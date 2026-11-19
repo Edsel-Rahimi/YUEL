@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "114.111.151.41",
+    "port": 80,
+    "type": "http",
+    "country": "AU",
+    "score": 81.48,
+    "tier": "gold",
+    "last_checked": "2026-11-19T16:59:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

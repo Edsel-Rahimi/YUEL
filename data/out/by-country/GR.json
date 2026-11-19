@@ -1,12 +1,12 @@
 [
   {
-    "ip": "150.140.148.235",
-    "port": 80,
+    "ip": "149.210.4.75",
+    "port": 18080,
     "type": "http",
     "country": "GR",
-    "score": 46.44,
+    "score": 43.53,
     "tier": "bronze",
-    "last_checked": "2026-11-19T15:53:14+00:00",
+    "last_checked": "2026-11-19T16:59:04+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

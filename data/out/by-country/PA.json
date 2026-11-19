@@ -1,45 +1,67 @@
 [
   {
-    "ip": "181.78.44.63",
+    "ip": "181.119.111.59",
     "port": 999,
     "type": "http",
     "country": "PA",
-    "score": 95.93,
+    "score": 92.06,
     "tier": "gold",
-    "last_checked": "2026-11-19T15:53:14+00:00",
+    "last_checked": "2026-11-19T16:59:04+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "157.100.63.247",
-    "port": 999,
-    "type": "http",
-    "country": "PA",
-    "score": 69.86,
-    "tier": "silver",
-    "last_checked": "2026-11-19T15:53:14+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "177.234.217.92",
-    "port": 999,
-    "type": "http",
-    "country": "PA",
-    "score": 30.46,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T15:53:14+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "190.61.63.106",
+    "ip": "181.79.217.1",
     "port": 8080,
     "type": "http",
     "country": "PA",
-    "score": 29.74,
+    "score": 89.48,
+    "tier": "gold",
+    "last_checked": "2026-11-19T16:59:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "181.119.84.221",
+    "port": 8080,
+    "type": "http",
+    "country": "PA",
+    "score": 72.09,
+    "tier": "silver",
+    "last_checked": "2026-11-19T16:59:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "177.234.217.82",
+    "port": 999,
+    "type": "http",
+    "country": "PA",
+    "score": 45.03,
     "tier": "bronze",
-    "last_checked": "2026-11-19T15:53:14+00:00",
+    "last_checked": "2026-11-19T16:59:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "181.78.1.227",
+    "port": 999,
+    "type": "http",
+    "country": "PA",
+    "score": 44.32,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T16:59:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "181.188.203.112",
+    "port": 999,
+    "type": "http",
+    "country": "PA",
+    "score": 39.53,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T16:59:04+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
