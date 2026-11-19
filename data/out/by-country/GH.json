@@ -4,9 +4,20 @@
     "port": 80,
     "type": "http",
     "country": "GH",
-    "score": 82.68,
+    "score": 86.85,
     "tier": "gold",
-    "last_checked": "2026-11-19T22:44:32+00:00",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "197.255.125.12",
+    "port": 80,
+    "type": "http",
+    "country": "GH",
+    "score": 71.54,
+    "tier": "silver",
+    "last_checked": "2026-11-19T23:39:23+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

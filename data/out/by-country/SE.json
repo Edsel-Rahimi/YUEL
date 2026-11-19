@@ -1,12 +1,56 @@
 [
   {
+    "ip": "171.25.158.95",
+    "port": 1080,
+    "type": "socks5",
+    "country": "SE",
+    "score": 77.6,
+    "tier": "silver",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "46.246.12.31",
     "port": 1080,
     "type": "socks5",
     "country": "SE",
-    "score": 76.47,
+    "score": 75.79,
     "tier": "silver",
-    "last_checked": "2026-11-19T22:44:32+00:00",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "193.181.35.96",
+    "port": 8118,
+    "type": "http",
+    "country": "SE",
+    "score": 71.15,
+    "tier": "silver",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "194.14.207.87",
+    "port": 80,
+    "type": "http",
+    "country": "SE",
+    "score": 43.46,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "194.14.207.87",
+    "port": 8001,
+    "type": "http",
+    "country": "SE",
+    "score": 32.29,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T23:39:23+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,12 +1,12 @@
 [
   {
-    "ip": "103.11.193.67",
+    "ip": "218.100.23.130",
     "port": 8080,
     "type": "http",
-    "country": "MN",
-    "score": 44.06,
+    "country": "NZ",
+    "score": 41.35,
     "tier": "bronze",
-    "last_checked": "2026-11-19T22:44:32+00:00",
+    "last_checked": "2026-11-19T23:39:23+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

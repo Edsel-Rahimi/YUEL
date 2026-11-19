@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "SA",
-    "score": 97.76,
+    "score": 98.93,
     "tier": "gold",
-    "last_checked": "2026-11-19T22:44:32+00:00",
+    "last_checked": "2026-11-19T23:39:23+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,20 @@
     "port": 80,
     "type": "http",
     "country": "SA",
-    "score": 97.73,
+    "score": 98.76,
     "tier": "gold",
-    "last_checked": "2026-11-19T22:44:32+00:00",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "89.108.0.172",
+    "port": 3128,
+    "type": "http",
+    "country": "SA",
+    "score": 27.6,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T23:39:23+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

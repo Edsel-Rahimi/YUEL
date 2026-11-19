@@ -1,12 +1,34 @@
 [
   {
-    "ip": "38.191.161.190",
+    "ip": "38.51.48.178",
+    "port": 5678,
+    "type": "socks4",
+    "country": "DO",
+    "score": 96.72,
+    "tier": "gold",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.50.165.126",
     "port": 999,
     "type": "http",
     "country": "DO",
-    "score": 96.14,
-    "tier": "gold",
-    "last_checked": "2026-11-19T22:44:32+00:00",
+    "score": 72.64,
+    "tier": "silver",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.172.154.229",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 65.1,
+    "tier": "silver",
+    "last_checked": "2026-11-19T23:39:23+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +37,53 @@
     "port": 999,
     "type": "http",
     "country": "DO",
-    "score": 82.24,
-    "tier": "gold",
-    "last_checked": "2026-11-19T22:44:32+00:00",
+    "score": 43.87,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "154.88.164.160",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 42.39,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.76.251.115",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 41.61,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "154.88.136.50",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 38.82,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.156.238.24",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 29.75,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T23:39:23+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

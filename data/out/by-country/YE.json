@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "89.189.75.246",
+    "port": 8080,
+    "type": "http",
+    "country": "YE",
+    "score": 72.54,
+    "tier": "silver",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -1,12 +1,23 @@
 [
   {
+    "ip": "159.148.146.65",
+    "port": 5678,
+    "type": "socks4",
+    "country": "LV",
+    "score": 94.63,
+    "tier": "gold",
+    "last_checked": "2026-11-19T23:39:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "195.135.255.98",
     "port": 1080,
     "type": "socks5",
     "country": "LV",
-    "score": 56.82,
+    "score": 78.1,
     "tier": "silver",
-    "last_checked": "2026-11-19T22:44:32+00:00",
+    "last_checked": "2026-11-19T23:39:23+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
