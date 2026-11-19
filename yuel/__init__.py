@@ -17,10 +17,10 @@ Stage-based pipeline:
                   freshness, anonymity + rolling history
     5. geo        country split via public IP-to-country table  (implemented)
     6. publish    per-country machine-readable proxy files      (implemented)
-    7. automate   orchestration + GitHub Actions schedule       (planned)
+    7. automate   orchestration + GitHub Actions schedule       (implemented)
 
 This is a fresh, independently written codebase — it shares no code with
 any other project.
 """
 
-__version__ = "0.6.0"
+__version__ = "0.7.0"

@@ -96,7 +96,7 @@ spawns **no binaries**: everything is raw sockets.
 # run the test suite (pure logic + fake proxy servers, no network)
 python3 -m unittest discover -s tests -t .
 
-# run all implemented stages in order (collect → normalize → validate)
+# run all implemented stages in order (collect → … → publish)
 python3 -m yuel.pipeline run
 
 # or a single stage
@@ -344,6 +344,57 @@ data/
 
 Field names, tiers, and the history schema will be frozen and fully
 documented here when stage 6 lands.
+
+## Automation (stage 7)
+
+`.github/workflows/pipeline.yml` runs the full pipeline on a schedule and
+commits the published contract to `main`, so consumers read stable URLs like:
+
+```
+https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/all.json
+https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/IT.json
+https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/run-summary.json
+```
+
+Why `main` + `data/out/` (and not a separate branch): raw file URLs stay
+predictable, consumers diff outputs with plain git tooling, and one commit
+per run (`[skip ci]`, so it never loops) is the simplest auditable history.
+The commit is produced only by the workflow; local runs write `data/out/`
+too but leave committing to git.
+
+**Fail-loud, never stale:** the workflow runs `python3 -m yuel.pipeline run`,
+which exits non-zero on the *first* failing stage; a sanity step then
+re-verifies `data/out/run-summary.json` (published > 0). Any failure is a red
+run in the Actions tab — a publish is atomic (stage 6), so a broken run can
+never replace good output with empty data.
+
+**Running it manually** (identical to the scheduled path):
+
+```bash
+# local, no GitHub needed
+python3 -m yuel.pipeline run
+
+# or trigger the GitHub workflow on demand
+gh workflow run pipeline
+```
+
+**Honest free-tier / cadence assessment (checked 2026-11-19):**
+
+- Public repository → GitHub-hosted `ubuntu-latest` runners are **free with
+  no minutes cap**; the 30-minute cron itself is fine on the free tier.
+- A full run takes **~30–45 minutes** (the handshake pass over ~40k
+  reachable targets dominates). The workflow therefore serializes via a
+  `concurrency` group: with a 30-minute cron the *effective* cadence is
+  "one full run at a time, back-to-back" (~40–45 min), and overlapping
+  scheduled invocations queue rather than pile up. If you want true
+  30-minute freshness, either raise `workers` in `config/validate.json`
+  (network-bound, ~150–200 is safe) or shorten the handshake pass — not by
+  lowering timeouts, which would misclassify slow-but-alive proxies.
+- GitHub pauses scheduled workflows on repos with **no activity for 60
+  days** (any push counts; our own output commits keep it alive, but after
+  a long pause re-enable the workflow from the Actions tab once).
+- Very heavily scheduled workflows can be delayed during peak load — the
+  cron is best-effort timing, not a guarantee.
 
 ## Security
 

@@ -4,6 +4,30 @@ All notable changes to YUEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [0.7.0] - 2026-11-19
+
+### Added
+
+- Stage 7 — **automate** (`.github/workflows/pipeline.yml`):
+  - Scheduled GitHub Actions workflow running the full chain
+    (collect → normalize → validate → score → geo → publish) every 30
+    minutes (`*/30 * * * *`, matching the consumer cadence) plus
+    `workflow_dispatch` for manual triggers.
+  - **Fail-loud**: the pipeline exits non-zero on the first failing stage
+    and a sanity step re-verifies `run-summary.json` (published > 0) — any
+    failure is a red run in the Actions tab, never silently-stale data.
+  - Publishes by committing `data/out/` to `main` (`[skip ci]`, one commit
+    per run) so consumers read stable raw.githubusercontent URLs;
+    `permissions: contents: write`, `concurrency` group serializes runs
+    (never a killed mid-publish run), `timeout-minutes: 90`.
+  - README documents manual runs (`python3 -m yuel.pipeline run`,
+    `gh workflow run pipeline`) and an honest free-tier assessment: public
+    repo = free standard runners with no minutes cap; full-run runtime
+    (~30–45 min) exceeds the 30-minute cron, so the concurrency group makes
+    the effective cadence back-to-back; scheduled workflows auto-pause
+    after 60 days without repo activity.
+- All seven stages are now implemented; the pipeline is end-to-end.
+
 ## [0.6.0] - 2026-11-19
 
 ### Added
