@@ -27,15 +27,16 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from . import __version__, collect, geo, normalize, score, validate
+from . import __version__, collect, geo, normalize, publish, score, validate
 from . import config as config_mod
 from .geo import stage_geo  # noqa: F401 — re-exported for CLI/chain
+from .publish import stage_publish  # noqa: F401 — re-exported for CLI/chain
 from .score import stage_score  # noqa: F401 — re-exported for CLI/chain
 from .stage import StageResult
 from .validate import stage_validate  # noqa: F401 — re-exported for CLI/chain
 
 __all__ = ["StageResult", "stage_collect", "stage_normalize", "stage_validate",
-           "stage_score", "stage_geo", "run_pipeline", "main"]
+           "stage_score", "stage_geo", "stage_publish", "run_pipeline", "main"]
 
 
 def stage_collect(cfg_path: Path, data_dir: Path, **_: Any) -> StageResult:
@@ -133,6 +134,7 @@ def run_pipeline(
         "validate": stage_validate,
         "score": stage_score,
         "geo": stage_geo,
+        "publish": stage_publish,
     }
     extra = stage_kwargs or {}
     for name in stage_names:
@@ -176,6 +178,7 @@ def main(argv: list[str] | None = None) -> int:
         ("validate", "run stage 3 only (TCP prefilter + handshake checks)"),
         ("score", "run stage 4 only (weighted scoring + rolling history)"),
         ("geo", "run stage 5 only (IP→country classification)"),
+        ("publish", "run stage 6 only (atomic per-country output contract)"),
         ("run", "run all implemented stages in order"),
     ):
         sub = subparsers.add_parser(name, help=help_text)
@@ -210,6 +213,12 @@ def main(argv: list[str] | None = None) -> int:
                 default=None,
                 help="path to geo config (default: config/geo.json)",
             )
+        if name == "publish":
+            sub.add_argument(
+                "--publish-config",
+                default=None,
+                help="path to publish config (default: config/publish.json)",
+            )
     args = parser.parse_args(argv)
 
     cfg_path = (
@@ -223,7 +232,8 @@ def main(argv: list[str] | None = None) -> int:
         "validate": ("validate",),
         "score": ("score",),
         "geo": ("geo",),
-        "run": ("collect", "normalize", "validate", "score", "geo"),
+        "publish": ("publish",),
+        "run": ("collect", "normalize", "validate", "score", "geo", "publish"),
     }[args.command]
     stage_kwargs: dict[str, dict[str, Any]] = {}
     if args.command == "validate":
@@ -246,6 +256,12 @@ def main(argv: list[str] | None = None) -> int:
                 Path(args.geo_config) if args.geo_config else None
             ),
         }
+    elif args.command == "publish":
+        stage_kwargs["publish"] = {
+            "publish_cfg_path": (
+                Path(args.publish_config) if args.publish_config else None
+            ),
+        }
     elif args.command == "run":
         stage_kwargs["validate"] = {
             "validate_cfg_path": (
@@ -261,6 +277,11 @@ def main(argv: list[str] | None = None) -> int:
             "geo_cfg_path": (
                 Path(args.geo_config)
                 if getattr(args, "geo_config", None)
+                else None
+            ),
+            "publish_cfg_path": (
+                Path(args.publish_config)
+                if getattr(args, "publish_config", None)
                 else None
             ),
         }

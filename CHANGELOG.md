@@ -4,6 +4,38 @@ All notable changes to YUEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [0.6.0] - 2026-11-19
+
+### Added
+
+- Stage 6 — **publish** (`yuel/publish.py`, `config/publish.json`):
+  - The stable output contract now exists: `data/out/all.json` (every alive
+    proxy, all tiers — documented interpretation of "all tiers"),
+    `data/out/by-country/<ISO2>.json` (tier != `excluded` only),
+    `data/out/by-country/unclassified.json` (always present, may be empty),
+    `data/out/run-summary.json` (counts per country/tier + chain totals
+    pulled from the earlier stages' reports). Records are plain-proxy
+    shaped — `{ip, port, type: socks5|socks4|http, user?, pass?, country,
+    score, tier, last_checked, consecutive_successes,
+    consecutive_failures}` — with `user`/`pass` present only when the
+    proxy has credentials. Must never be confused with a tunnel-config feed.
+  - **Atomic publish**: everything is built in `data/.out_staging/`,
+    validated (every file parses, `all.json` non-empty, country files
+    non-empty — `unclassified.json` exempt), then swapped into
+    `data/out/` with rollback; a validation failure or I/O error aborts and
+    **previously-good output stays intact**. A run with zero alive proxies
+    refuses to publish entirely (an empty fleet is a health problem, not
+    fresh data).
+  - `data/out/` is committed by the automation (stage 7) so consumers get
+    stable raw.githubusercontent URLs; `.gitignore` restructured
+    (`data/*` + `!data/out/`, staging/prev/cache/history still ignored).
+- CLI: `python -m yuel.pipeline publish [--publish-config PATH]`; `run`
+  chain is now collect → normalize → validate → score → geo → publish.
+- Tests: 13 new — exact contract shape (with/without credentials),
+  per-country grouping + score-desc ordering, unclassified exemptions,
+  run-summary totals, empty-run refusal, simulated validation failure with
+  old-output intact, replacement between runs. Suite total: **164 tests**.
+
 ## [0.5.0] - 2026-11-19
 
 ### Added

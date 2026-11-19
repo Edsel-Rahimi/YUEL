@@ -8,8 +8,17 @@ venv/
 .coverage
 htmlcov/
 
-# Pipeline stage output — publish stage will define what gets committed
-data/
+# Pipeline stage output. data/out/ is the PUBLISHED contract (stage 6) and is
+# committed by the automation workflow on every successful run, so consumers
+# can fetch stable URLs like
+#   https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/all.json
+# Everything else under data/ is intermediate state and stays private.
+data/*
+!data/out/
+data/.out_staging/
+data/.out_prev/
+data/cache/
+data/history/
 
 # OS / editor noise
 .DS_Store
