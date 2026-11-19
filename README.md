@@ -382,14 +382,15 @@ gh workflow run pipeline
 
 - Public repository → GitHub-hosted `ubuntu-latest` runners are **free with
   no minutes cap**; the 30-minute cron itself is fine on the free tier.
-- A full run takes **~30–45 minutes** (the handshake pass over ~40k
-  reachable targets dominates). The workflow therefore serializes via a
-  `concurrency` group: with a 30-minute cron the *effective* cadence is
-  "one full run at a time, back-to-back" (~40–45 min), and overlapping
-  scheduled invocations queue rather than pile up. If you want true
-  30-minute freshness, either raise `workers` in `config/validate.json`
-  (network-bound, ~150–200 is safe) or shorten the handshake pass — not by
-  lowering timeouts, which would misclassify slow-but-alive proxies.
+- A full run takes **~10 minutes, measured** on 2026-11-19 (75k candidates
+  → 57k unique → 39.9k handshake-tested at the committed worker settings;
+  the handshake pass over ~40k reachable targets dominates). That fits the
+  30-minute cron with room to spare. The workflow still serializes via a
+  `concurrency` group so overlapping scheduled invocations queue rather
+  than pile up (e.g. if a source is slow and a run overshoots). If runtime
+  ever grows past the interval, raise `workers` in `config/validate.json`
+  (network-bound, ~150–200 is safe) — not the timeouts, which would
+  misclassify slow-but-alive proxies.
 - GitHub pauses scheduled workflows on repos with **no activity for 60
   days** (any push counts; our own output commits keep it alive, but after
   a long pause re-enable the workflow from the Actions tab once).
