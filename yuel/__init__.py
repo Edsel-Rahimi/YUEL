@@ -3,7 +3,7 @@
 Stage-based pipeline:
 
     1. collect    fetch public sources, extract endpoint URIs   (implemented)
-    2. normalize  dedupe by connection identity, drop invalid   (planned)
+    2. normalize  dedupe by connection identity, drop invalid   (implemented)
     3. validate   TCP prefilter + xray/sing-box live checks     (planned)
     4. score      weighted quality formula, gold/silver/bronze  (planned)
     5. geo        country split via public IP-to-ASN table      (planned)
@@ -14,4 +14,4 @@ This is a fresh, independently written codebase — it shares no code with
 any other project.
 """
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"

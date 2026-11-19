@@ -2,14 +2,15 @@
 
 Usage::
 
-    python -m yuel.pipeline collect [--sources PATH] [--data-dir PATH]
-    python -m yuel.pipeline run     [--sources PATH] [--data-dir PATH]
+    python -m yuel.pipeline collect   [--sources PATH] [--data-dir PATH]
+    python -m yuel.pipeline normalize [--data-dir PATH]
+    python -m yuel.pipeline run       [--sources PATH] [--data-dir PATH]
 
 ``run`` executes every implemented stage in order and stops at the first
 failing stage, so a stage failure can never corrupt previously written
-output. Later stages (normalize, validate, score, geo, publish) are appended
-to the chain as they land; see README.md for the architecture and the output
-file contract.
+output. Later stages (validate, score, geo, publish) are appended to the
+chain as they land; see README.md for the architecture and the output file
+contract.
 """
 
 from __future__ import annotations
@@ -20,7 +21,7 @@ import sys
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from . import __version__, collect
+from . import __version__, collect, normalize
 from . import config as config_mod
 
 
@@ -66,15 +67,62 @@ def stage_collect(cfg_path: Path, data_dir: Path) -> StageResult:
     return StageResult("collect", True, detail, [endpoints_path, report_path])
 
 
-def run_pipeline(cfg_path: Path, data_dir: Path) -> int:
-    """Run all implemented stages in order; stop at the first failure.
+def stage_normalize(cfg_path: Path, data_dir: Path) -> StageResult:
+    """Stage 2: dedupe stage-1 output by connection identity."""
+    collected_path = data_dir / "collected" / "endpoints_raw.json"
+    if not collected_path.exists():
+        return StageResult(
+            "normalize", False, f"stage-1 output not found: {collected_path} "
+            "(run collect first)"
+        )
+    try:
+        endpoints = json.loads(collected_path.read_text(encoding="utf-8"))
+    except (json.JSONDecodeError, OSError) as exc:
+        return StageResult("normalize", False, f"cannot read stage-1 output: {exc}")
+    if not isinstance(endpoints, list):
+        return StageResult(
+            "normalize", False, f"stage-1 output is not a JSON list: {collected_path}"
+        )
+
+    normalized, report = normalize.normalize_endpoints(endpoints)
+
+    out_dir = data_dir / "normalized"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    endpoints_path = out_dir / "endpoints_normalized.json"
+    report_path = out_dir / "normalize_report.json"
+
+    endpoints_path.write_text(
+        json.dumps(normalized, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+    report_on_disk = dict(report)
+    report_on_disk["endpoints_file"] = endpoints_path.name
+    report_path.write_text(
+        json.dumps(report_on_disk, indent=2, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
+    detail = (
+        f"{report['output']['endpoints_out']} unique endpoints "
+        f"(from {report['input']['endpoints_in']}, "
+        f"{report['output']['duplicates_collapsed']} duplicates collapsed, "
+        f"{report['input']['invalid_dropped']} invalid dropped)"
+    )
+    return StageResult("normalize", True, detail, [endpoints_path, report_path])
+
+
+def run_pipeline(cfg_path: Path, data_dir: Path, stage_names: tuple[str, ...]) -> int:
+    """Run the selected stages in order; stop at the first failure.
 
     Each stage writes its own output only after it succeeds, so a failing
     stage leaves any earlier stage's files intact.
     """
-    stages = (stage_collect,)  # normalize/validate/score/geo/publish land here
-    for stage in stages:
-        result = stage(cfg_path, data_dir)
+    stages = {
+        "collect": stage_collect,
+        "normalize": stage_normalize,
+    }
+    for name in stage_names:
+        result = stages[name](cfg_path, data_dir)
         tag = "OK" if result.ok else "FAIL"
         print(f"[{tag}] {result.name}: {result.detail}")
         for output in result.outputs:
@@ -109,6 +157,7 @@ def main(argv: list[str] | None = None) -> int:
     subparsers = parser.add_subparsers(dest="command", required=True)
     for name, help_text in (
         ("collect", "run stage 1 only (fetch sources and extract endpoints)"),
+        ("normalize", "run stage 2 only (dedupe stage-1 output)"),
         ("run", "run all implemented stages in order"),
     ):
         sub = subparsers.add_parser(name, help=help_text)
@@ -120,9 +169,12 @@ def main(argv: list[str] | None = None) -> int:
     )
     data_dir = Path(args.data_dir) if args.data_dir else config_mod.default_data_dir()
 
-    # `collect` and `run` are equivalent today; `run` grows the stage chain
-    # as later stages are implemented.
-    return run_pipeline(cfg_path, data_dir)
+    stage_chain = {
+        "collect": ("collect",),
+        "normalize": ("normalize",),
+        "run": ("collect", "normalize"),
+    }[args.command]
+    return run_pipeline(cfg_path, data_dir, stage_chain)
 
 
 if __name__ == "__main__":

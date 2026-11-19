@@ -4,6 +4,32 @@ All notable changes to YUEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [0.2.0] - 2026-11-19
+
+### Added
+
+- Stage 2 — **normalize** (`yuel/normalize.py`):
+  - Dedupe by *effective connection identity* (`scheme|host|port|secret`,
+    host lowercased) — the same node with reordered query params, different
+    display tags, or published by several sources collapses to one entry.
+  - Deterministic representative selection per target: richest metadata
+    wins (most params → most extras → longest name → canonical JSON dump
+    tie-break), so output is reproducible byte-for-byte.
+  - Merged `sources` list (sorted, unique) on every entry — preserves how
+    many independent lists carried the node, for later freshness scoring.
+  - Defensive re-validation of stage-1 rows: invalid entries are dropped,
+    counted, and sampled (up to 5) in `normalize_report.json`; the stage
+    never raises on malformed rows.
+  - Per-target output sorted by `identity`; per-scheme counts in the report.
+- CLI: `python -m yuel.pipeline normalize` (stage 2 only) and a real
+  `run` chain (collect → normalize), stopping at the first failing stage.
+  `normalize` fails gracefully when stage-1 output is missing/corrupt.
+- `validate_endpoint` is now a public API of `yuel.collect`, reused by
+  normalize (was private `_validate_endpoint`).
+- Tests: 17 new pure-logic tests (dedupe identity, merge determinism,
+  invalid-row handling, sources merging, by-scheme counts, stage-2 file
+  handling with corrupt/missing input). Suite total: **65 tests**.
+
 ## [0.1.0] - 2026-11-19
 
 ### Added

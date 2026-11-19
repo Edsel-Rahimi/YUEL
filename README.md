@@ -5,8 +5,8 @@ configs (vmess / vless / trojan / ss / hysteria2 / tuic), really tests which
 ones are alive, scores and tiers them by quality, classifies them by country,
 and publishes machine-readable files that another system can consume.
 
-**Status: stage 1 (collect) implemented and shipped. Later stages are being
-built one at a time — see the stage table below.**
+**Status: stages 1–2 (collect, normalize) implemented and shipped. Later
+stages are being built one at a time — see the stage table below.**
 
 This repository is a fresh, independently written codebase. It shares no
 code, config, or history with any other project.
@@ -36,7 +36,7 @@ code, config, or history with any other project.
 | Stage | What it does | Status |
 | --- | --- | --- |
 | 1. collect | Fetch raw text from configured public sources (plain HTTP files and `https://t.me/s/<channel>` Telegram web previews), extract endpoint URIs per scheme, parse each into a canonical dict. One dead source never crashes the run — errors are recorded per source. | **implemented** (v0.1.0) |
-| 2. normalize | Dedupe by *effective connection identity* (host + port + secret, not literal string — query-param order and display tags are ignored), strip invalid entries, emit one canonical list. | planned |
+| 2. normalize | Dedupe by *effective connection identity* (`scheme\|host\|port\|secret`, host lowercased — not literal string; query-param order and display tags are ignored), deterministically keep the richest metadata per target, merge all source ids into a sorted `sources` list, drop invalid rows. Byte-for-byte reproducible. | **implemented** (v0.2.0) |
 | 3. validate | Cheap TCP-connect prefilter; survivors get a real one-shot xray-core (vmess/vless/trojan/ss) or sing-box (hysteria2/tuic) process with a local SOCKS5 inbound routed to that outbound; a real fetch through the port measures latency and success. Engine binaries are pinned to exact versions and cached. Concurrency-limited worker pool; process cleanup on timeout. | planned |
 | 4. score | Weighted formula over latency, success rate, freshness, and protocol strength (reality/hysteria2 > plain vless > ss > ssr); each component 0–100, weights re-normalized when a component is unavailable; final score mapped to configurable tiers (gold/silver/bronze). | planned |
 | 5. geo | Country of literal-IP hosts via a free public IP-to-ASN/country table (iptoasn.com `ip2asn-v4.tsv`), refreshed regularly; table download failure degrades to "unclassified" instead of crashing. Domain-hosted endpoints are explicitly `unclassified`, never guessed. | planned |
@@ -56,10 +56,13 @@ YUEL/
 │   ├── __init__.py
 │   ├── config.py              ← sources-file loading + strict schema validation
 │   ├── collect.py             ← stage 1: fetchers + URI extraction/parsing
+│   ├── normalize.py           ← stage 2: identity dedupe + canonical list
 │   └── pipeline.py            ← orchestrator + CLI entrypoint
 ├── tests/
 │   ├── test_collect.py        ← extraction, parsing, identity, run error-handling
-│   └── test_config.py         ← sources-file schema validation
+│   ├── test_config.py         ← sources-file schema validation
+│   ├── test_normalize.py      ← dedupe, merge policy, determinism
+│   └── test_pipeline.py       ← stage chaining + graceful failure (file-based)
 └── data/                      ← stage output (gitignored; publish stage will
                                   define what gets committed)
 ```
@@ -72,15 +75,23 @@ Python 3.10+ — **no third-party dependencies** (stdlib only).
 # run the test suite (pure logic, no network)
 python3 -m unittest discover -s tests -t .
 
-# run stage 1 (collect) against config/sources.json
-python3 -m yuel.pipeline collect
+# run all implemented stages in order (collect → normalize)
+python3 -m yuel.pipeline run
 
-# output lands in data/collected/
-#   endpoints_raw.json    canonical endpoint dicts (one JSON list)
-#   collect_report.json   per-source status, totals, failure samples
+# or a single stage
+python3 -m yuel.pipeline collect     # stage 1: fetch sources, extract endpoints
+python3 -m yuel.pipeline normalize   # stage 2: dedupe stage-1 output
+
+# stage output lands in:
+#   data/collected/
+#     endpoints_raw.json       canonical endpoint dicts, one per extracted URI
+#     collect_report.json      per-source status, totals, failure samples
+#   data/normalized/
+#     endpoints_normalized.json  ONE entry per effective connection target
+#     normalize_report.json      dedupe totals, by-scheme counts, audit samples
 ```
 
-Both commands accept `--sources PATH` and `--data-dir PATH`; the same can be
+Every command accepts `--sources PATH` and `--data-dir PATH`; the same can be
 set through the `YUEL_SOURCES` and `YUEL_DATA_DIR` environment variables.
 
 Exit code is 0 when every stage succeeded, 1 when a stage failed (the run
@@ -166,11 +177,41 @@ Rules:
 }
 ```
 
-- `identity` is the dedupe key stage 2 will use: same host + port + secret
-  is the same target even when query-param order or the display tag differs.
+- `identity` is the dedupe key stage 2 uses: same host + port + secret is
+  the same target even when query-param order or the display tag differs.
   Host is lowercased (trailing root dot stripped); scheme is part of the key
   because one host:port can speak two protocols.
 - Stage 1 does **not** dedupe across sources; that is normalize's job.
+
+### Normalized endpoint schema (v0.1 draft)
+
+`data/normalized/endpoints_normalized.json` is a JSON array with **one entry
+per effective connection target**, sorted by `identity`:
+
+```json
+{
+  "scheme": "vless",
+  "host": "v1.example.com",
+  "port": 443,
+  "secret": "<uuid or password>",
+  "params": {"security": "reality", "sni": "www.example.com", "pbk": "..."},
+  "name": "display tag / ps field",
+  "extra": {"method": "aes-256-gcm"},
+  "identity": "vless|v1.example.com|443|<secret>",
+  "sources": ["solispirit-all", "barry-far-all"]   // sorted, unique
+}
+```
+
+Merge rules (documented so downstream consumers can rely on them):
+
+- The representative metadata (`params`/`name`/`extra`) is chosen
+  deterministically: the entry with the most params, then most extras, then
+  longest name; ties are broken by a canonical JSON dump — runs are
+  reproducible byte-for-byte.
+- `sources` accumulates every source id that published this target — how
+  many independent lists carried the node is preserved for later scoring.
+- Rows failing validation (defensive re-check of stage-1 output) are dropped
+  and counted in `normalize_report.json` with up to 5 samples.
 
 ## Output file contract (v0.1 draft — finalized at stage 6)
 
@@ -179,9 +220,12 @@ until then treat everything under `data/` as moving. Planned layout:
 
 ```
 data/
-├── collected/                 # stage 1 output (already produced)
-│   ├── endpoints_raw.json     # array of canonical endpoint dicts
+├── collected/                 # stage 1 output (produced)
+│   ├── endpoints_raw.json     # array of canonical endpoint dicts (pre-dedupe)
 │   └── collect_report.json    # per-source status + totals (audit trail)
+├── normalized/                # stage 2 output (produced)
+│   ├── endpoints_normalized.json  # one entry per connection target
+│   └── normalize_report.json      # dedupe totals + audit samples
 └── out/                       # stage 6 output (published, committed)
     ├── all.json               # every alive endpoint, scored + tiered
     ├── by-tier/gold.json | silver.json | bronze.json

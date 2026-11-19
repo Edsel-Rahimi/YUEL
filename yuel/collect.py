@@ -389,7 +389,8 @@ def endpoint_identity(endpoint: dict[str, Any]) -> str:
     )
 
 
-def _validate_endpoint(endpoint: dict[str, Any]) -> tuple[bool, str | None]:
+def validate_endpoint(endpoint: dict[str, Any]) -> tuple[bool, str | None]:
+    """Public endpoint sanity check, reused by stage 2 (normalize)."""
     scheme = endpoint["scheme"]
     host = str(endpoint.get("host", ""))
     if not host or not _HOST_RE.fullmatch(host):
@@ -437,7 +438,7 @@ def parse_endpoint(uri: str) -> tuple[dict[str, Any] | None, str | None]:
         return None, str(exc)
     except Exception as exc:  # last-resort guard
         return None, f"unexpected parse error: {type(exc).__name__}: {exc}"
-    ok, reason = _validate_endpoint(endpoint)
+    ok, reason = validate_endpoint(endpoint)
     if not ok:
         return None, reason or "validation failed"
     endpoint["identity"] = endpoint_identity(endpoint)
