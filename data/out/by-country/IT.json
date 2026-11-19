@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "77.242.177.57",
+    "port": 3128,
+    "type": "http",
+    "country": "IT",
+    "score": 27.85,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

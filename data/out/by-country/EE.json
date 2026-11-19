@@ -1,12 +1,12 @@
 [
   {
-    "ip": "185.203.6.219",
-    "port": 3128,
-    "type": "http",
+    "ip": "46.36.220.243",
+    "port": 1080,
+    "type": "socks5",
     "country": "EE",
-    "score": 46.64,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "score": 91.91,
+    "tier": "gold",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,12 +1,34 @@
 [
   {
-    "ip": "165.16.27.42",
-    "port": 1981,
+    "ip": "165.16.30.101",
+    "port": 9999,
     "type": "http",
     "country": "LY",
-    "score": 81.38,
+    "score": 82.0,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "165.16.58.130",
+    "port": 8080,
+    "type": "http",
+    "country": "LY",
+    "score": 79.87,
+    "tier": "silver",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "165.16.2.250",
+    "port": 9999,
+    "type": "http",
+    "country": "LY",
+    "score": 73.43,
+    "tier": "silver",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,31 +37,42 @@
     "port": 8080,
     "type": "http",
     "country": "LY",
-    "score": 79.94,
+    "score": 70.43,
     "tier": "silver",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "41.254.48.188",
-    "port": 1970,
-    "type": "http",
-    "country": "LY",
-    "score": 33.75,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T17:53:39+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "165.16.27.43",
+    "ip": "154.127.70.1",
     "port": 1981,
     "type": "http",
     "country": "LY",
-    "score": 29.94,
+    "score": 46.24,
     "tier": "bronze",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.68.128.216",
+    "port": 8080,
+    "type": "http",
+    "country": "LY",
+    "score": 44.31,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "62.68.48.22",
+    "port": 8080,
+    "type": "http",
+    "country": "LY",
+    "score": 29.39,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

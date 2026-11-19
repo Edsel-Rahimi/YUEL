@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "CY",
-    "score": 96.05,
+    "score": 96.15,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,9 @@
     "port": 80,
     "type": "http",
     "country": "CY",
-    "score": 95.26,
+    "score": 95.01,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,9 +26,9 @@
     "port": 3128,
     "type": "http",
     "country": "CY",
-    "score": 68.79,
-    "tier": "silver",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "score": 33.1,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

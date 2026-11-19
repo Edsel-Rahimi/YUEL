@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "TW",
-    "score": 94.51,
+    "score": 93.22,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,31 +15,20 @@
     "port": 8888,
     "type": "http",
     "country": "TW",
-    "score": 94.29,
+    "score": 93.01,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "114.34.145.135",
-    "port": 8080,
-    "type": "http",
-    "country": "TW",
-    "score": 48.1,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T17:53:39+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "59.124.62.9",
+    "ip": "203.145.218.204",
     "port": 3128,
     "type": "http",
     "country": "TW",
-    "score": 27.84,
+    "score": 43.0,
     "tier": "bronze",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

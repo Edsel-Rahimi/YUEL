@@ -1,45 +1,23 @@
 [
   {
-    "ip": "220.116.142.217",
-    "port": 80,
-    "type": "http",
-    "country": "KR",
-    "score": 95.17,
-    "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
     "ip": "183.106.215.208",
     "port": 1080,
     "type": "socks5",
     "country": "KR",
-    "score": 94.53,
+    "score": 94.58,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "221.157.45.249",
-    "port": 80,
-    "type": "socks4",
-    "country": "KR",
-    "score": 94.13,
-    "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
     "ip": "183.110.216.159",
-    "port": 8091,
+    "port": 8090,
     "type": "http",
     "country": "KR",
-    "score": 91.12,
+    "score": 89.71,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -48,9 +26,9 @@
     "port": 60984,
     "type": "socks4",
     "country": "KR",
-    "score": 90.27,
+    "score": 89.31,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -59,9 +37,9 @@
     "port": 8091,
     "type": "http",
     "country": "KR",
-    "score": 87.41,
+    "score": 89.18,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -70,20 +48,9 @@
     "port": 5555,
     "type": "socks5",
     "country": "KR",
-    "score": 80.64,
-    "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "220.81.123.23",
-    "port": 48678,
-    "type": "http",
-    "country": "KR",
-    "score": 48.22,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "score": 76.47,
+    "tier": "silver",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

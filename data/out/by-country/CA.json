@@ -4,9 +4,42 @@
     "port": 3118,
     "type": "http",
     "country": "CA",
-    "score": 97.02,
+    "score": 98.31,
     "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.49.210.79",
+    "port": 40000,
+    "type": "socks5",
+    "country": "CA",
+    "score": 97.81,
+    "tier": "gold",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "184.70.113.34",
+    "port": 3128,
+    "type": "http",
+    "country": "CA",
+    "score": 92.18,
+    "tier": "gold",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "173.181.142.228",
+    "port": 80,
+    "type": "http",
+    "country": "CA",
+    "score": 28.69,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

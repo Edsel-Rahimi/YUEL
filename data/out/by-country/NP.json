@@ -1,56 +1,45 @@
 [
   {
+    "ip": "110.34.1.156",
+    "port": 1080,
+    "type": "socks4",
+    "country": "NP",
+    "score": 82.64,
+    "tier": "gold",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "182.93.75.162",
+    "port": 1080,
+    "type": "socks4",
+    "country": "NP",
+    "score": 79.64,
+    "tier": "silver",
+    "last_checked": "2026-11-19T18:53:18+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "110.34.1.212",
     "port": 1080,
     "type": "socks4",
     "country": "NP",
-    "score": 82.83,
-    "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "score": 78.8,
+    "tier": "silver",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "110.34.10.226",
-    "port": 1080,
-    "type": "socks4",
-    "country": "NP",
-    "score": 82.83,
-    "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "110.34.2.186",
-    "port": 1080,
-    "type": "socks4",
-    "country": "NP",
-    "score": 81.5,
-    "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "202.79.35.12",
-    "port": 1080,
-    "type": "socks4",
-    "country": "NP",
-    "score": 80.75,
-    "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "43.245.93.193",
-    "port": 53805,
+    "ip": "103.124.97.12",
+    "port": 8080,
     "type": "http",
     "country": "NP",
-    "score": 33.94,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "score": 71.0,
+    "tier": "silver",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

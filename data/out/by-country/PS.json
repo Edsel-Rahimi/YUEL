@@ -1,12 +1,12 @@
 [
   {
-    "ip": "82.213.29.53",
-    "port": 18000,
+    "ip": "178.214.80.27",
+    "port": 1981,
     "type": "http",
     "country": "PS",
-    "score": 29.13,
+    "score": 30.92,
     "tier": "bronze",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

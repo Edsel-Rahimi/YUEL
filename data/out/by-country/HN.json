@@ -1,12 +1,12 @@
 [
   {
-    "ip": "200.107.239.218",
+    "ip": "179.49.113.230",
     "port": 999,
     "type": "http",
     "country": "HN",
-    "score": 94.83,
-    "tier": "gold",
-    "last_checked": "2026-11-19T17:53:39+00:00",
+    "score": 43.3,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T18:53:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
