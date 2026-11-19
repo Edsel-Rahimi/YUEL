@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "description": "Public sources for the YUEL collector. Add sources here (never in code); the pipeline never crashes on a dead source, it records the error per source. Every source below was verified live on 2026-11-19 (fetch OK + endpoints extracted). See README.md 'Source config format' for the schema.",
+  "defaults": {
+    "timeout_seconds": 20,
+    "max_bytes": 8000000,
+    "fetch_concurrency": 6
+  },
+  "sources": [
+    {
+      "id": "solispirit-all",
+      "type": "raw_http",
+      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt",
+      "enabled": true,
+      "tags": ["github", "aggregator", "multi-protocol"],
+      "note": "Large frequently-updated multi-protocol aggregation (~12.5k URIs at intake)."
+    },
+    {
+      "id": "barry-far-all",
+      "type": "raw_http",
+      "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_Sub.txt",
+      "enabled": true,
+      "tags": ["github", "aggregator", "multi-protocol"],
+      "note": "Large frequently-updated multi-protocol aggregation (~8.5k URIs at intake). Repo is 'V2ray-Config' (singular) — 'V2ray-Configs' is dead."
+    },
+    {
+      "id": "peasoft-nomorewalls",
+      "type": "raw_http",
+      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
+      "enabled": true,
+      "tags": ["github", "aggregator", "base64-subscription"],
+      "note": "Plain-text/base64 mixed list, updated regularly."
+    },
+    {
+      "id": "pawdroid-free-servers",
+      "type": "raw_http",
+      "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+      "enabled": true,
+      "tags": ["github", "base64-subscription"],
+      "note": "Whole-body base64 subscription; exercises the base64 fallback path."
+    },
+    {
+      "id": "tg-v2ray-vpn-free",
+      "type": "telegram_preview",
+      "url": "https://t.me/s/v2ray_vpn_free",
+      "enabled": true,
+      "tags": ["telegram", "channel-preview"],
+      "note": "Public Telegram channel web preview; only channel of 3 candidates that returned real endpoints (the other two are placeholder pages)."
+    }
+  ]
+}
