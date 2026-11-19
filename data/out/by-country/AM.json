@@ -4,20 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "AM",
-    "score": 91.61,
+    "score": 91.37,
     "tier": "gold",
-    "last_checked": "2026-11-19T16:59:04+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "81.16.9.222",
-    "port": 3629,
-    "type": "socks4",
-    "country": "AM",
-    "score": 87.54,
-    "tier": "gold",
-    "last_checked": "2026-11-19T16:59:04+00:00",
+    "last_checked": "2026-11-19T17:53:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,23 +1,12 @@
 [
   {
-    "ip": "90.156.160.234",
-    "port": 3128,
-    "type": "http",
-    "country": "UZ",
-    "score": 78.38,
-    "tier": "silver",
-    "last_checked": "2026-11-19T16:59:04+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
     "ip": "195.158.8.123",
     "port": 3128,
     "type": "http",
     "country": "UZ",
-    "score": 48.29,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T16:59:04+00:00",
+    "score": 75.9,
+    "tier": "silver",
+    "last_checked": "2026-11-19T17:53:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

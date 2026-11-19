@@ -1,0 +1,35 @@
+[
+  {
+    "ip": "200.125.169.51",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 96.14,
+    "tier": "gold",
+    "last_checked": "2026-11-19T17:53:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.76.251.115",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 46.69,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T17:53:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.156.238.24",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 46.65,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T17:53:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

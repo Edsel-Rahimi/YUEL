@@ -1,12 +1,23 @@
 [
   {
+    "ip": "185.128.240.2",
+    "port": 3128,
+    "type": "http",
+    "country": "RO",
+    "score": 78.77,
+    "tier": "silver",
+    "last_checked": "2026-11-19T17:53:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "92.86.207.198",
     "port": 8080,
     "type": "http",
     "country": "RO",
-    "score": 91.46,
-    "tier": "gold",
-    "last_checked": "2026-11-19T16:59:04+00:00",
+    "score": 70.26,
+    "tier": "silver",
+    "last_checked": "2026-11-19T17:53:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

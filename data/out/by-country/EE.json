@@ -1,12 +1,12 @@
 [
   {
-    "ip": "77.242.177.57",
+    "ip": "185.203.6.219",
     "port": 3128,
     "type": "http",
-    "country": "IT",
-    "score": 43.13,
+    "country": "EE",
+    "score": 46.64,
     "tier": "bronze",
-    "last_checked": "2026-11-19T16:59:04+00:00",
+    "last_checked": "2026-11-19T17:53:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

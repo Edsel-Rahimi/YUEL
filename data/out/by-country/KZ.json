@@ -1,12 +1,34 @@
 [
   {
+    "ip": "185.166.196.14",
+    "port": 8443,
+    "type": "http",
+    "country": "KZ",
+    "score": 95.99,
+    "tier": "gold",
+    "last_checked": "2026-11-19T17:53:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "72.56.73.23",
     "port": 80,
     "type": "http",
     "country": "KZ",
-    "score": 93.4,
+    "score": 95.73,
     "tier": "gold",
-    "last_checked": "2026-11-19T16:59:04+00:00",
+    "last_checked": "2026-11-19T17:53:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.200.84.4",
+    "port": 3128,
+    "type": "http",
+    "country": "KZ",
+    "score": 42.19,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T17:53:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

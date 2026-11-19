@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "163.44.126.97",
+    "port": 3128,
+    "type": "http",
+    "country": "JP",
+    "score": 75.17,
+    "tier": "silver",
+    "last_checked": "2026-11-19T17:53:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "85.131.243.125",
+    "port": 3128,
+    "type": "http",
+    "country": "JP",
+    "score": 27.56,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T17:53:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
