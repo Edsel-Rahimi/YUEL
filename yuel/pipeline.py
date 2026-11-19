@@ -4,13 +4,18 @@ Usage::
 
     python -m yuel.pipeline collect   [--sources PATH] [--data-dir PATH]
     python -m yuel.pipeline normalize [--data-dir PATH]
+    python -m yuel.pipeline validate  [--data-dir PATH] [--limit N]
+                                      [--prefilter-only] [--validate-config PATH]
     python -m yuel.pipeline run       [--sources PATH] [--data-dir PATH]
 
 ``run`` executes every implemented stage in order and stops at the first
 failing stage, so a stage failure can never corrupt previously written
-output. Later stages (validate, score, geo, publish) are appended to the
-chain as they land; see README.md for the architecture and the output file
-contract.
+output. Later stages (score, geo, publish) are appended to the chain as they
+land; see README.md for the architecture and the output file contract.
+
+Scope (v0.3.0): plain SOCKS4/SOCKS5/HTTP(S) proxies for chaining — stage 1
+parses bare ip:port entries from list sources, stage 2 dedupes them by
+connection identity, stage 3 confirms them with real protocol handshakes.
 """
 
 from __future__ import annotations
@@ -18,23 +23,20 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from dataclasses import dataclass, field
 from pathlib import Path
+from typing import Any
 
-from . import __version__, collect, normalize
+from . import __version__, collect, normalize, validate
 from . import config as config_mod
+from .stage import StageResult
+from .validate import stage_validate  # noqa: F401 — re-exported for CLI/chain
+
+__all__ = ["StageResult", "stage_collect", "stage_normalize", "stage_validate",
+           "run_pipeline", "main"]
 
 
-@dataclass
-class StageResult:
-    name: str
-    ok: bool
-    detail: str
-    outputs: list[Path] = field(default_factory=list)
-
-
-def stage_collect(cfg_path: Path, data_dir: Path) -> StageResult:
-    """Stage 1: fetch all configured sources and extract endpoints."""
+def stage_collect(cfg_path: Path, data_dir: Path, **_: Any) -> StageResult:
+    """Stage 1: fetch all configured sources and parse proxy entries."""
     try:
         cfg = config_mod.load_sources(cfg_path)
     except config_mod.ConfigError as exc:
@@ -45,15 +47,15 @@ def stage_collect(cfg_path: Path, data_dir: Path) -> StageResult:
 
     out_dir = data_dir / "collected"
     out_dir.mkdir(parents=True, exist_ok=True)
-    endpoints_path = out_dir / "endpoints_raw.json"
+    proxies_path = out_dir / "proxies_raw.json"
     report_path = out_dir / "collect_report.json"
 
-    endpoints_path.write_text(
-        json.dumps(report["endpoints"], indent=2, ensure_ascii=False) + "\n",
+    proxies_path.write_text(
+        json.dumps(report["proxies"], indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
-    report_on_disk = {k: v for k, v in report.items() if k != "endpoints"}
-    report_on_disk["endpoints_file"] = endpoints_path.name
+    report_on_disk = {k: v for k, v in report.items() if k != "proxies"}
+    report_on_disk["proxies_file"] = proxies_path.name
     report_path.write_text(
         json.dumps(report_on_disk, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
@@ -61,57 +63,62 @@ def stage_collect(cfg_path: Path, data_dir: Path) -> StageResult:
 
     detail = (
         f"{totals['sources_ok']}/{totals['sources_enabled']} sources ok, "
-        f"{totals['endpoints_parsed']} endpoints parsed "
-        f"({totals['endpoints_failed']} malformed rejected)"
+        f"{totals['entries_parsed']} proxies parsed "
+        f"({totals['entries_failed']} malformed rejected)"
     )
-    return StageResult("collect", True, detail, [endpoints_path, report_path])
+    return StageResult("collect", True, detail, [proxies_path, report_path])
 
 
-def stage_normalize(cfg_path: Path, data_dir: Path) -> StageResult:
+def stage_normalize(cfg_path: Path, data_dir: Path, **_: Any) -> StageResult:
     """Stage 2: dedupe stage-1 output by connection identity."""
-    collected_path = data_dir / "collected" / "endpoints_raw.json"
+    collected_path = data_dir / "collected" / "proxies_raw.json"
     if not collected_path.exists():
         return StageResult(
             "normalize", False, f"stage-1 output not found: {collected_path} "
             "(run collect first)"
         )
     try:
-        endpoints = json.loads(collected_path.read_text(encoding="utf-8"))
+        proxies = json.loads(collected_path.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError) as exc:
         return StageResult("normalize", False, f"cannot read stage-1 output: {exc}")
-    if not isinstance(endpoints, list):
+    if not isinstance(proxies, list):
         return StageResult(
             "normalize", False, f"stage-1 output is not a JSON list: {collected_path}"
         )
 
-    normalized, report = normalize.normalize_endpoints(endpoints)
+    normalized, report = normalize.normalize_proxies(proxies)
 
     out_dir = data_dir / "normalized"
     out_dir.mkdir(parents=True, exist_ok=True)
-    endpoints_path = out_dir / "endpoints_normalized.json"
+    proxies_path = out_dir / "proxies_normalized.json"
     report_path = out_dir / "normalize_report.json"
 
-    endpoints_path.write_text(
+    proxies_path.write_text(
         json.dumps(normalized, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
     report_on_disk = dict(report)
-    report_on_disk["endpoints_file"] = endpoints_path.name
+    report_on_disk["proxies_file"] = proxies_path.name
     report_path.write_text(
         json.dumps(report_on_disk, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8",
     )
 
     detail = (
-        f"{report['output']['endpoints_out']} unique endpoints "
-        f"(from {report['input']['endpoints_in']}, "
+        f"{report['output']['proxies_out']} unique proxies "
+        f"(from {report['input']['proxies_in']}, "
         f"{report['output']['duplicates_collapsed']} duplicates collapsed, "
         f"{report['input']['invalid_dropped']} invalid dropped)"
     )
-    return StageResult("normalize", True, detail, [endpoints_path, report_path])
+    return StageResult("normalize", True, detail, [proxies_path, report_path])
 
 
-def run_pipeline(cfg_path: Path, data_dir: Path, stage_names: tuple[str, ...]) -> int:
+def run_pipeline(
+    cfg_path: Path,
+    data_dir: Path,
+    stage_names: tuple[str, ...],
+    stage_kwargs: dict[str, dict[str, Any]] | None = None,
+) -> int:
     """Run the selected stages in order; stop at the first failure.
 
     Each stage writes its own output only after it succeeds, so a failing
@@ -120,9 +127,11 @@ def run_pipeline(cfg_path: Path, data_dir: Path, stage_names: tuple[str, ...]) -
     stages = {
         "collect": stage_collect,
         "normalize": stage_normalize,
+        "validate": stage_validate,
     }
+    extra = stage_kwargs or {}
     for name in stage_names:
-        result = stages[name](cfg_path, data_dir)
+        result = stages[name](cfg_path, data_dir, **extra.get(name, {}))
         tag = "OK" if result.ok else "FAIL"
         print(f"[{tag}] {result.name}: {result.detail}")
         for output in result.outputs:
@@ -151,17 +160,37 @@ def _add_common_args(parser: argparse.ArgumentParser) -> None:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(
         prog="yuel",
-        description="YUEL — automated public proxy/VPN endpoint monitoring pipeline",
+        description="YUEL — automated plain SOCKS4/SOCKS5/HTTP proxy monitoring "
+        "pipeline (collect → normalize → validate → score → geo → publish)",
     )
     parser.add_argument("--version", action="version", version=f"yuel {__version__}")
     subparsers = parser.add_subparsers(dest="command", required=True)
     for name, help_text in (
-        ("collect", "run stage 1 only (fetch sources and extract endpoints)"),
+        ("collect", "run stage 1 only (fetch sources and parse proxy entries)"),
         ("normalize", "run stage 2 only (dedupe stage-1 output)"),
+        ("validate", "run stage 3 only (TCP prefilter + handshake checks)"),
         ("run", "run all implemented stages in order"),
     ):
         sub = subparsers.add_parser(name, help=help_text)
         _add_common_args(sub)
+        if name == "validate":
+            sub.add_argument(
+                "--limit",
+                type=int,
+                default=None,
+                help="live-check only the first N prefilter survivors "
+                "(demo/small runs; full run by default)",
+            )
+            sub.add_argument(
+                "--prefilter-only",
+                action="store_true",
+                help="skip the handshake check entirely (TCP reachability only)",
+            )
+            sub.add_argument(
+                "--validate-config",
+                default=None,
+                help="path to validate config (default: config/validate.json)",
+            )
     args = parser.parse_args(argv)
 
     cfg_path = (
@@ -172,9 +201,27 @@ def main(argv: list[str] | None = None) -> int:
     stage_chain = {
         "collect": ("collect",),
         "normalize": ("normalize",),
-        "run": ("collect", "normalize"),
+        "validate": ("validate",),
+        "run": ("collect", "normalize", "validate"),
     }[args.command]
-    return run_pipeline(cfg_path, data_dir, stage_chain)
+    stage_kwargs: dict[str, dict[str, Any]] = {}
+    if args.command == "validate":
+        stage_kwargs["validate"] = {
+            "limit": args.limit,
+            "prefilter_only": args.prefilter_only,
+            "validate_cfg_path": (
+                Path(args.validate_config) if args.validate_config else None
+            ),
+        }
+    elif args.command == "run":
+        stage_kwargs["validate"] = {
+            "validate_cfg_path": (
+                Path(args.validate_config)
+                if getattr(args, "validate_config", None)
+                else None
+            ),
+        }
+    return run_pipeline(cfg_path, data_dir, stage_chain, stage_kwargs)
 
 
 if __name__ == "__main__":

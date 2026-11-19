@@ -4,6 +4,14 @@ The source list lives in ``config/sources.json`` (data, not code) so it can
 grow over time without touching the collector. This module loads it, validates
 the schema strictly enough to catch typos early, and resolves the default
 paths (both overridable through environment variables).
+
+Scope note (v0.3.0): YUEL collects PLAIN proxies — bare ``ip:port`` /
+``ip:port:user:pass`` SOCKS4/SOCKS5/HTTP(S) servers used as chain hops —
+never standalone tunnel configs (vmess/vless/trojan/...). The ``format``
+field tells the collector which line shape a source uses; the ``claimed_*``
+fields record what the source ASSERTS about each entry (type, country,
+anonymity) so stage 3 can later compare claims against its own live
+validation results as a data-quality signal.
 """
 
 from __future__ import annotations
@@ -15,10 +23,20 @@ from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any
 
-VALID_SOURCE_TYPES = ("raw_http", "telegram_preview")
+VALID_FORMATS = (
+    "ip:port",            # 1.2.3.4:8080 (optionally with #-comments)
+    "ip:port:user:pass",  # 1.2.3.4:8080:user:pass
+    "ip:port:country",    # 1.2.3.4:8080:United States
+    "user:pass@ip:port",  # user:pass@1.2.3.4:8080
+    "proto-prefixed",     # socks5://1.2.3.4:1080[,US,City] / http://...,CSV columns
+    "json-structured",    # JSON API with per-record fields (ip, port, protocols, ...)
+)
+VALID_CLAIMED_TYPES = ("socks4", "socks5", "http", "https")
+VALID_ANONYMITY_LEVELS = ("transparent", "anonymous", "elite")
 DEFAULT_TIMEOUT_SECONDS = 20
-DEFAULT_MAX_BYTES = 8_000_000  # 8 MiB per source fetch
+DEFAULT_MAX_BYTES = 20_000_000  # 20 MiB per source fetch (b0ba67 http.txt ~2 MB)
 DEFAULT_FETCH_CONCURRENCY = 6
+DEFAULT_USER_AGENT = "YUEL-collector/0.3 (+https://github.com/Edsel-Rahimi/YUEL)"
 
 _SOURCE_ID_RE = re.compile(r"[a-z0-9][a-z0-9_-]*")
 
@@ -29,14 +47,16 @@ class ConfigError(ValueError):
 
 @dataclass
 class Source:
-    """One configured public source to collect from."""
+    """One configured public source of plain proxy entries."""
 
     id: str
-    type: str
     url: str
+    format: str
+    claimed_type: str | None = None
+    claimed_country: bool = False
+    claimed_anonymity: str | None = None
     enabled: bool = True
-    tags: list[str] = field(default_factory=list)
-    note: str = ""
+    notes: str = ""
 
 
 @dataclass
@@ -47,6 +67,7 @@ class CollectConfig:
     timeout_seconds: int = DEFAULT_TIMEOUT_SECONDS
     max_bytes: int = DEFAULT_MAX_BYTES
     fetch_concurrency: int = DEFAULT_FETCH_CONCURRENCY
+    user_agent: str = DEFAULT_USER_AGENT
 
 
 def _require(condition: bool, message: str) -> None:
@@ -60,13 +81,20 @@ def load_sources(path: str | os.PathLike[str]) -> CollectConfig:
     Schema::
 
         {
-          "schema_version": 1,
-          "defaults": {"timeout_seconds": 20, "max_bytes": 8000000,
-                       "fetch_concurrency": 6},
+          "schema_version": 2,
+          "defaults": {"timeout_seconds": 20, "max_bytes": 20000000,
+                       "fetch_concurrency": 6, "user_agent": "..."},
           "sources": [
-            {"id": "my-source", "type": "raw_http" | "telegram_preview",
-             "url": "https://...", "enabled": true,
-             "tags": ["..."], "note": "why this source exists"}
+            {"id": "my-source",
+             "url": "https://...",
+             "format": "ip:port" | "ip:port:user:pass" | "ip:port:country"
+                     | "user:pass@ip:port" | "proto-prefixed"
+                     | "json-structured",
+             "claimed_type": "socks5" | "socks4" | "http" | "https" | null,
+             "claimed_country": true | false,
+             "claimed_anonymity": "transparent" | "anonymous" | "elite" | null,
+             "enabled": true,
+             "notes": "when added / verified, quirks"}
           ]
         }
     """
@@ -79,6 +107,11 @@ def load_sources(path: str | os.PathLike[str]) -> CollectConfig:
         raise ConfigError(f"sources file is not valid JSON: {path}: {exc}") from exc
 
     _require(isinstance(raw, dict), "sources file must be a JSON object")
+    _require(
+        raw.get("schema_version") == 2,
+        f"unsupported sources schema_version: {raw.get('schema_version')!r} "
+        "(expected 2 — plain-proxy scope)",
+    )
     entries = raw.get("sources")
     _require(
         isinstance(entries, list) and bool(entries),
@@ -104,43 +137,62 @@ def load_sources(path: str | os.PathLike[str]) -> CollectConfig:
         _require(source_id not in seen, f"duplicate source id: {source_id}")
         seen.add(source_id)
 
-        source_type = entry.get("type")
-        _require(
-            source_type in VALID_SOURCE_TYPES,
-            f"{ctx}.type ({source_type!r}) must be one of {VALID_SOURCE_TYPES}",
-        )
-
         url = entry.get("url")
         _require(
             isinstance(url, str) and url.startswith(("http://", "https://")),
             f"{ctx}.url must be an http(s) URL",
         )
 
+        fmt = entry.get("format")
+        _require(
+            fmt in VALID_FORMATS,
+            f"{ctx}.format ({fmt!r}) must be one of {VALID_FORMATS}",
+        )
+
+        claimed_type = entry.get("claimed_type")
+        _require(
+            claimed_type is None or claimed_type in VALID_CLAIMED_TYPES,
+            f"{ctx}.claimed_type ({claimed_type!r}) must be null or one of "
+            f"{VALID_CLAIMED_TYPES}",
+        )
+
+        claimed_country = entry.get("claimed_country", False)
+        _require(
+            isinstance(claimed_country, bool),
+            f"{ctx}.claimed_country must be a boolean",
+        )
+
+        claimed_anonymity = entry.get("claimed_anonymity")
+        _require(
+            claimed_anonymity is None or claimed_anonymity in VALID_ANONYMITY_LEVELS,
+            f"{ctx}.claimed_anonymity ({claimed_anonymity!r}) must be null or one "
+            f"of {VALID_ANONYMITY_LEVELS}",
+        )
+
         enabled = entry.get("enabled", True)
         _require(isinstance(enabled, bool), f"{ctx}.enabled must be a boolean")
 
-        tags = entry.get("tags", [])
-        _require(
-            isinstance(tags, list) and all(isinstance(t, str) for t in tags),
-            f"{ctx}.tags must be a list of strings",
-        )
-
-        note = entry.get("note", "")
-        _require(isinstance(note, str), f"{ctx}.note must be a string")
+        notes = entry.get("notes", "")
+        _require(isinstance(notes, str), f"{ctx}.notes must be a string")
 
         sources.append(
             Source(
                 id=source_id,
-                type=source_type,
                 url=url,
+                format=fmt,
+                claimed_type=claimed_type,
+                claimed_country=claimed_country,
+                claimed_anonymity=claimed_anonymity,
                 enabled=enabled,
-                tags=tags,
-                note=note,
+                notes=notes,
             )
         )
 
     defaults = raw.get("defaults", {})
     _require(isinstance(defaults, dict), "'defaults' must be an object when present")
+    user_agent = defaults.get("user_agent", DEFAULT_USER_AGENT)
+    _require(isinstance(user_agent, str) and bool(user_agent),
+             "defaults.user_agent must be a non-empty string")
 
     return CollectConfig(
         sources=sources,
@@ -156,6 +208,7 @@ def load_sources(path: str | os.PathLike[str]) -> CollectConfig:
             defaults.get("fetch_concurrency", DEFAULT_FETCH_CONCURRENCY),
             "defaults.fetch_concurrency",
         ),
+        user_agent=user_agent,
     )
 
 

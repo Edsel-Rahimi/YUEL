@@ -4,6 +4,69 @@ All notable changes to YUEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [0.3.0] - 2026-11-19
+
+### Changed — SCOPE CORRECTION (breaking)
+
+The project goal was mis-specified before this release. YUEL collects **plain
+SOCKS4/SOCKS5/HTTP proxy servers** — bare `ip:port` / `ip:port:user:pass`
+entries meant to be chained as an outbound hop (egress-IP/country swap) —
+**not** standalone tunnel endpoints (`vmess://`, `vless://`, `trojan://`,
+`ss://`, `hysteria2://`, `tuic://`), which are complete VPN servers of a
+different product. Everything below re-aligns the pipeline with the
+corrected goal; v0.1.0/v0.2.0 shipped tunnel-scope stages 1–2, and an
+unreleased tunnel-scope stage 3 (xray/sing-box engine machinery) existed in
+the working tree and was replaced.
+
+- **Kept and adapted** (the genuinely reusable pieces):
+  - Repo scaffolding: layout, MIT, `.gitignore`, defensive per-source error
+    capture, never-raises parsing discipline, stage reports with samples,
+    `StageResult` + orchestrator + CLI pattern (`yuel/stage.py`,
+    `yuel/pipeline.py`), default-path helpers and strict config validation.
+  - `socks5.py` — the stdlib SOCKS5 no-auth CONNECT client and tunneled-HTTP
+    probe survive as the core of the new `yuel/proxy_client.py`, extended
+    with SOCKS5 username/password auth (RFC 1929), a SOCKS4 client, and
+    HTTP-proxy GET (absolute-URI) / CONNECT clients.
+  - Stage 3's TCP prefilter, bounded worker pool, latency percentiles, and
+    report structure carried over from the engine-based draft.
+- **Rewritten**:
+  - `config/sources.json` (schema v2): 24 verified plain-proxy sources
+    (GitHub raw lists + public aggregator APIs). Every seed source from the
+    corrected brief is included after a live check (clarketm is reachable
+    but stale since 2023 — kept `enabled: false` with a note). Independently
+    discovered and verified: monosans (×3 files), zloi-user/hideip.me (×3),
+    mmpx12 (×2), iplocate, geonode JSON API, ProxyScrape free API (×2).
+    Evaluated and skipped: ShmoTick (dead 404), roosterkid (near-dead),
+    TheSpeedX/PROXY-List (exact duplicate of SOCKS-List). Each source
+    records url, format, claimed type/country/anonymity, and
+    added/verified notes.
+  - `yuel/config.py` — schema v2 with `format` (six formats: `ip:port`,
+    `ip:port:user:pass`, `ip:port:country`, `user:pass@ip:port`,
+    `proto-prefixed`, `json-structured`) and claim fields.
+  - `yuel/collect.py` — fetch layer kept; all URI/tunnel parsing replaced by
+    plain-proxy line parsers for the six formats, junk-tolerant, claims
+    attached per entry; `identity` = `host|port|user|pass`.
+  - `yuel/normalize.py` — dedupe by the new identity (credentials are part
+    of it), deterministic claim merging (agreement → value, disagreement →
+    null + `claim_conflicts` flag), `sources` merge preserved.
+  - `yuel/validate.py` — the key difference: **no engine binaries at all**.
+    Prefilter (TCP connect per unique host:port, 128 workers) then direct
+    handshakes in claim-implied order (unknown → SOCKS5 → HTTP GET → HTTP
+    CONNECT); first real HTTP < 400 through the proxy wins and is recorded
+    as `type_confirmed` + `method_used`; claim-vs-measured calibration
+    (agree/disagree/unknown) in the report.
+- **Removed**: `yuel/engine_config.py`, `yuel/engines.py`, `yuel/socks5.py`
+  (superseded by `yuel/proxy_client.py`), `scripts/pin_engines.py`, the
+  engines block of `config/validate.json`, and their tests — plain-proxy
+  validation needs no external binaries, downloads, or process cleanup.
+- Tests: rewritten for the new scope — format parsers, claim merging, and
+  real handshake flows against in-process fake SOCKS5 (incl. RFC 1929 auth),
+  SOCKS4, and HTTP-proxy servers (plain GET / CONNECT / 407 / 405 paths).
+  Suite total: **93 tests**.
+- Docs: README rewritten for the corrected scope (chaining use case, source
+  formats, validation approach, plain-proxy output contract with an explicit
+  never-confuse-with-tunnel-configs note).
+
 ## [0.2.0] - 2026-11-19
 
 ### Added

@@ -1,34 +1,43 @@
-"""Stage 1 — collect: fetch public sources and extract endpoint URIs.
+"""Stage 1 — collect: fetch public plain-proxy sources and parse entries.
 
-Supported schemes: ``vmess``, ``vless``, ``trojan``, ``ss`` (SIP002 and the
-legacy whole-base64 form), ``hysteria2`` (including the ``hy2://`` alias) and
-``tuic``. ``ssr://`` is deliberately not supported (deprecated protocol).
+Scope (v0.3.0): PLAIN proxies — bare ``ip:port`` / ``ip:port:user:pass``
+SOCKS4/SOCKS5/HTTP(S) servers used as chain hops — never standalone tunnel
+configs (vmess/vless/trojan/...); that was the pre-0.3.0 scope and is gone.
 
-Design rules:
+Supported source formats (``config/sources.json``):
+
+- ``ip:port``            — ``1.2.3.4:8080`` lines; ``#`` comments skipped
+- ``ip:port:user:pass``  — ``1.2.3.4:8080:user:pass`` (password may contain ':')
+- ``ip:port:country``    — ``1.2.3.4:8080:United States`` (country is a claim)
+- ``user:pass@ip:port``  — ``user:pass@1.2.3.4:8080``
+- ``proto-prefixed``     — ``socks5://1.2.3.4:1080`` or
+                           ``socks5://1.2.3.4:1080,US,Alexandria`` (proxifly csv);
+                           the URL prefix is the per-line type claim
+- ``json-structured``    — JSON API rows with ip/port/protocols/country fields
+
+Design rules (unchanged from the v0.1.0 collector):
+
 - One dead source must never crash the run: every fetch is wrapped and the
   error is recorded per source in the run report.
-- Extraction is regex based and tolerant of real-world noise: HTML-escaped
-  text (Telegram web previews), trailing punctuation glued to tokens,
-  base64 with wrong padding / urlsafe alphabets, and whole-document base64
-  subscription blobs (a file that is a single base64 line).
-- Parsing never raises: malformed URIs are counted (a few samples are kept
-  for the report) instead of aborting the stage.
-- No deduplication here — that is stage 2 (normalize). Entries already carry
-  an ``identity`` key computed by :func:`endpoint_identity`, which is what
-  dedupe will key on: same host + port + secret is the same effective target
-  even when query parameters are reordered or the display tag differs.
+- Parsing never raises: malformed lines are counted (a few samples kept for
+  the report) instead of aborting the stage. Junk lines that real-world
+  lists occasionally contain (``error code: 1015`` …) are just malformed
+  entries.
+- No deduplication here — that is stage 2 (normalize). Entries carry an
+  ``identity`` key (``host|port|username|password``) which dedupe keys on.
+
+Type/country/anonymity are *claims*: sources assert them, YUEL does not
+trust them. Stage 3 measures the truth; keeping the claims next to the
+measured result is a data-quality signal (flag sources whose claims
+disagree with live validation).
 """
 
 from __future__ import annotations
 
-import base64
-import binascii
 import json
-import re
 import socket
 import time
 import urllib.error
-import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from dataclasses import dataclass, field
@@ -36,133 +45,45 @@ from datetime import datetime, timezone
 from html import unescape
 from typing import Any, Callable
 
-from .config import CollectConfig, Source
-
-USER_AGENT = "YUEL-collector/0.1 (+https://github.com/Edsel-Rahimi/YUEL)"
-
-SCHEME_ALIASES = {"hy2": "hysteria2"}
-SUPPORTED_SCHEMES = ("vmess", "vless", "trojan", "ss", "hysteria2", "tuic")
-
-# A URI token may contain almost anything except whitespace and characters
-# that commonly wrap URIs in HTML/Markdown (quotes, angle brackets, backticks,
-# parentheses/braces, pipes, asterisks, commas). Bracketed IPv6 literals keep
-# their square brackets; '#' is kept so the display tag stays attached.
-_URI_RE = re.compile(
-    r"\b(?:vmess|vless|trojan|ss|hysteria2|hy2|tuic)://[^\s<>\"'`,|*{}()\\]+"
+from .config import (
+    CollectConfig,
+    Source,
+    VALID_ANONYMITY_LEVELS,
+    VALID_CLAIMED_TYPES,
+    DEFAULT_USER_AGENT,
 )
 
-_HOST_RE = re.compile(
-    r"(?:\[[0-9A-Fa-f:.]+\])"
-    r"|(?:\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})"
-    r"|(?:[A-Za-z0-9](?:[A-Za-z0-9_-]{0,61}[A-Za-z0-9])?"
-    r"(?:\.[A-Za-z0-9](?:[A-Za-z0-9_-]{0,61}[A-Za-z0-9])?)*)"
-)
-_UUID_RE = re.compile(
-    r"[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
-)
-_B64_CHARSET_RE = re.compile(r"[A-Za-z0-9+/]+")
-_B64_DOCUMENT_RE = re.compile(r"[A-Za-z0-9+/=\s]+")
-# Punctuation that real-world lists glue to URI tokens ("vmess://xxx)." etc).
-_B64_STRIP_CHARS = ",.;:)]}\"'"
+USER_AGENT = DEFAULT_USER_AGENT
 
-_SCRIPT_STYLE_RE = re.compile(r"(?is)<(script|style)\b.*?</\1\s*>")
+# A URL scheme prefix maps to a claimed proxy type; unknown/ambiguous
+# schemes ("socks://") parse fine but carry no type claim.
+_SCHEME_TO_TYPE = {
+    "socks5": "socks5",
+    "socks4": "socks4",
+    "http": "http",
+    "https": "https",
+}
 
-_VMESS_PARAM_KEYS = (
-    "net", "type", "path", "host", "tls", "sni", "alpn", "fp", "scy", "altn",
-    "peers", "verify_cert", "headers",
-)
+_HOST_RE = r"(?:\[[0-9A-Fa-f:.]+\])|(?:\d{1,3}(?:\.\d{1,3}){3})|(?:[A-Za-z0-9](?:[A-Za-z0-9_-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z0-9](?:[A-Za-z0-9_-]{0,61}[A-Za-z0-9])?)*)"
+_HOST_RE_COMPILED = None  # built lazily via re below
 
 
 class _ParseError(ValueError):
-    """Internal: a URI could not be parsed; the message becomes the reason."""
+    """Internal: a line could not be parsed; the message becomes the reason."""
+
+
+def _host_ok(host: str) -> bool:
+    import re as _re
+
+    global _HOST_RE_COMPILED
+    if _HOST_RE_COMPILED is None:
+        _HOST_RE_COMPILED = _re.compile(_HOST_RE)
+    return _HOST_RE_COMPILED.fullmatch(host) is not None
 
 
 # ---------------------------------------------------------------------------
-# base64 helpers
+# shared parsing helpers (carried over from the v0.1.0 collector)
 # ---------------------------------------------------------------------------
-
-
-def _b64_decode(payload: str) -> str:
-    """Decode base64 text to UTF-8, tolerating urlsafe alphabets, missing
-    padding, stray whitespace, and up to two trailing junk characters.
-
-    Raises ValueError when no decoding attempt succeeds.
-    """
-    cleaned = "".join(payload.split()).strip(_B64_STRIP_CHARS)
-    for candidate in (cleaned, cleaned[:-1], cleaned[:-2]):
-        if not candidate:
-            continue
-        normalized = candidate.replace("-", "+").replace("_", "/").rstrip("=")
-        if not _B64_CHARSET_RE.fullmatch(normalized):
-            continue
-        padded = normalized + "=" * (-len(normalized) % 4)
-        try:
-            raw = base64.b64decode(padded, validate=True)
-            return raw.decode("utf-8")
-        except (binascii.Error, UnicodeDecodeError, ValueError):
-            continue
-    raise ValueError("not valid base64")
-
-
-def _looks_like_base64_document(text: str) -> bool:
-    """True when the whole document is plausibly a base64 subscription body."""
-    compact = "".join(text.split())
-    if len(compact) < 64 or len(compact) % 4 != 0:
-        return False
-    return _B64_DOCUMENT_RE.fullmatch(compact) is not None
-
-
-# ---------------------------------------------------------------------------
-# extraction
-# ---------------------------------------------------------------------------
-
-
-def _collect_unique(items: list[str]) -> list[str]:
-    seen: set[str] = set()
-    out: list[str] = []
-    for item in items:
-        if item not in seen:
-            seen.add(item)
-            out.append(item)
-    return out
-
-
-def extract_uris(text: str) -> tuple[list[str], str]:
-    """Extract endpoint URIs from a raw document.
-
-    Returns ``(uris, mode)``. ``mode`` is ``"text"`` normally, or
-    ``"base64"`` when the document is a whole-body base64 subscription blob
-    that only yields URIs after decoding. Literal duplicates are removed and
-    order is preserved.
-    """
-    uris = _collect_unique(_URI_RE.findall(text))
-    if uris:
-        return uris, "text"
-    if _looks_like_base64_document(text):
-        try:
-            decoded = _b64_decode(text)
-        except ValueError:
-            decoded = None
-        if decoded:
-            return _collect_unique(_URI_RE.findall(decoded)), "base64"
-    return [], "text"
-
-
-# ---------------------------------------------------------------------------
-# URI parsing
-# ---------------------------------------------------------------------------
-
-
-def _split_fragment(body: str) -> tuple[str, str]:
-    """Split off the ``#fragment`` (node display name); returns (core, name)."""
-    if "#" in body:
-        core, _, fragment = body.partition("#")
-        return core, urllib.parse.unquote(unescape(fragment))
-    return body, ""
-
-
-def _parse_query(query_string: str) -> dict[str, str]:
-    return dict(urllib.parse.parse_qsl(unescape(query_string), keep_blank_values=True))
 
 
 def _to_port(text: str) -> int:
@@ -175,20 +96,9 @@ def _to_port(text: str) -> int:
     return port
 
 
-def _split_hostport(core: str) -> tuple[str, str, int]:
-    """Split ``[userinfo@]host:port[/path]`` into (userinfo, host, port).
-
-    Handles bracketed IPv6 literals and userinfo that itself contains '@'
-    (split at the *last* '@').
-    """
-    core = unescape(core).strip()
-    if not core:
-        raise _ParseError("empty authority")
-    if "@" in core:
-        userinfo, _, authority = core.rpartition("@")
-    else:
-        userinfo, authority = "", core
-    authority = authority.split("/", 1)[0].strip()
+def _split_hostport(authority: str) -> tuple[str, int]:
+    """Split ``host:port`` (bracketed IPv6 allowed) into (host, port)."""
+    authority = unescape(authority).strip()
     if not authority:
         raise _ParseError("missing host")
     if authority.startswith("["):
@@ -202,259 +112,290 @@ def _split_hostport(core: str) -> tuple[str, str, int]:
         port = _to_port(rest[1:])
     else:
         if ":" not in authority:
-            raise _ParseError("missing port")
+            raise _ParseError(f"missing port in {authority!r}")
         host, _, port_text = authority.rpartition(":")
         if not host:
             raise _ParseError(f"missing host in {authority!r}")
         host = host.rstrip(".")  # tolerate fully-qualified "host.example.com."
         port = _to_port(port_text)
-    return userinfo, host, port
+    return host, port
 
 
-def _parse_vmess(uri: str) -> dict[str, Any]:
-    """Parse ``vmess://<base64(JSON)>`` — the v2fly sharing format."""
-    _, _, body = uri.partition("://")
-    core, fragment_name = _split_fragment(body)
-    token = core.split("?", 1)[0]
-    try:
-        text = _b64_decode(token)
-    except ValueError as exc:
-        raise _ParseError(f"vmess payload is not decodable base64 ({exc})") from exc
-    try:
-        payload = json.loads(text)
-    except json.JSONDecodeError as exc:
-        raise _ParseError(f"vmess payload is not JSON ({exc.msg})") from exc
-    if not isinstance(payload, dict):
-        raise _ParseError("vmess payload is not a JSON object")
-
-    host = str(payload.get("add", "") or "").strip()
-    if not host:
-        raise _ParseError("vmess payload missing 'add' (host)")
-    port_raw = payload.get("port")
-    if port_raw is None or str(port_raw).strip() == "":
-        raise _ParseError("vmess payload missing 'port'")
-    try:
-        port = _to_port(str(port_raw))
-    except _ParseError:
-        raise _ParseError(f"vmess port invalid: {port_raw!r}") from None
-    secret = str(payload.get("id", "") or "").strip()
-    if not secret:
-        raise _ParseError("vmess payload missing 'id' (uuid)")
-
-    params = {}
-    for key in _VMESS_PARAM_KEYS:
-        value = payload.get(key)
-        if value not in (None, ""):
-            params[key] = str(value)
-
-    aid_raw = payload.get("aid")
-    if aid_raw is None:
-        aid_raw = payload.get("alterId", 0)
-    try:
-        alter_id = int(str(aid_raw))
-    except ValueError:
-        alter_id = 0
-
-    extra: dict[str, Any] = {"alter_id": alter_id}
-    reserved = {"v", "ps", "add", "port", "id", "aid", "alterId", *_VMESS_PARAM_KEYS}
-    leftover = {
-        str(k): v
-        for k, v in payload.items()
-        if k not in reserved and v not in (None, "")
-    }
-    if leftover:
-        extra["fields"] = leftover
-
-    name = str(payload.get("ps", "") or "") or fragment_name
-    return {
-        "scheme": "vmess",
-        "host": host,
-        "port": port,
-        "secret": secret,
-        "params": params,
-        "name": name,
-        "extra": extra,
-    }
-
-
-def _split_ss_userinfo(userinfo: str) -> tuple[str, str]:
-    """Return (method, password) from an ss userinfo segment.
-
-    Accepts the base64-encoded ``method:password`` form (SIP002) and the
-    plain ``method:password`` form used by the 2022 ciphers. Base64 never
-    contains ':', so a raw ':' is checked first.
-    """
-    text = userinfo
-    if ":" not in text:
-        try:
-            text = _b64_decode(userinfo)
-        except ValueError as exc:
-            raise _ParseError(
-                "ss userinfo is neither method:password nor decodable base64"
-            ) from exc
-    if ":" not in text:
-        raise _ParseError("ss userinfo missing method:password separator")
-    method, _, password = text.partition(":")
-    if not method:
-        raise _ParseError("ss userinfo missing cipher method")
-    return method, password
-
-
-def _parse_ss(uri: str) -> dict[str, Any]:
-    """Parse ss:// in SIP002 form or the legacy whole-base64 form."""
-    _, _, body = uri.partition("://")
-    core, fragment_name = _split_fragment(body)
-    query: dict[str, str] = {}
-    if "?" in core:
-        core, _, query_string = core.partition("?")
-        query = _parse_query(query_string)
+def _split_userinfo(core: str) -> tuple[str, str]:
+    """Split ``user:pass@host:port`` into (userinfo, authority) at the last @."""
     if "@" in core:
-        userinfo, host, port = _split_hostport(core)
-    else:
-        # Legacy form: everything is base64 of method:password@host:port.
-        try:
-            text = _b64_decode(core)
-        except ValueError as exc:
-            raise _ParseError(f"ss payload is not decodable ({exc})") from exc
-        if "@" not in text:
-            raise _ParseError("ss legacy payload has no @host:port part")
-        userinfo, host, port = _split_hostport(text)
-    method, password = _split_ss_userinfo(userinfo)
+        userinfo, _, authority = core.rpartition("@")
+        if not userinfo:
+            raise _ParseError("empty credentials before '@'")
+        return userinfo, authority
+    return "", core
+
+
+def _split_creds(userinfo: str) -> tuple[str, str]:
+    user, sep, password = userinfo.partition(":")
+    if not user:
+        raise _ParseError("empty username in credentials")
+    if not sep:
+        raise _ParseError("credentials missing ':' separator (need user:pass)")
+    return user, password
+
+
+def _clean_creds(user: str, password: str) -> tuple[str, str]:
+    """Reject whitespace/control characters inside credentials."""
+    for name, value in (("username", user), ("password", password)):
+        if value and any(ch.isspace() or ord(ch) < 32 for ch in value):
+            raise _ParseError(f"{name} contains whitespace/control characters")
+    return user, password
+
+
+# ---------------------------------------------------------------------------
+# per-format line parsers — each returns a canonical candidate dict
+# ---------------------------------------------------------------------------
+
+
+def _candidate(
+    host: str,
+    port: int,
+    username: str,
+    password: str,
+    claimed_type: str | None,
+    claimed_country: str | None,
+    claimed_anonymity: str | None,
+) -> dict[str, Any]:
     return {
-        "scheme": "ss",
         "host": host,
         "port": port,
-        "secret": password,
-        "params": {k.lower(): v for k, v in query.items()},
-        "name": fragment_name,
-        "extra": {"method": method},
+        "username": username,
+        "password": password,
+        "claimed_type": claimed_type,
+        "claimed_country": claimed_country,
+        "claimed_anonymity": claimed_anonymity,
     }
 
 
-def _parse_userinfo_style(scheme: str, uri: str) -> dict[str, Any]:
-    """Parse vless/trojan/hysteria2/tuic URIs.
+def _parse_ip_port(line: str, source: Source) -> dict[str, Any]:
+    host, port = _split_hostport(line)
+    return _candidate(
+        host, port, "", "", source.claimed_type, None, source.claimed_anonymity
+    )
 
-    Shape: ``scheme://[secret@]host:port?params#name``. hysteria2 also
-    accepts the auth in a ``?auth=`` query parameter instead of userinfo.
+
+def _parse_ip_port_user_pass(line: str, source: Source) -> dict[str, Any]:
+    parts = line.split(":", 3)
+    if len(parts) == 2:
+        # tolerate cred-less lines inside a cred format
+        host, port = _split_hostport(line)
+        return _candidate(
+            host, port, "", "", source.claimed_type, None,
+            source.claimed_anonymity,
+        )
+    if len(parts) != 4:
+        raise _ParseError(f"expected ip:port:user:pass, got {len(parts)} fields")
+    host, port = _split_hostport(parts[0] + ":" + parts[1])
+    user, password = _clean_creds(parts[2], parts[3])
+    return _candidate(
+        host, port, user, password, source.claimed_type, None,
+        source.claimed_anonymity,
+    )
+
+
+def _parse_ip_port_country(line: str, source: Source) -> dict[str, Any]:
+    parts = line.split(":", 2)
+    if len(parts) not in (2, 3):
+        raise _ParseError(f"expected ip:port[:country], got {len(parts)} fields")
+    host, port = _split_hostport(parts[0] + ":" + parts[1])
+    country = parts[2].strip() if len(parts) == 3 else None
+    return _candidate(
+        host, port, "", "", source.claimed_type, country or None,
+        source.claimed_anonymity,
+    )
+
+
+def _parse_user_pass_at_host_port(line: str, source: Source) -> dict[str, Any]:
+    userinfo, authority = _split_userinfo(line)
+    host, port = _split_hostport(authority)
+    user, password = _clean_creds(*_split_creds(userinfo))
+    return _candidate(
+        host, port, user, password, source.claimed_type, None,
+        source.claimed_anonymity,
+    )
+
+
+def _parse_proto_prefixed(line: str, source: Source) -> dict[str, Any]:
+    first, _, extra_cols = line.partition(",")
+    url = first.strip()
+    _, _, body = url.partition("://")
+    if not _:
+        raise _ParseError("line has no protocol:// prefix")
+    scheme = url.partition("://")[0].lower()
+    core = body.split("/", 1)[0].strip()
+    userinfo, authority = _split_userinfo(core)
+    host, port = _split_hostport(authority)
+    username, password = ("", "")
+    if userinfo:
+        username, password = _clean_creds(*_split_creds(userinfo))
+    claimed_type = _SCHEME_TO_TYPE.get(scheme) or source.claimed_type
+    country = None
+    if extra_cols:
+        cols = [c.strip() for c in extra_cols.split(",")]
+        if cols and cols[0]:
+            country = cols[0]
+    return _candidate(
+        host, port, username, password, claimed_type, country,
+        source.claimed_anonymity,
+    )
+
+
+def _parse_json_document(text: str, source: Source) -> list[dict[str, Any]]:
+    """Parse a JSON-structured API document into candidates.
+
+    Expected shape (geonode-style): ``{"data": [ {...}, ... ]}`` with a
+    plain top-level list also accepted. Records need ``ip`` and ``port``;
+    ``protocols`` (list) / ``protocol`` / ``country`` / ``anonymityLevel``
+    are optional claims. Invalid records are reported as failures by the
+    caller via the returned candidates only — a record that cannot yield
+    host+port is skipped silently *unless* nothing parses at all.
     """
-    _, _, body = uri.partition("://")
-    core, fragment_name = _split_fragment(body)
-    query: dict[str, str] = {}
-    if "?" in core:
-        core, _, query_string = core.partition("?")
-        query = _parse_query(query_string)
-    userinfo, host, port = _split_hostport(core)
-    params = {k.lower(): v for k, v in query.items()}
-    extra: dict[str, Any] = {}
-    if scheme == "tuic":
-        uuid, sep, password = userinfo.partition(":")
-        if not sep:
-            raise _ParseError("tuic userinfo must be uuid:password")
-        secret = uuid
-        extra["password"] = password
-    elif scheme == "hysteria2":
-        secret = userinfo or params.get("auth", "")
-        if not secret:
-            raise _ParseError(
-                "hysteria2 endpoint has no auth (need userinfo or ?auth=)"
-            )
+    try:
+        document = json.loads(text)
+    except json.JSONDecodeError as exc:
+        raise _ParseError(f"document is not valid JSON ({exc.msg})") from exc
+
+    if isinstance(document, dict):
+        records = document.get("data", document.get("results", []))
     else:
-        secret = userinfo
-    return {
-        "scheme": scheme,
-        "host": host,
-        "port": port,
-        "secret": secret,
-        "params": params,
-        "name": fragment_name,
-        "extra": extra,
-    }
+        records = document
+    if not isinstance(records, list):
+        raise _ParseError("JSON document has no record list")
+
+    candidates: list[dict[str, Any]] = []
+    for record in records:
+        if not isinstance(record, dict):
+            continue
+        host = str(record.get("ip", "") or "").strip()
+        if not host:
+            continue
+        try:
+            port = _to_port(str(record.get("port", "")))
+        except _ParseError:
+            continue
+        protocols = record.get("protocols") or []
+        if not protocols and record.get("protocol"):
+            protocols = [record["protocol"]]
+        protocols = [
+            str(p).lower() for p in protocols if str(p).lower() in _SCHEME_TO_TYPE
+        ]
+        claimed_type = protocols[0] if len(protocols) == 1 else source.claimed_type
+        country = record.get("country")
+        anonymity = record.get("anonymityLevel") or record.get("anonymity")
+        anonymity = str(anonymity).lower() if anonymity else None
+        if anonymity not in VALID_ANONYMITY_LEVELS:
+            anonymity = None
+        candidates.append(
+            _candidate(host, port, "", "", claimed_type, country, anonymity)
+        )
+    if not candidates:
+        raise _ParseError("JSON document yielded no parsable records")
+    return candidates
 
 
-def endpoint_identity(endpoint: dict[str, Any]) -> str:
-    """Stable connection identity, the key stage 2 (normalize) will dedupe on.
+_LINE_PARSERS = {
+    "ip:port": _parse_ip_port,
+    "ip:port:user:pass": _parse_ip_port_user_pass,
+    "ip:port:country": _parse_ip_port_country,
+    "user:pass@ip:port": _parse_user_pass_at_host_port,
+    "proto-prefixed": _parse_proto_prefixed,
+}
 
-    Same host + port + secret = same effective target, regardless of query
-    parameter order or display tag. Host is lowercased (DNS names are
-    case-insensitive, and a trailing root dot is dropped); the scheme stays
-    in the key because one host:port can legitimately speak two protocols.
+
+# ---------------------------------------------------------------------------
+# identity + validation (public — stage 2 reuses these)
+# ---------------------------------------------------------------------------
+
+
+def proxy_identity(proxy: dict[str, Any]) -> str:
+    """Stable connection identity — the key stage 2 (normalize) dedupes on.
+
+    Same host + port + credentials = same effective target. Host is
+    lowercased with a trailing root dot dropped; credentials are part of the
+    identity because ``ip:port`` with different creds is a different access
+    path to the same server.
     """
     return "|".join(
         (
-            str(endpoint["scheme"]),
-            str(endpoint["host"]).lower().rstrip("."),
-            str(endpoint["port"]),
-            str(endpoint.get("secret", "")),
+            str(proxy["host"]).lower().rstrip("."),
+            str(proxy["port"]),
+            str(proxy.get("username", "")),
+            str(proxy.get("password", "")),
         )
     )
 
 
-def validate_endpoint(endpoint: dict[str, Any]) -> tuple[bool, str | None]:
-    """Public endpoint sanity check, reused by stage 2 (normalize)."""
-    scheme = endpoint["scheme"]
-    host = str(endpoint.get("host", ""))
-    if not host or not _HOST_RE.fullmatch(host):
+def validate_proxy(proxy: dict[str, Any]) -> tuple[bool, str | None]:
+    """Public candidate sanity check, reused by stage 2 (normalize)."""
+    host = str(proxy.get("host", ""))
+    if not host or not _host_ok(host):
         return False, f"invalid host {host!r}"
     octets = host.split(".")
     if len(octets) == 4 and all(o.isdigit() for o in octets):
         if any(int(o) > 255 for o in octets):
             return False, f"invalid IPv4 address {host!r}"
-    port = endpoint.get("port")
+    port = proxy.get("port")
     if not isinstance(port, int) or not 1 <= port <= 65535:
         return False, f"invalid port {port!r}"
-    secret = str(endpoint.get("secret", ""))
-    if scheme in ("vmess", "vless", "tuic") and not _UUID_RE.fullmatch(secret):
-        return False, f"invalid {scheme} uuid {secret!r}"
-    if scheme == "trojan" and not secret:
-        return False, "trojan endpoint missing password"
-    if scheme == "hysteria2" and not secret:
-        return False, "hysteria2 endpoint missing auth"
-    if scheme == "ss":
-        if not str(endpoint.get("extra", {}).get("method", "")):
-            return False, "ss endpoint missing cipher method"
-        if not secret:
-            return False, "ss endpoint missing password"
+    for key in ("username", "password"):
+        value = str(proxy.get(key, ""))
+        if any(ch.isspace() or ord(ch) < 32 for ch in value):
+            return False, f"{key} contains whitespace/control characters"
+    claimed_type = proxy.get("claimed_type")
+    if claimed_type is not None and claimed_type not in VALID_CLAIMED_TYPES:
+        return False, f"invalid claimed_type {claimed_type!r}"
     return True, None
 
 
-def parse_endpoint(uri: str) -> tuple[dict[str, Any] | None, str | None]:
-    """Parse one endpoint URI into the canonical dict.
+def parse_entry(
+    line: str, source: Source
+) -> tuple[dict[str, Any] | None, str | None]:
+    """Parse one source line into a canonical candidate dict.
 
-    Returns ``(endpoint, None)`` on success or ``(None, reason)`` on failure.
-    Never raises — a single malformed URI must not kill the run.
+    Returns ``(proxy, None)`` on success or ``(None, reason)`` on failure.
+    Never raises — a single malformed line must not kill the run.
     """
     try:
-        raw_scheme = uri.partition("://")[0].lower()
-        scheme = SCHEME_ALIASES.get(raw_scheme, raw_scheme)
-        if scheme not in SUPPORTED_SCHEMES:
-            return None, f"unsupported scheme {raw_scheme!r}"
-        if scheme == "vmess":
-            endpoint = _parse_vmess(uri)
-        elif scheme == "ss":
-            endpoint = _parse_ss(uri)
-        else:
-            endpoint = _parse_userinfo_style(scheme, uri)
+        cleaned = unescape(line).strip()
+        if not cleaned or cleaned.startswith("#"):
+            return None, None  # comments / blanks are not failures
+        parser = _LINE_PARSERS.get(source.format)
+        if parser is None:
+            raise _ParseError(f"format {source.format!r} has no line parser")
+        proxy = parser(cleaned, source)
     except _ParseError as exc:
         return None, str(exc)
     except Exception as exc:  # last-resort guard
         return None, f"unexpected parse error: {type(exc).__name__}: {exc}"
-    ok, reason = validate_endpoint(endpoint)
+    ok, reason = validate_proxy(proxy)
     if not ok:
         return None, reason or "validation failed"
-    endpoint["identity"] = endpoint_identity(endpoint)
-    return endpoint, None
+    proxy["source"] = source.id
+    proxy["identity"] = proxy_identity(proxy)
+    return proxy, None
 
 
 # ---------------------------------------------------------------------------
-# fetching
+# fetching (carried over from the v0.1.0 collector)
 # ---------------------------------------------------------------------------
 
 
-def fetch_url(url: str, timeout_seconds: int, max_bytes: int) -> tuple[int, bytes]:
+def fetch_url(
+    url: str,
+    timeout_seconds: int,
+    max_bytes: int,
+    user_agent: str = USER_AGENT,
+) -> tuple[int, bytes]:
     """Fetch a URL and return ``(http_status, raw_bytes)``. Raises on failure."""
     request = urllib.request.Request(
         url,
-        headers={"User-Agent": USER_AGENT, "Accept": "*/*"},
+        headers={"User-Agent": user_agent, "Accept": "*/*"},
     )
     with urllib.request.urlopen(request, timeout=timeout_seconds) as response:
         status = int(getattr(response, "status", 0) or 0)
@@ -464,11 +405,6 @@ def fetch_url(url: str, timeout_seconds: int, max_bytes: int) -> tuple[int, byte
     return status, data
 
 
-def _strip_telegram_chrome(page_html: str) -> str:
-    """Remove <script>/<style> blocks from a t.me/s page before extraction."""
-    return _SCRIPT_STYLE_RE.sub(" ", page_html)
-
-
 # ---------------------------------------------------------------------------
 # per-source processing and the stage report
 # ---------------------------------------------------------------------------
@@ -476,34 +412,31 @@ def _strip_telegram_chrome(page_html: str) -> str:
 
 @dataclass
 class SourceResult:
-    """Outcome of fetching + extracting one source (also when it failed)."""
+    """Outcome of fetching + parsing one source (also when it failed)."""
 
     source: Source
     ok: bool = False
     http_status: int | None = None
     bytes_read: int = 0
-    mode: str = "text"
-    uris_found: int = 0
-    endpoints_parsed: int = 0
-    endpoints_failed: int = 0
+    lines_read: int = 0
+    entries_parsed: int = 0
+    entries_failed: int = 0
     failure_samples: list[str] = field(default_factory=list)
     error: str | None = None
     elapsed_seconds: float = 0.0
-    endpoints: list[dict[str, Any]] = field(default_factory=list)
+    proxies: list[dict[str, Any]] = field(default_factory=list)
 
     def as_dict(self) -> dict[str, Any]:
         return {
             "id": self.source.id,
-            "type": self.source.type,
+            "format": self.source.format,
             "url": self.source.url,
-            "tags": self.source.tags,
             "ok": self.ok,
             "http_status": self.http_status,
             "bytes_read": self.bytes_read,
-            "mode": self.mode,
-            "uris_found": self.uris_found,
-            "endpoints_parsed": self.endpoints_parsed,
-            "endpoints_failed": self.endpoints_failed,
+            "lines_read": self.lines_read,
+            "entries_parsed": self.entries_parsed,
+            "entries_failed": self.entries_failed,
             "failure_samples": self.failure_samples,
             "error": self.error,
             "elapsed_seconds": round(self.elapsed_seconds, 3),
@@ -513,9 +446,9 @@ class SourceResult:
 def process_source(
     source: Source,
     cfg: CollectConfig,
-    fetch: Callable[[str, int, int], tuple[int, bytes]] = fetch_url,
+    fetch: Callable[..., tuple[int, bytes]] = fetch_url,
 ) -> SourceResult:
-    """Fetch one source and parse its endpoints. Never raises."""
+    """Fetch one source and parse its proxy entries. Never raises."""
     result = SourceResult(source=source)
     started = time.monotonic()
 
@@ -524,7 +457,9 @@ def process_source(
         return result
 
     try:
-        status, data = fetch(source.url, cfg.timeout_seconds, cfg.max_bytes)
+        status, data = fetch(
+            source.url, cfg.timeout_seconds, cfg.max_bytes, cfg.user_agent
+        )
     except urllib.error.HTTPError as exc:
         result.error = f"HTTP {exc.code}: {exc.reason}"
         return done()
@@ -541,29 +476,49 @@ def process_source(
     result.http_status = status
     result.bytes_read = len(data)
     text = data.decode("utf-8", errors="replace")
-    if source.type == "telegram_preview":
-        text = _strip_telegram_chrome(text)
 
-    uris, mode = extract_uris(text)
-    result.mode = mode
-    result.uris_found = len(uris)
-    for uri in uris:
-        endpoint, reason = parse_endpoint(uri)
-        if endpoint is None:
-            result.endpoints_failed += 1
+    def record(proxy: dict[str, Any] | None, reason: str | None, line: str) -> None:
+        if proxy is None:
+            if reason is None:
+                return  # comment / blank line — not a failure
+            result.entries_failed += 1
             if len(result.failure_samples) < 5:
-                result.failure_samples.append(f"{uri[:80]} -> {reason}")
-            continue
-        endpoint["source"] = source.id
-        result.endpoints.append(endpoint)
-        result.endpoints_parsed += 1
+                result.failure_samples.append(f"{line[:80]} -> {reason}")
+            return
+        result.proxies.append(proxy)
+        result.entries_parsed += 1
+
+    if source.format == "json-structured":
+        try:
+            candidates = _parse_json_document(text, source)
+        except _ParseError as exc:
+            result.entries_failed += 1
+            result.failure_samples.append(str(exc))
+            result.ok = True  # fetch worked; content was unusable
+            return done()
+        for candidate in candidates:
+            ok, reason = validate_proxy(candidate)
+            if not ok:
+                record(None, reason, json.dumps(candidate)[:80])
+                continue
+            candidate["source"] = source.id
+            candidate["identity"] = proxy_identity(candidate)
+            record(candidate, None, "")
+    else:
+        lines = text.splitlines()
+        result.lines_read = len(lines)
+        parser = _LINE_PARSERS[source.format]
+        for line in lines:
+            proxy, reason = parse_entry(line, source)
+            record(proxy, reason, line)
+
     result.ok = True
     return done()
 
 
 def run_collect(
     cfg: CollectConfig,
-    fetch: Callable[[str, int, int], tuple[int, bytes]] = fetch_url,
+    fetch: Callable[..., tuple[int, bytes]] = fetch_url,
     max_workers: int | None = None,
 ) -> dict[str, Any]:
     """Fetch every enabled source concurrently and build the stage report."""
@@ -579,9 +534,9 @@ def run_collect(
                 results.append(
                     SourceResult(source=source, error=f"worker crashed: {exc}")
                 )
-    endpoints: list[dict[str, Any]] = []
+    proxies: list[dict[str, Any]] = []
     for result in results:
-        endpoints.extend(result.endpoints)
+        proxies.extend(result.proxies)
 
     return {
         "stage": "collect",
@@ -593,7 +548,7 @@ def run_collect(
         },
         "sources": [r.as_dict() for r in sorted(results, key=lambda r: r.source.id)],
         "disabled_sources": [
-            {"id": s.id, "url": s.url, "note": s.note}
+            {"id": s.id, "url": s.url, "notes": s.notes}
             for s in cfg.sources
             if not s.enabled
         ],
@@ -601,9 +556,8 @@ def run_collect(
             "sources_enabled": len(enabled),
             "sources_ok": sum(1 for r in results if r.ok),
             "sources_failed": sum(1 for r in results if not r.ok),
-            "uris_found": sum(r.uris_found for r in results),
-            "endpoints_parsed": len(endpoints),
-            "endpoints_failed": sum(r.endpoints_failed for r in results),
+            "entries_parsed": len(proxies),
+            "entries_failed": sum(r.entries_failed for r in results),
         },
-        "endpoints": endpoints,
+        "proxies": proxies,
     }

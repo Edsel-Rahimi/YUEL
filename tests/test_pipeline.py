@@ -9,46 +9,48 @@ from pathlib import Path
 
 from yuel.pipeline import stage_normalize
 
-UUID = "550e8400-e29b-41d4-a716-446655440000"
+
+class ImportWiringTests(unittest.TestCase):
+    def test_stage_validate_importable_from_pipeline(self):
+        # regression: run_pipeline's stage chain references the name directly
+        from yuel.pipeline import stage_validate
+
+        self.assertTrue(callable(stage_validate))
 
 
-def make_collected_dir(data_dir: Path, endpoints: list) -> Path:
+def make_collected_dir(data_dir: Path, proxies: list) -> Path:
     collected = data_dir / "collected"
     collected.mkdir(parents=True)
-    (collected / "endpoints_raw.json").write_text(
-        json.dumps(endpoints), encoding="utf-8"
+    (collected / "proxies_raw.json").write_text(
+        json.dumps(proxies), encoding="utf-8"
     )
     return data_dir
 
 
+def make_proxy(**overrides) -> dict:
+    fields = {
+        "host": "1.2.3.4",
+        "port": 8080,
+        "username": "",
+        "password": "",
+        "claimed_type": "socks5",
+        "claimed_country": None,
+        "claimed_anonymity": None,
+        "identity": "1.2.3.4|8080||",
+        "source": "src-a",
+    }
+    fields.update(overrides)
+    return fields
+
+
 class StageNormalizeTests(unittest.TestCase):
     def test_writes_normalized_output(self):
-        endpoints = [
-            {
-                "scheme": "vless",
-                "host": "v.example.com",
-                "port": 443,
-                "secret": UUID,
-                "params": {},
-                "name": "a",
-                "extra": {},
-                "identity": f"vless|v.example.com|443|{UUID}",
-                "source": "src-a",
-            },
-            {
-                "scheme": "vless",
-                "host": "v.example.com",
-                "port": 443,
-                "secret": UUID,
-                "params": {},
-                "name": "b",
-                "extra": {},
-                "identity": f"vless|v.example.com|443|{UUID}",
-                "source": "src-b",
-            },
+        proxies = [
+            make_proxy(source="src-a"),
+            make_proxy(source="src-b", claimed_type=None),
         ]
         with tempfile.TemporaryDirectory() as tmp:
-            data_dir = make_collected_dir(Path(tmp), endpoints)
+            data_dir = make_collected_dir(Path(tmp), proxies)
             result = stage_normalize(Path("unused"), data_dir)
             self.assertTrue(result.ok, result.detail)
             self.assertEqual(len(result.outputs), 2)
@@ -72,7 +74,7 @@ class StageNormalizeTests(unittest.TestCase):
             data_dir = Path(tmp)
             collected = data_dir / "collected"
             collected.mkdir(parents=True)
-            (collected / "endpoints_raw.json").write_text("{not json", encoding="utf-8")
+            (collected / "proxies_raw.json").write_text("{not json", encoding="utf-8")
             result = stage_normalize(Path("unused"), data_dir)
             self.assertFalse(result.ok)
             self.assertIn("cannot read", result.detail)
@@ -82,7 +84,7 @@ class StageNormalizeTests(unittest.TestCase):
             data_dir = Path(tmp)
             collected = data_dir / "collected"
             collected.mkdir(parents=True)
-            (collected / "endpoints_raw.json").write_text('{"a": 1}', encoding="utf-8")
+            (collected / "proxies_raw.json").write_text('{"a": 1}', encoding="utf-8")
             result = stage_normalize(Path("unused"), data_dir)
             self.assertFalse(result.ok)
             self.assertIn("not a JSON list", result.detail)

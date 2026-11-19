@@ -1,51 +1,262 @@
 {
-  "schema_version": 1,
-  "description": "Public sources for the YUEL collector. Add sources here (never in code); the pipeline never crashes on a dead source, it records the error per source. Every source below was verified live on 2026-11-19 (fetch OK + endpoints extracted). See README.md 'Source config format' for the schema.",
+  "schema_version": 2,
+  "description": "Public sources of PLAIN SOCKS4/SOCKS5/HTTP(S) proxy servers for the YUEL collector (bare ip:port entries meant for chaining — never tunnel configs like vmess/vless). Add sources here (never in code); the pipeline never crashes on a dead source, it records the error per source. Every enabled source below was verified live on 2026-11-19 (HTTP 200 + plausible content). See README.md 'Source config format' for the schema.",
   "defaults": {
     "timeout_seconds": 20,
-    "max_bytes": 8000000,
-    "fetch_concurrency": 6
+    "max_bytes": 20000000,
+    "fetch_concurrency": 6,
+    "user_agent": "YUEL-collector/0.3 (+https://github.com/Edsel-Rahimi/YUEL)"
   },
   "sources": [
     {
-      "id": "solispirit-all",
-      "type": "raw_http",
-      "url": "https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt",
+      "id": "thespeedx-socks5",
+      "url": "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks5.txt",
+      "format": "ip:port",
+      "claimed_type": "socks5",
+      "claimed_country": false,
+      "claimed_anonymity": null,
       "enabled": true,
-      "tags": ["github", "aggregator", "multi-protocol"],
-      "note": "Large frequently-updated multi-protocol aggregation (~12.5k URIs at intake)."
+      "notes": "user seed list; verified live 2026-11-19 (2797 lines); TheSpeedX/PROXY-List mirrors the same data and is deliberately not added to avoid duplicate fetching"
     },
     {
-      "id": "barry-far-all",
-      "type": "raw_http",
-      "url": "https://raw.githubusercontent.com/barry-far/V2ray-Config/main/All_Configs_Sub.txt",
+      "id": "thespeedx-socks4",
+      "url": "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/socks4.txt",
+      "format": "ip:port",
+      "claimed_type": "socks4",
+      "claimed_country": false,
+      "claimed_anonymity": null,
       "enabled": true,
-      "tags": ["github", "aggregator", "multi-protocol"],
-      "note": "Large frequently-updated multi-protocol aggregation (~8.5k URIs at intake). Repo is 'V2ray-Config' (singular) — 'V2ray-Configs' is dead."
+      "notes": "user seed list; verified live 2026-11-19 (2623 lines)"
     },
     {
-      "id": "peasoft-nomorewalls",
-      "type": "raw_http",
-      "url": "https://raw.githubusercontent.com/peasoft/NoMoreWalls/master/list.txt",
+      "id": "thespeedx-http",
+      "url": "https://raw.githubusercontent.com/TheSpeedX/SOCKS-List/master/http.txt",
+      "format": "ip:port",
+      "claimed_type": "http",
+      "claimed_country": false,
+      "claimed_anonymity": null,
       "enabled": true,
-      "tags": ["github", "aggregator", "base64-subscription"],
-      "note": "Plain-text/base64 mixed list, updated regularly."
+      "notes": "user seed list; verified live 2026-11-19 (2743 lines)"
     },
     {
-      "id": "pawdroid-free-servers",
-      "type": "raw_http",
-      "url": "https://raw.githubusercontent.com/Pawdroid/Free-servers/main/sub",
+      "id": "proxifly-all",
+      "url": "https://raw.githubusercontent.com/proxifly/free-proxy-list/main/proxies/all/data.csv",
+      "format": "proto-prefixed",
+      "claimed_type": null,
+      "claimed_country": true,
+      "claimed_anonymity": null,
       "enabled": true,
-      "tags": ["github", "base64-subscription"],
-      "note": "Whole-body base64 subscription; exercises the base64 fallback path."
+      "notes": "user seed list; verified live 2026-11-19 (11800 lines); lines are proto://ip:port,COUNTRY,CITY so type is claimed per line; protocol-split files in the same repo are redundant with this one fetch"
     },
     {
-      "id": "tg-v2ray-vpn-free",
-      "type": "telegram_preview",
-      "url": "https://t.me/s/v2ray_vpn_free",
+      "id": "vpslab-all",
+      "url": "https://raw.githubusercontent.com/VPSLabCloud/VPSLab-Free-Proxy-List/main/all_proxies.txt",
+      "format": "ip:port",
+      "claimed_type": null,
+      "claimed_country": false,
+      "claimed_anonymity": null,
       "enabled": true,
-      "tags": ["telegram", "channel-preview"],
-      "note": "Public Telegram channel web preview; only channel of 3 candidates that returned real endpoints (the other two are placeholder pages)."
+      "notes": "user seed list; verified live 2026-11-19 (1769 lines, header updated the same day); raw paths were derived from the repo README at fetch time as instructed; '#'-comment lines are skipped by the parser"
+    },
+    {
+      "id": "vpslab-socks5",
+      "url": "https://raw.githubusercontent.com/VPSLabCloud/VPSLab-Free-Proxy-List/main/socks5_all.txt",
+      "format": "ip:port",
+      "claimed_type": "socks5",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "verified live 2026-11-19 (1140 lines); protocol claim comes from the file's own '# Protocol: socks5' header"
+    },
+    {
+      "id": "vpslab-socks4",
+      "url": "https://raw.githubusercontent.com/VPSLabCloud/VPSLab-Free-Proxy-List/main/socks4_all.txt",
+      "format": "ip:port",
+      "claimed_type": "socks4",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "verified live 2026-11-19 (152 lines)"
+    },
+    {
+      "id": "vpslab-http",
+      "url": "https://raw.githubusercontent.com/VPSLabCloud/VPSLab-Free-Proxy-List/main/http_all.txt",
+      "format": "ip:port",
+      "claimed_type": "http",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "verified live 2026-11-19 (373 lines)"
+    },
+    {
+      "id": "vpslab-elite",
+      "url": "https://raw.githubusercontent.com/VPSLabCloud/VPSLab-Free-Proxy-List/main/all_elite.txt",
+      "format": "ip:port",
+      "claimed_type": null,
+      "claimed_country": false,
+      "claimed_anonymity": "elite",
+      "enabled": true,
+      "notes": "verified live 2026-11-19 (1446 lines); anonymity claim from the file's '# Anonymity: elite' header; type deliberately unknown, validation decides"
+    },
+    {
+      "id": "b0ba67-http",
+      "url": "https://raw.githubusercontent.com/b0ba67/PROXY-List/master/http.txt",
+      "format": "ip:port",
+      "claimed_type": "http",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "user seed list; verified live 2026-11-19 (40566 lines — largest http list)"
+    },
+    {
+      "id": "b0ba67-socks5",
+      "url": "https://raw.githubusercontent.com/b0ba67/PROXY-List/master/socks5.txt",
+      "format": "ip:port",
+      "claimed_type": "socks5",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "user seed list; verified live 2026-11-19 (1677 lines)"
+    },
+    {
+      "id": "b0ba67-socks4",
+      "url": "https://raw.githubusercontent.com/b0ba67/PROXY-List/master/socks4.txt",
+      "format": "ip:port",
+      "claimed_type": "socks4",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "user seed list; verified live 2026-11-19 (2345 lines)"
+    },
+    {
+      "id": "clarketm-raw",
+      "url": "https://raw.githubusercontent.com/clarketm/proxy-list/master/proxy-list-raw.txt",
+      "format": "ip:port",
+      "claimed_type": "http",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": false,
+      "notes": "user seed list; reachable 2026-11-19 (400 lines) but the repo's own header shows the data was last updated 2023-03-24 — stale; kept disabled as a fallback instead of deleted, per the verify-before-adding instruction"
+    },
+    {
+      "id": "monosans-socks5",
+      "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks5.txt",
+      "format": "ip:port",
+      "claimed_type": "socks5",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered (hourly-updated repo, widely mirrored); verified live 2026-11-19 (85 lines)"
+    },
+    {
+      "id": "monosans-socks4",
+      "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/socks4.txt",
+      "format": "ip:port",
+      "claimed_type": "socks4",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (240 lines)"
+    },
+    {
+      "id": "monosans-http",
+      "url": "https://raw.githubusercontent.com/monosans/proxy-list/main/proxies/http.txt",
+      "format": "ip:port",
+      "claimed_type": "http",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (321 lines)"
+    },
+    {
+      "id": "zloi-user-socks5",
+      "url": "https://raw.githubusercontent.com/zloi-user/hideip.me/main/socks5.txt",
+      "format": "ip:port:country",
+      "claimed_type": "socks5",
+      "claimed_country": true,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (101 lines); lines carry a trailing country-name column which the parser keeps as a claim"
+    },
+    {
+      "id": "zloi-user-socks4",
+      "url": "https://raw.githubusercontent.com/zloi-user/hideip.me/main/socks4.txt",
+      "format": "ip:port:country",
+      "claimed_type": "socks4",
+      "claimed_country": true,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (127 lines)"
+    },
+    {
+      "id": "zloi-user-http",
+      "url": "https://raw.githubusercontent.com/zloi-user/hideip.me/main/http.txt",
+      "format": "ip:port:country",
+      "claimed_type": "http",
+      "claimed_country": true,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (119 lines)"
+    },
+    {
+      "id": "mmpx12-socks5",
+      "url": "https://raw.githubusercontent.com/mmpx12/proxy-list/master/socks5.txt",
+      "format": "ip:port",
+      "claimed_type": "socks5",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (280 lines); file sometimes contains junk lines (Cloudflare error text) — the parser drops them and counts them as malformed"
+    },
+    {
+      "id": "mmpx12-http",
+      "url": "https://raw.githubusercontent.com/mmpx12/proxy-list/master/http.txt",
+      "format": "ip:port",
+      "claimed_type": "http",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (441 lines); same junk-line tolerance as mmpx12-socks5"
+    },
+    {
+      "id": "iplocate-all",
+      "url": "https://raw.githubusercontent.com/iplocate/free-proxy-list/main/all-proxies.txt",
+      "format": "proto-prefixed",
+      "claimed_type": null,
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered via web search (repo updates every 30 min); verified live 2026-11-19 (1315 lines); type is claimed per line via the protocol prefix"
+    },
+    {
+      "id": "geonode-api",
+      "url": "https://proxylist.geonode.com/api/proxy-list?limit=500&page=1&sort_by=lastChecked&sort_type=desc&protocols=http,https,socks4,socks5",
+      "format": "json-structured",
+      "claimed_type": null,
+      "claimed_country": true,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (~4675 total, fetched 500/page); public free API built for exactly this purpose, no registration; rows carry claimed protocols + country + anonymityLevel per record"
+    },
+    {
+      "id": "proxyscrape-socks5",
+      "url": "https://api.proxyscrape.com/v2/?request=getproxies&protocol=socks5&timeout=10000",
+      "format": "ip:port",
+      "claimed_type": "socks5",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (1047 lines); public free API endpoint, no registration"
+    },
+    {
+      "id": "proxyscrape-http",
+      "url": "https://api.proxyscrape.com/v2/?request=getproxies&protocol=http&timeout=10000",
+      "format": "ip:port",
+      "claimed_type": "http",
+      "claimed_country": false,
+      "claimed_anonymity": null,
+      "enabled": true,
+      "notes": "AI-discovered; verified live 2026-11-19 (432 lines)"
     }
   ]
 }

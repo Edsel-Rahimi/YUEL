@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "prefilter": {
+    "timeout_seconds": 3,
+    "workers": 128
+  },
+  "probe": {
+    "url": "http://www.gstatic.com/generate_204",
+    "timeout_seconds": 8
+  },
+  "workers": 100
+}

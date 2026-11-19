@@ -1,12 +1,22 @@
 # YUEL
 
-Automated pipeline that collects publicly available proxy/VPN endpoint
-configs (vmess / vless / trojan / ss / hysteria2 / tuic), really tests which
-ones are alive, scores and tiers them by quality, classifies them by country,
-and publishes machine-readable files that another system can consume.
+Automated pipeline that collects publicly published **plain SOCKS4/SOCKS5/HTTP
+proxy servers** — bare `ip:port` / `ip:port:user:pass` entries — really tests
+which ones are alive (and which protocol each one actually speaks), scores and
+tiers them by quality, classifies them by country, and publishes
+machine-readable files that a proxy-chaining consumer can use directly to
+swap its egress hop (e.g. "give me an Italian exit").
 
-**Status: stages 1–2 (collect, normalize) implemented and shipped. Later
-stages are being built one at a time — see the stage table below.**
+**These are NOT tunnel configs.** YUEL deliberately does not handle
+`vmess://` / `vless://` / `trojan://` / `ss://` / `hysteria2://` / `tuic://`
+URIs — those are standalone VPN endpoints with their own tunnel encryption,
+a different product (that was the pre-0.3.0 scope; it has been removed).
+Plain proxies chain in FRONT of or BEHIND another connection as an outbound
+hop; their output contract below is different by design and must never be
+confused with a tunnel-config feed downstream.
+
+**Status: stages 1–3 (collect, normalize, validate) implemented against the
+corrected scope. Later stages are built one at a time — see the table.**
 
 This repository is a fresh, independently written codebase. It shares no
 code, config, or history with any other project.
@@ -17,30 +27,34 @@ code, config, or history with any other project.
 
 ```
  config/sources.json
+ (plain-proxy list sources)
         │
         ▼
  ┌─────────────┐    ┌─────────────┐    ┌──────────────┐    ┌─────────┐
  │ 1. collect  │───▶│ 2. normalize│───▶│ 3. validate  │───▶│ 4. score│
- │ fetch +     │    │ dedupe by   │    │ TCP prefilter│    │ weighted│
- │ extract URIs│    │ connection  │    │ + xray-core /│    │ formula │
- │             │    │ identity    │    │ sing-box live│    │ + tiers │
+ │ fetch lists │    │ dedupe by   │    │ TCP prefilter│    │ latency,│
+ │ parse ip:port│   │ connection  │    │ + real SOCKS5│    │ success,│
+ │ (+creds)    │    │ identity    │    │ /SOCKS4/HTTP │    │ freshness│
+ │             │    │             │    │ handshakes   │    │ anonymity│
  └─────────────┘    └─────────────┘    └──────────────┘    └─────────┘
                                                                 │
  ┌─────────────┐    ┌─────────────┐    ┌──────────────────────────▼──┐
  │ 7. automate │◀───│ 6. publish  │◀───│ 5. geo                        │
- │ scheduled   │    │ documented  │    │ IP→country via public         │
- │ CI runs     │    │ output files│    │ IP-to-ASN table               │
+ │ scheduled   │    │ {ip,port,   │    │ IP→country via a free public  │
+ │ CI runs     │    │ type,user?, │    │ IP-to-country table           │
+ │             │    │ pass?,countr│    │                               │
+ │             │    │ ,score,tier}│    │                               │
  └─────────────┘    └─────────────┘    └───────────────────────────────┘
 ```
 
 | Stage | What it does | Status |
 | --- | --- | --- |
-| 1. collect | Fetch raw text from configured public sources (plain HTTP files and `https://t.me/s/<channel>` Telegram web previews), extract endpoint URIs per scheme, parse each into a canonical dict. One dead source never crashes the run — errors are recorded per source. | **implemented** (v0.1.0) |
-| 2. normalize | Dedupe by *effective connection identity* (`scheme\|host\|port\|secret`, host lowercased — not literal string; query-param order and display tags are ignored), deterministically keep the richest metadata per target, merge all source ids into a sorted `sources` list, drop invalid rows. Byte-for-byte reproducible. | **implemented** (v0.2.0) |
-| 3. validate | Cheap TCP-connect prefilter; survivors get a real one-shot xray-core (vmess/vless/trojan/ss) or sing-box (hysteria2/tuic) process with a local SOCKS5 inbound routed to that outbound; a real fetch through the port measures latency and success. Engine binaries are pinned to exact versions and cached. Concurrency-limited worker pool; process cleanup on timeout. | planned |
-| 4. score | Weighted formula over latency, success rate, freshness, and protocol strength (reality/hysteria2 > plain vless > ss > ssr); each component 0–100, weights re-normalized when a component is unavailable; final score mapped to configurable tiers (gold/silver/bronze). | planned |
-| 5. geo | Country of literal-IP hosts via a free public IP-to-ASN/country table (iptoasn.com `ip2asn-v4.tsv`), refreshed regularly; table download failure degrades to "unclassified" instead of crashing. Domain-hosted endpoints are explicitly `unclassified`, never guessed. | planned |
-| 6. publish | Writes per-tier lists, per-country lists, an auditable results/history JSON, and a run summary to a documented directory layout (contract below). | planned |
+| 1. collect | Fetch list sources (raw `ip:port` text files, proto-prefixed csv, JSON APIs) from GitHub repos and public aggregator APIs, parse every entry into a canonical dict with the source's *claims* (type / country / anonymity) attached. One dead source never crashes the run — errors are recorded per source; malformed lines are counted and sampled. | **implemented** (v0.3.0) |
+| 2. normalize | Dedupe by *effective connection identity* (`host\|port\|user\|pass`, host lowercased — same server with different credentials stays separate), merge claims deterministically (agreement → value; disagreement → null + flagged as a data-quality signal), merge sorted `sources` lists, drop invalid rows. Byte-for-byte reproducible. | **implemented** (v0.3.0) |
+| 3. validate | Two passes, **no engine binaries**. Prefilter: plain TCP connect per unique `host:port` (128 workers). Handshake pass: real SOCKS5 greeting (+ RFC 1929 auth when creds exist) → CONNECT, real SOCKS4 CONNECT, real HTTP proxy GET (absolute-URI) / CONNECT — tried in claim-implied order (unknown → SOCKS5 first, then HTTP GET, then HTTP CONNECT). The first protocol that returns a real HTTP status < 400 through the proxy wins and is recorded as `type_confirmed`. Bounded worker pool, latency percentiles, claim-vs-measured calibration in the report. | **implemented** (v0.3.0) |
+| 4. score | Weighted formula over latency, success rate, freshness — plus *anonymity level* (transparent / anonymous / elite) where the source or the proxy's behavior reveals it, replacing the old "protocol strength" component (plain proxies are undifferentiated; there is no reality/hysteria2 tier to rank). Mapped to configurable tiers (gold/silver/bronze). | planned |
+| 5. geo | Country of literal-IP hosts via a free public IP-to-country table (iptoasn.com `ip2asn-v4.tsv`), refreshed regularly; table download failure degrades to "unclassified" instead of crashing. Domain-hosted endpoints are explicitly `unclassified`, never guessed. This is what lets a member pick "Italy" and get an Italian-exit proxy. | planned |
+| 6. publish | Writes the chaining-consumer contract (see below): per-tier lists, **per-country lists**, audit history, run summary. Explicitly a plain-proxy format — never a vmess/vless/... feed. | planned |
 | 7. automate | One entrypoint runs all stages in order with graceful partial-failure handling; GitHub Actions runs it on a schedule and commits the output. | planned |
 
 ## Repository layout
@@ -51,48 +65,62 @@ YUEL/
 ├── CHANGELOG.md               ← running changelog, updated every stage
 ├── LICENSE                    ← MIT
 ├── config/
-│   └── sources.json           ← the source list (data, not code)
+│   ├── sources.json           ← the plain-proxy source list (data, not code)
+│   └── validate.json          ← validate stage: probe URL + timeouts + workers
 ├── yuel/
 │   ├── __init__.py
 │   ├── config.py              ← sources-file loading + strict schema validation
-│   ├── collect.py             ← stage 1: fetchers + URI extraction/parsing
-│   ├── normalize.py           ← stage 2: identity dedupe + canonical list
+│   ├── collect.py             ← stage 1: fetchers + plain-proxy line parsers
+│   ├── normalize.py           ← stage 2: identity dedupe + claim merge
+│   ├── proxy_client.py        ← stage 3: SOCKS5(+auth)/SOCKS4/HTTP proxy clients
+│   ├── validate.py            ← stage 3: TCP prefilter + handshake checks
+│   ├── stage.py               ← shared StageResult dataclass
 │   └── pipeline.py            ← orchestrator + CLI entrypoint
 ├── tests/
-│   ├── test_collect.py        ← extraction, parsing, identity, run error-handling
+│   ├── test_collect.py        ← format parsers, identity, run error-handling
 │   ├── test_config.py         ← sources-file schema validation
-│   ├── test_normalize.py      ← dedupe, merge policy, determinism
-│   └── test_pipeline.py       ← stage chaining + graceful failure (file-based)
-└── data/                      ← stage output (gitignored; publish stage will
-                                  define what gets committed)
+│   ├── test_normalize.py      ← dedupe, claim merging, determinism
+│   ├── test_pipeline.py       ← stage chaining + graceful failure (file-based)
+│   ├── test_proxy_client.py   ← handshakes against fake SOCKS5/SOCKS4/HTTP servers
+│   └── test_validate.py       ← prefilter + checks + stage flows (fake proxies)
+└── data/                      ← stage output (gitignored; the publish stage
+                                  will define what gets committed)
 ```
 
 ## Quickstart
 
-Python 3.10+ — **no third-party dependencies** (stdlib only).
+Python 3.10+ — **no third-party dependencies** (stdlib only), and validation
+spawns **no binaries**: everything is raw sockets.
 
 ```bash
-# run the test suite (pure logic, no network)
+# run the test suite (pure logic + fake proxy servers, no network)
 python3 -m unittest discover -s tests -t .
 
-# run all implemented stages in order (collect → normalize)
+# run all implemented stages in order (collect → normalize → validate)
 python3 -m yuel.pipeline run
 
 # or a single stage
-python3 -m yuel.pipeline collect     # stage 1: fetch sources, extract endpoints
+python3 -m yuel.pipeline collect     # stage 1: fetch sources, parse entries
 python3 -m yuel.pipeline normalize   # stage 2: dedupe stage-1 output
+python3 -m yuel.pipeline validate    # stage 3: prefilter + handshake checks
+python3 -m yuel.pipeline validate --prefilter-only   # pass 1 only
+python3 -m yuel.pipeline validate --limit 100        # demo: first 100 survivors
 
 # stage output lands in:
 #   data/collected/
-#     endpoints_raw.json       canonical endpoint dicts, one per extracted URI
+#     proxies_raw.json         canonical proxy dicts, one per parsed line
 #     collect_report.json      per-source status, totals, failure samples
 #   data/normalized/
-#     endpoints_normalized.json  ONE entry per effective connection target
-#     normalize_report.json      dedupe totals, by-scheme counts, audit samples
+#     proxies_normalized.json  ONE entry per effective connection target
+#     normalize_report.json    dedupe totals, claim counts, audit samples
+#   data/validated/
+#     proxies_validated.json   tested targets with check verdict + latency
+#     validate_report.json     prefilter/check totals, percentiles, calibration
 ```
 
 Every command accepts `--sources PATH` and `--data-dir PATH`; the same can be
-set through the `YUEL_SOURCES` and `YUEL_DATA_DIR` environment variables.
+set through the `YUEL_SOURCES` and `YUEL_DATA_DIR` environment variables
+(`YUEL_VALIDATE_CONFIG` overrides the validate config path).
 
 Exit code is 0 when every stage succeeded, 1 when a stage failed (the run
 stops at the first failing stage; earlier stages' output stays intact).
@@ -100,138 +128,217 @@ stops at the first failing stage; earlier stages' output stays intact).
 ## Source config format
 
 Sources live in `config/sources.json` — never hardcoded — so the list can
-grow without touching the collector:
+grow without touching the collector. Every source was verified live
+(HTTP 200 + plausible content) before being added; the verification date is
+recorded in its `notes`:
 
 ```json
 {
-  "schema_version": 1,
-  "defaults": {"timeout_seconds": 20, "max_bytes": 8000000, "fetch_concurrency": 6},
+  "schema_version": 2,
+  "defaults": {"timeout_seconds": 20, "max_bytes": 20000000,
+               "fetch_concurrency": 6, "user_agent": "YUEL-collector/0.3"},
   "sources": [
     {
       "id": "my-source",            // lowercase a-z, digits, '-', '_'; unique
-      "type": "raw_http",           // "raw_http" or "telegram_preview"
       "url": "https://...",         // http(s) only
+      "format": "ip:port",          // see the six formats below
+      "claimed_type": "socks5",     // source-level claim: socks4/socks5/http/https/null
+      "claimed_country": false,     // does the source assert a country?
+      "claimed_anonymity": null,    // "transparent"/"anonymous"/"elite"/null
       "enabled": true,              // optional, default true
-      "tags": ["github"],           // optional
-      "note": "why this source exists"  // optional
+      "notes": "added 2026-11-19; verified live 2026-11-19 (2797 lines)"
     }
   ]
 }
 ```
 
+The six supported `format` values:
+
+| format | line shape | example |
+| --- | --- | --- |
+| `ip:port` | bare entries, `#` comments skipped | `1.2.3.4:8080` |
+| `ip:port:user:pass` | credentials (password may contain `:`) | `1.2.3.4:8080:alice:s3cret` |
+| `ip:port:country` | trailing country-name claim | `1.2.3.4:8080:United States` |
+| `user:pass@ip:port` | credentials before the host | `alice:s3cret@1.2.3.4:8080` |
+| `proto-prefixed` | `proto://[user:pass@]ip:port[,COUNTRY,CITY]` | `socks5://1.2.3.4:1080,US,Alexandria` |
+| `json-structured` | JSON rows with ip/port/protocols/country/anonymity | geonode API |
+
 Rules:
 
-- `type: "raw_http"` — plain file (URI list or whole-body base64 subscription).
-- `type: "telegram_preview"` — public channel web preview at `https://t.me/s/<channel>`.
+- Claims are **not trusted** — they are recorded so stage 3 can calibrate
+  them against its own live measurements; a source whose claims frequently
+  disagree is a future data-quality flag.
 - A dead source never fails the stage: its error is recorded in
   `collect_report.json` under that source's entry and the run continues.
-- Malformed entries inside a source are counted, with up to 5 samples kept in
-  `failure_samples` for debugging.
+- Malformed lines inside a source (junk, error pages, bad ports) are counted,
+  with up to 5 samples kept in `failure_samples` for debugging.
+- Only openly published sources are added (raw GitHub files, public APIs
+  built for this exact purpose). No payment, no registration, no scraping
+  against robots/ToS. Stale repos are kept `enabled: false` with a note
+  rather than deleted, so the history stays auditable.
 
-## Stage 1: extraction approach
+## Stage 1: parsing approach
 
-1. **Regex per scheme.** One token regex matches all supported schemes
-   (`vmess|vless|trojan|ss|hysteria2|hy2|tuic`) with a charset that excludes
-   whitespace and the characters that wrap URIs in HTML/Markdown (quotes,
-   angle brackets, backticks, parentheses, braces, pipes, asterisks,
-   commas). This splits comma-separated lists and ignores `ssr://` and
-   plain `http(s)://` URLs.
-2. **HTML tolerance.** Telegram preview pages are fetched, `<script>` /
-   `<style>` blocks are stripped, and `&amp;`-style entities are unescaped
-   before/while parsing, so URIs embedded in message HTML parse correctly.
-3. **Whole-body base64 fallback.** If a document yields no URIs directly and
-   looks like one big base64 blob (subscription style), it is decoded and
-   re-scanned; the report records `mode: "base64"` per source.
-4. **Per-scheme parsing.**
-   - `vmess://` — base64(JSON) payload (v2fly format); requires `add`,
-     `port`, `id`; transport/TLS keys map into `params`; extra JSON keys are
-     preserved under `extra.fields`.
-   - `ss://` — both SIP002 (`ss://b64(method:pass)@host:port`) and the
-     legacy whole-base64 form, plus plain 2022-cipher userinfos; `plugin`
-     query preserved.
-   - `vless://`, `trojan://` — `secret@host:port?params#tag`.
-   - `hysteria2://` (alias `hy2://`) — auth from userinfo or `?auth=`.
-   - `tuic://` — `uuid:password@host:port`.
-   - Bracketed IPv6 literals, trailing-dot FQDNs, userinfo containing `@`
-     (split at the last `@`), wrong base64 padding, urlsafe alphabets, and
-     trailing punctuation glued to tokens are all handled.
-5. **Validation and canonical form.** Every parsed entry is checked (host
-   shape, port range, uuid shape where applicable, cipher method present for
-   ss, auth present for hysteria2) and turned into a canonical dict.
-
-### Canonical endpoint schema (v0.1 draft)
-
-`data/collected/endpoints_raw.json` is a JSON array of these objects:
+1. **Format-driven parsing.** Each source declares its line format; one
+   small parser per format handles host/port extraction (bracketed IPv6
+   literals supported, trailing-dot FQDNs tolerated), credential splitting
+   (split at the last `@`; password keeps embedded colons), and claim
+   extraction (protocol prefix, country column, anonymity level).
+2. **Junk tolerance.** Comment/blank lines are skipped silently; anything
+   unparseable (Cloudflare error pages that leak into some lists, bad ports,
+   whitespace inside credentials) becomes a counted failure with samples.
+3. **JSON APIs.** Geonode-style documents (`{"data": [...]}`) yield one
+   candidate per record; a record with exactly one claimed protocol gets it,
+   a multi-protocol record stays `claimed_type: null` for validation to
+   decide; `anonymityLevel` is kept when it is one of the known levels.
+4. **Canonical form.** Every parsed entry passes a sanity check (host shape,
+   port range, credential charset) and becomes:
 
 ```json
 {
-  "scheme": "vless",
-  "host": "v1.example.com",
-  "port": 443,
-  "secret": "<uuid or password>",
-  "params": {"security": "reality", "sni": "www.example.com", "pbk": "..."},
-  "name": "display tag / ps field",
-  "extra": {"method": "aes-256-gcm"},     // scheme-specific extras
-  "identity": "vless|v1.example.com|443|<secret>",
-  "source": "solispirit-all"
+  "host": "1.2.3.4",
+  "port": 8080,
+  "username": "",
+  "password": "",
+  "claimed_type": "socks5",
+  "claimed_country": "US",
+  "claimed_anonymity": null,
+  "identity": "1.2.3.4|8080||",
+  "source": "thespeedx-socks5"
 }
 ```
 
-- `identity` is the dedupe key stage 2 uses: same host + port + secret is
-  the same target even when query-param order or the display tag differs.
-  Host is lowercased (trailing root dot stripped); scheme is part of the key
-  because one host:port can speak two protocols.
-- Stage 1 does **not** dedupe across sources; that is normalize's job.
+`identity` is the dedupe key stage 2 uses: `host|port|username|password`
+with the host lowercased. Stage 1 does **not** dedupe; that is normalize's
+job.
 
-### Normalized endpoint schema (v0.1 draft)
+### Normalized proxy schema (v0.1 draft)
 
-`data/normalized/endpoints_normalized.json` is a JSON array with **one entry
+`data/normalized/proxies_normalized.json` is a JSON array with **one entry
 per effective connection target**, sorted by `identity`:
 
 ```json
 {
-  "scheme": "vless",
-  "host": "v1.example.com",
-  "port": 443,
-  "secret": "<uuid or password>",
-  "params": {"security": "reality", "sni": "www.example.com", "pbk": "..."},
-  "name": "display tag / ps field",
-  "extra": {"method": "aes-256-gcm"},
-  "identity": "vless|v1.example.com|443|<secret>",
-  "sources": ["solispirit-all", "barry-far-all"]   // sorted, unique
+  "host": "1.2.3.4",
+  "port": 8080,
+  "username": "",
+  "password": "",
+  "claimed_type": "socks5",
+  "claimed_country": "US",
+  "claimed_anonymity": null,
+  "identity": "1.2.3.4|8080||",
+  "sources": ["thespeedx-socks5", "monosans-socks5"],
+  "claim_conflicts": []
 }
 ```
 
 Merge rules (documented so downstream consumers can rely on them):
 
-- The representative metadata (`params`/`name`/`extra`) is chosen
-  deterministically: the entry with the most params, then most extras, then
-  longest name; ties are broken by a canonical JSON dump — runs are
-  reproducible byte-for-byte.
+- Credentials are part of the identity: the same server with different
+  credentials is a different entry (different access path).
+- Claims are merged across duplicates: when all sources agree, the value is
+  kept; when they disagree, the claim is set to `null` and the conflict is
+  listed in `claim_conflicts` (`"type"`, `"country"`, `"anonymity"`).
 - `sources` accumulates every source id that published this target — how
-  many independent lists carried the node is preserved for later scoring.
+  many independent lists carried the server is preserved for later scoring.
 - Rows failing validation (defensive re-check of stage-1 output) are dropped
   and counted in `normalize_report.json` with up to 5 samples.
 
+## Stage 3: validation approach
+
+**Pass 1 — TCP prefilter.** One plain `socket.create_connection` per
+*unique* `host:port` pair (128 workers). Unreachable targets never reach
+the handshake pass — the prefilter keeps the expensive pass small. Their
+verdict lives in `validate_report.json`, not in the validated list.
+
+**Pass 2 — real protocol handshakes (no engines, no subprocesses).** Each
+survivor is tried with the strategies its claim implies:
+
+| claimed type | strategies tried, in order |
+| --- | --- |
+| `socks5` | SOCKS5 greeting (+ RFC 1929 username/password when creds exist) → CONNECT → GET |
+| `socks4` | SOCKS4 CONNECT (target resolved to IPv4 locally) → GET |
+| `http`   | plain proxied GET (absolute-URI), then CONNECT tunnel |
+| `https`  | CONNECT tunnel, then plain proxied GET |
+| unknown  | SOCKS5 → HTTP GET → HTTP CONNECT |
+
+The first strategy that returns a real HTTP status < 400 through the proxy
+wins. The measured protocol is recorded as `type_confirmed`
+(`socks5`/`socks4`/`http`; CONNECT success also counts as `http` with
+`method_used: "http_connect"` — tunneling capability is a separate fact the
+score stage can use). Latency covers connect → handshake → CONNECT → GET →
+status line. HTTP statuses ≥ 400 (e.g. a 407 auth demand or a 405) count as
+a *failed* attempt, not a success.
+
+**Claim calibration.** For every alive proxy the report compares the
+claimed type with the measured one (`agree` / `disagree` / `claim-unknown`).
+Over many runs this exposes sources whose assertions are unreliable — the
+data-quality signal the claims were recorded for.
+
+**Bounded concurrency.** `workers` (default 100) handshake checks run in
+parallel as plain socket clients; the prefilter uses its own larger pool
+(128). Progress prints every 200 checks.
+
+### Validated proxy schema (v0.1 draft)
+
+`data/validated/proxies_validated.json` contains every *tested* proxy (the
+normalized dict plus the check verdict; the score stage filters on
+`check.ok`):
+
+```json
+{
+  "...": "normalized proxy fields",
+  "check": {
+    "ok": true,
+    "type_confirmed": "socks5",
+    "method_used": "socks5",
+    "latency_ms": 412.7,
+    "http_status": 204,
+    "checked_utc": "2026-11-19T10:00:00+00:00",
+    "error": null
+  }
+}
+```
+
 ## Output file contract (v0.1 draft — finalized at stage 6)
 
-The publish stage (stage 6) will make the following the stable contract;
-until then treat everything under `data/` as moving. Planned layout:
+The publish stage will make the following the stable contract. The record
+shape is for **plain proxies only** and must never be confused downstream
+with a vmess/vless/... tunnel-config feed:
+
+```json
+{
+  "ip": "1.2.3.4",
+  "port": 8080,
+  "type": "socks5",
+  "user": null,
+  "pass": null,
+  "country": "IT",
+  "score": 87.2,
+  "tier": "gold",
+  "last_checked": "2026-11-19T10:00:00+00:00"
+}
+```
+
+Planned layout:
 
 ```
 data/
 ├── collected/                 # stage 1 output (produced)
-│   ├── endpoints_raw.json     # array of canonical endpoint dicts (pre-dedupe)
+│   ├── proxies_raw.json       # array of canonical proxy dicts (pre-dedupe)
 │   └── collect_report.json    # per-source status + totals (audit trail)
 ├── normalized/                # stage 2 output (produced)
-│   ├── endpoints_normalized.json  # one entry per connection target
-│   └── normalize_report.json      # dedupe totals + audit samples
+│   ├── proxies_normalized.json  # one entry per connection target
+│   └── normalize_report.json    # dedupe totals + claim merges + samples
+├── validated/                 # stage 3 output (produced)
+│   ├── proxies_validated.json   # tested targets + check verdict/latency
+│   └── validate_report.json     # prefilter/check totals, calibration
 └── out/                       # stage 6 output (published, committed)
-    ├── all.json               # every alive endpoint, scored + tiered
+    ├── all.json               # every alive proxy, scored + tiered
     ├── by-tier/gold.json | silver.json | bronze.json
-    ├── by-country/<ISO2>.json # alive, scored endpoints per country
-    ├── unclassified.json      # endpoints without a trustworthy country
-    ├── history/results.json   # per-endpoint test history (auditable)
+    ├── by-country/<ISO2>.json # alive, scored proxies per country
+    ├── unclassified.json      # proxies without a trustworthy country
+    ├── history/results.json   # per-proxy test history (auditable)
     └── run-summary.json       # counts, durations, stage statuses
 ```
 
@@ -244,5 +351,10 @@ documented here when stage 6 lands.
   only through environment variables / GitHub Actions secrets.
 - The GitHub token used to create/push this repo is never printed, logged,
   committed, or stored in the repo or in git remote URLs.
-- Later stages pin exact xray-core / sing-box release versions (downloaded
-  once per run, cached) — never floating "latest".
+- Validation connects only to the configured probe URL *through* the
+  candidate proxies; candidates are untrusted network peers, so every
+  reply is length-capped and parsed defensively (never `eval`/`exec`, never
+  shell-outs — there are no subprocesses at all).
+- Only openly published list sources are fetched (raw GitHub files, public
+  APIs meant for this); no paid, registration-walled, or
+  robots/ToS-forbidden pages.
