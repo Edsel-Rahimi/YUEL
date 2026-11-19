@@ -266,6 +266,14 @@ def stage_publish(
         country: len(countries) for country, countries in sorted(by_country.items())
     }
 
+    # per-tier files: tier != excluded only (stable contract: gold/silver/
+    # bronze ALWAYS exist, even when a tier is empty this run)
+    by_tier_records: dict[str, list[dict[str, Any]]] = {}
+    for record in records:
+        if record["tier"] == "excluded":
+            continue
+        by_tier_records.setdefault(record["tier"], []).append(record)
+
     totals = _read_report_totals(data_dir)
     summary = {
         "generated_utc": now_utc,
@@ -284,6 +292,7 @@ def stage_publish(
     if staging_dir.exists():
         shutil.rmtree(staging_dir)
     (staging_dir / "by-country").mkdir(parents=True)
+    (staging_dir / "by-tier").mkdir(parents=True)
 
     try:
         (staging_dir / "all.json").write_text(
@@ -293,6 +302,11 @@ def stage_publish(
         for country, country_records in sorted(by_country.items()):
             (staging_dir / "by-country" / f"{country}.json").write_text(
                 json.dumps(country_records, indent=2, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+        for tier in ("gold", "silver", "bronze"):
+            (staging_dir / "by-tier" / f"{tier}.json").write_text(
+                json.dumps(by_tier_records.get(tier, []), indent=2, ensure_ascii=False) + "\n",
                 encoding="utf-8",
             )
         # stable contract: unclassified.json ALWAYS exists (may be empty)

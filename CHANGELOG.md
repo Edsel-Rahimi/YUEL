@@ -4,6 +4,22 @@ All notable changes to YUEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Added
+
+- **README: fully animated SVG card set.** Ten cards (header, stats strip,
+  flow graph, quality tiers, collection funnel, top countries, protocol
+  donut, pipeline architecture, divider, footer), each in a light and a
+  dark variant, generated from the real run output by
+  `scripts/render_assets.py` — CSS-keyframe animations (traveling packets,
+  marching dashes, ping rings, rising particles, waves, highlight sweep,
+  draw-in bars, heartbeat numbers) all guarded by `prefers-reduced-motion`.
+- **publish: per-tier output files.** The publish stage now writes
+  `data/out/by-tier/{gold,silver,bronze}.json` (stable contract: all three
+  files always exist) alongside `all.json` and the per-country lists;
+  the README tier/funnel cards link to them.
+
 ## [0.7.1] - 2026-11-19
 
 ### Fixed

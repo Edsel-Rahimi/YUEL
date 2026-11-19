@@ -1,0 +1,227 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="480" viewBox="0 0 1200 480" role="img">
+  <defs>
+    <linearGradient id="bg-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
+      <stop offset="0" stop-color="#08442C" stop-opacity="1"/>
+      <stop offset="1" stop-color="#085834" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="tint-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAECC5" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#FAECC5" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="inner-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAECC5" stop-opacity="0.1"/>
+      <stop offset="0.28" stop-color="#FAECC5" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="topbar-dark" gradientUnits="userSpaceOnUse" x1="0" y1="1.5" x2="1200" y2="1.5">
+      <stop offset="0" stop-color="#085834" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#BD2632" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#F32138" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="hero-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F32138" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#BD2632" stop-opacity="1"/>
+      <stop offset="1" stop-color="#FAECC5" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="word-dark" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FAECC5" stop-opacity="1"/>
+      <stop offset="0.6" stop-color="#F32138" stop-opacity="1"/>
+      <stop offset="1" stop-color="#BD2632" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="ib-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F32138" stop-opacity="0.5"/>
+      <stop offset="0.45" stop-color="#F32138" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#F32138" stop-opacity="0.05"/>
+    </linearGradient>
+    <linearGradient id="border-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
+      <stop offset="0" stop-color="#FAECC5" stop-opacity="0.2"/>
+      <stop offset="1" stop-color="#FAECC5" stop-opacity="0.11000000000000001"/>
+    </linearGradient>
+    <linearGradient id="div-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FAECC5" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#FAECC5" stop-opacity="0.055999999999999994"/>
+    </linearGradient>
+    <radialGradient id="glow-dark" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#F32138" stop-opacity="0.55"/><stop offset="0.55" stop-color="#F32138" stop-opacity="0.18"/><stop offset="1" stop-color="#F32138" stop-opacity="0"/></radialGradient>
+    <linearGradient id="shine-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
+      <stop offset="0" stop-color="#FAECC5" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FAECC5" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#FAECC5" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="wavea-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F32138" stop-opacity="0.1"/>
+      <stop offset="1" stop-color="#F32138" stop-opacity="0.020000000000000004"/>
+    </linearGradient>
+    <linearGradient id="waveb-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FAECC5" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#FAECC5" stop-opacity="0.014000000000000002"/>
+    </linearGradient>
+    <pattern id="grid-dark" width="24" height="24" patternUnits="userSpaceOnUse">
+      <circle cx="1.6" cy="1.6" r="1.05" fill="#FAECC5"/>
+    </pattern>
+    <filter id="grain-dark" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0" result="m"/>
+      <feComposite in="m" in2="SourceGraphic" operator="in"/>
+    </filter>
+    <filter id="shadow-dark" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#F32138" flood-opacity="0.20"/>
+      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#F32138" flood-opacity="0.25"/>
+    </filter>
+    <clipPath id="clip-dark"><rect x="0" y="0" width="1200" height="480" rx="26"/></clipPath>
+  </defs>
+    <style>
+      @keyframes fl-dark {
+        0% { transform: translateY(0); opacity: 0; }
+        12% { opacity: 0.85; }
+        80% { opacity: 0.45; }
+        100% { transform: translateY(-330px); opacity: 0; }
+      }
+      .pt-dark { animation: fl-dark 9s linear infinite; }
+
+      @keyframes sw-dark {
+        0%, 52% { transform: translateX(0) skewX(-20deg); }
+        100% { transform: translateX(1900px) skewX(-20deg); }
+      }
+      .sweep-dark { animation: sw-dark 7.5s ease-in-out infinite; }
+
+      @keyframes wvm-dark { to { transform: translateX(-170px); } }
+      .wv-dark { animation: wvm-dark 9s ease-in-out infinite alternate; }
+      .wv2-dark { animation-duration: 14s; }
+
+      @keyframes sp-dark { to { transform: rotate(360deg); } }
+      .spin-dark { transform-box: fill-box; transform-origin: center;
+                  animation: sp-dark 8s linear infinite; }
+      .rev-dark { animation-direction: reverse; }
+
+      @keyframes bt-dark { 50% { transform: scale(1.12); } }
+      .beat-dark { transform-box: fill-box; transform-origin: center;
+                  animation: bt-dark 2.4s ease-in-out infinite; }
+
+      @keyframes gw-dark { 50% { opacity: 0.55; } }
+      .glowG-dark { animation: gw-dark 3.2s ease-in-out infinite; }
+
+      @keyframes shn-dark {
+        0%, 46% { transform: translateX(-540px); }
+        100% { transform: translateX(1620px); }
+      }
+      .shn-dark { animation: shn-dark 5.5s ease-in-out infinite; }
+
+      @keyframes bgl-dark { 0%, 100% { opacity: 0.35; } 12% { opacity: 1; } }
+      .bgl-dark { animation: bgl-dark 2.2s ease-in-out infinite; }
+
+      @keyframes dsh-dark { to { stroke-dashoffset: -36; } }
+      .dash-dark { stroke-dasharray: 8 10; animation: dsh-dark 1.2s linear infinite; }
+
+      @keyframes pk-dark {
+        0% { transform: translateX(0); opacity: 0; }
+        10% { opacity: 1; }
+        88% { opacity: 1; }
+        100% { transform: translateX(var(--d, 200px)); opacity: 0; }
+      }
+      .pk-dark { animation: pk-dark 2.6s linear infinite; }
+
+      @keyframes pkv-dark {
+        0% { transform: translateY(0); opacity: 0; }
+        10% { opacity: 1; }
+        88% { opacity: 1; }
+        100% { transform: translateY(var(--dy, 40px)); opacity: 0; }
+      }
+      .pkv-dark { animation: pkv-dark 2.6s linear infinite; }
+
+      @keyframes pls-dark {
+        0% { transform: scale(0.55); opacity: 0.85; }
+        100% { transform: scale(2.4); opacity: 0; }
+      }
+      .pls-dark { transform-box: fill-box; transform-origin: center;
+                 animation: pls-dark 2.4s ease-out infinite; }
+
+      @keyframes flt-dark { 50% { transform: translateY(-6px); } }
+      .flt-dark { animation: flt-dark 6s ease-in-out infinite; }
+
+      @keyframes grw-dark { from { transform: scaleX(0); } }
+      .grow-dark { transform-box: fill-box; transform-origin: left center;
+                  animation: grw-dark 1.5s 0.2s ease-out both; }
+
+      @media (prefers-reduced-motion: reduce) {
+        .pt-dark,.sweep-dark,.wv-dark,.spin-dark,.rev-dark,.beat-dark,.glowG-dark,.shn-dark,.bgl-dark,.dash-dark,.pk-dark,.pkv-dark,.pls-dark,.flt-dark,.grow-dark { animation: none; }
+      }
+    </style>
+  <g filter="url(#shadow-dark)"><rect width="1200" height="480" rx="26" fill="#08442C"/></g>
+  <g clip-path="url(#clip-dark)">
+    <rect width="1200" height="480" fill="url(#bg-dark)"/>
+    <rect width="1200" height="480" fill="url(#tint-dark)"/>
+    <rect width="1200" height="480" fill="url(#inner-dark)"/>
+    <rect width="1200" height="480" fill="url(#grid-dark)" opacity="0.05"/>
+    <rect width="1200" height="480" fill="#FAECC5" filter="url(#grain-dark)" opacity="0.045"/>
+    <ellipse cx="130" cy="60" rx="260" ry="140" fill="url(#glow-dark)" opacity="0.22"/>
+    <ellipse cx="1090" cy="430" rx="240" ry="130" fill="url(#glow-dark)" opacity="0.14"/>
+    <path class="wv-dark" d="M -320 446 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0" fill="url(#wavea-dark)" opacity="0.8"/>
+    <path class="wv-dark wv2-dark" d="M -320 458 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0" fill="url(#waveb-dark)" opacity="0.9"/>
+    <rect width="1200" height="3" fill="url(#topbar-dark)"/>
+    <g class="sweep-dark"><rect x="-320" y="-60" width="230" height="600" fill="url(#shine-dark)" opacity="0.75"/></g>
+  <circle class="pt-dark" cx="40" cy="464" r="2.0" fill="#F32138" opacity="0.55" style="animation-duration:8.0s;animation-delay:-0.0s"/>
+  <circle class="pt-dark" cx="150" cy="464" r="2.7" fill="#FAECC5" opacity="0.55" style="animation-duration:9.7s;animation-delay:-0.9s"/>
+  <circle class="pt-dark" cx="260" cy="464" r="3.4" fill="#FAECC5" opacity="0.55" style="animation-duration:11.4s;animation-delay:-1.8s"/>
+  <circle class="pt-dark" cx="289" cy="464" r="2.0" fill="#F32138" opacity="0.55" style="animation-duration:13.1s;animation-delay:-2.7s"/>
+  <circle class="pt-dark" cx="399" cy="464" r="2.7" fill="#FAECC5" opacity="0.55" style="animation-duration:8.0s;animation-delay:-3.6s"/>
+  <circle class="pt-dark" cx="509" cy="464" r="3.4" fill="#FAECC5" opacity="0.55" style="animation-duration:9.7s;animation-delay:-4.5s"/>
+  <circle class="pt-dark" cx="538" cy="464" r="2.0" fill="#F32138" opacity="0.55" style="animation-duration:11.4s;animation-delay:-5.4s"/>
+  <circle class="pt-dark" cx="648" cy="464" r="2.7" fill="#FAECC5" opacity="0.55" style="animation-duration:13.1s;animation-delay:-6.3s"/>
+  <circle class="pt-dark" cx="758" cy="464" r="3.4" fill="#FAECC5" opacity="0.55" style="animation-duration:8.0s;animation-delay:-7.2s"/>
+  <circle class="pt-dark" cx="787" cy="464" r="2.0" fill="#F32138" opacity="0.55" style="animation-duration:9.7s;animation-delay:-8.1s"/>
+  <circle class="pt-dark" cx="897" cy="464" r="2.7" fill="#FAECC5" opacity="0.55" style="animation-duration:11.4s;animation-delay:-9.0s"/>
+  <circle class="pt-dark" cx="1007" cy="464" r="3.4" fill="#FAECC5" opacity="0.55" style="animation-duration:13.1s;animation-delay:-9.9s"/>
+  <circle class="pt-dark" cx="1036" cy="464" r="2.0" fill="#F32138" opacity="0.55" style="animation-duration:8.0s;animation-delay:-2.8s"/>
+  <circle class="pt-dark" cx="1146" cy="464" r="2.7" fill="#FAECC5" opacity="0.55" style="animation-duration:9.7s;animation-delay:-2.0s"/>
+  <circle class="pt-dark" cx="136" cy="464" r="3.4" fill="#FAECC5" opacity="0.55" style="animation-duration:11.4s;animation-delay:-1.2s"/>
+  <circle class="pt-dark" cx="165" cy="464" r="2.0" fill="#F32138" opacity="0.55" style="animation-duration:13.1s;animation-delay:-0.4s"/>
+  <circle cx="46" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="89" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle class="bgl-dark" cx="132" cy="473" r="1.8" fill="#FAECC5" style="animation-delay:-0.46s"/>
+  <circle cx="176" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="219" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="262" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="305" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle class="bgl-dark" cx="348" cy="473" r="1.8" fill="#FAECC5" style="animation-delay:-1.61s"/>
+  <circle cx="392" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="435" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="478" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="521" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle class="bgl-dark" cx="564" cy="473" r="1.8" fill="#FAECC5" style="animation-delay:-2.76s"/>
+  <circle cx="608" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="651" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="694" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="737" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle class="bgl-dark" cx="780" cy="473" r="1.8" fill="#FAECC5" style="animation-delay:-3.91s"/>
+  <circle cx="824" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="867" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="910" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="953" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle class="bgl-dark" cx="996" cy="473" r="1.8" fill="#FAECC5" style="animation-delay:-5.06s"/>
+  <circle cx="1040" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="1083" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  <circle cx="1126" cy="473" r="1.8" fill="#FAECC5" opacity="0.28"/>
+  </g>
+  <rect x="3.5" y="3.5" width="1193" height="473" rx="23" fill="none" stroke="url(#ib-dark)" stroke-width="1.5"/>
+  <rect x="0.5" y="0.5" width="1199" height="479" rx="26" fill="none" stroke="url(#border-dark)" stroke-width="1"/>
+  <g class="pls-dark" style="animation-delay:0s"><circle cx="600" cy="112" r="44" fill="none" stroke="#F32138" stroke-width="2" opacity="0.3"/></g>
+  <g class="pls-dark" style="animation-delay:-1.2s"><circle cx="600" cy="112" r="44" fill="none" stroke="#F32138" stroke-width="2" opacity="0.3"/></g>
+  <circle class="spin-dark" cx="600" cy="112" r="42" fill="none" stroke="#FAECC5" stroke-opacity="0.5" stroke-width="1.6" stroke-dasharray="6 8"/>
+  <g class="glowG-dark"><ellipse cx="600" cy="112" rx="100" ry="44" fill="url(#glow-dark)" opacity="0.28"/><ellipse cx="600" cy="112" rx="65" ry="29" fill="url(#glow-dark)" opacity="0.5"/><ellipse cx="600" cy="112" rx="38" ry="17" fill="url(#glow-dark)" opacity="0.85"/></g>
+  <rect x="568" y="80" width="64" height="64" rx="17" fill="url(#hero-dark)"/>
+  <rect x="568.5" y="80.5" width="63" height="63" rx="17" fill="none" stroke="#FAECC5" stroke-opacity="0.35" stroke-width="1"/>
+<g transform="translate(588.0,100.0) scale(1.0000)" fill="none" stroke="#FAECC5" stroke-width="2.00" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"><path d="M4 5 H20 L14 12 V17.5 L10 20.5 V12 Z"/><path d="M7.5 8.2 H16.5"/></g>
+  <rect x="402" y="172" width="395" height="30" rx="15" fill="#FAECC5" fill-opacity="0.07" stroke="#FAECC5" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="600.0" y="191.14" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#FAECC5" text-anchor="middle" letter-spacing="1.4" opacity="0.75">PLAIN-PROXY INTELLIGENCE · REFRESHED HOURLY</text>
+  <g class="glowG-dark"><ellipse cx="600" cy="268" rx="240" ry="106" fill="url(#glow-dark)" opacity="0.28"/><ellipse cx="600" cy="268" rx="156" ry="70" fill="url(#glow-dark)" opacity="0.5"/><ellipse cx="600" cy="268" rx="91" ry="41" fill="url(#glow-dark)" opacity="0.85"/></g>
+  <text x="600" y="300" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="112" font-weight="800" fill="url(#word-dark)" text-anchor="middle" letter-spacing="6">YUEL</text>
+  <text x="600" y="348" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="500" fill="#FAECC5" text-anchor="middle" opacity="0.55">841 plain proxies alive right now · 64 countries · 24 public sources</text>
+  <rect x="266" y="372" width="216" height="36" rx="18" fill="#F32138" fill-opacity="0.16" stroke="#F32138" stroke-opacity="0.55" stroke-width="1"/>
+  <text x="374.03000000000003" y="394.14" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#F32138" text-anchor="middle" letter-spacing="1.4">SOCKS4 · SOCKS5 · HTTP</text>
+  <rect x="496" y="372" width="88" height="36" rx="18" fill="#FAECC5" fill-opacity="0.07" stroke="#FAECC5" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="540.315" y="394.14" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#FAECC5" text-anchor="middle" letter-spacing="1.4" opacity="0.75">ONE CLI</text>
+  <rect x="598" y="372" width="122" height="36" rx="18" fill="#FAECC5" fill-opacity="0.07" stroke="#FAECC5" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="659.6850000000001" y="394.14" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#FAECC5" text-anchor="middle" letter-spacing="1.4" opacity="0.75">JSON OUTPUT</text>
+  <rect x="735" y="372" width="199" height="36" rx="18" fill="#FAECC5" fill-opacity="0.07" stroke="#FAECC5" stroke-opacity="0.3" stroke-width="1"/>
+  <text x="834.5000000000001" y="394.14" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11.5" font-weight="700" fill="#FAECC5" text-anchor="middle" letter-spacing="1.4" opacity="0.75">NO TUNNELS BY DESIGN</text>
+  <text x="600" y="446" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#FAECC5" text-anchor="middle" opacity="0.55">latency p50 408.5 ms — measured through real handshakes</text>
+</svg>
