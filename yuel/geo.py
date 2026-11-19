@@ -119,8 +119,13 @@ class GeoTable:
     def from_tsv(cls, text: str) -> "GeoTable":
         """Parse iptoasn-style TSV: ``start\\tend\\tAS\\tcountry\\tASname``.
 
-        Invalid rows (non-numeric bounds, missing country) are skipped —
-        one bad line never invalidates the table.
+        Bounds are accepted either as dotted quads (the real
+        ``ip2asn-v4.tsv`` format, e.g.
+        ``1.0.0.0\\t1.0.0.255\\t13335\\tUS\\tCLOUDFLARENET``) or as plain
+        integers (fixture/testing convenience). Rows without a valid
+        2-letter country code — including iptoasn's ``None`` "Not routed"
+        rows — and rows with unparseable bounds are skipped; one bad line
+        never invalidates the table.
         """
         ranges: list[tuple[int, int, str]] = []
         for line in text.splitlines():
@@ -129,11 +134,19 @@ class GeoTable:
             cols = line.split("\t")
             if len(cols) < 4:
                 continue
-            try:
-                start = int(cols[0])
-                end = int(cols[1])
-            except ValueError:
+            bounds = []
+            for cell in (cols[0], cols[1]):
+                if cell.isdigit():
+                    bounds.append(int(cell))
+                else:
+                    ip_int = ip_to_int(cell)
+                    if ip_int is None:
+                        bounds = None
+                        break
+                    bounds.append(ip_int)
+            if bounds is None:
                 continue
+            start, end = bounds
             country = cols[3].strip().upper()
             if end < start or len(country) != 2 or not country.isalpha():
                 continue

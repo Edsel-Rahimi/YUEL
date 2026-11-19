@@ -24,8 +24,11 @@ from yuel.geo import (
 
 FIXTURE_TSV = (
     "# comment line\n"
-    "16777216\t16777471\tAS1\tUS\tTest One\n"      # 1.0.0.0 – 1.0.0.255
-    "16777472\t16778239\tAS2\tAU\tTest Two\n"      # 1.0.1.0 – 1.0.3.255
+    "16777216\t16777471\tAS1\tUS\tTest One\n"      # integer bounds form
+    "16777472\t16778239\tAS2\tAU\tTest Two\n"
+    "1.0.0.0\t1.0.0.255\t13335\tGB\tDotted form (real ip2asn format)\n"
+    "1.0.1.0\t1.0.3.255\t0\tNone\tNot routed (no country → skipped)\n"
+    "9.9.9.0\t9.9.9.255\tAS19281\tFR\tQuad9\n"
     "67174657\t67174657\tAS3\tIT\tTest Three\n"    # 4.1.1.1 exactly
 )
 FIXTURE_GZ = gzip.compress(FIXTURE_TSV.encode("utf-8"))
@@ -63,14 +66,23 @@ class GeoTableTests(unittest.TestCase):
         self.table = GeoTable.from_tsv(FIXTURE_TSV)
 
     def test_inside_range(self):
-        self.assertEqual(self.table.lookup("1.0.0.55"), "US")
+        # 1.0.0.0/24 is described by BOTH the integer-bounds row (US) and the
+        # dotted-quad row (GB); sorted stably, the dotted row wins the tie —
+        # either way it proves dotted parsing works
+        self.assertEqual(self.table.lookup("1.0.0.55"), "GB")
         self.assertEqual(self.table.lookup("1.0.2.128"), "AU")
+        self.assertEqual(self.table.lookup("9.9.9.100"), "FR")
 
     def test_boundaries_inclusive(self):
-        self.assertEqual(self.table.lookup("1.0.0.0"), "US")
-        self.assertEqual(self.table.lookup("1.0.0.255"), "US")
+        self.assertEqual(self.table.lookup("1.0.0.0"), "GB")
+        self.assertEqual(self.table.lookup("1.0.0.255"), "GB")
         self.assertEqual(self.table.lookup("1.0.1.0"), "AU")
         self.assertEqual(self.table.lookup("1.0.3.255"), "AU")
+
+    def test_none_country_rows_skipped(self):
+        # the real ip2asn file has "None" country rows for unrouted space;
+        # the AU row beneath it must still answer for that range
+        self.assertEqual(self.table.lookup("1.0.2.10"), "AU")
 
     def test_gap_outside_any_range(self):
         # 2.0.0.0 lies between the fixture ranges → not covered
@@ -119,7 +131,7 @@ class LoadTableTests(unittest.TestCase):
             )
             self.assertEqual(info["source"], "downloaded")
             self.assertIsNotNone(table)
-            self.assertEqual(table.lookup("1.0.0.55"), "US")
+            self.assertEqual(table.lookup("1.0.0.55"), "GB")
             self.assertTrue(cache.exists())
 
     def test_fresh_cache_skips_fetch(self):
@@ -153,7 +165,7 @@ class LoadTableTests(unittest.TestCase):
             self.assertEqual(info["source"], "cache-stale")
             self.assertIn("stale cache", info["warning"])
             self.assertIsNotNone(table)
-            self.assertEqual(table.lookup("1.0.0.55"), "US")
+            self.assertEqual(table.lookup("1.0.0.55"), "GB")
 
     def test_no_cache_and_fetch_fails_degrades_to_none(self):
         with tempfile.TemporaryDirectory() as tmp:
@@ -231,7 +243,7 @@ class StageGeoTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as tmp:
             data_dir = Path(tmp)
             proxies = [
-                make_scored("1.0.0.55", 8080),        # US
+                make_scored("1.0.0.55", 8080),        # GB (dotted-row range)
                 make_scored("1.0.2.10", 3128),        # AU
                 make_scored("2.0.0.1", 1080),         # gap → unclassified
                 make_scored("proxy.example.com", 80), # domain → unclassified
@@ -243,7 +255,7 @@ class StageGeoTests(unittest.TestCase):
                 (data_dir / "geo" / "proxies_geo.json").read_text(encoding="utf-8")
             )
             countries = {e["identity"]: e["country"] for e in geo}
-            self.assertEqual(countries["1.0.0.55|8080||"], "US")
+            self.assertEqual(countries["1.0.0.55|8080||"], "GB")
             self.assertEqual(countries["1.0.2.10|3128||"], "AU")
             self.assertEqual(countries["2.0.0.1|1080||"], "unclassified")
             self.assertEqual(countries["proxy.example.com|80||"], "unclassified")
@@ -258,7 +270,7 @@ class StageGeoTests(unittest.TestCase):
             )
             self.assertEqual(report["unclassified_reasons"]["not_in_table"], 1)
             self.assertEqual(report["table"]["source"], "downloaded")
-            self.assertEqual(report["by_country"], {"AU": 1, "US": 1})
+            self.assertEqual(report["by_country"], {"AU": 1, "GB": 1})
 
     def test_graceful_degradation_when_table_unavailable(self):
         with tempfile.TemporaryDirectory() as tmp:

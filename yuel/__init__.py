@@ -23,4 +23,4 @@ This is a fresh, independently written codebase — it shares no code with
 any other project.
 """
 
-__version__ = "0.7.0"
+__version__ = "0.7.1"

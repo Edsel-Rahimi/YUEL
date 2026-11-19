@@ -4,6 +4,19 @@ All notable changes to YUEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [0.7.1] - 2026-11-19
+
+### Fixed
+
+- **geo: parse the real `ip2asn-v4.tsv` format.** The first full end-to-end
+  run degraded gracefully (all 841 alive proxies `unclassified`, warning
+  surfaced, pipeline exit 0 — degradation worked as designed) because the
+  table's bounds are **dotted quads** (`1.0.0.0\t1.0.0.255\t13335\tUS\t…`),
+  not integers, so the integer-only parser rejected every row and produced
+  an empty table. `GeoTable.from_tsv` now accepts both dotted-quad and
+  integer bounds and skips iptoasn's `None`-country "Not routed" rows.
+  Fixture updated to the real format; suite: **165 tests**.
+
 ## [0.7.0] - 2026-11-19
 
 ### Added
