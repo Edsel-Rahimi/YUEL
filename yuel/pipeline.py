@@ -1,22 +1,23 @@
 """YUEL pipeline orchestrator and CLI entrypoint.
 
-Usage::
+    Usage::
 
-    python -m yuel.pipeline collect   [--sources PATH] [--data-dir PATH]
-    python -m yuel.pipeline normalize [--data-dir PATH]
-    python -m yuel.pipeline validate  [--data-dir PATH] [--limit N]
-                                      [--prefilter-only] [--validate-config PATH]
-    python -m yuel.pipeline run       [--sources PATH] [--data-dir PATH]
+        python -m yuel.pipeline collect   [--sources PATH] [--data-dir PATH]
+        python -m yuel.pipeline normalize [--data-dir PATH]
+        python -m yuel.pipeline validate  [--data-dir PATH] [--limit N]
+                                          [--prefilter-only] [--validate-config PATH]
+        python -m yuel.pipeline score     [--data-dir PATH] [--score-config PATH]
+        python -m yuel.pipeline run       [--sources PATH] [--data-dir PATH]
 
-``run`` executes every implemented stage in order and stops at the first
-failing stage, so a stage failure can never corrupt previously written
-output. Later stages (score, geo, publish) are appended to the chain as they
-land; see README.md for the architecture and the output file contract.
+    ``run`` executes every implemented stage in order and stops at the first
+    failing stage, so a stage failure can never corrupt previously written
+    output. Later stages (geo, publish) are appended to the chain as they
+    land; see README.md for the architecture and the output file contract.
 
-Scope (v0.3.0): plain SOCKS4/SOCKS5/HTTP(S) proxies for chaining — stage 1
-parses bare ip:port entries from list sources, stage 2 dedupes them by
-connection identity, stage 3 confirms them with real protocol handshakes.
-"""
+    Scope (v0.3.0): plain SOCKS4/SOCKS5/HTTP proxies for chaining — stage 1
+    parses bare ip:port entries from list sources, stage 2 dedupes them by
+    connection identity, stage 3 confirms them with real protocol handshakes.
+    """
 
 from __future__ import annotations
 
@@ -26,13 +27,14 @@ import sys
 from pathlib import Path
 from typing import Any
 
-from . import __version__, collect, normalize, validate
+from . import __version__, collect, normalize, score, validate
 from . import config as config_mod
+from .score import stage_score  # noqa: F401 — re-exported for CLI/chain
 from .stage import StageResult
 from .validate import stage_validate  # noqa: F401 — re-exported for CLI/chain
 
 __all__ = ["StageResult", "stage_collect", "stage_normalize", "stage_validate",
-           "run_pipeline", "main"]
+           "stage_score", "run_pipeline", "main"]
 
 
 def stage_collect(cfg_path: Path, data_dir: Path, **_: Any) -> StageResult:
@@ -128,6 +130,7 @@ def run_pipeline(
         "collect": stage_collect,
         "normalize": stage_normalize,
         "validate": stage_validate,
+        "score": stage_score,
     }
     extra = stage_kwargs or {}
     for name in stage_names:
@@ -169,6 +172,7 @@ def main(argv: list[str] | None = None) -> int:
         ("collect", "run stage 1 only (fetch sources and parse proxy entries)"),
         ("normalize", "run stage 2 only (dedupe stage-1 output)"),
         ("validate", "run stage 3 only (TCP prefilter + handshake checks)"),
+        ("score", "run stage 4 only (weighted scoring + rolling history)"),
         ("run", "run all implemented stages in order"),
     ):
         sub = subparsers.add_parser(name, help=help_text)
@@ -191,6 +195,12 @@ def main(argv: list[str] | None = None) -> int:
                 default=None,
                 help="path to validate config (default: config/validate.json)",
             )
+        if name == "score":
+            sub.add_argument(
+                "--score-config",
+                default=None,
+                help="path to score config (default: config/score.json)",
+            )
     args = parser.parse_args(argv)
 
     cfg_path = (
@@ -202,7 +212,8 @@ def main(argv: list[str] | None = None) -> int:
         "collect": ("collect",),
         "normalize": ("normalize",),
         "validate": ("validate",),
-        "run": ("collect", "normalize", "validate"),
+        "score": ("score",),
+        "run": ("collect", "normalize", "validate", "score"),
     }[args.command]
     stage_kwargs: dict[str, dict[str, Any]] = {}
     if args.command == "validate":
@@ -213,11 +224,22 @@ def main(argv: list[str] | None = None) -> int:
                 Path(args.validate_config) if args.validate_config else None
             ),
         }
+    elif args.command == "score":
+        stage_kwargs["score"] = {
+            "score_cfg_path": (
+                Path(args.score_config) if args.score_config else None
+            ),
+        }
     elif args.command == "run":
         stage_kwargs["validate"] = {
             "validate_cfg_path": (
                 Path(args.validate_config)
                 if getattr(args, "validate_config", None)
+                else None
+            ),
+            "score_cfg_path": (
+                Path(args.score_config)
+                if getattr(args, "score_config", None)
                 else None
             ),
         }

@@ -4,6 +4,43 @@ All notable changes to YUEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [0.4.0] - 2026-11-19
+
+### Added
+
+- Stage 4 — **score** (`yuel/score.py`, `yuel/history.py`,
+  `config/score.json`):
+  - Four components, each normalized 0–100 with **weight re-normalization
+    over the components actually available** per proxy: relative latency
+    (percentile rank within the current run's alive distribution — fastest
+    ≈ 100, slowest ≈ 0, ties share a rank; never a fixed arbitrary scale),
+    success rate from rolling history (only meaningful from
+    `min_events_for_success` events — checked-once-alive proxies are not
+    "reliable" yet, so the weight is redistributed), linear freshness decay
+    (`freshness_window_hours`, default 24), and anonymity level
+    (elite 100 / anonymous 70 / transparent 30; unknown → unavailable).
+    Anonymity replaces the tunnel-era "protocol strength" component.
+  - Tier thresholds are **config**, not magic numbers: gold ≥ 80, silver ≥ 50,
+    bronze ≥ 20, below → `excluded` (defaults in `config/score.json`,
+    validated: gold > silver > bronze > 0).
+  - Rolling per-identity history (`yuel/history.py`, file
+    `data/history/check_history.json`): every tested proxy (alive or dead)
+    appends `{utc, ok, latency_ms}` per run; per-identity events capped at
+    `max_entries_per_identity` (10); identities silent beyond
+    `inactivity_days` (7) are pruned; corrupt file degrades to fresh;
+    save is atomic (temp + `os.replace`). Derived facts: success_rate,
+    total_events, consecutive_successes, consecutive_failures.
+  - Stage output: `data/scored/proxies_scored.json` (alive only, sorted by
+    score, each entry carries `score` {total, tier, components,
+    weights_effective} + `history` facts) and `data/scored/score_report.json`
+    (tier distribution, score percentiles, history stats).
+- CLI: `python -m yuel.pipeline score [--score-config PATH]`; `run` chain is
+  now collect → normalize → validate → score.
+- Tests: 38 new — hand-picked formula cases with expected values computed in
+  the assertions (component math, exact renormalization, tier boundaries,
+  custom thresholds), history append/cap/prune/streaks, atomic save, corrupt
+  handling, and stage flows with pre-seeded history. Suite total: **131 tests**.
+
 ## [0.3.0] - 2026-11-19
 
 ### Changed — SCOPE CORRECTION (breaking)

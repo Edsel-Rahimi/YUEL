@@ -13,8 +13,8 @@ Stage-based pipeline:
     2. normalize  dedupe by connection identity, drop invalid   (implemented)
     3. validate   TCP prefilter + real SOCKS5/SOCKS4/HTTP       (implemented)
                   handshakes, confirm the working protocol
-    4. score      weighted formula: latency, success rate,      (planned)
-                  freshness, anonymity level
+    4. score      weighted formula: latency, success rate,      (implemented)
+                  freshness, anonymity + rolling history
     5. geo        country split via public IP-to-country table  (planned)
     6. publish    per-country machine-readable proxy files      (planned)
     7. automate   orchestration + GitHub Actions schedule       (planned)
@@ -23,4 +23,4 @@ This is a fresh, independently written codebase — it shares no code with
 any other project.
 """
 
-__version__ = "0.3.0"
+__version__ = "0.4.0"

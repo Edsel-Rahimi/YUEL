@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "weights": {
+    "latency": 0.40,
+    "success": 0.30,
+    "freshness": 0.15,
+    "anonymity": 0.15
+  },
+  "tiers": {
+    "gold": 80,
+    "silver": 50,
+    "bronze": 20
+  },
+  "freshness_window_hours": 24,
+  "anonymity_values": {
+    "elite": 100,
+    "anonymous": 70,
+    "transparent": 30
+  },
+  "min_events_for_success": 2,
+  "history": {
+    "max_entries_per_identity": 10,
+    "inactivity_days": 7
+  }
+}
