@@ -1,0 +1,66 @@
+name: pipeline
+
+# Runs the full YUEL pipeline (collect → normalize → validate → score →
+# geo → publish) on a schedule and commits the published contract
+# (data/out/) so consumers can read stable raw.githubusercontent URLs.
+#
+# Fail-loud: the pipeline exits non-zero on the FIRST failing stage and the
+# sanity-check step below re-verifies the published output, so any failure
+# shows up as a red run in the Actions tab — never as silently-stale data.
+
+on:
+  schedule:
+    # every 30 minutes. See README "Automation" for the honest runtime math:
+    # a full run takes ~30-45 min, so with the serialization below the
+    # effective cadence is "one run at a time, back-to-back".
+    - cron: "*/30 * * * *"
+  workflow_dispatch: {} # manual trigger from the Actions tab / `gh workflow run`
+
+permissions:
+  contents: write # required to commit data/out/ back to the repository
+
+concurrency:
+  group: yuel-pipeline
+  cancel-in-progress: false # serialize runs; never kill a run mid-publish
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run the full pipeline
+        # exits 1 on the first failing stage → red run in the Actions tab
+        run: python3 -m yuel.pipeline run
+
+      - name: Sanity-check the published output
+        run: |
+          test -s data/out/all.json
+          test -s data/out/run-summary.json
+          python3 - <<'EOF'
+          import json
+          summary = json.load(open("data/out/run-summary.json"))
+          published = summary["totals"]["published_records"]
+          assert published > 0, f"empty publish (published_records={published})"
+          print(f"published {published} records, "
+                f"{summary['totals']['countries']} country files")
+          EOF
+
+      - name: Commit published output
+        run: |
+          git config user.name "yuel-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/out
+          if git diff --cached --quiet; then
+            echo "published output unchanged — nothing to commit"
+          else
+            git commit -m "publish: pipeline output $(date -u +%FT%TZ) [skip ci]"
+            git push
+          fi
