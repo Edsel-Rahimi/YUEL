@@ -4,9 +4,9 @@
     "port": 1981,
     "type": "http",
     "country": "PS",
-    "score": 30.92,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "score": 92.5,
+    "tier": "gold",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

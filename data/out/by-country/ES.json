@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "ES",
-    "score": 93.36,
+    "score": 95.41,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

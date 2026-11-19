@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "CY",
-    "score": 96.15,
+    "score": 96.83,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,20 +15,9 @@
     "port": 80,
     "type": "http",
     "country": "CY",
-    "score": 95.01,
+    "score": 95.45,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "77.37.44.179",
-    "port": 3128,
-    "type": "http",
-    "country": "CY",
-    "score": 33.1,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

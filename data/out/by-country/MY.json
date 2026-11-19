@@ -4,20 +4,20 @@
     "port": 80,
     "type": "http",
     "country": "MY",
-    "score": 88.87,
+    "score": 88.2,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "219.93.111.125",
-    "port": 9412,
+    "ip": "219.94.75.2",
+    "port": 8080,
     "type": "http",
     "country": "MY",
-    "score": 73.33,
-    "tier": "silver",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "score": 33.84,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,12 +1,12 @@
 [
   {
-    "ip": "103.99.175.54",
+    "ip": "102.164.252.150",
     "port": 8080,
     "type": "http",
-    "country": "PG",
-    "score": 76.97,
+    "country": "GQ",
+    "score": 75.58,
     "tier": "silver",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

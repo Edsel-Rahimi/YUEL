@@ -1,12 +1,12 @@
 [
   {
-    "ip": "109.127.9.99",
-    "port": 8080,
-    "type": "http",
+    "ip": "185.43.189.253",
+    "port": 3629,
+    "type": "socks4",
     "country": "AZ",
-    "score": 81.74,
+    "score": 83.36,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

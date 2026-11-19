@@ -1,45 +1,45 @@
 [
   {
+    "ip": "220.116.142.217",
+    "port": 80,
+    "type": "http",
+    "country": "KR",
+    "score": 94.94,
+    "tier": "gold",
+    "last_checked": "2026-11-19T19:59:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "183.106.215.208",
     "port": 1080,
     "type": "socks5",
     "country": "KR",
-    "score": 94.58,
+    "score": 91.42,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "183.110.216.159",
-    "port": 8090,
-    "type": "http",
-    "country": "KR",
-    "score": 89.71,
-    "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "114.108.177.104",
-    "port": 60984,
-    "type": "socks4",
-    "country": "KR",
-    "score": 89.31,
-    "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
     "ip": "183.110.216.128",
-    "port": 8091,
+    "port": 8090,
     "type": "http",
     "country": "KR",
-    "score": 89.18,
+    "score": 84.48,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "121.169.46.116",
+    "port": 1090,
+    "type": "socks5",
+    "country": "KR",
+    "score": 80.34,
+    "tier": "gold",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -48,9 +48,20 @@
     "port": 5555,
     "type": "socks5",
     "country": "KR",
-    "score": 76.47,
+    "score": 75.76,
     "tier": "silver",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "221.141.140.132",
+    "port": 8118,
+    "type": "http",
+    "country": "KR",
+    "score": 27.31,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,23 +1,23 @@
 [
   {
-    "ip": "149.210.44.175",
-    "port": 1080,
-    "type": "socks5",
+    "ip": "149.210.4.75",
+    "port": 18080,
+    "type": "http",
     "country": "GR",
-    "score": 84.87,
+    "score": 80.39,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "94.68.245.147",
-    "port": 8080,
+    "ip": "81.31.228.10",
+    "port": 1090,
     "type": "http",
     "country": "GR",
-    "score": 29.19,
+    "score": 47.46,
     "tier": "bronze",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "196.0.111.186",
+    "port": 46048,
+    "type": "socks4",
+    "country": "UG",
+    "score": 65.58,
+    "tier": "silver",
+    "last_checked": "2026-11-19T19:59:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

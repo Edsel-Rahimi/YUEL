@@ -1,12 +1,12 @@
 [
   {
-    "ip": "94.242.50.113",
-    "port": 2080,
+    "ip": "195.135.255.98",
+    "port": 1080,
     "type": "socks5",
     "country": "LV",
-    "score": 92.76,
+    "score": 94.08,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,20 +15,9 @@
     "port": 8080,
     "type": "socks5",
     "country": "LV",
-    "score": 91.08,
+    "score": 93.76,
     "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "195.13.182.210",
-    "port": 8080,
-    "type": "socks5",
-    "country": "LV",
-    "score": 86.71,
-    "tier": "gold",
-    "last_checked": "2026-11-19T18:53:18+00:00",
+    "last_checked": "2026-11-19T19:59:21+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
