@@ -1,0 +1,35 @@
+[
+  {
+    "ip": "196.1.97.198",
+    "port": 80,
+    "type": "http",
+    "country": "SN",
+    "score": 58.36,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "196.1.93.10",
+    "port": 80,
+    "type": "http",
+    "country": "SN",
+    "score": 55.93,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "154.65.39.8",
+    "port": 80,
+    "type": "http",
+    "country": "SN",
+    "score": 53.68,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

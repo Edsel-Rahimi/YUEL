@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "41.139.151.147",
+    "port": 80,
+    "type": "http",
+    "country": "KE",
+    "score": 81.13,
+    "tier": "gold",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.213.248.13",
+    "port": 8080,
+    "type": "http",
+    "country": "KE",
+    "score": 27.62,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

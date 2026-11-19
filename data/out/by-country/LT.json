@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "185.193.26.120",
+    "port": 9050,
+    "type": "socks5",
+    "country": "LT",
+    "score": 43.2,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

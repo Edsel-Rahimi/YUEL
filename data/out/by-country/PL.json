@@ -1,0 +1,35 @@
+[
+  {
+    "ip": "185.49.31.205",
+    "port": 8080,
+    "type": "http",
+    "country": "PL",
+    "score": 77.66,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "83.168.74.163",
+    "port": 8080,
+    "type": "http",
+    "country": "PL",
+    "score": 74.55,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "91.150.189.122",
+    "port": 1080,
+    "type": "socks4",
+    "country": "PL",
+    "score": 51.52,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

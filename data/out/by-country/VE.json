@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "154.59.56.78",
+    "port": 999,
+    "type": "http",
+    "country": "VE",
+    "score": 41.47,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.172.181.0",
+    "port": 999,
+    "type": "http",
+    "country": "VE",
+    "score": 30.48,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

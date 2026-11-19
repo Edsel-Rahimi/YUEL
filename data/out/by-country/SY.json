@@ -1,0 +1,46 @@
+[
+  {
+    "ip": "79.98.32.137",
+    "port": 8080,
+    "type": "http",
+    "country": "SY",
+    "score": 78.54,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.235.16.12",
+    "port": 80,
+    "type": "http",
+    "country": "SY",
+    "score": 72.3,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "201.4.69.110",
+    "port": 8080,
+    "type": "http",
+    "country": "SY",
+    "score": 29.27,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "116.204.166.151",
+    "port": 8080,
+    "type": "http",
+    "country": "SY",
+    "score": 27.36,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

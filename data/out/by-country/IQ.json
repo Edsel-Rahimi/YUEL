@@ -1,0 +1,35 @@
+[
+  {
+    "ip": "185.135.69.34",
+    "port": 80,
+    "type": "http",
+    "country": "IQ",
+    "score": 77.29,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.166.24.191",
+    "port": 1981,
+    "type": "http",
+    "country": "IQ",
+    "score": 71.95,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "65.20.230.118",
+    "port": 9090,
+    "type": "http",
+    "country": "IQ",
+    "score": 59.05,
+    "tier": "silver",
+    "last_checked": "2026-11-19T13:53:03+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
