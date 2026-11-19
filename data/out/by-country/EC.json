@@ -1,23 +1,12 @@
 [
   {
-    "ip": "190.12.150.244",
-    "port": 999,
+    "ip": "181.233.50.233",
+    "port": 8787,
     "type": "http",
     "country": "EC",
-    "score": 32.99,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T13:53:03+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.225.89.145",
-    "port": 999,
-    "type": "http",
-    "country": "EC",
-    "score": 29.09,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T13:53:03+00:00",
+    "score": 90.87,
+    "tier": "gold",
+    "last_checked": "2026-11-19T14:50:04+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

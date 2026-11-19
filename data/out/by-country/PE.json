@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "45.236.44.94",
+    "port": 8080,
+    "type": "http",
+    "country": "PE",
+    "score": 41.36,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T14:50:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.10.107.117",
+    "port": 999,
+    "type": "http",
+    "country": "PE",
+    "score": 31.8,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T14:50:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
