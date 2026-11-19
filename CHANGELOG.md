@@ -4,6 +4,36 @@ All notable changes to YUEL are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/) and the project uses
 [SemVer](https://semver.org/).
 
+## [0.5.0] - 2026-11-19
+
+### Added
+
+- Stage 5 — **geo** (`yuel/geo.py`, `config/geo.json`):
+  - Data source: **iptoasn.com `ip2asn-v4.tsv.gz`** — free, public-domain,
+    refreshed daily, single gzip TSV, no registration (choice documented in
+    the module docstring). The lookup core is `GeoTable` (parsed from TSV
+    text, sorted ranges + bisect) so the source is swappable by changing
+    only the fetch/parse glue; `table_url` and `refresh_hours` live in
+    `config/geo.json`.
+  - Downloaded **once per refresh window** (default 72 h), cached at
+    `data/cache/geo/ip2asn-v4.tsv.gz` with an atomic cache write.
+  - Graceful degradation, never crashes the pipeline: refresh failure →
+    stale cache still used with a warning surfaced in the stage detail and
+    report; no cache at all → every proxy `unclassified`, stage still OK.
+  - Only literal IPv4 hosts are classified; domain-hosted proxies and IPv6
+    hosts are explicitly `unclassified` — never guessed. IPs outside every
+    range are also `unclassified`. The report separates the reasons
+    (domain_or_ipv6_host / not_in_table / table_unavailable).
+  - Stage output: `data/geo/proxies_geo.json` (scored entries + `country`)
+    and `data/geo/geo_report.json` (table info, per-country counts,
+    unclassified reasons).
+- CLI: `python -m yuel.pipeline geo [--geo-config PATH]`; `run` chain is now
+  collect → normalize → validate → score → geo.
+- Tests: 20 new — fixture-table lookup (inside ranges, inclusive boundaries,
+  gaps, single-IP ranges, invalid rows, unsorted input), cache freshness /
+  stale-reuse / corrupt-refetch / no-cache degradation (fetch seam, no
+  network), config validation, and stage flows. Suite total: **151 tests**.
+
 ## [0.4.0] - 2026-11-19
 
 ### Added

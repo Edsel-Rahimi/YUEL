@@ -15,7 +15,7 @@ Stage-based pipeline:
                   handshakes, confirm the working protocol
     4. score      weighted formula: latency, success rate,      (implemented)
                   freshness, anonymity + rolling history
-    5. geo        country split via public IP-to-country table  (planned)
+    5. geo        country split via public IP-to-country table  (implemented)
     6. publish    per-country machine-readable proxy files      (planned)
     7. automate   orchestration + GitHub Actions schedule       (planned)
 
@@ -23,4 +23,4 @@ This is a fresh, independently written codebase — it shares no code with
 any other project.
 """
 
-__version__ = "0.4.0"
+__version__ = "0.5.0"

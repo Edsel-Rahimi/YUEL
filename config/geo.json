@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "table_url": "https://iptoasn.com/data/ip2asn-v4.tsv.gz",
+  "cache_dir": "cache/geo",
+  "refresh_hours": 72,
+  "fetch_timeout_seconds": 180,
+  "max_bytes": 50000000
+}
