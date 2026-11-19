@@ -1,12 +1,12 @@
 [
   {
-    "ip": "185.82.99.204",
+    "ip": "185.82.99.101",
     "port": 92,
     "type": "http",
     "country": "LB",
-    "score": 44.69,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "score": 76.17,
+    "tier": "silver",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

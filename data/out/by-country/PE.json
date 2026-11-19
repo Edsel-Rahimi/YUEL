@@ -1,56 +1,12 @@
 [
   {
-    "ip": "179.63.6.239",
+    "ip": "38.172.131.105",
     "port": 999,
     "type": "http",
     "country": "PE",
-    "score": 88.85,
+    "score": 91.87,
     "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "200.121.48.195",
-    "port": 999,
-    "type": "http",
-    "country": "PE",
-    "score": 75.55,
-    "tier": "silver",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "200.106.116.105",
-    "port": 999,
-    "type": "http",
-    "country": "PE",
-    "score": 44.87,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "38.158.83.241",
-    "port": 999,
-    "type": "http",
-    "country": "PE",
-    "score": 44.55,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "179.63.6.249",
-    "port": 999,
-    "type": "http",
-    "country": "PE",
-    "score": 37.6,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -59,9 +15,31 @@
     "port": 3128,
     "type": "http",
     "country": "PE",
-    "score": 27.47,
+    "score": 69.56,
+    "tier": "silver",
+    "last_checked": "2026-11-19T22:44:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.210.106.24",
+    "port": 999,
+    "type": "http",
+    "country": "PE",
+    "score": 43.18,
     "tier": "bronze",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.10.107.117",
+    "port": 999,
+    "type": "http",
+    "country": "PE",
+    "score": 31.52,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

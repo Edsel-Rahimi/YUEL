@@ -1,56 +1,56 @@
 [
   {
-    "ip": "152.230.215.123",
-    "port": 80,
-    "type": "http",
-    "country": "CL",
-    "score": 93.94,
-    "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
     "ip": "170.239.84.103",
     "port": 3128,
     "type": "http",
     "country": "CL",
-    "score": 93.67,
+    "score": 94.35,
     "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "45.225.206.248",
+    "ip": "45.161.112.227",
     "port": 999,
     "type": "http",
     "country": "CL",
-    "score": 93.28,
-    "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "score": 47.87,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T22:44:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "186.148.31.28",
+    "port": 999,
+    "type": "http",
+    "country": "CL",
+    "score": 44.97,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T22:44:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "186.148.31.19",
+    "port": 999,
+    "type": "http",
+    "country": "CL",
+    "score": 32.99,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
     "ip": "200.111.104.59",
-    "port": 3129,
+    "port": 3128,
     "type": "http",
     "country": "CL",
-    "score": 32.19,
+    "score": 27.22,
     "tier": "bronze",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.225.204.10",
-    "port": 999,
-    "type": "http",
-    "country": "CL",
-    "score": 28.17,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

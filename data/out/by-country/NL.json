@@ -1,12 +1,23 @@
 [
   {
+    "ip": "145.220.227.2",
+    "port": 3128,
+    "type": "http",
+    "country": "NL",
+    "score": 95.26,
+    "tier": "gold",
+    "last_checked": "2026-11-19T22:44:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "145.220.227.24",
     "port": 8080,
     "type": "http",
     "country": "NL",
-    "score": 95.76,
+    "score": 95.23,
     "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +26,9 @@
     "port": 8080,
     "type": "http",
     "country": "NL",
-    "score": 94.96,
+    "score": 94.86,
     "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,42 +37,9 @@
     "port": 8080,
     "type": "http",
     "country": "NL",
-    "score": 94.85,
+    "score": 94.86,
     "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "145.220.227.2",
-    "port": 3128,
-    "type": "http",
-    "country": "NL",
-    "score": 94.71,
-    "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "109.236.88.82",
-    "port": 80,
-    "type": "http",
-    "country": "NL",
-    "score": 93.49,
-    "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "5.255.117.250",
-    "port": 1080,
-    "type": "socks5",
-    "country": "NL",
-    "score": 77.11,
-    "tier": "silver",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -70,9 +48,20 @@
     "port": 80,
     "type": "http",
     "country": "NL",
-    "score": 28.69,
+    "score": 77.44,
+    "tier": "silver",
+    "last_checked": "2026-11-19T22:44:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "109.236.88.82",
+    "port": 80,
+    "type": "http",
+    "country": "NL",
+    "score": 34.12,
     "tier": "bronze",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

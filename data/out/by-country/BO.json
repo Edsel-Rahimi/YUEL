@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "158.172.153.36",
+    "port": 999,
+    "type": "http",
+    "country": "BO",
+    "score": 42.91,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T22:44:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

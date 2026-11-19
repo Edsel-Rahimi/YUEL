@@ -4,9 +4,9 @@
     "port": 8080,
     "type": "http",
     "country": "DK",
-    "score": 81.86,
+    "score": 92.06,
     "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,20 +15,9 @@
     "port": 3128,
     "type": "http",
     "country": "DK",
-    "score": 81.27,
+    "score": 87.64,
     "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "194.150.110.134",
-    "port": 80,
-    "type": "http",
-    "country": "DK",
-    "score": 80.6,
-    "tier": "gold",
-    "last_checked": "2026-11-19T21:45:32+00:00",
+    "last_checked": "2026-11-19T22:44:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
