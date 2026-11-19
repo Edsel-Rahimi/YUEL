@@ -1,12 +1,23 @@
 [
   {
-    "ip": "161.22.33.152",
+    "ip": "82.86.112.52",
     "port": 999,
     "type": "http",
     "country": "VE",
-    "score": 95.51,
+    "score": 95.28,
     "tier": "gold",
-    "last_checked": "2026-11-19T14:50:04+00:00",
+    "last_checked": "2026-11-19T15:53:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.51.206.73",
+    "port": 999,
+    "type": "http",
+    "country": "VE",
+    "score": 95.25,
+    "tier": "gold",
+    "last_checked": "2026-11-19T15:53:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,31 +26,20 @@
     "port": 4145,
     "type": "socks4",
     "country": "VE",
-    "score": 84.84,
+    "score": 93.15,
     "tier": "gold",
-    "last_checked": "2026-11-19T14:50:04+00:00",
+    "last_checked": "2026-11-19T15:53:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "200.59.191.137",
+    "ip": "200.59.186.155",
     "port": 999,
     "type": "http",
     "country": "VE",
-    "score": 84.08,
-    "tier": "gold",
-    "last_checked": "2026-11-19T14:50:04+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "143.255.87.206",
-    "port": 999,
-    "type": "http",
-    "country": "VE",
-    "score": 28.29,
+    "score": 28.37,
     "tier": "bronze",
-    "last_checked": "2026-11-19T14:50:04+00:00",
+    "last_checked": "2026-11-19T15:53:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

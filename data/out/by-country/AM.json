@@ -4,9 +4,20 @@
     "port": 80,
     "type": "http",
     "country": "AM",
-    "score": 56.41,
-    "tier": "silver",
-    "last_checked": "2026-11-19T14:50:04+00:00",
+    "score": 89.72,
+    "tier": "gold",
+    "last_checked": "2026-11-19T15:53:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "91.204.190.140",
+    "port": 81,
+    "type": "http",
+    "country": "AM",
+    "score": 27.86,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T15:53:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

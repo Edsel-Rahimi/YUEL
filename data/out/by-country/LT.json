@@ -4,9 +4,9 @@
     "port": 8080,
     "type": "http",
     "country": "LT",
-    "score": 86.4,
-    "tier": "gold",
-    "last_checked": "2026-11-19T14:50:04+00:00",
+    "score": 73.28,
+    "tier": "silver",
+    "last_checked": "2026-11-19T15:53:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

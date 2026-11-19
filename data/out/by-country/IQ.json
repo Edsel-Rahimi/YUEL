@@ -4,20 +4,20 @@
     "port": 80,
     "type": "http",
     "country": "IQ",
-    "score": 82.31,
-    "tier": "gold",
-    "last_checked": "2026-11-19T14:50:04+00:00",
+    "score": 79.14,
+    "tier": "silver",
+    "last_checked": "2026-11-19T15:53:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "185.166.27.208",
-    "port": 2020,
+    "ip": "62.201.217.243",
+    "port": 40010,
     "type": "http",
     "country": "IQ",
-    "score": 45.39,
+    "score": 40.63,
     "tier": "bronze",
-    "last_checked": "2026-11-19T14:50:04+00:00",
+    "last_checked": "2026-11-19T15:53:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
