@@ -1,12 +1,12 @@
 [
   {
-    "ip": "196.0.111.186",
-    "port": 46048,
-    "type": "socks4",
+    "ip": "196.0.111.194",
+    "port": 34638,
+    "type": "http",
     "country": "UG",
-    "score": 79.8,
-    "tier": "silver",
-    "last_checked": "2026-11-19T20:49:30+00:00",
+    "score": 33.45,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T21:45:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

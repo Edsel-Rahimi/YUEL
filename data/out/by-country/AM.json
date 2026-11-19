@@ -4,9 +4,9 @@
     "port": 4153,
     "type": "socks4",
     "country": "AM",
-    "score": 88.29,
+    "score": 87.66,
     "tier": "gold",
-    "last_checked": "2026-11-19T20:49:30+00:00",
+    "last_checked": "2026-11-19T21:45:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,9 @@
     "port": 80,
     "type": "http",
     "country": "AM",
-    "score": 75.72,
+    "score": 79.79,
     "tier": "silver",
-    "last_checked": "2026-11-19T20:49:30+00:00",
+    "last_checked": "2026-11-19T21:45:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "63.175.157.2",
+    "port": 30005,
+    "type": "http",
+    "country": "BB",
+    "score": 29.15,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T21:45:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
