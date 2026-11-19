@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "109.107.166.207",
+    "port": 30385,
+    "type": "socks5",
+    "country": "AE",
+    "score": 93.64,
+    "tier": "gold",
+    "last_checked": "2026-11-19T20:49:30+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

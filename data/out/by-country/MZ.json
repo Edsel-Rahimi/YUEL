@@ -1,12 +1,12 @@
 [
   {
-    "ip": "197.157.194.10",
+    "ip": "160.119.159.98",
     "port": 1080,
     "type": "socks4",
-    "country": "BI",
-    "score": 75.21,
+    "country": "MZ",
+    "score": 79.93,
     "tier": "silver",
-    "last_checked": "2026-11-19T19:59:21+00:00",
+    "last_checked": "2026-11-19T20:49:30+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

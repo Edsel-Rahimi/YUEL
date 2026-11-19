@@ -1,23 +1,23 @@
 [
   {
-    "ip": "178.252.134.188",
-    "port": 3128,
+    "ip": "81.90.144.170",
+    "port": 9000,
     "type": "http",
     "country": "IR",
-    "score": 83.2,
+    "score": 80.72,
     "tier": "gold",
-    "last_checked": "2026-11-19T19:59:21+00:00",
+    "last_checked": "2026-11-19T20:49:30+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "5.200.72.61",
-    "port": 3128,
+    "ip": "46.209.30.11",
+    "port": 8080,
     "type": "http",
     "country": "IR",
-    "score": 81.09,
-    "tier": "gold",
-    "last_checked": "2026-11-19T19:59:21+00:00",
+    "score": 44.34,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T20:49:30+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,53 +26,9 @@
     "port": 1090,
     "type": "http",
     "country": "IR",
-    "score": 80.7,
-    "tier": "gold",
-    "last_checked": "2026-11-19T19:59:21+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "80.191.46.62",
-    "port": 1099,
-    "type": "socks4",
-    "country": "IR",
-    "score": 80.53,
-    "tier": "gold",
-    "last_checked": "2026-11-19T19:59:21+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "195.181.40.34",
-    "port": 8080,
-    "type": "http",
-    "country": "IR",
-    "score": 78.87,
-    "tier": "silver",
-    "last_checked": "2026-11-19T19:59:21+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "31.14.124.45",
-    "port": 8080,
-    "type": "http",
-    "country": "IR",
-    "score": 39.09,
+    "score": 30.07,
     "tier": "bronze",
-    "last_checked": "2026-11-19T19:59:21+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "94.183.6.226",
-    "port": 9090,
-    "type": "http",
-    "country": "IR",
-    "score": 31.1,
-    "tier": "bronze",
-    "last_checked": "2026-11-19T19:59:21+00:00",
+    "last_checked": "2026-11-19T20:49:30+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

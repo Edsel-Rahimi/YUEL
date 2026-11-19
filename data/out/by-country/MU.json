@@ -1,12 +1,12 @@
 [
   {
-    "ip": "105.22.37.218",
+    "ip": "102.134.19.170",
     "port": 8080,
     "type": "http",
     "country": "MU",
-    "score": 34.18,
+    "score": 31.59,
     "tier": "bronze",
-    "last_checked": "2026-11-19T19:59:21+00:00",
+    "last_checked": "2026-11-19T20:49:30+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

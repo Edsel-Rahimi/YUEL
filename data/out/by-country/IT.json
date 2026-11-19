@@ -4,20 +4,9 @@
     "port": 3128,
     "type": "http",
     "country": "IT",
-    "score": 92.36,
-    "tier": "gold",
-    "last_checked": "2026-11-19T19:59:21+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "80.211.131.230",
-    "port": 9050,
-    "type": "socks5",
-    "country": "IT",
-    "score": 78.93,
-    "tier": "silver",
-    "last_checked": "2026-11-19T19:59:21+00:00",
+    "score": 32.31,
+    "tier": "bronze",
+    "last_checked": "2026-11-19T20:49:30+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
