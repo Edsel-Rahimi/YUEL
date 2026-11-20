@@ -30,6 +30,8 @@ jobs:
     steps:
       - name: Check out the repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so the commit steps can rebase safely
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -65,6 +67,9 @@ jobs:
             echo "published output unchanged — nothing to commit"
           else
             git commit -m "publish: pipeline output $(date -u +%FT%TZ) [skip ci]"
+            # rebase over anything pushed while this run was executing
+            # (manual commits landing mid-run must not kill the publish)
+            git pull --rebase origin main
             git push
           fi
 
@@ -82,5 +87,6 @@ jobs:
             echo "rendered assets unchanged — nothing to commit"
           else
             git commit -m "render: brand assets + country grid $(date -u +%FT%TZ) [skip ci]"
+            git pull --rebase origin main
             git push
           fi
