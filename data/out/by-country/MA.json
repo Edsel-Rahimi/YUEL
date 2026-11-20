@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "160.179.209.197",
+    "port": 60000,
+    "type": "http",
+    "country": "MA",
+    "score": 92.61,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

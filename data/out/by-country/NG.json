@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "41.216.169.82",
+    "port": 5678,
+    "type": "socks4",
+    "country": "NG",
+    "score": 81.35,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

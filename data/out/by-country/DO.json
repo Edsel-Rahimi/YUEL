@@ -1,23 +1,23 @@
 [
   {
-    "ip": "177.52.221.115",
+    "ip": "149.2.82.197",
     "port": 999,
     "type": "http",
     "country": "DO",
-    "score": 97.69,
+    "score": 81.2,
     "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "168.243.77.81",
+    "ip": "200.26.184.192",
     "port": 999,
     "type": "http",
     "country": "DO",
-    "score": 28.54,
+    "score": 43.94,
     "tier": "bronze",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

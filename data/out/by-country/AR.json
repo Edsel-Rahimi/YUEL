@@ -1,34 +1,78 @@
 [
   {
+    "ip": "198.12.37.25",
+    "port": 1080,
+    "type": "socks4",
+    "country": "AR",
+    "score": 89.52,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "187.102.219.32",
+    "port": 999,
+    "type": "http",
+    "country": "AR",
+    "score": 87.41,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "181.209.125.236",
+    "port": 999,
+    "type": "http",
+    "country": "AR",
+    "score": 85.97,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "181.209.78.75",
+    "port": 999,
+    "type": "http",
+    "country": "AR",
+    "score": 47.08,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "138.118.51.137",
+    "port": 8080,
+    "type": "http",
+    "country": "AR",
+    "score": 44.02,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "190.123.83.137",
     "port": 999,
     "type": "http",
     "country": "AR",
-    "score": 90.06,
-    "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "score": 43.43,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "45.172.142.189",
-    "port": 999,
-    "type": "http",
-    "country": "AR",
-    "score": 89.77,
-    "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.232.0.2",
+    "ip": "200.70.35.2",
     "port": 8080,
     "type": "http",
     "country": "AR",
-    "score": 86.81,
-    "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "score": 31.32,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

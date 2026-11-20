@@ -1,23 +1,12 @@
 [
   {
-    "ip": "5.255.99.75",
-    "port": 1080,
+    "ip": "31.44.5.192",
+    "port": 1081,
     "type": "socks5",
     "country": "NL",
-    "score": 96.09,
+    "score": 99.55,
     "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "145.220.227.24",
-    "port": 8080,
-    "type": "http",
-    "country": "NL",
-    "score": 95.56,
-    "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,9 +15,20 @@
     "port": 3128,
     "type": "http",
     "country": "NL",
-    "score": 95.35,
+    "score": 97.61,
     "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "145.220.227.24",
+    "port": 8080,
+    "type": "http",
+    "country": "NL",
+    "score": 97.26,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -37,9 +37,20 @@
     "port": 8080,
     "type": "http",
     "country": "NL",
-    "score": 95.31,
+    "score": 95.09,
     "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "109.236.88.82",
+    "port": 80,
+    "type": "http",
+    "country": "NL",
+    "score": 94.04,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -48,9 +59,9 @@
     "port": 8080,
     "type": "http",
     "country": "NL",
-    "score": 94.18,
+    "score": 92.76,
     "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -59,9 +70,9 @@
     "port": 1080,
     "type": "socks5",
     "country": "NL",
-    "score": 56.28,
+    "score": 56.05,
     "tier": "silver",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

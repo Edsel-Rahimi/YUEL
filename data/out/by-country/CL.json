@@ -4,9 +4,9 @@
     "port": 3128,
     "type": "http",
     "country": "CL",
-    "score": 92.9,
+    "score": 92.72,
     "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,20 @@
     "port": 80,
     "type": "http",
     "country": "CL",
-    "score": 72.5,
-    "tier": "silver",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "score": 45.25,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "190.54.100.74",
+    "port": 8080,
+    "type": "http",
+    "country": "CL",
+    "score": 34.08,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

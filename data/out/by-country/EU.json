@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "188.150.229.60",
+    "port": 5678,
+    "type": "socks4",
+    "country": "EU",
+    "score": 92.91,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

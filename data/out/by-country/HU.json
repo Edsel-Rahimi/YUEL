@@ -1,12 +1,23 @@
 [
   {
-    "ip": "109.61.117.11",
-    "port": 1080,
+    "ip": "178.48.13.177",
+    "port": 80,
     "type": "socks4",
     "country": "HU",
-    "score": 93.82,
+    "score": 91.71,
     "tier": "gold",
-    "last_checked": "2026-11-20T07:01:16+00:00",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "95.214.123.144",
+    "port": 8080,
+    "type": "http",
+    "country": "HU",
+    "score": 90.75,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

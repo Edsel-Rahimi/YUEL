@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "185.73.103.23",
+    "port": 3128,
+    "type": "http",
+    "country": "CZ",
+    "score": 93.69,
+    "tier": "gold",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "95.129.101.73",
+    "port": 80,
+    "type": "http",
+    "country": "CZ",
+    "score": 43.15,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T08:18:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
