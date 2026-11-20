@@ -10,27 +10,27 @@
   <rect x="48" y="76" width="344" height="188" rx="18" fill="#4F3F62" fill-opacity="0.3" stroke="#645676" stroke-opacity="0.65" stroke-width="1.2"/>
   <circle cx="76" cy="110" r="5" fill="#FC671F"/>
   <text x="92" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#F7F6F9">GOLD</text>
-  <text x="76" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#FC671F">574</text>
-  <text x="76" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">SCORE ≥ 80 · 29.5% OF ALIVE</text>
+  <text x="76" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#FC671F">524</text>
+  <text x="76" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">SCORE ≥ 80 · 29.3% OF ALIVE</text>
   <rect x="76" y="228" width="288" height="6" rx="3" fill="#645676" fill-opacity="0.65"/>
-  <rect class="m-grow" style="animation-delay:0.30s" x="76" y="228" width="84.9" height="6" rx="3" fill="#FC671F"/>
+  <rect class="m-grow" style="animation-delay:0.30s" x="76" y="228" width="84.3" height="6" rx="3" fill="#FC671F"/>
   </g>
   <g class="m-fade" style="animation-delay:0.24s">
   <rect x="428" y="76" width="344" height="188" rx="18" fill="#4F3F62" fill-opacity="0.3" stroke="#645676" stroke-opacity="0.65" stroke-width="1.2"/>
   <circle cx="456" cy="110" r="5" fill="#6574C9"/>
   <text x="472" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#F7F6F9">SILVER</text>
-  <text x="456" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#6574C9">798</text>
-  <text x="456" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">SCORE ≥ 50 · 41.0% OF ALIVE</text>
+  <text x="456" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#6574C9">736</text>
+  <text x="456" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">SCORE ≥ 50 · 41.1% OF ALIVE</text>
   <rect x="456" y="228" width="288" height="6" rx="3" fill="#645676" fill-opacity="0.65"/>
-  <rect class="m-grow" style="animation-delay:0.44s" x="456" y="228" width="118.1" height="6" rx="3" fill="#6574C9"/>
+  <rect class="m-grow" style="animation-delay:0.44s" x="456" y="228" width="118.4" height="6" rx="3" fill="#6574C9"/>
   </g>
   <g class="m-fade" style="animation-delay:0.38s">
   <rect x="808" y="76" width="344" height="188" rx="18" fill="#4F3F62" fill-opacity="0.3" stroke="#645676" stroke-opacity="0.65" stroke-width="1.2"/>
   <circle cx="836" cy="110" r="5" fill="#ED4A3B"/>
   <text x="852" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#F7F6F9">BRONZE</text>
-  <text x="836" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#ED4A3B">574</text>
-  <text x="836" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">SCORE ≥ 20 · 29.5% OF ALIVE</text>
+  <text x="836" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#ED4A3B">531</text>
+  <text x="836" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">SCORE ≥ 20 · 29.6% OF ALIVE</text>
   <rect x="836" y="228" width="288" height="6" rx="3" fill="#645676" fill-opacity="0.65"/>
-  <rect class="m-grow" style="animation-delay:0.58s" x="836" y="228" width="84.9" height="6" rx="3" fill="#ED4A3B"/>
+  <rect class="m-grow" style="animation-delay:0.58s" x="836" y="228" width="85.4" height="6" rx="3" fill="#ED4A3B"/>
   </g>
 </svg>
