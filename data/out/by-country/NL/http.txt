@@ -1,5 +1,5 @@
-# YUEL · NL · http · 4 proxies · generated 2026-11-20T11:37:45 UTC
+# YUEL · NL · http · 4 proxies · generated 2026-11-20T12:34:11 UTC
 http://145.220.227.67:8080
-http://145.220.227.28:8080
 http://145.220.227.2:3128
-http://109.236.88.82:80
+http://145.220.227.28:8080
+http://91.218.244.153:8989
