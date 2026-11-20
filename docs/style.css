@@ -811,6 +811,16 @@ input[type="checkbox"]:indeterminate::after {
 }
 
 /* ------------------------------------------------------------------ */
+/* placeholder for records without a real ISO-2 country code */
+.flag-ph {
+  width: 24px;
+  height: 18px;
+  border-radius: 3px;
+  background: var(--yuel-bg-sunken);
+  border: 1px solid var(--yuel-border-default);
+  flex: none;
+}
+
 /* pagination                                                          */
 /* ------------------------------------------------------------------ */
 

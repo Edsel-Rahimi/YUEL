@@ -66,7 +66,15 @@ const $ = (id) => document.getElementById(id);
 /* helpers                                                             */
 /* ------------------------------------------------------------------ */
 
+const ISO2_RE = /^[A-Z]{2}$/;
 const flagUrl = (cc) => `https://flagcdn.com/24x18/${cc.toLowerCase()}.png`;
+// real ISO-2 codes render a flag; anything else (e.g. "unclassified")
+// gets a neutral placeholder so rows never show a broken image
+function flagImg(cc, cls = "") {
+  return ISO2_RE.test(cc)
+    ? `<img src="${flagUrl(cc)}" alt="" loading="lazy"${cls ? ` class="${cls}"` : ""}>`
+    : `<span class="flag-ph" aria-hidden="true"></span>`;
+}
 
 function connOf(r) {  // same convention as the published txt siblings
   const creds = r.user && r.pass ? `${r.user}:${r.pass}@` : "";
@@ -208,7 +216,7 @@ function renderComboList() {
     <span class="c">${fmt(state.records.length)}</span></button>`;
   comboList.innerHTML = allBtn + (hits.length ? hits.map((c) => `
     <button type="button" class="combo-item" data-cc="${c.cc}">
-      <img src="${flagUrl(c.cc)}" alt="" loading="lazy"> <span class="n">${countryName(c.cc)}</span>
+      ${flagImg(c.cc)} <span class="n">${countryName(c.cc)}</span>
       <span class="c">${fmt(c.count)}</span>
     </button>`).join("") : '<div class="combo-empty">No country matches.</div>');
 }
@@ -297,7 +305,7 @@ function renderResults() {
       <td class="col-check"><input type="checkbox" class="row-check"${sel ? " checked" : ""} aria-label="Select ${r.ip}"></td>
       <td class="ip-cell">${r.ip}<span class="port">:${r.port}</span></td>
       <td><span class="type-badge"><span class="tdot ${r.type || "unknown"}"></span>${r.type || "unknown"}</span></td>
-      <td><span class="country-cell"><img src="${flagUrl(cc)}" alt="" loading="lazy">${countryName(cc)} <span class="code">${cc}</span></span></td>
+      <td><span class="country-cell">${flagImg(cc)}${countryName(cc)} <span class="code">${cc}</span></span></td>
       <td><span class="tier-badge ${r.tier}">${r.tier}</span></td>
       <td class="score-cell">${r.score != null ? Number(r.score).toFixed(2) : "—"}</td>
       <td class="latency-cell">${r.latency != null ? fmt(r.latency) + " ms" : "—"}</td>
