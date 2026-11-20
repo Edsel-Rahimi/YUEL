@@ -1,2 +1,2 @@
-# YUEL · IT · 1 proxies · generated 2026-11-20T18:59:48 UTC
-http://79.59.124.55:8080
+# YUEL · IT · 1 proxies · generated 2026-11-20T20:02:27 UTC
+http://93.42.151.100:8080

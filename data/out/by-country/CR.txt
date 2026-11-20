@@ -1,2 +1,0 @@
-# YUEL · CR · 1 proxies · generated 2026-11-20T18:59:48 UTC
-socks4://200.192.236.242:1080
