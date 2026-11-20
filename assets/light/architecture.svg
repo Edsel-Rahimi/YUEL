@@ -18,35 +18,35 @@
   <rect x="428" y="76" width="344" height="140" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
   <rect x="454" y="100" width="10" height="10" rx="3" fill="#4854A6" fill-opacity="0.8"/>
   <text x="476" y="110" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">NORMALIZE</text>
-  <text x="454" y="160" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">56,015 unique</text>
+  <text x="454" y="160" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">56,160 unique</text>
   <text x="454" y="190" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#545242">exact + fuzzy dedup</text>
   </g>
   <g class="m-fade" style="animation-delay:0.30s">
   <rect x="808" y="76" width="344" height="140" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
   <rect x="834" y="100" width="10" height="10" rx="3" fill="#4854A6" fill-opacity="0.8"/>
   <text x="856" y="110" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">VALIDATE</text>
-  <text x="834" y="160" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">40,654 tested</text>
+  <text x="834" y="160" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">40,716 tested</text>
   <text x="834" y="190" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#545242">real socks/http handshakes</text>
   </g>
   <g class="m-fade" style="animation-delay:0.40s">
   <rect x="48" y="236" width="344" height="140" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
   <rect x="74" y="260" width="10" height="10" rx="3" fill="#4854A6" fill-opacity="0.8"/>
   <text x="96" y="270" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE</text>
-  <text x="74" y="320" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">p50 64.96</text>
+  <text x="74" y="320" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">p50 64.04</text>
   <text x="74" y="350" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#545242">latency · success · freshness</text>
   </g>
   <g class="m-fade" style="animation-delay:0.50s">
   <rect x="428" y="236" width="344" height="140" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
   <rect x="454" y="260" width="10" height="10" rx="3" fill="#4854A6" fill-opacity="0.8"/>
   <text x="476" y="270" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">GEO</text>
-  <text x="454" y="320" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">75 countries</text>
+  <text x="454" y="320" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">74 countries</text>
   <text x="454" y="350" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#545242">ip-api country lookup</text>
   </g>
   <g class="m-fade" style="animation-delay:0.60s">
   <rect x="808" y="236" width="344" height="140" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
   <rect x="834" y="260" width="10" height="10" rx="3" fill="url(#brand-light)" fill-opacity="1.0"/>
   <text x="856" y="270" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">PUBLISH</text>
-  <text x="834" y="320" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="url(#brand-light)">1,791 alive</text>
+  <text x="834" y="320" font-size="24" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="url(#brand-light)">1,857 alive</text>
   <text x="834" y="350" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#545242">data/out/*.json contract</text>
   </g>
 </svg>

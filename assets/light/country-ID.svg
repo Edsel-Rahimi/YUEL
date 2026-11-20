@@ -6,7 +6,7 @@
   <image x="24" y="24" width="48" height="36" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAMAAAB2Mu6sAAAA7VBMVEVHcEzQAgLRAADTAQHXAgLXAgLUAQHSAQG+vr7XAgLQCAjExMTIyMjIyMi+vr7CwsK+vr7TAgLVAwPUBQXSAQHRAQHRFxfPAQHBwcHOzs7Dw8O+vr7GxsaioqLKysq8vLy5ubn/AAD////5AAD4+Pj2AADJAADVAADoAAD19fXYAADp6enQ0NDT09Pk5OT/YmLwAADtAAC/v7/Nzc3v7++8vLz/dHT/m5v/g4P/oKDyAADgAADCwsLHx8f/Nzf/WFj/EBD/iYn/6ur/xsb33Nz/KSnTZ2f/f3/1ISH/1tbEaWnc3Nz9/f3l5eXZ2dkpq+iOAAAAIXRSTlMAtP5ou5/CzNXYHbnFr59oHXtVL+itC+R7yVUv6Avkw7sWu81pAAAAtklEQVQY063RxxKCQBRE0WcgKGLOGRFBRgYQMCHmnP7/c5wqLdmoK+6yz7IB4hGKjsWYKJXJ5orwKh5hIKq6imkYhqm4qhzOM6FCiC6F5R6okuAnzkyFZIgSAVH40j+QAwRprx/H4/VouVj5cLrAYdf5tNlOJyNdP07P/Tlo3c6XfsMQBkGBQ6BrI4zvyO7ffLAdsDSrmeB5LlH3PEu7YoQQfnhOGyqp9PudRq1aTnIsy7aSZHsC2I85rK37bCAAAAAASUVORK5CYII="/>
   <text x="86" y="46" font-size="17" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">Indonesia</text>
   <text x="86" y="66" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">ID</text>
-  <text x="24" y="112" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">130</text>
+  <text x="24" y="112" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">107</text>
   <text x="112.4" y="112" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">ALIVE</text>
   <rect x="24" y="122" width="28" height="3" rx="1.5" fill="url(#brand-light)" opacity="0.35"/>
 </svg>
