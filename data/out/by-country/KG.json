@@ -1,12 +1,12 @@
 [
   {
-    "ip": "80.72.180.122",
-    "port": 1080,
-    "type": "socks5",
+    "ip": "80.72.176.101",
+    "port": 8080,
+    "type": "http",
     "country": "KG",
-    "score": 75.15,
+    "score": 76.61,
     "tier": "silver",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

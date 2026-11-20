@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "208.163.39.218",
+    "port": 53281,
+    "type": "http",
+    "country": "JM",
+    "score": 28.76,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T02:03:55+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

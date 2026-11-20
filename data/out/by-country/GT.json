@@ -1,12 +1,23 @@
 [
   {
-    "ip": "38.199.88.1",
+    "ip": "181.115.67.3",
     "port": 999,
     "type": "http",
     "country": "GT",
-    "score": 45.89,
+    "score": 48.21,
     "tier": "bronze",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "last_checked": "2026-11-20T02:03:55+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "200.119.141.114",
+    "port": 999,
+    "type": "http",
+    "country": "GT",
+    "score": 28.12,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

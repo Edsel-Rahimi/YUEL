@@ -4,20 +4,20 @@
     "port": 4153,
     "type": "socks4",
     "country": "GE",
-    "score": 89.14,
+    "score": 92.44,
     "tier": "gold",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "178.134.100.66",
+    "ip": "178.134.242.26",
     "port": 8080,
     "type": "http",
     "country": "GE",
-    "score": 33.88,
+    "score": 38.01,
     "tier": "bronze",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

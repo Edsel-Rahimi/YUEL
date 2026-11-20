@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "212.34.230.102",
+    "port": 4153,
+    "type": "socks4",
+    "country": "AM",
+    "score": 91.89,
+    "tier": "gold",
+    "last_checked": "2026-11-20T02:03:55+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

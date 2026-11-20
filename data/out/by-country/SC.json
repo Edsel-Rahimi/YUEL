@@ -1,23 +1,23 @@
 [
   {
     "ip": "94.26.106.100",
-    "port": 8080,
+    "port": 3128,
     "type": "http",
     "country": "SC",
-    "score": 95.3,
+    "score": 97.19,
     "tier": "gold",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "94.26.106.100",
+    "ip": "31.207.4.14",
     "port": 3128,
     "type": "http",
     "country": "SC",
-    "score": 94.59,
-    "tier": "gold",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "score": 30.6,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

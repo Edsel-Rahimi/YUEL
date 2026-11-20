@@ -1,23 +1,12 @@
 [
   {
-    "ip": "221.157.45.249",
-    "port": 80,
-    "type": "socks4",
-    "country": "KR",
-    "score": 90.62,
-    "tier": "gold",
-    "last_checked": "2026-11-20T00:48:01+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
     "ip": "183.106.215.208",
     "port": 1080,
     "type": "socks5",
     "country": "KR",
-    "score": 90.47,
+    "score": 89.96,
     "tier": "gold",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,20 +15,9 @@
     "port": 80,
     "type": "http",
     "country": "KR",
-    "score": 90.45,
+    "score": 88.9,
     "tier": "gold",
-    "last_checked": "2026-11-20T00:48:01+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "58.234.114.199",
-    "port": 1080,
-    "type": "socks5",
-    "country": "KR",
-    "score": 87.03,
-    "tier": "gold",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -48,9 +26,31 @@
     "port": 1979,
     "type": "socks5",
     "country": "KR",
-    "score": 86.82,
+    "score": 85.47,
     "tier": "gold",
-    "last_checked": "2026-11-20T00:48:01+00:00",
+    "last_checked": "2026-11-20T02:03:55+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "183.110.216.128",
+    "port": 8090,
+    "type": "http",
+    "country": "KR",
+    "score": 84.45,
+    "tier": "gold",
+    "last_checked": "2026-11-20T02:03:55+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "183.110.216.159",
+    "port": 8091,
+    "type": "http",
+    "country": "KR",
+    "score": 80.34,
+    "tier": "gold",
+    "last_checked": "2026-11-20T02:03:55+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
