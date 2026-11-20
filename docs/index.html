@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YUEL — browse alive proxies</title>
+  <meta name="description" content="Browse, filter and grab plain proxies from the latest YUEL run — socks5, socks4 and http, scored and tiered.">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // apply a persisted manual theme before first paint (no flash);
+    // without it, docs/tokens.css follows the OS preference
+    (function () {
+      try {
+        var saved = localStorage.getItem("yuel-theme");
+        if (saved === "light" || saved === "dark") {
+          document.documentElement.dataset.theme = saved;
+        }
+      } catch (e) { /* private mode etc. — OS preference applies */ }
+    })();
+  </script>
+</head>
+<body>
+
+  <header class="site-header">
+    <a class="brand" href="./">
+      <span class="brand-mark">Y</span>
+      <span>
+        <span class="brand-name">YUEL</span>
+        <div class="brand-sub">plain-proxy intelligence</div>
+      </span>
+    </a>
+    <span class="header-spacer"></span>
+    <div class="live-chips">
+      <span class="chip"><span class="dot pulse"></span><strong>1,875</strong>&nbsp;alive now</span>
+      <span class="chip updated">updated&nbsp;<strong>14m</strong>&nbsp;ago</span>
+      <a class="icon-btn" href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener" aria-label="YUEL on GitHub" title="YUEL on GitHub">
+        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      </a>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
+        <svg class="ico-moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.06.94a.5.5 0 0 1 .5.5 5.06 5.06 0 0 0 5.06 5.06.5.5 0 0 1 .5.5 6.06 6.06 0 1 1-6.06-6.06Z" transform="translate(-1.06 1.06)"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h1 class="page-title">Browse the latest run, <span class="grad">grab what you need</span></h1>
+      <p class="page-note">Static preview — sample rows, not wired to live data yet.</p>
+    </div>
+
+    <!-- filter bar ------------------------------------------------- -->
+    <section class="card filters" aria-label="Filters">
+      <div class="field-combo">
+        <label class="field-label" for="country-input">Country</label>
+        <div class="combo" id="country-combo">
+          <input class="control" id="country-input" type="text" placeholder="All countries — type to narrow" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="country-list">
+          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+          <div class="combo-list" id="country-list" role="listbox"></div>
+        </div>
+      </div>
+
+      <div class="search field-search">
+        <label class="field-label" for="ip-search">Search IP</label>
+        <input class="control" id="ip-search" type="text" placeholder="e.g. 47.251" autocomplete="off" spellcheck="false">
+        <svg class="search-ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.4"/><path d="m10.4 10.4 3.2 3.2"/></svg>
+      </div>
+
+      <div class="select field-sort">
+        <label class="field-label" for="sort-select">Sort by</label>
+        <select class="control" id="sort-select">
+          <option value="score" selected>Score — best first</option>
+          <option value="latency">Latency — fastest first</option>
+          <option value="country">Country — A to Z</option>
+        </select>
+        <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+      </div>
+
+      <div class="field-types">
+        <span class="field-label">Type</span>
+        <div class="toggle-group" id="type-toggles">
+          <button class="toggle" data-type="socks5" aria-pressed="true"><span class="tdot socks5"></span>socks5</button>
+          <button class="toggle" data-type="socks4" aria-pressed="true"><span class="tdot socks4"></span>socks4</button>
+          <button class="toggle" data-type="http" aria-pressed="true"><span class="tdot http"></span>http</button>
+        </div>
+      </div>
+
+      <div class="field-tiers">
+        <span class="field-label">Tier</span>
+        <div class="toggle-group" id="tier-toggles">
+          <button class="toggle" data-tier="gold" aria-pressed="true"><span class="tdot gold"></span>gold</button>
+          <button class="toggle" data-tier="silver" aria-pressed="true"><span class="tdot silver"></span>silver</button>
+          <button class="toggle" data-tier="bronze" aria-pressed="true"><span class="tdot bronze"></span>bronze</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- results ---------------------------------------------------- -->
+    <section class="card" aria-label="Results">
+      <div class="results-head">
+        <span class="results-count">Showing <span id="shown-count">6</span> <span class="muted" id="of-total">of 1,875 proxies</span></span>
+        <span class="results-hint">static preview rows — latency values are illustrative</span>
+      </div>
+      <div class="table-scroll">
+        <table class="results">
+          <thead>
+            <tr>
+              <th class="col-check"><input type="checkbox" id="check-all" aria-label="Select all visible"></th>
+              <th>IP : Port</th>
+              <th>Type</th>
+              <th>Country</th>
+              <th>Tier</th>
+              <th>Score</th>
+              <th>Latency</th>
+              <th>Checked</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="results-body"><!-- sample rows rendered by app.js --></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- sticky selection bar (demo: shows when ≥1 row selected) ------- -->
+  <div class="selection-bar hidden" id="selection-bar" role="toolbar" aria-label="Selected proxies actions">
+    <span class="selection-count"><span id="sel-count">0</span> <span class="muted">selected</span></span>
+    <span class="sel-divider"></span>
+    <button class="btn btn-primary" id="copy-list">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5v-2A1.5 1.5 0 0 0 9 2H3.5A1.5 1.5 0 0 0 2 3.5V9a1.5 1.5 0 0 0 1.5 1.5h2"/></svg>
+      Copy <span id="copy-n">0</span> as list
+    </button>
+    <button class="btn btn-outline" id="download-txt">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0 3-3M8 10 5 7"/><path d="M2.5 12.5h11"/></svg>
+      Download <span id="dl-n">0</span> as <span class="btn-label-dl">.txt</span>
+    </button>
+    <button class="icon-btn" id="clear-sel" aria-label="Clear selection" title="Clear selection">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8"/></svg>
+    </button>
+  </div>
+
+  <footer class="site-footer">
+    Data from <span class="mono">data/out</span> on <a href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener">GitHub</a> · refreshed every 30 min by Actions ·
+    plain <code>type://ip:port</code> lists also available under <a href="https://github.com/Edsel-Rahimi/YUEL/tree/main/data/out/by-country" target="_blank" rel="noopener">by-country</a>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
