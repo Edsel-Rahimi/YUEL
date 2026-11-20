@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "181.225.226.114",
+    "port": 3128,
+    "type": "http",
+    "country": "CU",
+    "score": 89.15,
+    "tier": "gold",
+    "last_checked": "2026-11-20T02:53:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "181.225.226.114",
+    "port": 3129,
+    "type": "http",
+    "country": "CU",
+    "score": 71.7,
+    "tier": "silver",
+    "last_checked": "2026-11-20T02:53:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

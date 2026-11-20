@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "134.35.173.253",
+    "port": 1080,
+    "type": "socks5",
+    "country": "YE",
+    "score": 70.1,
+    "tier": "silver",
+    "last_checked": "2026-11-20T02:53:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "89.189.75.246",
+    "port": 8080,
+    "type": "http",
+    "country": "YE",
+    "score": 29.11,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T02:53:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

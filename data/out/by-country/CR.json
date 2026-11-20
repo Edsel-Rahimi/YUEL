@@ -1,12 +1,12 @@
 [
   {
-    "ip": "85.112.65.130",
+    "ip": "38.210.160.159",
     "port": 8080,
     "type": "http",
-    "country": "LB",
-    "score": 43.76,
+    "country": "CR",
+    "score": 45.92,
     "tier": "bronze",
-    "last_checked": "2026-11-20T02:03:55+00:00",
+    "last_checked": "2026-11-20T02:53:10+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

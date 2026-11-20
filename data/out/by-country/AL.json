@@ -1,0 +1,35 @@
+[
+  {
+    "ip": "37.26.86.206",
+    "port": 4145,
+    "type": "socks4",
+    "country": "AL",
+    "score": 89.68,
+    "tier": "gold",
+    "last_checked": "2026-11-20T02:53:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "79.106.229.115",
+    "port": 8989,
+    "type": "http",
+    "country": "AL",
+    "score": 47.24,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T02:53:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "77.242.21.133",
+    "port": 8080,
+    "type": "http",
+    "country": "AL",
+    "score": 28.62,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T02:53:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

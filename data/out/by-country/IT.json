@@ -4,9 +4,9 @@
     "port": 3128,
     "type": "http",
     "country": "IT",
-    "score": 94.48,
+    "score": 91.92,
     "tier": "gold",
-    "last_checked": "2026-11-20T02:03:55+00:00",
+    "last_checked": "2026-11-20T02:53:10+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
