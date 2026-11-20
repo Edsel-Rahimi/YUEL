@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "102.38.7.149",
+    "port": 18000,
+    "type": "http",
+    "country": "LY",
+    "score": 27.42,
+    "tier": "bronze",
+    "latency": 6432,
+    "last_checked": "2026-11-20T13:48:31+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
