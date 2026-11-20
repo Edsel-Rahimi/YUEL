@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "5.191.253.56",
+    "port": 1080,
+    "type": "socks5",
+    "country": "AZ",
+    "score": 79.77,
+    "tier": "silver",
+    "latency": 293,
+    "last_checked": "2026-11-20T18:53:37+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.129.0.78",
+    "port": 8080,
+    "type": "http",
+    "country": "AZ",
+    "score": 78.04,
+    "tier": "silver",
+    "latency": 345,
+    "last_checked": "2026-11-20T18:53:37+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

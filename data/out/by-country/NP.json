@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "110.34.8.100",
+    "port": 1080,
+    "type": "socks4",
+    "country": "NP",
+    "score": 82.93,
+    "tier": "gold",
+    "latency": 338,
+    "last_checked": "2026-11-20T18:53:37+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "103.167.229.147",
+    "port": 8080,
+    "type": "http",
+    "country": "NP",
+    "score": 30.89,
+    "tier": "bronze",
+    "latency": 3583,
+    "last_checked": "2026-11-20T18:53:37+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

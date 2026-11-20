@@ -1,13 +1,13 @@
 [
   {
-    "ip": "185.196.182.22",
-    "port": 8080,
+    "ip": "79.106.229.208",
+    "port": 8989,
     "type": "http",
     "country": "AL",
-    "score": 86.92,
-    "tier": "gold",
-    "latency": 211,
-    "last_checked": "2026-11-20T17:55:00+00:00",
+    "score": 39.91,
+    "tier": "bronze",
+    "latency": 2090,
+    "last_checked": "2026-11-20T18:53:37+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
