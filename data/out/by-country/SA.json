@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "SA",
-    "score": 99.27,
+    "score": 98.77,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,9 @@
     "port": 80,
     "type": "http",
     "country": "SA",
-    "score": 98.75,
+    "score": 98.68,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

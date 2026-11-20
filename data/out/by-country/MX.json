@@ -1,12 +1,45 @@
 [
   {
+    "ip": "38.7.17.82",
+    "port": 999,
+    "type": "http",
+    "country": "MX",
+    "score": 98.65,
+    "tier": "gold",
+    "last_checked": "2026-11-20T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "200.33.20.25",
     "port": 80,
     "type": "http",
     "country": "MX",
-    "score": 98.2,
+    "score": 98.23,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.58.66.175",
+    "port": 999,
+    "type": "http",
+    "country": "MX",
+    "score": 98.19,
+    "tier": "gold",
+    "last_checked": "2026-11-20T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "206.135.53.53",
+    "port": 999,
+    "type": "http",
+    "country": "MX",
+    "score": 98.07,
+    "tier": "gold",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +48,9 @@
     "port": 999,
     "type": "http",
     "country": "MX",
-    "score": 72.08,
+    "score": 72.0,
     "tier": "silver",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,64 +59,9 @@
     "port": 999,
     "type": "http",
     "country": "MX",
-    "score": 72.0,
+    "score": 71.96,
     "tier": "silver",
-    "last_checked": "2026-11-20T05:58:33+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "206.135.47.106",
-    "port": 999,
-    "type": "http",
-    "country": "MX",
-    "score": 39.72,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T05:58:33+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "187.251.222.69",
-    "port": 8080,
-    "type": "http",
-    "country": "MX",
-    "score": 32.89,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T05:58:33+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "187.190.58.152",
-    "port": 8081,
-    "type": "http",
-    "country": "MX",
-    "score": 32.8,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T05:58:33+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "201.139.115.206",
-    "port": 8082,
-    "type": "http",
-    "country": "MX",
-    "score": 31.47,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T05:58:33+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "187.251.134.179",
-    "port": 999,
-    "type": "http",
-    "country": "MX",
-    "score": 29.93,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

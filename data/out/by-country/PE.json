@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "186.148.196.60",
+    "port": 999,
+    "type": "http",
+    "country": "PE",
+    "score": 30.25,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

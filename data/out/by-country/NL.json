@@ -1,23 +1,12 @@
 [
   {
-    "ip": "31.44.5.192",
-    "port": 1081,
+    "ip": "5.255.99.75",
+    "port": 1080,
     "type": "socks5",
     "country": "NL",
-    "score": 99.53,
+    "score": 96.09,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "145.220.227.28",
-    "port": 8080,
-    "type": "http",
-    "country": "NL",
-    "score": 97.5,
-    "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,9 +15,9 @@
     "port": 8080,
     "type": "http",
     "country": "NL",
-    "score": 97.41,
+    "score": 95.56,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -37,20 +26,9 @@
     "port": 3128,
     "type": "http",
     "country": "NL",
-    "score": 97.16,
+    "score": 95.35,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "109.236.88.82",
-    "port": 80,
-    "type": "http",
-    "country": "NL",
-    "score": 95.71,
-    "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -59,9 +37,31 @@
     "port": 8080,
     "type": "http",
     "country": "NL",
-    "score": 95.41,
+    "score": 95.31,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "145.220.227.28",
+    "port": 8080,
+    "type": "http",
+    "country": "NL",
+    "score": 94.18,
+    "tier": "gold",
+    "last_checked": "2026-11-20T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "5.255.123.162",
+    "port": 1080,
+    "type": "socks5",
+    "country": "NL",
+    "score": 56.28,
+    "tier": "silver",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

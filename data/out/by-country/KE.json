@@ -4,9 +4,31 @@
     "port": 80,
     "type": "http",
     "country": "KE",
-    "score": 83.54,
+    "score": 81.88,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.209.18.68",
+    "port": 8080,
+    "type": "http",
+    "country": "KE",
+    "score": 77.46,
+    "tier": "silver",
+    "last_checked": "2026-11-20T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "154.79.246.102",
+    "port": 1080,
+    "type": "socks4",
+    "country": "KE",
+    "score": 76.79,
+    "tier": "silver",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

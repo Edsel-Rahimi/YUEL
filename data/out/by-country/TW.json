@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "TW",
-    "score": 86.0,
+    "score": 90.73,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,9 @@
     "port": 8888,
     "type": "http",
     "country": "TW",
-    "score": 85.95,
+    "score": 89.1,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

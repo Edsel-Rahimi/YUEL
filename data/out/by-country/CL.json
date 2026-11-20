@@ -4,20 +4,20 @@
     "port": 3128,
     "type": "http",
     "country": "CL",
-    "score": 92.87,
+    "score": 92.9,
     "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "38.7.195.136",
-    "port": 999,
+    "ip": "152.230.215.123",
+    "port": 80,
     "type": "http",
     "country": "CL",
-    "score": 91.83,
-    "tier": "gold",
-    "last_checked": "2026-11-20T05:58:33+00:00",
+    "score": 72.5,
+    "tier": "silver",
+    "last_checked": "2026-11-20T07:01:16+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
