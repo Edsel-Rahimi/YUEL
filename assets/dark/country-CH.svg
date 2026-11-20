@@ -6,7 +6,7 @@
   <image x="24" y="24" width="48" height="36" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAMAAAB2Mu6sAAAAllBMVEVHcEzMAADVAQHBAADQAADSAQHKAQHUBwe7AADIAwPIAADHBga8AADJAQHKAwPMAwPJAwO6AADTAQG+AADFAAD/AAD/AAD////YAADQAAD/wsLwAADmAADdAAD/v7/FAADqAAD//f3MAAD/AQH/+fn/Fhb/3Nz/Gxv6AAD/IiL/T0//EBD/ysr/0ND/q6v/PDz/rKz/QkIOVAvCAAAAFXRSTlMAj8/Pt+FcUFBQsS8JpkonKuj32ffiXynpAAAAuElEQVQY03XR1w6DIBgFYHC1rmpHQAUHqHV1vv/LVUViMe25AfIR8ucAAACe5WumZkArBHMCeJhX10wpIaSgUXzSDMcwY27PsEvRknbigrSxCv1zWC5sIMHs8QdwpkKEUN015Qp8hSvGVYXxrRaw/wYRxjIVGJOUKFCisrmL51SQU5VNV/8EsctVeLEN2Aug4d1voCWUTuXJMiVwbo5t65ecRykd28+P7gwHGIgPCi3o6Gfdt7zx8AGBiB5kKLuH1AAAAABJRU5ErkJggg=="/>
   <text x="86" y="46" font-size="17" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#F7F6F9">Switzerland</text>
   <text x="86" y="66" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">CH</text>
-  <text x="24" y="112" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#F7F6F9">29</text>
+  <text x="24" y="112" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#F7F6F9">16</text>
   <text x="87.6" y="112" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">ALIVE</text>
   <rect x="24" y="122" width="28" height="3" rx="1.5" fill="url(#brand-dark)" opacity="0.35"/>
 </svg>
