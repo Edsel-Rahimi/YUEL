@@ -203,24 +203,24 @@
   <rect x="0.5" y="0.5" width="1199" height="299" rx="26" fill="none" stroke="url(#border-light)" stroke-width="1"/>
   <text x="40" y="52" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">PROTOCOL MIX — MEASURED BY REAL HANDSHAKE</text>
   <text x="1160" y="52" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#7D2327" text-anchor="end" opacity="0.8">claimed type never trusted — first working protocol wins</text>
-  <circle cx="250" cy="168" r="76" fill="none" stroke="#BD2632" stroke-width="24" stroke-dasharray="272.7 209.9" stroke-dashoffset="2.5" transform="rotate(-90 250 168)"/>
-  <circle cx="250" cy="168" r="76" fill="none" stroke="#085834" stroke-width="24" stroke-dasharray="167.0 315.5" stroke-dashoffset="-275.2" transform="rotate(-90 250 168)"/>
-  <circle cx="250" cy="168" r="76" fill="none" stroke="#7D2327" stroke-width="24" stroke-dasharray="22.8 459.7" stroke-dashoffset="-447.2" transform="rotate(-90 250 168)"/>
+  <circle cx="250" cy="168" r="76" fill="none" stroke="#BD2632" stroke-width="24" stroke-dasharray="174.5 308.0" stroke-dashoffset="2.5" transform="rotate(-90 250 168)"/>
+  <circle cx="250" cy="168" r="76" fill="none" stroke="#085834" stroke-width="24" stroke-dasharray="265.6 216.9" stroke-dashoffset="-177.0" transform="rotate(-90 250 168)"/>
+  <circle cx="250" cy="168" r="76" fill="none" stroke="#7D2327" stroke-width="24" stroke-dasharray="22.4 460.2" stroke-dashoffset="-447.7" transform="rotate(-90 250 168)"/>
   <circle class="spin-light" cx="250" cy="168" r="108" fill="none" stroke="#085834" stroke-opacity="0.30" stroke-width="1.6" stroke-dasharray="3 10"/>
   <g class="glowG-light"><ellipse cx="250" cy="168" rx="110" ry="48" fill="url(#glow-light)" opacity="0.28"/><ellipse cx="250" cy="168" rx="72" ry="32" fill="url(#glow-light)" opacity="0.5"/><ellipse cx="250" cy="168" rx="42" ry="19" fill="url(#glow-light)" opacity="0.85"/></g>
-  <text class="beat-light" x="250" y="170" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="30" font-weight="800" fill="#080806" text-anchor="middle">841</text>
+  <text class="beat-light" x="250" y="170" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="30" font-weight="800" fill="#080806" text-anchor="middle">1,745</text>
   <text x="250" y="194" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">ALIVE</text>
   <rect x="440" y="84" width="20" height="20" rx="6" fill="#BD2632"/>
 <g transform="translate(472.0,84.0) scale(0.7500)" fill="none" stroke="#BD2632" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L20 7.5 L12 12 L4 7.5 Z"/><path d="M4 12.5 L12 17 L20 12.5"/><path d="M4 16.5 L12 21 L20 16.5"/></g>
   <text x="500" y="100" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="800" fill="#080806" text-anchor="start" letter-spacing="0.8">HTTP</text>
-  <text x="500" y="122" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">489 · 58.1%</text>
+  <text x="500" y="122" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">656 · 37.6%</text>
   <rect x="440" y="136" width="20" height="20" rx="6" fill="#085834"/>
 <g transform="translate(472.0,136.0) scale(0.7500)" fill="none" stroke="#085834" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L19 5.8 V11 C19 15.6 16.1 18.6 12 20.2 C7.9 18.6 5 15.6 5 11 V5.8 Z"/><path d="M9 11.6 L11.3 13.9 L15.3 9.7"/></g>
   <text x="500" y="152" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="800" fill="#080806" text-anchor="start" letter-spacing="0.8">SOCKS5</text>
-  <text x="500" y="174" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">303 · 36.0%</text>
+  <text x="500" y="174" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">989 · 56.7%</text>
   <rect x="440" y="188" width="20" height="20" rx="6" fill="#7D2327"/>
 <g transform="translate(472.0,188.0) scale(0.7500)" fill="none" stroke="#7D2327" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><circle cx="5.5" cy="6" r="2.4"/><circle cx="5.5" cy="18" r="2.4"/><circle cx="18.5" cy="12" r="2.4"/><path d="M7.7 7.1 L16.3 11 M7.7 16.9 L16.3 13"/></g>
   <text x="500" y="204" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="800" fill="#080806" text-anchor="start" letter-spacing="0.8">SOCKS4</text>
-  <text x="500" y="226" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">49 · 5.8%</text>
-  <text x="600" y="274" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="middle" opacity="0.8">handshake latency p50 408.5 ms · p90 2,112.1 ms · min 6.4 · max 7,062.7</text>
+  <text x="500" y="226" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">100 · 5.7%</text>
+  <text x="600" y="274" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="middle" opacity="0.8">every protocol above was proven by a real handshake during this run</text>
 </svg>

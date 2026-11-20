@@ -15,9 +15,10 @@ Palette: exactly the seven YUEL brand values —
 (the feTurbulence grain overlay is desaturated gray noise, i.e. texture).
 
 Data: every number comes from the last real pipeline run
-(``data/out/run-summary.json``, ``data/scored/score_report.json``,
-``data/validated/validate_report.json``, ``data/out/all.json``,
-``config/score.json``) and the generator asserts internal consistency.
+(``data/out/run-summary.json`` + ``data/out/all.json`` — the CI-published
+output — and ``config/score.json``). Protocol mix and score percentiles are
+derived from ``all.json`` itself so every card describes the same run, and
+the generator asserts internal consistency.
 
 Usage::
 
@@ -31,6 +32,7 @@ show layout only — animations, grain and shadows live in the browser.
 from __future__ import annotations
 
 import argparse
+import collections
 import json
 import math
 import sys
@@ -133,8 +135,6 @@ def oc(th: dict, key: str) -> tuple[str, float | None]:
 
 def load_real_data() -> dict:
     summary = json.loads((REPO / "data/out/run-summary.json").read_text(encoding="utf-8"))
-    score = json.loads((REPO / "data/scored/score_report.json").read_text(encoding="utf-8"))
-    validate = json.loads((REPO / "data/validated/validate_report.json").read_text(encoding="utf-8"))
     cfg = json.loads((REPO / "config/score.json").read_text(encoding="utf-8"))
     all_records = json.loads((REPO / "data/out/all.json").read_text(encoding="utf-8"))
 
@@ -144,6 +144,15 @@ def load_real_data() -> dict:
     assert sum(tiers.values()) == alive, f"tier counts {tiers} do not sum to alive {alive}"
     assert totals["published_records"] == alive, "published records != alive"
     assert len(all_records) == alive, "all.json rows != alive"
+
+    # protocol mix and score stats are derived from the published all.json so
+    # they always describe the SAME run as the headline numbers (the local
+    # validate/score reports can lag behind the CI-published output)
+    by_type = collections.Counter(record["type"] for record in all_records)
+    assert sum(by_type.values()) == alive, "protocol counts do not sum to alive"
+    scores = sorted(record["score"] for record in all_records)
+    n = len(scores)
+    p50 = scores[n // 2] if n % 2 else (scores[n // 2 - 1] + scores[n // 2]) / 2
 
     countries = sorted(summary["by_country"].items(), key=lambda kv: (-kv[1], kv[0]))
 
@@ -156,9 +165,8 @@ def load_real_data() -> dict:
         "alive": alive,
         "countries": totals["countries"],
         "by_tier": tiers,
-        "score_stats": score["score_stats"],
-        "latency": validate["handshake_check"]["latency_ms"],
-        "by_type": validate["handshake_check"]["alive_by_confirmed_type"],
+        "score_stats": {"p50": p50, "mean": sum(scores) / n},
+        "by_type": dict(by_type),
         "thresholds": cfg["tiers"],
         "top_countries": countries,
     }
@@ -617,7 +625,7 @@ def card_header(t: str, d: dict) -> str:
         cx += w + 14
 
     parts.append(mono_text(600, 446,
-                           f"latency p50 {fmt(d['latency']['p50'])} ms — measured through real handshakes",
+                           f"score p50 {d['score_stats']['p50']} — every hop handshake-verified each run",
                            11.5, muted_c, anchor="middle", opacity=muted_o))
     parts.append("</svg>")
     return "\n".join(parts)
@@ -841,7 +849,7 @@ def card_funnel(t: str, d: dict) -> str:
     parts.append(mono_text(px + 18, py + 176,
                            f"score p50 {d['score_stats']['p50']}", 12, muted_c, opacity=muted_o))
     parts.append(mono_text(px + 18, py + 196,
-                           f"latency p50 {fmt(d['latency']['p50'])} ms", 12, muted_c, opacity=muted_o))
+                           f"score avg {d['score_stats']['mean']:.2f}", 12, muted_c, opacity=muted_o))
     parts.append("</svg>")
     return "\n".join(parts)
 
@@ -940,10 +948,8 @@ def card_protocols(t: str, d: dict) -> str:
         parts.append(mono_text(500, y + 22, f"{fmt(v)} · {v / total * 100:.1f}%", 12,
                                muted_c, opacity=muted_o))
 
-    lat = d["latency"]
     parts.append(mono_text(600, 274,
-                           f"handshake latency p50 {fmt(lat['p50'])} ms · p90 {fmt(lat['p90'])} ms · "
-                           f"min {fmt(lat['min'])} · max {fmt(lat['max'])}",
+                           "every protocol above was proven by a real handshake during this run",
                            12, muted_c, anchor="middle", opacity=muted_o))
     parts.append("</svg>")
     return "\n".join(parts)

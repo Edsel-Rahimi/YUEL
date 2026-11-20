@@ -196,26 +196,26 @@
   <rect x="3.5" y="3.5" width="1193" height="183" rx="23" fill="none" stroke="url(#ib-light)" stroke-width="1.5"/>
   <rect x="0.5" y="0.5" width="1199" height="189" rx="26" fill="none" stroke="url(#border-light)" stroke-width="1"/>
   <circle class="bgl-light" cx="46.0" cy="40.0" r="4" fill="#BD2632"/>
-  <text x="58" y="44" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">LAST RUN — 2026-11-19 · 14:00 UTC</text>
+  <text x="58" y="44" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">LAST RUN — 2026-11-20 · 07:06 UTC</text>
   <text x="1160" y="44" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#7D2327" text-anchor="end" opacity="0.8">plain SOCKS4 / SOCKS5 / HTTP</text>
   <g class="pls-light" style="animation-delay:0s"><circle cx="74" cy="104" r="15" fill="none" stroke="#BD2632" stroke-width="2" opacity="0.3"/></g>
 <g transform="translate(40.0,66.0) scale(0.6250)" fill="none" stroke="#BD2632" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M4 5 H20 L14 12 V17.5 L10 20.5 V12 Z"/><path d="M7.5 8.2 H16.5"/></g>
-  <text x="40" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#BD2632" class="beat-light">841</text>
+  <text x="40" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#BD2632" class="beat-light">1,745</text>
   <text x="40" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">VALIDATED ALIVE</text>
 <g transform="translate(267.0,66.0) scale(0.6250)" fill="none" stroke="#085834" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5 V18.5 C4.5 20 7.9 21.3 12 21.3 C16.1 21.3 19.5 20 19.5 18.5 V5.5"/><path d="M4.5 12 C4.5 13.5 7.9 14.8 12 14.8 C16.1 14.8 19.5 13.5 19.5 12"/></g>
-  <text x="267" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#085834">75,193</text>
+  <text x="267" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#085834">73,574</text>
   <text x="267" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">COLLECTED</text>
   <line x1="259.0" y1="62" x2="259.0" y2="138" stroke="url(#div-light)" stroke-width="1"/>
 <g transform="translate(494.0,66.0) scale(0.6250)" fill="none" stroke="#7D2327" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L20 7.5 L12 12 L4 7.5 Z"/><path d="M4 12.5 L12 17 L20 12.5"/><path d="M4 16.5 L12 21 L20 16.5"/></g>
-  <text x="494" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#7D2327">57,062</text>
+  <text x="494" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#7D2327">56,016</text>
   <text x="494" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">UNIQUE</text>
   <line x1="486.0" y1="62" x2="486.0" y2="138" stroke="url(#div-light)" stroke-width="1"/>
 <g transform="translate(721.0,66.0) scale(0.6250)" fill="none" stroke="#085834" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L19 5.8 V11 C19 15.6 16.1 18.6 12 20.2 C7.9 18.6 5 15.6 5 11 V5.8 Z"/><path d="M9 11.6 L11.3 13.9 L15.3 9.7"/></g>
-  <text x="721" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#085834">39,911</text>
+  <text x="721" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#085834">40,797</text>
   <text x="721" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">HANDSHAKE-TESTED</text>
   <line x1="713.0" y1="62" x2="713.0" y2="138" stroke="url(#div-light)" stroke-width="1"/>
 <g transform="translate(948.0,66.0) scale(0.6250)" fill="none" stroke="#BD2632" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><circle cx="12" cy="12" r="8.2"/><ellipse cx="12" cy="12" rx="3.6" ry="8.2"/><path d="M4.4 12 H19.6"/></g>
-  <text x="948" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#BD2632">64</text>
+  <text x="948" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#BD2632">69</text>
   <text x="948" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">COUNTRIES</text>
   <line x1="940.0" y1="62" x2="940.0" y2="138" stroke="url(#div-light)" stroke-width="1"/>
 </svg>

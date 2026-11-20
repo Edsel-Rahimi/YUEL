@@ -33,7 +33,7 @@ code, config, or history with any other project.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/stats.svg">
-    <img src="assets/light/stats.svg" alt="Last run: 841 validated alive · 75,193 collected · 57,062 unique · 39,911 handshake-tested · 64 countries" width="100%">
+    <img src="assets/light/stats.svg" alt="Last run: 1,745 validated alive · 73,574 collected · 56,016 unique · 40,797 handshake-tested · 69 countries" width="100%">
   </picture>
 </p>
 
@@ -47,14 +47,14 @@ code, config, or history with any other project.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/tiers.svg">
-    <img src="assets/light/tiers.svg" alt="Quality tiers: gold 239 (score ≥ 80) · silver 366 (score ≥ 50) · bronze 236 (score ≥ 20)" width="100%">
+    <img src="assets/light/tiers.svg" alt="Quality tiers: gold 531 (score ≥ 80) · silver 715 (score ≥ 50) · bronze 499 (score ≥ 20)" width="100%">
   </picture>
 </p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/flow.svg">
-    <img src="assets/light/flow.svg" alt="Pipeline flow: 24 sources → 57,062 unique → 39,911 tested → scored → 64 countries → 841 published" width="100%">
+    <img src="assets/light/flow.svg" alt="Pipeline flow: 24 sources → 56,016 unique → 40,797 tested → scored → 69 countries → 1,745 published" width="100%">
   </picture>
 </p>
 
@@ -68,14 +68,14 @@ code, config, or history with any other project.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/funnel.svg">
-    <img src="assets/light/funnel.svg" alt="Collection funnel: 75,193 collected → 57,062 unique → 39,911 tested → 841 alive (2.1% survive)" width="100%">
+    <img src="assets/light/funnel.svg" alt="Collection funnel: 73,574 collected → 56,016 unique → 40,797 tested → 1,745 alive (4.3% survive)" width="100%">
   </picture>
 </p>
 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/countries.svg">
-    <img src="assets/light/countries.svg" alt="Top countries by alive exits: US 251, CN 141, ID 45, GB 44, DE 43 — 64 countries total" width="100%">
+    <img src="assets/light/countries.svg" alt="Top countries by alive exits: CN 897, US 267, GB 74, ID 74, DE 54 — 69 countries total" width="100%">
   </picture>
 </p>
 
@@ -89,7 +89,7 @@ code, config, or history with any other project.
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/protocols.svg">
-    <img src="assets/light/protocols.svg" alt="Protocol mix of alive proxies: HTTP 489 (58.1%) · SOCKS5 303 (36.0%) · SOCKS4 49 (5.8%)" width="100%">
+    <img src="assets/light/protocols.svg" alt="Protocol mix of alive proxies: HTTP 656 (37.6%) · SOCKS5 989 (56.7%) · SOCKS4 100 (5.7%)" width="100%">
   </picture>
 </p>
 
