@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "134.35.129.34",
+    "port": 10800,
+    "type": "socks5",
+    "country": "YE",
+    "score": 80.67,
+    "tier": "gold",
+    "latency": 408,
+    "last_checked": "2026-11-20T10:25:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "217.145.199.45",
+    "port": 56746,
+    "type": "socks4",
+    "country": "SK",
+    "score": 93.18,
+    "tier": "gold",
+    "latency": 127,
+    "last_checked": "2026-11-20T10:25:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

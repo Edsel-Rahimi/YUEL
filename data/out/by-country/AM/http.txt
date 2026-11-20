@@ -1,2 +1,3 @@
-# YUEL · AM · http · 1 proxies · generated 2026-11-20T09:39:32 UTC
+# YUEL · AM · http · 2 proxies · generated 2026-11-20T10:31:35 UTC
 http://202.133.88.173:80
+http://91.204.190.140:81

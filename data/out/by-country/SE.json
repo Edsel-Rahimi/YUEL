@@ -1,23 +1,13 @@
 [
   {
-    "ip": "171.25.158.95",
-    "port": 1080,
-    "type": "socks5",
-    "country": "SE",
-    "score": 85.08,
-    "tier": "gold",
-    "last_checked": "2026-11-20T09:33:56+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
     "ip": "46.246.12.31",
     "port": 1080,
     "type": "socks5",
     "country": "SE",
-    "score": 76.66,
+    "score": 55.78,
     "tier": "silver",
-    "last_checked": "2026-11-20T09:33:56+00:00",
+    "latency": 1646,
+    "last_checked": "2026-11-20T10:25:48+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

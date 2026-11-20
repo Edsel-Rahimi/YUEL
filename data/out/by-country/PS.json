@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "82.213.29.53",
+    "port": 18000,
+    "type": "http",
+    "country": "PS",
+    "score": 27.2,
+    "tier": "bronze",
+    "latency": 7557,
+    "last_checked": "2026-11-20T10:25:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
