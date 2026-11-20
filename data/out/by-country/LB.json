@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "185.82.99.101",
+    "port": 92,
+    "type": "http",
+    "country": "LB",
+    "score": 80.54,
+    "tier": "gold",
+    "latency": 260,
+    "last_checked": "2026-11-20T22:42:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

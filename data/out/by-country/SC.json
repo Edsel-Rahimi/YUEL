@@ -1,25 +1,37 @@
 [
   {
     "ip": "94.26.106.100",
-    "port": 3128,
+    "port": 8080,
     "type": "http",
     "country": "SC",
-    "score": 96.24,
+    "score": 94.23,
     "tier": "gold",
-    "latency": 94,
-    "last_checked": "2026-11-20T21:43:12+00:00",
+    "latency": 154,
+    "last_checked": "2026-11-20T22:42:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
     "ip": "94.26.106.100",
-    "port": 8080,
+    "port": 3128,
     "type": "http",
     "country": "SC",
-    "score": 95.88,
+    "score": 93.85,
     "tier": "gold",
-    "latency": 95,
-    "last_checked": "2026-11-20T21:43:12+00:00",
+    "latency": 156,
+    "last_checked": "2026-11-20T22:42:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "31.56.19.26",
+    "port": 1080,
+    "type": "socks5",
+    "country": "SC",
+    "score": 93.29,
+    "tier": "gold",
+    "latency": 176,
+    "last_checked": "2026-11-20T22:42:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

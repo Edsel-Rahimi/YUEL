@@ -1,5 +1,4 @@
-# YUEL · KR · http · 4 proxies · generated 2026-11-20T21:49:00 UTC
+# YUEL · KR · http · 3 proxies · generated 2026-11-20T22:48:33 UTC
 http://220.116.142.217:80
-http://183.110.216.128:8090
-http://183.110.216.159:8091
+http://183.110.216.159:8090
 http://222.111.130.73:8080

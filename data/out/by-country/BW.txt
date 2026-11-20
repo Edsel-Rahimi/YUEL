@@ -1,0 +1,3 @@
+# YUEL · BW · 2 proxies · generated 2026-11-20T22:48:33 UTC
+http://154.73.87.241:8080
+http://83.143.29.225:80

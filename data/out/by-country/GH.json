@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "GH",
-    "score": 88.05,
-    "tier": "gold",
-    "latency": 180,
-    "last_checked": "2026-11-20T21:43:12+00:00",
+    "score": 78.9,
+    "tier": "silver",
+    "latency": 279,
+    "last_checked": "2026-11-20T22:42:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "197.255.125.12",
+    "port": 80,
+    "type": "http",
+    "country": "GH",
+    "score": 72.01,
+    "tier": "silver",
+    "latency": 468,
+    "last_checked": "2026-11-20T22:42:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
