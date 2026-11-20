@@ -1,2 +1,4 @@
-# YUEL · PE · http · 1 proxies · generated 2026-11-20T20:02:27 UTC
-http://138.186.76.57:999
+# YUEL · PE · http · 3 proxies · generated 2026-11-20T20:51:20 UTC
+http://200.106.124.208:999
+http://179.43.96.178:8080
+http://190.119.41.162:3128

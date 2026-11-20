@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "102.64.116.121",
+    "port": 4145,
+    "type": "socks4",
+    "country": "CG",
+    "score": 74.89,
+    "tier": "silver",
+    "latency": 331,
+    "last_checked": "2026-11-20T20:45:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

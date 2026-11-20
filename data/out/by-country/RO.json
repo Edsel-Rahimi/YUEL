@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "109.166.207.162",
+    "port": 3629,
+    "type": "socks4",
+    "country": "RO",
+    "score": 88.18,
+    "tier": "gold",
+    "latency": 196,
+    "last_checked": "2026-11-20T20:45:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

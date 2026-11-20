@@ -1,3 +1,5 @@
-# YUEL · KR · 2 proxies · generated 2026-11-20T20:02:27 UTC
+# YUEL · KR · 4 proxies · generated 2026-11-20T20:51:20 UTC
+http://220.116.142.217:80
 socks5://183.106.215.208:1080
+socks4://114.108.177.104:60984
 http://222.111.130.73:8080

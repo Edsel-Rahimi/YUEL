@@ -1,5 +1,4 @@
-# YUEL · UA · http · 4 proxies · generated 2026-11-20T20:02:27 UTC
+# YUEL · UA · http · 3 proxies · generated 2026-11-20T20:51:20 UTC
 http://31.148.207.153:80
-http://176.105.220.74:3129
 http://46.150.9.111:8123
-http://176.37.21.46:41890
+http://188.190.177.47:8989
