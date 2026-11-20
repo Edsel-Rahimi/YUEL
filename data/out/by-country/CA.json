@@ -4,9 +4,20 @@
     "port": 40000,
     "type": "socks5",
     "country": "CA",
-    "score": 99.31,
+    "score": 99.41,
     "tier": "gold",
-    "last_checked": "2026-11-20T08:18:34+00:00",
+    "last_checked": "2026-11-20T09:33:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "173.181.142.228",
+    "port": 80,
+    "type": "http",
+    "country": "CA",
+    "score": 28.75,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T09:33:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

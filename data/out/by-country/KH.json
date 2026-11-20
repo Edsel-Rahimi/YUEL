@@ -1,12 +1,12 @@
 [
   {
-    "ip": "203.189.136.174",
+    "ip": "103.197.241.209",
     "port": 1080,
-    "type": "socks4",
+    "type": "socks5",
     "country": "KH",
-    "score": 85.47,
+    "score": 82.57,
     "tier": "gold",
-    "last_checked": "2026-11-20T08:18:34+00:00",
+    "last_checked": "2026-11-20T09:33:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,31 @@
     "port": 8080,
     "type": "http",
     "country": "KH",
-    "score": 80.77,
+    "score": 81.72,
     "tier": "gold",
-    "last_checked": "2026-11-20T08:18:34+00:00",
+    "last_checked": "2026-11-20T09:33:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "36.37.203.215",
+    "port": 4153,
+    "type": "socks4",
+    "country": "KH",
+    "score": 79.67,
+    "tier": "silver",
+    "last_checked": "2026-11-20T09:33:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "36.37.180.40",
+    "port": 8080,
+    "type": "http",
+    "country": "KH",
+    "score": 78.67,
+    "tier": "silver",
+    "last_checked": "2026-11-20T09:33:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,9 +48,31 @@
     "port": 8080,
     "type": "http",
     "country": "KH",
-    "score": 77.66,
+    "score": 78.36,
     "tier": "silver",
-    "last_checked": "2026-11-20T08:18:34+00:00",
+    "last_checked": "2026-11-20T09:33:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "103.216.50.11",
+    "port": 8080,
+    "type": "http",
+    "country": "KH",
+    "score": 68.47,
+    "tier": "silver",
+    "last_checked": "2026-11-20T09:33:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "103.17.215.9",
+    "port": 8089,
+    "type": "http",
+    "country": "KH",
+    "score": 40.95,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T09:33:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -4,9 +4,9 @@
     "port": 8080,
     "type": "http",
     "country": "DK",
-    "score": 88.65,
+    "score": 88.51,
     "tier": "gold",
-    "last_checked": "2026-11-20T08:18:34+00:00",
+    "last_checked": "2026-11-20T09:33:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,9 @@
     "port": 3128,
     "type": "http",
     "country": "DK",
-    "score": 88.45,
+    "score": 85.5,
     "tier": "gold",
-    "last_checked": "2026-11-20T08:18:34+00:00",
+    "last_checked": "2026-11-20T09:33:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -26,9 +26,9 @@
     "port": 80,
     "type": "http",
     "country": "DK",
-    "score": 86.36,
-    "tier": "gold",
-    "last_checked": "2026-11-20T08:18:34+00:00",
+    "score": 31.99,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T09:33:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
