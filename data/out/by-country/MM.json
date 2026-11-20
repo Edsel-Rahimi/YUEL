@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "202.165.92.206",
+    "port": 8080,
+    "type": "http",
+    "country": "MM",
+    "score": 43.25,
+    "tier": "bronze",
+    "latency": 1289,
+    "last_checked": "2026-11-20T17:55:00+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

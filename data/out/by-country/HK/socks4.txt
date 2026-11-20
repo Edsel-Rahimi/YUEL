@@ -1,2 +1,2 @@
-# YUEL · HK · socks4 · 1 proxies · generated 2026-11-20T17:01:28 UTC
+# YUEL · HK · socks4 · 1 proxies · generated 2026-11-20T18:01:08 UTC
 socks4://49.0.252.39:9000
