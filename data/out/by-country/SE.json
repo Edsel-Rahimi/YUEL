@@ -4,9 +4,9 @@
     "port": 1080,
     "type": "socks5",
     "country": "SE",
-    "score": 85.12,
-    "tier": "gold",
-    "last_checked": "2026-11-20T02:53:10+00:00",
+    "score": 77.38,
+    "tier": "silver",
+    "last_checked": "2026-11-20T03:48:31+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,20 +15,9 @@
     "port": 1080,
     "type": "socks5",
     "country": "SE",
-    "score": 76.82,
+    "score": 77.19,
     "tier": "silver",
-    "last_checked": "2026-11-20T02:53:10+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "193.181.35.96",
-    "port": 8118,
-    "type": "http",
-    "country": "SE",
-    "score": 39.51,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T02:53:10+00:00",
+    "last_checked": "2026-11-20T03:48:31+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

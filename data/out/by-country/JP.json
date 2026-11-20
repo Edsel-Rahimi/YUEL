@@ -1,12 +1,12 @@
 [
   {
-    "ip": "140.227.61.201",
+    "ip": "160.251.172.183",
     "port": 3128,
     "type": "http",
     "country": "JP",
-    "score": 96.21,
-    "tier": "gold",
-    "last_checked": "2026-11-20T02:53:10+00:00",
+    "score": 44.46,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T03:48:31+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
