@@ -6,7 +6,7 @@
   <image x="24" y="24" width="48" height="36" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAMAAAB2Mu6sAAAAnFBMVEVHcEyzEBfLJzHLJzK0ERe8FRy7GyPDHSe9GiK7GyO/GiPDHCSuIyPuGyTqExnwIizwJjDtGSLrFR3sFx/vHijxKTTjFx+4ERfwLTjDExvUEhmuDRLKIiznICnFHCbfEhn+9fXmKzbaGyT1h4z5tLfOKDT95+jqJjHdJzHzZWv6w8X83N7xQUj1fIH71NX4pKjyWF73naH0dnz3mJ1py2ukAAAADXRSTlMA39jJvsufs24jVeYLseZxZQAAAPtJREFUGBkFwdtqU0EUANA1c/YkTROjIFQook/+/x+JD0KtYpE2ycnkXLZrFbtcl1Qia83hBOxyie1nQ2fLSZW3yrI9Ur7NIwsm8qjBaWoljCxMSK80Ok3YjQsTufmyfm/oAjG2hUlyfItGJyBsTOTj7nYV892ZoFKZSF5u+zg/3H0aQq2oyNSe9mq+X4/zR5WkkjTx993bdnI+/K6kXUS90Oj9tl0vy/3ThoSKRvd1zdf7/aWRzFSa3vl5bR9+dGMmMwKd4OWfzZ/HV8wQdIIKwzMzENMS7XBFG2eYwVTCMPx6GSxlfmiqArmW59KGMgKHpazrWmZDrWX8DzHdeM4oALzZAAAAAElFTkSuQmCC"/>
   <text x="86" y="46" font-size="17" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#F7F6F9">Hong Kong</text>
   <text x="86" y="66" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">HK</text>
-  <text x="24" y="112" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#F7F6F9">19</text>
+  <text x="24" y="112" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#F7F6F9">14</text>
   <text x="87.6" y="112" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">ALIVE</text>
   <rect x="24" y="122" width="28" height="3" rx="1.5" fill="url(#brand-dark)" opacity="0.35"/>
 </svg>
