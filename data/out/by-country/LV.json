@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "94.242.50.113",
+    "port": 2080,
+    "type": "socks5",
+    "country": "LV",
+    "score": 90.65,
+    "tier": "gold",
+    "latency": 199,
+    "last_checked": "2026-11-20T11:31:41+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

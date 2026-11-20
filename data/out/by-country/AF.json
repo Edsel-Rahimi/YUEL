@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "103.96.233.10",
+    "port": 1080,
+    "type": "socks5",
+    "country": "AF",
+    "score": 71.12,
+    "tier": "silver",
+    "latency": 721,
+    "last_checked": "2026-11-20T11:31:41+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

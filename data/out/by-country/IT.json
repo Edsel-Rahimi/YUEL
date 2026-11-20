@@ -4,10 +4,10 @@
     "port": 3128,
     "type": "http",
     "country": "IT",
-    "score": 43.1,
+    "score": 41.21,
     "tier": "bronze",
-    "latency": 1819,
-    "last_checked": "2026-11-20T10:25:48+00:00",
+    "latency": 1700,
+    "last_checked": "2026-11-20T11:31:41+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

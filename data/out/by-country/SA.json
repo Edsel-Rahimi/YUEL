@@ -4,10 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "SA",
-    "score": 99.44,
+    "score": 99.02,
     "tier": "gold",
-    "latency": 26,
-    "last_checked": "2026-11-20T10:25:48+00:00",
+    "latency": 46,
+    "last_checked": "2026-11-20T11:31:41+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +16,10 @@
     "port": 80,
     "type": "http",
     "country": "SA",
-    "score": 98.74,
+    "score": 98.9,
     "tier": "gold",
-    "latency": 81,
-    "last_checked": "2026-11-20T10:25:48+00:00",
+    "latency": 50,
+    "last_checked": "2026-11-20T11:31:41+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,2 +1,2 @@
-# YUEL · PS · 1 proxies · generated 2026-11-20T10:31:35 UTC
-http://82.213.29.53:18000
+# YUEL · PS · 1 proxies · generated 2026-11-20T11:37:45 UTC
+socks4://213.6.68.210:4145
