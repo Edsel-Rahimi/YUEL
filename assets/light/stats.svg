@@ -1,221 +1,39 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img">
-  <defs>
-    <linearGradient id="bg-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
-      <stop offset="0" stop-color="#FCF7E8" stop-opacity="1"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="tint-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#E8E0C5" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#E8E0C5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="inner-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FAECC5" stop-opacity="0.55"/>
-      <stop offset="0.28" stop-color="#FAECC5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="topbar-light" gradientUnits="userSpaceOnUse" x1="0" y1="1.5" x2="1200" y2="1.5">
-      <stop offset="0" stop-color="#D03D00" stop-opacity="0.9"/>
-      <stop offset="0.55" stop-color="#BD2632" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#4854A6" stop-opacity="0.9"/>
-    </linearGradient>
-    <linearGradient id="hero-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#D03D00" stop-opacity="1"/>
-      <stop offset="0.55" stop-color="#BD2632" stop-opacity="1"/>
-      <stop offset="1" stop-color="#CC3C77" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="word-light" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7D2327" stop-opacity="1"/>
-      <stop offset="0.6" stop-color="#BD2632" stop-opacity="1"/>
-      <stop offset="1" stop-color="#D03D00" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="ib-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#D03D00" stop-opacity="0.5"/>
-      <stop offset="0.45" stop-color="#D03D00" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#D03D00" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="border-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
-      <stop offset="0" stop-color="#D1C9AC" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#D1C9AC" stop-opacity="0.49500000000000005"/>
-    </linearGradient>
-    <linearGradient id="div-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
-      <stop offset="0" stop-color="#B4AE95" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#B4AE95" stop-opacity="0.13999999999999999"/>
-    </linearGradient>
-    <radialGradient id="glow-light" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#D03D00" stop-opacity="0.55"/><stop offset="0.55" stop-color="#D03D00" stop-opacity="0.18"/><stop offset="1" stop-color="#D03D00" stop-opacity="0"/></radialGradient>
-    <linearGradient id="shine-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#FC671F" stop-opacity="0.06"/>
-      <stop offset="1" stop-color="#FC671F" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="wavea-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="0.09"/>
-      <stop offset="1" stop-color="#FC671F" stop-opacity="0.018"/>
-    </linearGradient>
-    <linearGradient id="waveb-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4854A6" stop-opacity="0.07"/>
-      <stop offset="1" stop-color="#4854A6" stop-opacity="0.014000000000000002"/>
-    </linearGradient>
-    <pattern id="grid-light" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="1.6" cy="1.6" r="1.05" fill="#B4AE95"/>
-    </pattern>
-    <filter id="grain-light" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
-      <feColorMatrix in="n" type="saturate" values="0" result="m"/>
-      <feComposite in="m" in2="SourceGraphic" operator="in"/>
-    </filter>
-    <filter id="shadow-light" x="-15%" y="-15%" width="130%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#BD2632" flood-opacity="0.20"/>
-      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#BD2632" flood-opacity="0.25"/>
-    </filter>
-    <clipPath id="clip-light"><rect x="0" y="0" width="1200" height="190" rx="26"/></clipPath>
-  </defs>
-    <style>
-      @keyframes fl-light {
-        0% { transform: translateY(0); opacity: 0; }
-        12% { opacity: 0.85; }
-        80% { opacity: 0.45; }
-        100% { transform: translateY(-330px); opacity: 0; }
-      }
-      .pt-light { animation: fl-light 9s linear infinite; }
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="190" viewBox="0 0 1200 190" role="img" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <style>.m-fade{animation:vf .7s ease-out both}.m-grow{transform-box:fill-box;transform-origin:left center;animation:vg .9s cubic-bezier(.2,.7,.2,1) both}.m-dash{animation:vm 26s linear infinite}.m-beat{animation:vb 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes vf{from{opacity:0}to{opacity:1}}@keyframes vg{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes vm{to{stroke-dashoffset:-320}}@keyframes vb{0%,86%,100%{transform:scale(1)}90%{transform:scale(1.05)}95%{transform:scale(1.01)}}@media (prefers-reduced-motion:reduce){.m-fade,.m-grow,.m-dash,.m-beat{animation:none}}</style>
+  <linearGradient id="brand-light" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FC671F"/><stop offset="0.38" stop-color="#ED4A3B"/><stop offset="0.66" stop-color="#CC3C77"/><stop offset="1" stop-color="#6574C9"/></linearGradient>
+  <rect x="0.75" y="0.75" width="1198.5" height="188.5" rx="26" fill="#FCF7E8" stroke="#E8E0C5" stroke-width="1.5"/>
 
-      @keyframes sw-light {
-        0%, 52% { transform: translateX(0) skewX(-20deg); }
-        100% { transform: translateX(1900px) skewX(-20deg); }
-      }
-      .sweep-light { animation: sw-light 7.5s ease-in-out infinite; }
-
-      @keyframes wvm-light { to { transform: translateX(-170px); } }
-      .wv-light { animation: wvm-light 9s ease-in-out infinite alternate; }
-      .wv2-light { animation-duration: 14s; }
-
-      @keyframes sp-light { to { transform: rotate(360deg); } }
-      .spin-light { transform-box: fill-box; transform-origin: center;
-                  animation: sp-light 8s linear infinite; }
-      .rev-light { animation-direction: reverse; }
-
-      @keyframes bt-light { 50% { transform: scale(1.12); } }
-      .beat-light { transform-box: fill-box; transform-origin: center;
-                  animation: bt-light 2.4s ease-in-out infinite; }
-
-      @keyframes gw-light { 50% { opacity: 0.55; } }
-      .glowG-light { animation: gw-light 3.2s ease-in-out infinite; }
-
-      @keyframes shn-light {
-        0%, 46% { transform: translateX(-540px); }
-        100% { transform: translateX(1620px); }
-      }
-      .shn-light { animation: shn-light 5.5s ease-in-out infinite; }
-
-      @keyframes bgl-light { 0%, 100% { opacity: 0.35; } 12% { opacity: 1; } }
-      .bgl-light { animation: bgl-light 2.2s ease-in-out infinite; }
-
-      @keyframes dsh-light { to { stroke-dashoffset: -36; } }
-      .dash-light { stroke-dasharray: 8 10; animation: dsh-light 1.2s linear infinite; }
-
-      @keyframes pk-light {
-        0% { transform: translateX(0); opacity: 0; }
-        10% { opacity: 1; }
-        88% { opacity: 1; }
-        100% { transform: translateX(var(--d, 200px)); opacity: 0; }
-      }
-      .pk-light { animation: pk-light 2.6s linear infinite; }
-
-      @keyframes pkv-light {
-        0% { transform: translateY(0); opacity: 0; }
-        10% { opacity: 1; }
-        88% { opacity: 1; }
-        100% { transform: translateY(var(--dy, 40px)); opacity: 0; }
-      }
-      .pkv-light { animation: pkv-light 2.6s linear infinite; }
-
-      @keyframes pls-light {
-        0% { transform: scale(0.55); opacity: 0.85; }
-        100% { transform: scale(2.4); opacity: 0; }
-      }
-      .pls-light { transform-box: fill-box; transform-origin: center;
-                 animation: pls-light 2.4s ease-out infinite; }
-
-      @keyframes flt-light { 50% { transform: translateY(-6px); } }
-      .flt-light { animation: flt-light 6s ease-in-out infinite; }
-
-      @keyframes grw-light { from { transform: scaleX(0); } }
-      .grow-light { transform-box: fill-box; transform-origin: left center;
-                  animation: grw-light 1.5s 0.2s ease-out both; }
-
-      @media (prefers-reduced-motion: reduce) {
-        .pt-light,.sweep-light,.wv-light,.spin-light,.rev-light,.beat-light,.glowG-light,.shn-light,.bgl-light,.dash-light,.pk-light,.pkv-light,.pls-light,.flt-light,.grow-light { animation: none; }
-      }
-    </style>
-  <g filter="url(#shadow-light)"><rect width="1200" height="190" rx="26" fill="#FCF7E8"/></g>
-  <g clip-path="url(#clip-light)">
-    <rect width="1200" height="190" fill="url(#bg-light)"/>
-    <rect width="1200" height="190" fill="url(#tint-light)"/>
-    <rect width="1200" height="190" fill="url(#inner-light)"/>
-    <rect width="1200" height="190" fill="url(#grid-light)" opacity="0.05"/>
-    <rect width="1200" height="190" fill="#080806" filter="url(#grain-light)" opacity="0.045"/>
-    <ellipse cx="130" cy="60" rx="260" ry="140" fill="url(#glow-light)" opacity="0.22"/>
-    <ellipse cx="1090" cy="140" rx="240" ry="130" fill="url(#glow-light)" opacity="0.14"/>
-    <path class="wv-light" d="M -320 156 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0" fill="url(#wavea-light)" opacity="0.8"/>
-    <path class="wv-light wv2-light" d="M -320 168 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0" fill="url(#waveb-light)" opacity="0.9"/>
-    <rect width="1200" height="3" fill="url(#topbar-light)"/>
-    <g class="sweep-light"><rect x="-320" y="-60" width="230" height="310" fill="url(#shine-light)" opacity="0.75"/></g>
-  <circle class="pt-light" cx="40" cy="174" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:8.0s;animation-delay:-0.0s"/>
-  <circle class="pt-light" cx="150" cy="174" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:9.7s;animation-delay:-0.9s"/>
-  <circle class="pt-light" cx="260" cy="174" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:11.4s;animation-delay:-1.8s"/>
-  <circle class="pt-light" cx="289" cy="174" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:13.1s;animation-delay:-2.7s"/>
-  <circle class="pt-light" cx="399" cy="174" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:8.0s;animation-delay:-3.6s"/>
-  <circle class="pt-light" cx="509" cy="174" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:9.7s;animation-delay:-4.5s"/>
-  <circle class="pt-light" cx="538" cy="174" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:11.4s;animation-delay:-5.4s"/>
-  <circle class="pt-light" cx="648" cy="174" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:13.1s;animation-delay:-6.3s"/>
-  <circle cx="46" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="89" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="132" cy="183" r="1.8" fill="#4854A6" style="animation-delay:-0.46s"/>
-  <circle cx="176" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="219" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="262" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="305" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="348" cy="183" r="1.8" fill="#4854A6" style="animation-delay:-1.61s"/>
-  <circle cx="392" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="435" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="478" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="521" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="564" cy="183" r="1.8" fill="#4854A6" style="animation-delay:-2.76s"/>
-  <circle cx="608" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="651" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="694" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="737" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="780" cy="183" r="1.8" fill="#4854A6" style="animation-delay:-3.91s"/>
-  <circle cx="824" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="867" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="910" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="953" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="996" cy="183" r="1.8" fill="#4854A6" style="animation-delay:-5.06s"/>
-  <circle cx="1040" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="1083" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="1126" cy="183" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <g class="m-fade" style="animation-delay:0.00s">
+  <text x="48" y="46" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">LAST RUN — 2026-11-20 · 07:06 UTC</text>
+  <text x="1152" y="46" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="end" fill="#D03D00">PLAIN SOCKS4 / SOCKS5 / HTTP</text>
   </g>
-  <rect x="3.5" y="3.5" width="1193" height="183" rx="23" fill="none" stroke="url(#ib-light)" stroke-width="1.5"/>
-  <rect x="0.5" y="0.5" width="1199" height="189" rx="26" fill="none" stroke="url(#border-light)" stroke-width="1"/>
-  <circle class="bgl-light" cx="46.0" cy="40.0" r="4" fill="#D03D00"/>
-  <text x="58" y="44" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">LAST RUN — 2026-11-20 · 07:06 UTC</text>
-  <text x="1160" y="44" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#545242" text-anchor="end" opacity="0.85">plain SOCKS4 / SOCKS5 / HTTP</text>
-  <g class="pls-light" style="animation-delay:0s"><circle cx="74" cy="104" r="15" fill="none" stroke="#D03D00" stroke-width="2" opacity="0.3"/></g>
-<g transform="translate(40.0,66.0) scale(0.6250)" fill="none" stroke="#D03D00" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M4 5 H20 L14 12 V17.5 L10 20.5 V12 Z"/><path d="M7.5 8.2 H16.5"/></g>
-  <text x="40" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#D03D00" class="beat-light">1,745</text>
-  <text x="40" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">VALIDATED ALIVE</text>
-<g transform="translate(267.0,66.0) scale(0.6250)" fill="none" stroke="#4854A6" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5 V18.5 C4.5 20 7.9 21.3 12 21.3 C16.1 21.3 19.5 20 19.5 18.5 V5.5"/><path d="M4.5 12 C4.5 13.5 7.9 14.8 12 14.8 C16.1 14.8 19.5 13.5 19.5 12"/></g>
-  <text x="267" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#4854A6">73,574</text>
-  <text x="267" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">COLLECTED</text>
-  <line x1="259.0" y1="62" x2="259.0" y2="138" stroke="url(#div-light)" stroke-width="1"/>
-<g transform="translate(494.0,66.0) scale(0.6250)" fill="none" stroke="#BD2632" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L20 7.5 L12 12 L4 7.5 Z"/><path d="M4 12.5 L12 17 L20 12.5"/><path d="M4 16.5 L12 21 L20 16.5"/></g>
-  <text x="494" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#BD2632">56,016</text>
-  <text x="494" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">UNIQUE</text>
-  <line x1="486.0" y1="62" x2="486.0" y2="138" stroke="url(#div-light)" stroke-width="1"/>
-<g transform="translate(721.0,66.0) scale(0.6250)" fill="none" stroke="#CC3C77" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L19 5.8 V11 C19 15.6 16.1 18.6 12 20.2 C7.9 18.6 5 15.6 5 11 V5.8 Z"/><path d="M9 11.6 L11.3 13.9 L15.3 9.7"/></g>
-  <text x="721" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#CC3C77">40,797</text>
-  <text x="721" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">HANDSHAKE-TESTED</text>
-  <line x1="713.0" y1="62" x2="713.0" y2="138" stroke="url(#div-light)" stroke-width="1"/>
-<g transform="translate(948.0,66.0) scale(0.6250)" fill="none" stroke="#D03D00" stroke-width="3.20" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><circle cx="12" cy="12" r="8.2"/><ellipse cx="12" cy="12" rx="3.6" ry="8.2"/><path d="M4.4 12 H19.6"/></g>
-  <text x="948" y="118" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="38" font-weight="800" fill="#D03D00">69</text>
-  <text x="948" y="140" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">COUNTRIES</text>
-  <line x1="940.0" y1="62" x2="940.0" y2="138" stroke="url(#div-light)" stroke-width="1"/>
+  <g class="m-fade" style="animation-delay:0.10s">
+  <text x="158.4" y="94" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#545242">VALIDATED ALIVE</text>
+  <text class="m-beat" x="158.4" y="144" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="url(#brand-light)">1,745</text>
+  <rect x="143.4" y="158" width="30" height="3" rx="1.5" fill="url(#brand-light)" opacity="1.0"/>
+  </g>
+  <g class="m-fade" style="animation-delay:0.22s">
+  <text x="379.20000000000005" y="94" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#545242">COLLECTED</text>
+  <text x="379.20000000000005" y="144" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#080806">73,574</text>
+  <rect x="369.20000000000005" y="158" width="20" height="3" rx="1.5" fill="#D1C9AC" opacity="0.9"/>
+  </g>
+  <line x1="268.8" y1="72" x2="268.8" y2="158" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round"/>
+  <g class="m-fade" style="animation-delay:0.34s">
+  <text x="600.0" y="94" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#545242">UNIQUE</text>
+  <text x="600.0" y="144" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#080806">56,016</text>
+  <rect x="590.0" y="158" width="20" height="3" rx="1.5" fill="#D1C9AC" opacity="0.9"/>
+  </g>
+  <line x1="489.6" y1="72" x2="489.6" y2="158" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round"/>
+  <g class="m-fade" style="animation-delay:0.46s">
+  <text x="820.8000000000001" y="94" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#545242">HANDSHAKE-TESTED</text>
+  <text x="820.8000000000001" y="144" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#080806">40,797</text>
+  <rect x="810.8000000000001" y="158" width="20" height="3" rx="1.5" fill="#D1C9AC" opacity="0.9"/>
+  </g>
+  <line x1="710.4000000000001" y1="72" x2="710.4000000000001" y2="158" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round"/>
+  <g class="m-fade" style="animation-delay:0.58s">
+  <text x="1041.6" y="94" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#545242">COUNTRIES</text>
+  <text x="1041.6" y="144" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#080806">69</text>
+  <rect x="1031.6" y="158" width="20" height="3" rx="1.5" fill="#D1C9AC" opacity="0.9"/>
+  </g>
+  <line x1="931.2" y1="72" x2="931.2" y2="158" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2" stroke-linecap="round"/>
 </svg>

@@ -1,245 +1,45 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="340" viewBox="0 0 1200 340" role="img">
-  <defs>
-    <linearGradient id="bg-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
-      <stop offset="0" stop-color="#1E0D2F" stop-opacity="1"/>
-      <stop offset="1" stop-color="#4F3F62" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="tint-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6574C9" stop-opacity="0.08"/>
-      <stop offset="1" stop-color="#6574C9" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="inner-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FAECC5" stop-opacity="0.1"/>
-      <stop offset="0.28" stop-color="#FAECC5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="topbar-dark" gradientUnits="userSpaceOnUse" x1="0" y1="1.5" x2="1200" y2="1.5">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="0.9"/>
-      <stop offset="0.55" stop-color="#CC3C77" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#6574C9" stop-opacity="0.9"/>
-    </linearGradient>
-    <linearGradient id="hero-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="1"/>
-      <stop offset="0.55" stop-color="#CC3C77" stop-opacity="1"/>
-      <stop offset="1" stop-color="#6574C9" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="word-dark" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="1"/>
-      <stop offset="0.6" stop-color="#CC3C77" stop-opacity="1"/>
-      <stop offset="1" stop-color="#6574C9" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="ib-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="0.5"/>
-      <stop offset="0.45" stop-color="#FC671F" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#FC671F" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="border-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
-      <stop offset="0" stop-color="#6574C9" stop-opacity="0.45"/>
-      <stop offset="1" stop-color="#6574C9" stop-opacity="0.24750000000000003"/>
-    </linearGradient>
-    <linearGradient id="div-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
-      <stop offset="0" stop-color="#CCC5D5" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#CCC5D5" stop-opacity="0.055999999999999994"/>
-    </linearGradient>
-    <radialGradient id="glow-dark" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#FC671F" stop-opacity="0.55"/><stop offset="0.55" stop-color="#FC671F" stop-opacity="0.18"/><stop offset="1" stop-color="#FC671F" stop-opacity="0"/></radialGradient>
-    <linearGradient id="shine-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FAECC5" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#FAECC5" stop-opacity="0.06"/>
-      <stop offset="1" stop-color="#FAECC5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="wavea-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="0.1"/>
-      <stop offset="1" stop-color="#FC671F" stop-opacity="0.020000000000000004"/>
-    </linearGradient>
-    <linearGradient id="waveb-dark" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6574C9" stop-opacity="0.1"/>
-      <stop offset="1" stop-color="#6574C9" stop-opacity="0.020000000000000004"/>
-    </linearGradient>
-    <pattern id="grid-dark" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="1.6" cy="1.6" r="1.05" fill="#CCC5D5"/>
-    </pattern>
-    <filter id="grain-dark" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
-      <feColorMatrix in="n" type="saturate" values="0" result="m"/>
-      <feComposite in="m" in2="SourceGraphic" operator="in"/>
-    </filter>
-    <filter id="shadow-dark" x="-15%" y="-15%" width="130%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#FC671F" flood-opacity="0.20"/>
-      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#FC671F" flood-opacity="0.25"/>
-    </filter>
-    <clipPath id="clip-dark"><rect x="0" y="0" width="1200" height="340" rx="26"/></clipPath>
-  </defs>
-    <style>
-      @keyframes fl-dark {
-        0% { transform: translateY(0); opacity: 0; }
-        12% { opacity: 0.85; }
-        80% { opacity: 0.45; }
-        100% { transform: translateY(-330px); opacity: 0; }
-      }
-      .pt-dark { animation: fl-dark 9s linear infinite; }
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <style>.m-fade{animation:vf .7s ease-out both}.m-grow{transform-box:fill-box;transform-origin:left center;animation:vg .9s cubic-bezier(.2,.7,.2,1) both}.m-dash{animation:vm 26s linear infinite}.m-beat{animation:vb 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes vf{from{opacity:0}to{opacity:1}}@keyframes vg{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes vm{to{stroke-dashoffset:-320}}@keyframes vb{0%,86%,100%{transform:scale(1)}90%{transform:scale(1.05)}95%{transform:scale(1.01)}}@media (prefers-reduced-motion:reduce){.m-fade,.m-grow,.m-dash,.m-beat{animation:none}}</style>
+  <linearGradient id="brand-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FC671F"/><stop offset="0.38" stop-color="#ED4A3B"/><stop offset="0.66" stop-color="#CC3C77"/><stop offset="1" stop-color="#6574C9"/></linearGradient>
+  <rect x="0.75" y="0.75" width="1198.5" height="278.5" rx="26" fill="#1E0D2F" stroke="#645676" stroke-width="1.5"/>
 
-      @keyframes sw-dark {
-        0%, 52% { transform: translateX(0) skewX(-20deg); }
-        100% { transform: translateX(1900px) skewX(-20deg); }
-      }
-      .sweep-dark { animation: sw-dark 7.5s ease-in-out infinite; }
-
-      @keyframes wvm-dark { to { transform: translateX(-170px); } }
-      .wv-dark { animation: wvm-dark 9s ease-in-out infinite alternate; }
-      .wv2-dark { animation-duration: 14s; }
-
-      @keyframes sp-dark { to { transform: rotate(360deg); } }
-      .spin-dark { transform-box: fill-box; transform-origin: center;
-                  animation: sp-dark 8s linear infinite; }
-      .rev-dark { animation-direction: reverse; }
-
-      @keyframes bt-dark { 50% { transform: scale(1.12); } }
-      .beat-dark { transform-box: fill-box; transform-origin: center;
-                  animation: bt-dark 2.4s ease-in-out infinite; }
-
-      @keyframes gw-dark { 50% { opacity: 0.55; } }
-      .glowG-dark { animation: gw-dark 3.2s ease-in-out infinite; }
-
-      @keyframes shn-dark {
-        0%, 46% { transform: translateX(-540px); }
-        100% { transform: translateX(1620px); }
-      }
-      .shn-dark { animation: shn-dark 5.5s ease-in-out infinite; }
-
-      @keyframes bgl-dark { 0%, 100% { opacity: 0.35; } 12% { opacity: 1; } }
-      .bgl-dark { animation: bgl-dark 2.2s ease-in-out infinite; }
-
-      @keyframes dsh-dark { to { stroke-dashoffset: -36; } }
-      .dash-dark { stroke-dasharray: 8 10; animation: dsh-dark 1.2s linear infinite; }
-
-      @keyframes pk-dark {
-        0% { transform: translateX(0); opacity: 0; }
-        10% { opacity: 1; }
-        88% { opacity: 1; }
-        100% { transform: translateX(var(--d, 200px)); opacity: 0; }
-      }
-      .pk-dark { animation: pk-dark 2.6s linear infinite; }
-
-      @keyframes pkv-dark {
-        0% { transform: translateY(0); opacity: 0; }
-        10% { opacity: 1; }
-        88% { opacity: 1; }
-        100% { transform: translateY(var(--dy, 40px)); opacity: 0; }
-      }
-      .pkv-dark { animation: pkv-dark 2.6s linear infinite; }
-
-      @keyframes pls-dark {
-        0% { transform: scale(0.55); opacity: 0.85; }
-        100% { transform: scale(2.4); opacity: 0; }
-      }
-      .pls-dark { transform-box: fill-box; transform-origin: center;
-                 animation: pls-dark 2.4s ease-out infinite; }
-
-      @keyframes flt-dark { 50% { transform: translateY(-6px); } }
-      .flt-dark { animation: flt-dark 6s ease-in-out infinite; }
-
-      @keyframes grw-dark { from { transform: scaleX(0); } }
-      .grow-dark { transform-box: fill-box; transform-origin: left center;
-                  animation: grw-dark 1.5s 0.2s ease-out both; }
-
-      @media (prefers-reduced-motion: reduce) {
-        .pt-dark,.sweep-dark,.wv-dark,.spin-dark,.rev-dark,.beat-dark,.glowG-dark,.shn-dark,.bgl-dark,.dash-dark,.pk-dark,.pkv-dark,.pls-dark,.flt-dark,.grow-dark { animation: none; }
-      }
-    </style>
-  <g filter="url(#shadow-dark)"><rect width="1200" height="340" rx="26" fill="#1E0D2F"/></g>
-  <g clip-path="url(#clip-dark)">
-    <rect width="1200" height="340" fill="url(#bg-dark)"/>
-    <rect width="1200" height="340" fill="url(#tint-dark)"/>
-    <rect width="1200" height="340" fill="url(#inner-dark)"/>
-    <rect width="1200" height="340" fill="url(#grid-dark)" opacity="0.05"/>
-    <rect width="1200" height="340" fill="#FAECC5" filter="url(#grain-dark)" opacity="0.045"/>
-    <ellipse cx="130" cy="60" rx="260" ry="140" fill="url(#glow-dark)" opacity="0.22"/>
-    <ellipse cx="1090" cy="290" rx="240" ry="130" fill="url(#glow-dark)" opacity="0.14"/>
-    <path class="wv-dark" d="M -320 306 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0" fill="url(#wavea-dark)" opacity="0.8"/>
-    <path class="wv-dark wv2-dark" d="M -320 318 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0" fill="url(#waveb-dark)" opacity="0.9"/>
-    <rect width="1200" height="3" fill="url(#topbar-dark)"/>
-    <g class="sweep-dark"><rect x="-320" y="-60" width="230" height="460" fill="url(#shine-dark)" opacity="0.75"/></g>
-  <circle class="pt-dark" cx="40" cy="324" r="2.0" fill="#FC671F" opacity="0.55" style="animation-duration:8.0s;animation-delay:-0.0s"/>
-  <circle class="pt-dark" cx="150" cy="324" r="2.7" fill="#6574C9" opacity="0.55" style="animation-duration:9.7s;animation-delay:-0.9s"/>
-  <circle class="pt-dark" cx="260" cy="324" r="3.4" fill="#6574C9" opacity="0.55" style="animation-duration:11.4s;animation-delay:-1.8s"/>
-  <circle class="pt-dark" cx="289" cy="324" r="2.0" fill="#FC671F" opacity="0.55" style="animation-duration:13.1s;animation-delay:-2.7s"/>
-  <circle class="pt-dark" cx="399" cy="324" r="2.7" fill="#6574C9" opacity="0.55" style="animation-duration:8.0s;animation-delay:-3.6s"/>
-  <circle class="pt-dark" cx="509" cy="324" r="3.4" fill="#6574C9" opacity="0.55" style="animation-duration:9.7s;animation-delay:-4.5s"/>
-  <circle class="pt-dark" cx="538" cy="324" r="2.0" fill="#FC671F" opacity="0.55" style="animation-duration:11.4s;animation-delay:-5.4s"/>
-  <circle class="pt-dark" cx="648" cy="324" r="2.7" fill="#6574C9" opacity="0.55" style="animation-duration:13.1s;animation-delay:-6.3s"/>
-  <circle class="pt-dark" cx="758" cy="324" r="3.4" fill="#6574C9" opacity="0.55" style="animation-duration:8.0s;animation-delay:-7.2s"/>
-  <circle class="pt-dark" cx="787" cy="324" r="2.0" fill="#FC671F" opacity="0.55" style="animation-duration:9.7s;animation-delay:-8.1s"/>
-  <circle class="pt-dark" cx="897" cy="324" r="2.7" fill="#6574C9" opacity="0.55" style="animation-duration:11.4s;animation-delay:-9.0s"/>
-  <circle class="pt-dark" cx="1007" cy="324" r="3.4" fill="#6574C9" opacity="0.55" style="animation-duration:13.1s;animation-delay:-9.9s"/>
-  <circle class="pt-dark" cx="1036" cy="324" r="2.0" fill="#FC671F" opacity="0.55" style="animation-duration:8.0s;animation-delay:-2.8s"/>
-  <circle class="pt-dark" cx="1146" cy="324" r="2.7" fill="#6574C9" opacity="0.55" style="animation-duration:9.7s;animation-delay:-2.0s"/>
-  <circle cx="46" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="89" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle class="bgl-dark" cx="132" cy="333" r="1.8" fill="#6574C9" style="animation-delay:-0.46s"/>
-  <circle cx="176" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="219" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="262" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="305" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle class="bgl-dark" cx="348" cy="333" r="1.8" fill="#6574C9" style="animation-delay:-1.61s"/>
-  <circle cx="392" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="435" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="478" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="521" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle class="bgl-dark" cx="564" cy="333" r="1.8" fill="#6574C9" style="animation-delay:-2.76s"/>
-  <circle cx="608" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="651" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="694" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="737" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle class="bgl-dark" cx="780" cy="333" r="1.8" fill="#6574C9" style="animation-delay:-3.91s"/>
-  <circle cx="824" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="867" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="910" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="953" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle class="bgl-dark" cx="996" cy="333" r="1.8" fill="#6574C9" style="animation-delay:-5.06s"/>
-  <circle cx="1040" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="1083" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
-  <circle cx="1126" cy="333" r="1.8" fill="#6574C9" opacity="0.28"/>
+  <g class="m-fade" style="animation-delay:0.00s">
+  <text x="48" y="50" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">FROM PUBLIC SOURCES TO A CURATED FEED</text>
+  <text x="1152" y="50" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="end" fill="#CCC5D5">EVERY HOP VERIFIED EACH RUN — DEAD LISTS NEVER PUBLISH</text>
   </g>
-  <rect x="3.5" y="3.5" width="1193" height="333" rx="23" fill="none" stroke="url(#ib-dark)" stroke-width="1.5"/>
-  <rect x="0.5" y="0.5" width="1199" height="339" rx="26" fill="none" stroke="url(#border-dark)" stroke-width="1"/>
-  <text x="600" y="54" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#FC671F" text-anchor="start" letter-spacing="2.4">FROM PUBLIC SOURCES TO A CURATED FEED</text>
-  <line x1="330" y1="50" x2="404" y2="50" stroke="url(#div-dark)" stroke-width="1.5"/>
-  <line x1="796" y1="50" x2="870" y2="50" stroke="url(#div-dark)" stroke-width="1.5"/>
-  <line class="dash-dark" x1="180" y1="176" x2="268" y2="176" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.6"/>
-  <circle class="pk-dark" cx="180" cy="176" r="3.2" fill="#FC671F" opacity="0" style="--d:88px;animation-delay:-0.0s"/>
-  <circle cx="130" cy="176" r="44" fill="#4F3F62" stroke="#FC671F" stroke-opacity="0.55" stroke-width="2"/>
-<g transform="translate(119.0,150.0) scale(0.9167)" fill="none" stroke="#FC671F" stroke-width="2.18" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"><ellipse cx="12" cy="5.5" rx="7.5" ry="2.8"/><path d="M4.5 5.5 V18.5 C4.5 20 7.9 21.3 12 21.3 C16.1 21.3 19.5 20 19.5 18.5 V5.5"/><path d="M4.5 12 C4.5 13.5 7.9 14.8 12 14.8 C16.1 14.8 19.5 13.5 19.5 12"/></g>
-  <text x="130" y="198" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="13.5" font-weight="700" fill="#F7F6F9" text-anchor="middle">24</text>
-  <text x="130" y="250" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#FC671F" text-anchor="start" letter-spacing="2.4">SOURCES</text>
-  <line class="dash-dark" x1="368" y1="176" x2="456" y2="176" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.6"/>
-  <circle class="pk-dark" cx="368" cy="176" r="3.2" fill="#FC671F" opacity="0" style="--d:88px;animation-delay:-0.7s"/>
-  <circle cx="318" cy="176" r="44" fill="#4F3F62" stroke="#6574C9" stroke-opacity="0.55" stroke-width="2"/>
-<g transform="translate(307.0,150.0) scale(0.9167)" fill="none" stroke="#6574C9" stroke-width="2.18" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"><path d="M12 3 L20 7.5 L12 12 L4 7.5 Z"/><path d="M4 12.5 L12 17 L20 12.5"/><path d="M4 16.5 L12 21 L20 16.5"/></g>
-  <text x="318" y="198" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="13.5" font-weight="700" fill="#F7F6F9" text-anchor="middle">56,016</text>
-  <text x="318" y="250" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#6574C9" text-anchor="start" letter-spacing="2.4">NORMALIZE</text>
-  <line class="dash-dark" x1="556" y1="176" x2="644" y2="176" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.6"/>
-  <circle class="pk-dark" cx="556" cy="176" r="3.2" fill="#FC671F" opacity="0" style="--d:88px;animation-delay:-1.4s"/>
-  <circle cx="506" cy="176" r="44" fill="#4F3F62" stroke="#ED4A3B" stroke-opacity="0.55" stroke-width="2"/>
-<g transform="translate(495.0,150.0) scale(0.9167)" fill="none" stroke="#ED4A3B" stroke-width="2.18" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"><path d="M12 3 L19 5.8 V11 C19 15.6 16.1 18.6 12 20.2 C7.9 18.6 5 15.6 5 11 V5.8 Z"/><path d="M9 11.6 L11.3 13.9 L15.3 9.7"/></g>
-  <text x="506" y="198" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="13.5" font-weight="700" fill="#F7F6F9" text-anchor="middle">40,797</text>
-  <text x="506" y="250" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#ED4A3B" text-anchor="start" letter-spacing="2.4">HANDSHAKE</text>
-  <line class="dash-dark" x1="744" y1="176" x2="832" y2="176" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.6"/>
-  <circle class="pk-dark" cx="744" cy="176" r="3.2" fill="#FC671F" opacity="0" style="--d:88px;animation-delay:-2.1s"/>
-  <circle cx="694" cy="176" r="44" fill="#4F3F62" stroke="#CC3C77" stroke-opacity="0.55" stroke-width="2"/>
-<g transform="translate(683.0,150.0) scale(0.9167)" fill="none" stroke="#CC3C77" stroke-width="2.18" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"><path d="M4.5 15.5 A 8 8 0 1 1 19.5 15.5"/><path d="M12 14.5 L16.4 10.1"/><circle cx="12" cy="15" r="1.8"/></g>
-  <text x="694" y="198" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="13.5" font-weight="700" fill="#F7F6F9" text-anchor="middle">p50 64.45</text>
-  <text x="694" y="250" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#CC3C77" text-anchor="start" letter-spacing="2.4">SCORE</text>
-  <line class="dash-dark" x1="932" y1="176" x2="1020" y2="176" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.6"/>
-  <circle class="pk-dark" cx="932" cy="176" r="3.2" fill="#FC671F" opacity="0" style="--d:88px;animation-delay:-2.8s"/>
-  <circle cx="882" cy="176" r="44" fill="#4F3F62" stroke="#FC671F" stroke-opacity="0.55" stroke-width="2"/>
-<g transform="translate(871.0,150.0) scale(0.9167)" fill="none" stroke="#FC671F" stroke-width="2.18" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"><circle cx="12" cy="12" r="8.2"/><ellipse cx="12" cy="12" rx="3.6" ry="8.2"/><path d="M4.4 12 H19.6"/></g>
-  <text x="882" y="198" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="13.5" font-weight="700" fill="#F7F6F9" text-anchor="middle">69</text>
-  <text x="882" y="250" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#FC671F" text-anchor="start" letter-spacing="2.4">GEO</text>
-  <g class="pls-dark" style="animation-delay:0s"><circle cx="1070" cy="176" r="50" fill="none" stroke="#ED4A3B" stroke-width="2" opacity="0.3"/></g>
-  <g class="pls-dark" style="animation-delay:-1.2s"><circle cx="1070" cy="176" r="50" fill="none" stroke="#ED4A3B" stroke-width="2" opacity="0.3"/></g>
-  <g class="glowG-dark"><ellipse cx="1070" cy="176" rx="124" ry="55" fill="url(#glow-dark)" opacity="0.28"/><ellipse cx="1070" cy="176" rx="81" ry="36" fill="url(#glow-dark)" opacity="0.5"/><ellipse cx="1070" cy="176" rx="47" ry="21" fill="url(#glow-dark)" opacity="0.85"/></g>
-  <circle cx="1070" cy="176" r="44" fill="#4F3F62" stroke="#ED4A3B" stroke-opacity="0.9" stroke-width="2"/>
-<g transform="translate(1059.0,150.0) scale(0.9167)" fill="none" stroke="#ED4A3B" stroke-width="2.18" stroke-linecap="round" stroke-linejoin="round" opacity="0.92"><path d="M4 8 L12 4 L20 8 V16 L12 20 L4 16 Z"/><path d="M4 8 L12 12 L20 8 M12 12 V20"/></g>
-  <text x="1070" y="198" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="13.5" font-weight="700" fill="#F7F6F9" text-anchor="middle" class="beat-dark">1,745</text>
-  <text x="1070" y="250" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#ED4A3B" text-anchor="start" letter-spacing="2.4">PUBLISH</text>
-  <text x="600" y="300" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#CCC5D5" text-anchor="middle" opacity="0.55">every hop re-verified each run — dead exits never publish</text>
+  <g class="m-fade" style="animation-delay:0.10s">
+  <circle cx="140.0" cy="150" r="46" fill="#4F3F62" fill-opacity="0.3" stroke="#FC671F" stroke-opacity="0.9" stroke-width="1.4"/>
+  <text x="140.0" y="156" font-size="17" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#F7F6F9">24</text>
+  <text x="140.0" y="226" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#CCC5D5">SOURCES</text>
+  </g>
+  <line x1="196.0" y1="150" x2="268.0" y2="150" stroke="#645676" stroke-opacity="0.65" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 8" class="m-dash"/>
+  <g class="m-fade" style="animation-delay:0.22s">
+  <circle cx="324.0" cy="150" r="46" fill="#4F3F62" fill-opacity="0.3" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.4"/>
+  <text x="324.0" y="156" font-size="15" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#F7F6F9">56,016</text>
+  <text x="324.0" y="226" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#CCC5D5">UNIQUE</text>
+  </g>
+  <line x1="380.0" y1="150" x2="452.0" y2="150" stroke="#645676" stroke-opacity="0.65" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 8" class="m-dash"/>
+  <g class="m-fade" style="animation-delay:0.34s">
+  <circle cx="508.0" cy="150" r="46" fill="#4F3F62" fill-opacity="0.3" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.4"/>
+  <text x="508.0" y="156" font-size="15" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#F7F6F9">40,797</text>
+  <text x="508.0" y="226" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#CCC5D5">HANDSHAKE-TESTED</text>
+  </g>
+  <line x1="564.0" y1="150" x2="636.0" y2="150" stroke="#645676" stroke-opacity="0.65" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 8" class="m-dash"/>
+  <g class="m-fade" style="animation-delay:0.46s">
+  <circle cx="692.0" cy="150" r="46" fill="#4F3F62" fill-opacity="0.3" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.4"/>
+  <text x="692.0" y="156" font-size="15" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#F7F6F9">p50 64.45</text>
+  <text x="692.0" y="226" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#CCC5D5">SCORE</text>
+  </g>
+  <line x1="748.0" y1="150" x2="820.0" y2="150" stroke="#645676" stroke-opacity="0.65" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 8" class="m-dash"/>
+  <g class="m-fade" style="animation-delay:0.58s">
+  <circle cx="876.0" cy="150" r="46" fill="#4F3F62" fill-opacity="0.3" stroke="#6574C9" stroke-opacity="0.45" stroke-width="1.4"/>
+  <text x="876.0" y="156" font-size="17" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#F7F6F9">69</text>
+  <text x="876.0" y="226" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#CCC5D5">GEO</text>
+  </g>
+  <line x1="932.0" y1="150" x2="1004.0" y2="150" stroke="#645676" stroke-opacity="0.65" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="2 8" class="m-dash"/>
+  <g class="m-fade" style="animation-delay:0.70s">
+  <circle cx="1060.0" cy="150" r="46" fill="#4F3F62" fill-opacity="0.44999999999999996" stroke="url(#brand-dark)" stroke-opacity="0.9" stroke-width="2"/>
+  <text x="1060.0" y="156" font-size="17" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="url(#brand-dark)">1,745</text>
+  <text x="1060.0" y="226" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#CCC5D5">PUBLISHED</text>
+  </g>
 </svg>

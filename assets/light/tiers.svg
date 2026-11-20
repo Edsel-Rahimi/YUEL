@@ -1,233 +1,36 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="290" viewBox="0 0 1200 290" role="img">
-  <defs>
-    <linearGradient id="bg-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
-      <stop offset="0" stop-color="#FCF7E8" stop-opacity="1"/>
-      <stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="tint-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#E8E0C5" stop-opacity="0.6"/>
-      <stop offset="1" stop-color="#E8E0C5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="inner-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FAECC5" stop-opacity="0.55"/>
-      <stop offset="0.28" stop-color="#FAECC5" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="topbar-light" gradientUnits="userSpaceOnUse" x1="0" y1="1.5" x2="1200" y2="1.5">
-      <stop offset="0" stop-color="#D03D00" stop-opacity="0.9"/>
-      <stop offset="0.55" stop-color="#BD2632" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#4854A6" stop-opacity="0.9"/>
-    </linearGradient>
-    <linearGradient id="hero-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#D03D00" stop-opacity="1"/>
-      <stop offset="0.55" stop-color="#BD2632" stop-opacity="1"/>
-      <stop offset="1" stop-color="#CC3C77" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="word-light" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#7D2327" stop-opacity="1"/>
-      <stop offset="0.6" stop-color="#BD2632" stop-opacity="1"/>
-      <stop offset="1" stop-color="#D03D00" stop-opacity="1"/>
-    </linearGradient>
-    <linearGradient id="ib-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#D03D00" stop-opacity="0.5"/>
-      <stop offset="0.45" stop-color="#D03D00" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#D03D00" stop-opacity="0.05"/>
-    </linearGradient>
-    <linearGradient id="border-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
-      <stop offset="0" stop-color="#D1C9AC" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#D1C9AC" stop-opacity="0.49500000000000005"/>
-    </linearGradient>
-    <linearGradient id="div-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
-      <stop offset="0" stop-color="#B4AE95" stop-opacity="0.4"/>
-      <stop offset="1" stop-color="#B4AE95" stop-opacity="0.13999999999999999"/>
-    </linearGradient>
-    <radialGradient id="glow-light" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#D03D00" stop-opacity="0.55"/><stop offset="0.55" stop-color="#D03D00" stop-opacity="0.18"/><stop offset="1" stop-color="#D03D00" stop-opacity="0"/></radialGradient>
-    <linearGradient id="shine-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#FC671F" stop-opacity="0.06"/>
-      <stop offset="1" stop-color="#FC671F" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="wavea-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#FC671F" stop-opacity="0.09"/>
-      <stop offset="1" stop-color="#FC671F" stop-opacity="0.018"/>
-    </linearGradient>
-    <linearGradient id="waveb-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4854A6" stop-opacity="0.07"/>
-      <stop offset="1" stop-color="#4854A6" stop-opacity="0.014000000000000002"/>
-    </linearGradient>
-    <pattern id="grid-light" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="1.6" cy="1.6" r="1.05" fill="#B4AE95"/>
-    </pattern>
-    <filter id="grain-light" x="0" y="0" width="100%" height="100%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
-      <feColorMatrix in="n" type="saturate" values="0" result="m"/>
-      <feComposite in="m" in2="SourceGraphic" operator="in"/>
-    </filter>
-    <filter id="shadow-light" x="-15%" y="-15%" width="130%" height="140%">
-      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#BD2632" flood-opacity="0.20"/>
-      <feDropShadow dx="0" dy="2" stdDeviation="5" flood-color="#BD2632" flood-opacity="0.25"/>
-    </filter>
-    <clipPath id="clip-light"><rect x="0" y="0" width="1200" height="290" rx="26"/></clipPath>
-  </defs>
-    <style>
-      @keyframes fl-light {
-        0% { transform: translateY(0); opacity: 0; }
-        12% { opacity: 0.85; }
-        80% { opacity: 0.45; }
-        100% { transform: translateY(-330px); opacity: 0; }
-      }
-      .pt-light { animation: fl-light 9s linear infinite; }
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif">
+  <style>.m-fade{animation:vf .7s ease-out both}.m-grow{transform-box:fill-box;transform-origin:left center;animation:vg .9s cubic-bezier(.2,.7,.2,1) both}.m-dash{animation:vm 26s linear infinite}.m-beat{animation:vb 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes vf{from{opacity:0}to{opacity:1}}@keyframes vg{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes vm{to{stroke-dashoffset:-320}}@keyframes vb{0%,86%,100%{transform:scale(1)}90%{transform:scale(1.05)}95%{transform:scale(1.01)}}@media (prefers-reduced-motion:reduce){.m-fade,.m-grow,.m-dash,.m-beat{animation:none}}</style>
+  <rect x="0.75" y="0.75" width="1198.5" height="298.5" rx="26" fill="#FCF7E8" stroke="#E8E0C5" stroke-width="1.5"/>
 
-      @keyframes sw-light {
-        0%, 52% { transform: translateX(0) skewX(-20deg); }
-        100% { transform: translateX(1900px) skewX(-20deg); }
-      }
-      .sweep-light { animation: sw-light 7.5s ease-in-out infinite; }
-
-      @keyframes wvm-light { to { transform: translateX(-170px); } }
-      .wv-light { animation: wvm-light 9s ease-in-out infinite alternate; }
-      .wv2-light { animation-duration: 14s; }
-
-      @keyframes sp-light { to { transform: rotate(360deg); } }
-      .spin-light { transform-box: fill-box; transform-origin: center;
-                  animation: sp-light 8s linear infinite; }
-      .rev-light { animation-direction: reverse; }
-
-      @keyframes bt-light { 50% { transform: scale(1.12); } }
-      .beat-light { transform-box: fill-box; transform-origin: center;
-                  animation: bt-light 2.4s ease-in-out infinite; }
-
-      @keyframes gw-light { 50% { opacity: 0.55; } }
-      .glowG-light { animation: gw-light 3.2s ease-in-out infinite; }
-
-      @keyframes shn-light {
-        0%, 46% { transform: translateX(-540px); }
-        100% { transform: translateX(1620px); }
-      }
-      .shn-light { animation: shn-light 5.5s ease-in-out infinite; }
-
-      @keyframes bgl-light { 0%, 100% { opacity: 0.35; } 12% { opacity: 1; } }
-      .bgl-light { animation: bgl-light 2.2s ease-in-out infinite; }
-
-      @keyframes dsh-light { to { stroke-dashoffset: -36; } }
-      .dash-light { stroke-dasharray: 8 10; animation: dsh-light 1.2s linear infinite; }
-
-      @keyframes pk-light {
-        0% { transform: translateX(0); opacity: 0; }
-        10% { opacity: 1; }
-        88% { opacity: 1; }
-        100% { transform: translateX(var(--d, 200px)); opacity: 0; }
-      }
-      .pk-light { animation: pk-light 2.6s linear infinite; }
-
-      @keyframes pkv-light {
-        0% { transform: translateY(0); opacity: 0; }
-        10% { opacity: 1; }
-        88% { opacity: 1; }
-        100% { transform: translateY(var(--dy, 40px)); opacity: 0; }
-      }
-      .pkv-light { animation: pkv-light 2.6s linear infinite; }
-
-      @keyframes pls-light {
-        0% { transform: scale(0.55); opacity: 0.85; }
-        100% { transform: scale(2.4); opacity: 0; }
-      }
-      .pls-light { transform-box: fill-box; transform-origin: center;
-                 animation: pls-light 2.4s ease-out infinite; }
-
-      @keyframes flt-light { 50% { transform: translateY(-6px); } }
-      .flt-light { animation: flt-light 6s ease-in-out infinite; }
-
-      @keyframes grw-light { from { transform: scaleX(0); } }
-      .grow-light { transform-box: fill-box; transform-origin: left center;
-                  animation: grw-light 1.5s 0.2s ease-out both; }
-
-      @media (prefers-reduced-motion: reduce) {
-        .pt-light,.sweep-light,.wv-light,.spin-light,.rev-light,.beat-light,.glowG-light,.shn-light,.bgl-light,.dash-light,.pk-light,.pkv-light,.pls-light,.flt-light,.grow-light { animation: none; }
-      }
-    </style>
-  <g filter="url(#shadow-light)"><rect width="1200" height="290" rx="26" fill="#FCF7E8"/></g>
-  <g clip-path="url(#clip-light)">
-    <rect width="1200" height="290" fill="url(#bg-light)"/>
-    <rect width="1200" height="290" fill="url(#tint-light)"/>
-    <rect width="1200" height="290" fill="url(#inner-light)"/>
-    <rect width="1200" height="290" fill="url(#grid-light)" opacity="0.05"/>
-    <rect width="1200" height="290" fill="#080806" filter="url(#grain-light)" opacity="0.045"/>
-    <ellipse cx="130" cy="60" rx="260" ry="140" fill="url(#glow-light)" opacity="0.22"/>
-    <ellipse cx="1090" cy="240" rx="240" ry="130" fill="url(#glow-light)" opacity="0.14"/>
-    <path class="wv-light" d="M -320 256 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0 q 85.0 11 170 0 q 85.0 -11 170 0" fill="url(#wavea-light)" opacity="0.8"/>
-    <path class="wv-light wv2-light" d="M -320 268 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0" fill="url(#waveb-light)" opacity="0.9"/>
-    <rect width="1200" height="3" fill="url(#topbar-light)"/>
-    <g class="sweep-light"><rect x="-320" y="-60" width="230" height="410" fill="url(#shine-light)" opacity="0.75"/></g>
-  <circle class="pt-light" cx="40" cy="274" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:8.0s;animation-delay:-0.0s"/>
-  <circle class="pt-light" cx="150" cy="274" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:9.7s;animation-delay:-0.9s"/>
-  <circle class="pt-light" cx="260" cy="274" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:11.4s;animation-delay:-1.8s"/>
-  <circle class="pt-light" cx="289" cy="274" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:13.1s;animation-delay:-2.7s"/>
-  <circle class="pt-light" cx="399" cy="274" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:8.0s;animation-delay:-3.6s"/>
-  <circle class="pt-light" cx="509" cy="274" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:9.7s;animation-delay:-4.5s"/>
-  <circle class="pt-light" cx="538" cy="274" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:11.4s;animation-delay:-5.4s"/>
-  <circle class="pt-light" cx="648" cy="274" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:13.1s;animation-delay:-6.3s"/>
-  <circle class="pt-light" cx="758" cy="274" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:8.0s;animation-delay:-7.2s"/>
-  <circle class="pt-light" cx="787" cy="274" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:9.7s;animation-delay:-8.1s"/>
-  <circle class="pt-light" cx="897" cy="274" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:11.4s;animation-delay:-9.0s"/>
-  <circle class="pt-light" cx="1007" cy="274" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:13.1s;animation-delay:-9.9s"/>
-  <circle class="pt-light" cx="1036" cy="274" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:8.0s;animation-delay:-2.8s"/>
-  <circle class="pt-light" cx="1146" cy="274" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:9.7s;animation-delay:-2.0s"/>
-  <circle cx="46" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="89" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="132" cy="283" r="1.8" fill="#4854A6" style="animation-delay:-0.46s"/>
-  <circle cx="176" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="219" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="262" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="305" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="348" cy="283" r="1.8" fill="#4854A6" style="animation-delay:-1.61s"/>
-  <circle cx="392" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="435" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="478" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="521" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="564" cy="283" r="1.8" fill="#4854A6" style="animation-delay:-2.76s"/>
-  <circle cx="608" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="651" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="694" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="737" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="780" cy="283" r="1.8" fill="#4854A6" style="animation-delay:-3.91s"/>
-  <circle cx="824" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="867" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="910" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="953" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle class="bgl-light" cx="996" cy="283" r="1.8" fill="#4854A6" style="animation-delay:-5.06s"/>
-  <circle cx="1040" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="1083" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
-  <circle cx="1126" cy="283" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <g class="m-fade" style="animation-delay:0.00s">
+  <text x="48" y="50" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">QUALITY TIERS — SCORED, HANDSHAKE-CHECKED</text>
+  <text x="1152" y="50" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="end" fill="#545242">GOLD ≥ 80 · SILVER ≥ 50 · BRONZE ≥ 20</text>
   </g>
-  <rect x="3.5" y="3.5" width="1193" height="283" rx="23" fill="none" stroke="url(#ib-light)" stroke-width="1.5"/>
-  <rect x="0.5" y="0.5" width="1199" height="289" rx="26" fill="none" stroke="url(#border-light)" stroke-width="1"/>
-  <text x="40" y="52" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">QUALITY TIERS — SCORED, HANDSHAKE-CHECKED</text>
-  <text x="1160" y="52" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#545242" text-anchor="end" opacity="0.85">gold ≥ 80 · silver ≥ 50 · bronze ≥ 20</text>
-  <defs><linearGradient id="tp-light-gold" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D03D00" stop-opacity="0.13"/><stop offset="1" stop-color="#FCF7E8" stop-opacity="0.03"/></linearGradient></defs>
-  <g class="glowG-light"><ellipse cx="218" cy="142" rx="110" ry="48" fill="url(#glow-light)" opacity="0.28"/><ellipse cx="218" cy="142" rx="72" ry="32" fill="url(#glow-light)" opacity="0.5"/><ellipse cx="218" cy="142" rx="42" ry="19" fill="url(#glow-light)" opacity="0.85"/></g>
-  <rect x="40" y="72" width="357" height="176" rx="20" fill="url(#tp-light-gold)" stroke="#D03D00" stroke-opacity="0.75" stroke-width="1.4"/>
-  <rect x="305.0" y="86" width="78" height="22" rx="11" fill="#D03D00"/>
-  <text x="344.0" y="101" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="10" font-weight="700" fill="#FAECC5" text-anchor="middle" letter-spacing="1.2">TOP TIER</text>
-  <g class="flt-light" style="animation-delay:-0.0s"><g transform="translate(66.0,94.0) scale(1.0000)" fill="none" stroke="#D03D00" stroke-width="2.00" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"><path d="M8 4 H16 L20 9 L12 20 L4 9 Z"/><path d="M4 9 H20 M8 4 L11.5 9 M16 4 L12.5 9 M12 9 L12 20" stroke-width="1.4"/></g></g>
-  <text x="100" y="112" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#D03D00" text-anchor="start" letter-spacing="2.4">GOLD</text>
-  <text x="66" y="188" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="56" font-weight="800" fill="#D03D00" class="beat-light">531</text>
-  <text x="68" y="216" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#545242" text-anchor="start" opacity="0.85">30.4% of alive</text>
-  <rect x="68" y="228" width="301" height="7" rx="3.5" fill="#D1C9AC" fill-opacity="0.8"/>
-  <rect class="grow-light" x="68" y="228" width="92" height="7" rx="3.5" fill="#D03D00" style="animation-delay:0.25s"/>
-  <defs><linearGradient id="tp-light-silver" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4854A6" stop-opacity="0.13"/><stop offset="1" stop-color="#FCF7E8" stop-opacity="0.03"/></linearGradient></defs>
-  <rect x="421" y="72" width="357" height="176" rx="20" fill="url(#tp-light-silver)" stroke="#4854A6" stroke-opacity="0.4" stroke-width="1.4"/>
-  <g class="flt-light" style="animation-delay:-1.4s"><g transform="translate(447.0,94.0) scale(1.0000)" fill="none" stroke="#4854A6" stroke-width="2.00" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"><path d="M12 3.6 L19.2 7.8 V16.2 L12 20.4 L4.8 16.2 V7.8 Z"/><circle cx="12" cy="12" r="3.2" stroke-width="1.4"/></g></g>
-  <text x="481" y="112" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#4854A6" text-anchor="start" letter-spacing="2.4">SILVER</text>
-  <text x="447" y="188" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="56" font-weight="800" fill="#4854A6">715</text>
-  <text x="449" y="216" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#545242" text-anchor="start" opacity="0.85">41.0% of alive</text>
-  <rect x="449" y="228" width="301" height="7" rx="3.5" fill="#D1C9AC" fill-opacity="0.8"/>
-  <rect class="grow-light" x="449" y="228" width="123" height="7" rx="3.5" fill="#4854A6" style="animation-delay:0.45s"/>
-  <defs><linearGradient id="tp-light-bronze" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#CC3C77" stop-opacity="0.13"/><stop offset="1" stop-color="#FCF7E8" stop-opacity="0.03"/></linearGradient></defs>
-  <rect x="802" y="72" width="357" height="176" rx="20" fill="url(#tp-light-bronze)" stroke="#CC3C77" stroke-opacity="0.4" stroke-width="1.4"/>
-  <g class="flt-light" style="animation-delay:-2.8s"><g transform="translate(828.0,94.0) scale(1.0000)" fill="none" stroke="#CC3C77" stroke-width="2.00" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"><path d="M12 3 L19 5.8 V11 C19 15.6 16.1 18.6 12 20.2 C7.9 18.6 5 15.6 5 11 V5.8 Z"/><path d="M9 11.6 L11.3 13.9 L15.3 9.7"/></g></g>
-  <text x="862" y="112" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#CC3C77" text-anchor="start" letter-spacing="2.4">BRONZE</text>
-  <text x="828" y="188" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="56" font-weight="800" fill="#CC3C77">499</text>
-  <text x="830" y="216" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#545242" text-anchor="start" opacity="0.85">28.6% of alive</text>
-  <rect x="830" y="228" width="301" height="7" rx="3.5" fill="#D1C9AC" fill-opacity="0.8"/>
-  <rect class="grow-light" x="830" y="228" width="86" height="7" rx="3.5" fill="#CC3C77" style="animation-delay:0.65s"/>
+  <g class="m-fade" style="animation-delay:0.10s">
+  <rect x="48" y="76" width="344" height="188" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
+  <circle cx="76" cy="110" r="5" fill="#D03D00"/>
+  <text x="92" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#080806">GOLD</text>
+  <text x="76" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#D03D00">531</text>
+  <text x="76" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE ≥ 80 · 30.4% OF ALIVE</text>
+  <rect x="76" y="228" width="288" height="6" rx="3" fill="#D1C9AC" fill-opacity="0.9"/>
+  <rect class="m-grow" style="animation-delay:0.30s" x="76" y="228" width="87.6" height="6" rx="3" fill="#D03D00"/>
+  </g>
+  <g class="m-fade" style="animation-delay:0.24s">
+  <rect x="428" y="76" width="344" height="188" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
+  <circle cx="456" cy="110" r="5" fill="#4854A6"/>
+  <text x="472" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#080806">SILVER</text>
+  <text x="456" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#4854A6">715</text>
+  <text x="456" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE ≥ 50 · 41.0% OF ALIVE</text>
+  <rect x="456" y="228" width="288" height="6" rx="3" fill="#D1C9AC" fill-opacity="0.9"/>
+  <rect class="m-grow" style="animation-delay:0.44s" x="456" y="228" width="118.0" height="6" rx="3" fill="#4854A6"/>
+  </g>
+  <g class="m-fade" style="animation-delay:0.38s">
+  <rect x="808" y="76" width="344" height="188" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
+  <circle cx="836" cy="110" r="5" fill="#CC3C77"/>
+  <text x="852" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#080806">BRONZE</text>
+  <text x="836" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#CC3C77">499</text>
+  <text x="836" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE ≥ 20 · 28.6% OF ALIVE</text>
+  <rect x="836" y="228" width="288" height="6" rx="3" fill="#D1C9AC" fill-opacity="0.9"/>
+  <rect class="m-grow" style="animation-delay:0.58s" x="836" y="228" width="82.4" height="6" rx="3" fill="#CC3C77"/>
+  </g>
 </svg>

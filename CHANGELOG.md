@@ -31,6 +31,22 @@ All notable changes to YUEL are documented here. The format follows
   files always exist) alongside `all.json` and the per-country lists;
   the README tier/funnel cards link to them.
 
+### Changed
+
+- **README visuals redesigned from scratch (v5, editorial-minimal).** The
+  v4 card style — busy gradient dashboard with film grain, particle
+  fields, waves, orbit rings and chips everywhere — was removed entirely
+  and rebuilt as a quiet typographic system: flat brand surfaces inside
+  hairline borders, uppercase mono micro-labels, huge Space Grotesk
+  numerals, one logo-gradient accent per card (hero numeral, single rule,
+  final pipeline node, top country bar). The logo lockup is now the hero
+  of the header card. Motion was reduced to four restrained effects
+  (staggered fade-in, draw-in bars, dash march, one heartbeat numeral),
+  hidden states live only inside keyframes so static renderers never show
+  blank cards, and everything remains guarded by
+  `prefers-reduced-motion`. All 20 SVGs regenerated from the same real
+  run data; filenames and README wiring unchanged.
+
 ## [0.7.1] - 2026-11-19
 
 ### Fixed
