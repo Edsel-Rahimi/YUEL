@@ -1,2 +1,3 @@
-# YUEL · AU · http · 1 proxies · generated 2026-11-20T22:48:33 UTC
+# YUEL · AU · http · 2 proxies · generated 2026-11-20T23:48:54 UTC
+http://61.29.96.146:8000
 http://114.111.151.41:80

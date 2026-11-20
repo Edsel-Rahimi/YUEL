@@ -1,13 +1,25 @@
 [
   {
+    "ip": "220.128.223.136",
+    "port": 8081,
+    "type": "http",
+    "country": "TW",
+    "score": 90.38,
+    "tier": "gold",
+    "latency": 173,
+    "last_checked": "2026-11-20T23:42:38+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "182.155.254.159",
     "port": 80,
     "type": "http",
     "country": "TW",
-    "score": 96.0,
+    "score": 89.51,
     "tier": "gold",
-    "latency": 140,
-    "last_checked": "2026-11-20T22:42:39+00:00",
+    "latency": 180,
+    "last_checked": "2026-11-20T23:42:38+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +28,46 @@
     "port": 8888,
     "type": "http",
     "country": "TW",
-    "score": 95.62,
+    "score": 89.31,
     "tier": "gold",
-    "latency": 144,
-    "last_checked": "2026-11-20T22:42:39+00:00",
+    "latency": 182,
+    "last_checked": "2026-11-20T23:42:38+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "220.128.223.136",
+    "port": 8084,
+    "type": "http",
+    "country": "TW",
+    "score": 86.48,
+    "tier": "gold",
+    "latency": 210,
+    "last_checked": "2026-11-20T23:42:38+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "220.128.223.136",
+    "port": 8082,
+    "type": "http",
+    "country": "TW",
+    "score": 81.86,
+    "tier": "gold",
+    "latency": 253,
+    "last_checked": "2026-11-20T23:42:38+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "61.216.156.222",
+    "port": 60808,
+    "type": "http",
+    "country": "TW",
+    "score": 28.74,
+    "tier": "bronze",
+    "latency": 4759,
+    "last_checked": "2026-11-20T23:42:38+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
