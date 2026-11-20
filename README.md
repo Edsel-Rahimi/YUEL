@@ -15,8 +15,11 @@ Plain proxies chain in FRONT of or BEHIND another connection as an outbound
 hop; their output contract below is different by design and must never be
 confused with a tunnel-config feed downstream.
 
-**Status: stages 1–3 (collect, normalize, validate) implemented against the
-corrected scope. Later stages are built one at a time — see the table.**
+**Status: all seven stages are implemented and running end-to-end — the
+full pipeline executes automatically on GitHub Actions every 30 minutes,
+and every number in this README comes from the latest published
+`data/out/run-summary.json` (last run 2026-11-20 08:24 UTC: 1,875 alive ·
+80 countries).**
 
 This repository is a fresh, independently written codebase. It shares no
 code, config, or history with any other project.
@@ -145,10 +148,27 @@ code, config, or history with any other project.
 | 1. collect | Fetch list sources (raw `ip:port` text files, proto-prefixed csv, JSON APIs) from GitHub repos and public aggregator APIs, parse every entry into a canonical dict with the source's *claims* (type / country / anonymity) attached. One dead source never crashes the run — errors are recorded per source; malformed lines are counted and sampled. | **implemented** (v0.3.0) |
 | 2. normalize | Dedupe by *effective connection identity* (`host\|port\|user\|pass`, host lowercased — same server with different credentials stays separate), merge claims deterministically (agreement → value; disagreement → null + flagged as a data-quality signal), merge sorted `sources` lists, drop invalid rows. Byte-for-byte reproducible. | **implemented** (v0.3.0) |
 | 3. validate | Two passes, **no engine binaries**. Prefilter: plain TCP connect per unique `host:port` (128 workers). Handshake pass: real SOCKS5 greeting (+ RFC 1929 auth when creds exist) → CONNECT, real SOCKS4 CONNECT, real HTTP proxy GET (absolute-URI) / CONNECT — tried in claim-implied order (unknown → SOCKS5 first, then HTTP GET, then HTTP CONNECT). The first protocol that returns a real HTTP status < 400 through the proxy wins and is recorded as `type_confirmed`. Bounded worker pool, latency percentiles, claim-vs-measured calibration in the report. | **implemented** (v0.3.0) |
-| 4. score | Weighted formula over latency, success rate, freshness — plus *anonymity level* (transparent / anonymous / elite) where the source or the proxy's behavior reveals it, replacing the old "protocol strength" component (plain proxies are undifferentiated; there is no reality/hysteria2 tier to rank). Mapped to configurable tiers (gold/silver/bronze). | planned |
-| 5. geo | Country of literal-IP hosts via a free public IP-to-country table (iptoasn.com `ip2asn-v4.tsv`), refreshed regularly; table download failure degrades to "unclassified" instead of crashing. Domain-hosted endpoints are explicitly `unclassified`, never guessed. This is what lets a member pick "Italy" and get an Italian-exit proxy. | planned |
-| 6. publish | Writes the chaining-consumer contract (see below): per-tier lists, **per-country lists**, audit history, run summary. Explicitly a plain-proxy format — never a vmess/vless/... feed. | planned |
-| 7. automate | One entrypoint runs all stages in order with graceful partial-failure handling; GitHub Actions runs it on a schedule and commits the output. | planned |
+| 4. score | Weighted formula over latency, success rate, freshness — plus *anonymity level* (transparent / anonymous / elite) where the source or the proxy's behavior reveals it, replacing the old "protocol strength" component (plain proxies are undifferentiated; there is no reality/hysteria2 tier to rank). Mapped to configurable tiers (gold/silver/bronze). | **implemented** (v0.4.0) |
+| 5. geo | Country of literal-IP hosts via a free public IP-to-country table (iptoasn.com `ip2asn-v4.tsv`), refreshed regularly; table download failure degrades to "unclassified" instead of crashing. Domain-hosted endpoints are explicitly `unclassified`, never guessed. This is what lets a member pick "Italy" and get an Italian-exit proxy. | **implemented** (v0.5.0) |
+| 6. publish | Writes the chaining-consumer contract (see below): per-tier lists, **per-country lists**, audit history, run summary. Explicitly a plain-proxy format — never a vmess/vless/... feed. | **implemented** (v0.6.0) |
+| 7. automate | One entrypoint runs all stages in order with graceful partial-failure handling; GitHub Actions runs it on a schedule and commits the output. | **implemented** (v0.7.0) |
+
+## Roadmap
+
+Built one stage at a time, each verified against live data before the next
+one started. All seven are done — nothing on this list is pending:
+
+- [x] 1. collect — fetch + parse public plain-proxy lists (v0.3.0)
+- [x] 2. normalize — connection-identity dedupe + claim merge (v0.3.0)
+- [x] 3. validate — TCP prefilter + real protocol handshakes (v0.3.0)
+- [x] 4. score — weighted quality score + gold/silver/bronze tiers (v0.4.0)
+- [x] 5. geo — IP→country classification via the ip2asn table (v0.5.0)
+- [x] 6. publish — stable `data/out/` contract with an atomic swap (v0.6.0)
+- [x] 7. automate — scheduled GitHub Actions runs, fail-loud (v0.7.0)
+
+There are no invented future phases here; fixes and smaller improvements
+(new parsers, better scoring, more sources) ship as releases — see
+[CHANGELOG.md](CHANGELOG.md).
 
 ## Repository layout
 
@@ -156,10 +176,16 @@ code, config, or history with any other project.
 YUEL/
 ├── README.md                  ← you are here
 ├── CHANGELOG.md               ← running changelog, updated every stage
+├── CONTRIBUTING.md            ← how to propose a new source
 ├── LICENSE                    ← MIT
+├── .github/workflows/
+│   └── pipeline.yml           ← stage 7: scheduled runs, commits data/out/
 ├── config/
 │   ├── sources.json           ← the plain-proxy source list (data, not code)
-│   └── validate.json          ← validate stage: probe URL + timeouts + workers
+│   ├── validate.json          ← validate stage: probe URL + timeouts + workers
+│   ├── score.json             ← score stage: weights + tier thresholds
+│   ├── geo.json               ← geo stage: ip2asn table URL + cache policy
+│   └── publish.json           ← publish stage: output layout + history depth
 ├── yuel/
 │   ├── __init__.py
 │   ├── config.py              ← sources-file loading + strict schema validation
@@ -167,17 +193,24 @@ YUEL/
 │   ├── normalize.py           ← stage 2: identity dedupe + claim merge
 │   ├── proxy_client.py        ← stage 3: SOCKS5(+auth)/SOCKS4/HTTP proxy clients
 │   ├── validate.py            ← stage 3: TCP prefilter + handshake checks
+│   ├── score.py               ← stage 4: weighted quality score + tiers
+│   ├── history.py             ← stage 4: per-proxy test history (audit trail)
+│   ├── geo.py                 ← stage 5: IP→country via the ip2asn table
+│   ├── publish.py             ← stage 6: the data/out/ contract (atomic swap)
 │   ├── stage.py               ← shared StageResult dataclass
 │   └── pipeline.py            ← orchestrator + CLI entrypoint
-├── tests/
+├── tests/                     ← 9 test modules, stdlib unittest, no network
 │   ├── test_collect.py        ← format parsers, identity, run error-handling
 │   ├── test_config.py         ← sources-file schema validation
 │   ├── test_normalize.py      ← dedupe, claim merging, determinism
-│   ├── test_pipeline.py       ← stage chaining + graceful failure (file-based)
 │   ├── test_proxy_client.py   ← handshakes against fake SOCKS5/SOCKS4/HTTP servers
-│   └── test_validate.py       ← prefilter + checks + stage flows (fake proxies)
-└── data/                      ← stage output (gitignored; the publish stage
-                                  will define what gets committed)
+│   ├── test_validate.py       ← prefilter + checks + stage flows (fake proxies)
+│   ├── test_score.py          ← scoring, tiers, history (v0.4.0)
+│   ├── test_geo.py            ← ip2asn parsing, unclassified fallback (v0.5.0)
+│   ├── test_publish.py        ← output contract, atomic swap (v0.6.0)
+│   └── test_pipeline.py       ← stage chaining + graceful failure (file-based)
+└── data/                      ← stage output; data/out/ is committed to main
+                                  by the automation each run (see Automation)
 ```
 
 ## Quickstart
@@ -393,7 +426,7 @@ normalized dict plus the check verdict; the score stage filters on
 }
 ```
 
-## Output file contract (v0.1 draft — finalized at stage 6)
+## Output file contract (stable — frozen in v0.6.0)
 
 The publish stage will make the following the stable contract. The record
 shape is for **plain proxies only** and must never be confused downstream
@@ -413,7 +446,7 @@ with a vmess/vless/... tunnel-config feed:
 }
 ```
 
-Planned layout:
+Layout as committed on `main` each run:
 
 ```
 data/
@@ -435,8 +468,9 @@ data/
     └── run-summary.json       # counts, durations, stage statuses
 ```
 
-Field names, tiers, and the history schema will be frozen and fully
-documented here when stage 6 lands.
+Field names, tiers, and the history schema are frozen as of v0.6.0 and are
+what the published files above actually contain; any change to the contract
+would ship as a documented breaking change in [CHANGELOG.md](CHANGELOG.md).
 
 ## Automation (stage 7)
 
@@ -490,6 +524,66 @@ gh workflow run pipeline
 - Very heavily scheduled workflows can be delayed during peak load — the
   cron is best-effort timing, not a guarantee.
 
+## FAQ
+
+<details>
+<summary><b>Why isn't every collected proxy alive?</b></summary>
+
+Because public proxy lists describe a world that decays within hours. In the
+last published run, 73,588 candidates were collected from 24 sources and
+deduped down to 56,016 unique targets — and only 1,875 (2.6% of collected,
+4.6% of the 40,781 that reached the handshake pass) came back alive. Most
+die before or during the run: lists republish yesterday's entries, some
+servers are offline, others accept the TCP connection but fail a real
+SOCKS5/SOCKS4/HTTP handshake, demand authentication, or answer the probe
+with an HTTP status ≥ 400. A proxy is published only when a real HTTP
+status < 400 came back <em>through</em> it in that run — nothing is
+extrapolated, and dead entries are never published.
+</details>
+
+<details>
+<summary><b>Which tier or file should I use?</b></summary>
+
+Tiers come from the score (latency, success rate, freshness, anonymity —
+configurable in `config/score.json`): <strong>gold</strong> ≥ 80 (560 in the
+last run) for when the hop must work, <strong>silver</strong> ≥ 50 (763) as
+the workhorse band, <strong>bronze</strong> ≥ 20 (552) when you just want
+volume and can tolerate churn. Files: `data/out/by-tier/{gold,silver,bronze}.json`
+if you think in tiers, `data/out/by-country/<ISO2>.json` if you need a
+country exit (e.g. `IT.json` for an Italian hop), and `data/out/all.json`
+when you want everything with its `score`/`tier`/`country` fields so your
+own consumer can filter. Pick the narrowest file your use case tolerates —
+narrower lists are fresher on average because every entry in them passed
+the same run.
+</details>
+
+<details>
+<summary><b>How often does the data refresh?</b></summary>
+
+The pipeline runs on a GitHub Actions schedule every 30 minutes (a full run
+takes ~10 minutes measured, so runs execute back-to-back, one at a time) and
+each run commits its output to `main`. Every record carries its own
+`last_checked` timestamp, and `data/out/run-summary.json` has the run's
+`generated_utc` — treat anything older than a few hours as suspect: public
+proxies churn, and an entry from yesterday is usually dead today. Re-fetch
+the files before each use rather than caching them.
+</details>
+
+<details>
+<summary><b>Why do some countries have very few or zero entries?</b></summary>
+
+YUEL publishes what survived the last run, not promised coverage. Counts
+mirror where public proxy operators actually host: in the last run the top
+five were CN 896, US 287, ID 130, RU 54, DE 52 — of 1,875 alive across 80
+countries. A country's file has zero entries when no source published an
+alive proxy there in that run. Classification is also deliberately strict:
+country comes from an IP-to-country table applied to literal IPv4 hosts
+only — domain-hosted endpoints and IPv6 hosts are `unclassified`, never
+guessed, so a handful of alive proxies sit in `unclassified.json` instead
+of a wrong country file. Every per-country file always exists (stable
+contract), even when empty.
+</details>
+
 ## Security
 
 - No secrets in code: nothing sensitive is hardcoded; CI credentials flow
@@ -503,3 +597,32 @@ gh workflow run pipeline
 - Only openly published list sources are fetched (raw GitHub files, public
   APIs meant for this); no paid, registration-walled, or
   robots/ToS-forbidden pages.
+
+## Disclaimer
+
+YUEL only indexes and live-tests data that third parties have published
+openly about their own proxy servers. It operates **no** proxy, relay, or
+server of its own, and it makes **no claim** about the trustworthiness,
+ownership, or legality of any listed proxy's operator in any jurisdiction.
+Listed entries are untrusted third-party hosts that can inspect, log, or
+modify anything sent through them; **you assume all risk** of using any
+listed entry, in any context, for any purpose, and you are responsible for
+complying with the laws of your own jurisdiction.
+
+**Removal requests:** operate a proxy and don't want it listed? Open an
+issue at <https://github.com/Edsel-Rahimi/YUEL/issues> with the host (and
+port, if known); the affected entries are removed from `data/out/` and
+excluded from future runs.
+
+## Contributing
+
+Have a public plain-proxy list source to add? It's a one-line PR to
+`config/sources.json` — the required fields and the pre-merge checks are
+step-by-step in [CONTRIBUTING.md](CONTRIBUTING.md). Bug reports and parser
+fixes for the six supported formats are equally welcome.
+
+---
+
+If YUEL saves you time, consider giving the repo a ⭐ star — it helps other
+people find a plain-proxy feed that doesn't pretend to be a tunnel config:
+<https://github.com/Edsel-Rahimi/YUEL>

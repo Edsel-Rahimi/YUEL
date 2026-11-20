@@ -8,6 +8,18 @@ All notable changes to YUEL are documented here. The format follows
 
 ### Added
 
+- **docs: README accuracy pass + CONTRIBUTING.md.** The stale "stages 1–3
+  implemented" status line was replaced with the real state (all seven
+  stages running automatically every 30 minutes, numbers pulled live from
+  `run-summary.json`); stage-table statuses and the repository-layout tree
+  were updated to match what's actually shipped; the output-contract
+  section no longer speaks of stage 6 as future. New sections: Roadmap
+  (all seven stages checked off), FAQ (four collapsible answers with
+  last-run numbers), Disclaimer (no servers operated, no operator claims,
+  all risk on the user, issue-based removal), and a Contributing pointer.
+  `CONTRIBUTING.md` documents proposing a new source via a PR to
+  `config/sources.json` — required fields, the six formats, and the
+  pre-merge checks.
 - **brand kit re-theme + logo.** All ten cards re-themed to
   `assets/tokens.json` v1.0.0 — dark cards sit on aubergine `#1E0D2F` with
   the logo gradient (ember → coral → magenta → violet), light cards on the
