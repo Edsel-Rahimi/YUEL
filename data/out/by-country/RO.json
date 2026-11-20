@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "45.80.151.33",
+    "port": 3128,
+    "type": "http",
+    "country": "RO",
+    "score": 28.97,
+    "tier": "bronze",
+    "latency": 5845,
+    "last_checked": "2026-11-20T14:52:05+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
