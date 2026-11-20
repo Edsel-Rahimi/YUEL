@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "149.210.4.75",
+    "port": 18080,
+    "type": "http",
+    "country": "GR",
+    "score": 41.05,
+    "tier": "bronze",
+    "latency": 2018,
+    "last_checked": "2026-11-20T16:55:41+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "188.164.201.197",
+    "port": 666,
+    "type": "http",
+    "country": "GR",
+    "score": 28.3,
+    "tier": "bronze",
+    "latency": 5467,
+    "last_checked": "2026-11-20T16:55:41+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
