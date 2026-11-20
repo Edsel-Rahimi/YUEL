@@ -43,6 +43,7 @@ import base64
 import collections
 import json
 import math
+import urllib.request
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
@@ -187,14 +188,14 @@ def card_css() -> str:
     )
 
 
-def card_open(t: str, W: int, H: int, defs: str = "") -> str:
-    """Card canvas: flat brand surface, hairline border, 26px radius."""
+def card_open(t: str, W: int, H: int, defs: str = "", rx: int = 26) -> str:
+    """Card canvas: flat brand surface, hairline border, rounded corners."""
     return (
         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
         f'viewBox="0 0 {W} {H}" role="img" font-family="{DISPLAY_FONT}">\n'
         f"  <style>{card_css()}</style>\n"
         f"{defs}"
-        f'  <rect x="0.75" y="0.75" width="{W - 1.5}" height="{H - 1.5}" rx="26" '
+        f'  <rect x="0.75" y="0.75" width="{W - 1.5}" height="{H - 1.5}" rx="{rx}" '
         f'fill="{SURFACE[t]}" stroke="{BORDER[t]}" stroke-width="1.5"/>\n'
     )
 
@@ -624,6 +625,218 @@ def card_footer(t: str, d: dict) -> str:
 
 
 # ---------------------------------------------------------------------------
+# top-20 country cards (README fast-path grid) — data from the last run
+# ---------------------------------------------------------------------------
+
+RAW_BASE = "https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out"
+GRID_START = "<!-- country-grid:start -->"
+GRID_END = "<!-- country-grid:end -->"
+README_PATH = REPO / "README.md"
+
+# ISO 3166-1 alpha-2 → short display name (static reference data; codes that
+# appear in the data but not here fall back to the code itself)
+ISO_NAMES = {
+    "AD": "Andorra", "AE": "United Arab Emirates", "AF": "Afghanistan",
+    "AG": "Antigua and Barbuda", "AI": "Anguilla", "AL": "Albania",
+    "AM": "Armenia", "AO": "Angola", "AQ": "Antarctica", "AR": "Argentina",
+    "AS": "American Samoa", "AT": "Austria", "AU": "Australia",
+    "AW": "Aruba", "AX": "Åland Islands", "AZ": "Azerbaijan",
+    "BA": "Bosnia and Herzegovina", "BB": "Barbados", "BD": "Bangladesh",
+    "BE": "Belgium", "BF": "Burkina Faso", "BG": "Bulgaria", "BH": "Bahrain",
+    "BI": "Burundi", "BJ": "Benin", "BL": "Saint Barthélemy",
+    "BM": "Bermuda", "BN": "Brunei", "BO": "Bolivia",
+    "BQ": "Caribbean Netherlands", "BR": "Brazil", "BS": "Bahamas",
+    "BT": "Bhutan", "BW": "Botswana", "BY": "Belarus", "BZ": "Belize",
+    "CA": "Canada", "CD": "DR Congo", "CF": "Central African Republic",
+    "CG": "Congo", "CH": "Switzerland", "CI": "Côte d'Ivoire",
+    "CK": "Cook Islands", "CL": "Chile", "CM": "Cameroon", "CN": "China",
+    "CO": "Colombia", "CR": "Costa Rica", "CU": "Cuba", "CV": "Cape Verde",
+    "CW": "Curaçao", "CX": "Christmas Island", "CY": "Cyprus",
+    "CZ": "Czechia", "DE": "Germany", "DJ": "Djibouti", "DK": "Denmark",
+    "DM": "Dominica", "DO": "Dominican Republic", "DZ": "Algeria",
+    "EC": "Ecuador", "EE": "Estonia", "EG": "Egypt",
+    "EH": "Western Sahara", "ER": "Eritrea", "ES": "Spain",
+    "ET": "Ethiopia", "FI": "Finland", "FJ": "Fiji",
+    "FK": "Falkland Islands", "FM": "Micronesia", "FO": "Faroe Islands",
+    "FR": "France", "GA": "Gabon", "GB": "United Kingdom", "GD": "Grenada",
+    "GE": "Georgia", "GF": "French Guiana", "GG": "Guernsey", "GH": "Ghana",
+    "GI": "Gibraltar", "GL": "Greenland", "GM": "Gambia", "GN": "Guinea",
+    "GP": "Guadeloupe", "GQ": "Equatorial Guinea", "GR": "Greece",
+    "GT": "Guatemala", "GU": "Guam", "GW": "Guinea-Bissau", "GY": "Guyana",
+    "HK": "Hong Kong", "HN": "Honduras", "HR": "Croatia", "HT": "Haiti",
+    "HU": "Hungary", "ID": "Indonesia", "IE": "Ireland", "IL": "Israel",
+    "IM": "Isle of Man", "IN": "India", "IO": "British Indian Ocean "
+                                              "Territory",
+    "IQ": "Iraq", "IR": "Iran", "IS": "Iceland", "IT": "Italy",
+    "JE": "Jersey", "JM": "Jamaica", "JO": "Jordan", "JP": "Japan",
+    "KE": "Kenya", "KG": "Kyrgyzstan", "KH": "Cambodia", "KI": "Kiribati",
+    "KM": "Comoros", "KN": "Saint Kitts and Nevis", "KP": "North Korea",
+    "KR": "South Korea", "KW": "Kuwait", "KY": "Cayman Islands",
+    "KZ": "Kazakhstan", "LA": "Laos", "LB": "Lebanon", "LC": "Saint Lucia",
+    "LI": "Liechtenstein", "LK": "Sri Lanka", "LR": "Liberia",
+    "LS": "Lesotho", "LT": "Lithuania", "LU": "Luxembourg", "LV": "Latvia",
+    "LY": "Libya", "MA": "Morocco", "MC": "Monaco", "MD": "Moldova",
+    "ME": "Montenegro", "MF": "Saint Martin", "MG": "Madagascar",
+    "MH": "Marshall Islands", "MK": "North Macedonia", "ML": "Mali",
+    "MM": "Myanmar", "MN": "Mongolia", "MO": "Macao",
+    "MP": "Northern Mariana Islands", "MQ": "Martinique",
+    "MR": "Mauritania", "MS": "Montserrat", "MT": "Malta",
+    "MU": "Mauritius", "MV": "Maldives", "MW": "Malawi", "MX": "Mexico",
+    "MY": "Malaysia", "MZ": "Mozambique", "NA": "Namibia",
+    "NC": "New Caledonia", "NE": "Niger", "NF": "Norfolk Island",
+    "NG": "Nigeria", "NI": "Nicaragua", "NL": "Netherlands", "NO": "Norway",
+    "NP": "Nepal", "NR": "Nauru", "NU": "Niue", "NZ": "New Zealand",
+    "OM": "Oman", "PA": "Panama", "PE": "Peru",
+    "PF": "French Polynesia", "PG": "Papua New Guinea", "PH": "Philippines",
+    "PK": "Pakistan", "PL": "Poland", "PM": "Saint Pierre and Miquelon",
+    "PR": "Puerto Rico", "PS": "Palestine", "PT": "Portugal", "PW": "Palau",
+    "PY": "Paraguay", "QA": "Qatar", "RE": "Réunion", "RO": "Romania",
+    "RS": "Serbia", "RU": "Russia", "RW": "Rwanda", "SA": "Saudi Arabia",
+    "SB": "Solomon Islands", "SC": "Seychelles", "SD": "Sudan",
+    "SE": "Sweden", "SG": "Singapore", "SI": "Slovenia", "SK": "Slovakia",
+    "SL": "Sierra Leone", "SM": "San Marino", "SN": "Senegal",
+    "SO": "Somalia", "SR": "Suriname", "SS": "South Sudan",
+    "ST": "São Tomé and Príncipe", "SV": "El Salvador",
+    "SX": "Sint Maarten", "SY": "Syria", "SZ": "Eswatini",
+    "TC": "Turks and Caicos Islands", "TD": "Chad", "TG": "Togo",
+    "TH": "Thailand", "TJ": "Tajikistan", "TK": "Tokelau",
+    "TL": "Timor-Leste", "TM": "Turkmenistan", "TN": "Tunisia",
+    "TO": "Tonga", "TR": "Turkey", "TT": "Trinidad and Tobago",
+    "TV": "Tuvalu", "TW": "Taiwan", "TZ": "Tanzania", "UA": "Ukraine",
+    "UG": "Uganda", "US": "United States", "UY": "Uruguay",
+    "UZ": "Uzbekistan", "VA": "Vatican City",
+    "VC": "Saint Vincent and the Grenadines", "VE": "Venezuela",
+    "VG": "British Virgin Islands", "VI": "U.S. Virgin Islands",
+    "VN": "Vietnam", "VU": "Vanuatu", "WF": "Wallis and Futuna",
+    "WS": "Samoa", "XK": "Kosovo", "YE": "Yemen", "YT": "Mayotte",
+    "ZA": "South Africa", "ZM": "Zambia", "ZW": "Zimbabwe",
+}
+
+
+def load_country_entries() -> list[dict]:
+    """Top 20 countries by alive count from run-summary.json, with per-type
+    counts taken from each country's published JSON (never hardcoded)."""
+    summary = json.loads(
+        (REPO / "data/out/run-summary.json").read_text(encoding="utf-8"))
+    top = sorted(((c, n) for c, n in summary["by_country"].items()
+                  if c != "unclassified"),
+                 key=lambda kv: (-kv[1], kv[0]))[:20]
+    entries = []
+    for cc, count in top:
+        records = json.loads(
+            (REPO / f"data/out/by-country/{cc}.json").read_text(encoding="utf-8"))
+        entries.append({
+            "cc": cc,
+            "name": ISO_NAMES.get(cc, cc),
+            "count": count,
+            "types": dict(collections.Counter(r["type"] for r in records)),
+        })
+    return entries
+
+
+def fetch_flag(cc: str) -> str | None:
+    """flagcdn.com static flag as a data URI (external refs are blocked in
+    SVGs rendered via <img>, so the verified PNG gets embedded)."""
+    url = f"https://flagcdn.com/24x18/{cc.lower()}.png"
+    try:
+        with urllib.request.urlopen(url, timeout=15) as resp:
+            data = resp.read()
+        return base64.b64encode(data).decode("ascii") if data else None
+    except OSError:
+        return None  # card still renders, minus the flag
+
+
+def card_country(t: str, cc: str, name: str, count: int, flag_b64: str | None,
+                 rank: int) -> str:
+    """One grid card in the v5 system: flag, name, alive count."""
+    W, H = 320, 140
+    p = [card_open(t, W, H, brand_grad(t, f"brand-{t}"), rx=20)]
+    hero = rank == 0
+    if flag_b64:
+        p.append(f'  <image x="24" y="24" width="48" height="36" '
+                 f'href="data:image/png;base64,{flag_b64}"/>')
+    else:
+        p.append(f'  <rect x="24" y="24" width="48" height="36" rx="4" '
+                 f'fill="{HAIR[t]}" fill-opacity="{HAIR_O[t]}"/>')
+    display = name if len(name) <= 16 else name[:15] + "…"
+    p.append(text_el(86, 46, display, 17, TEXT[t], weight=700))
+    p.append(micro(86, 66, cc, t))
+    fill = f"url(#brand-{t})" if hero else TEXT[t]
+    p.append(text_el(24, 112, fmt(count), 40, fill, weight=800))
+    count_w = len(fmt(count)) * 40 * 0.62
+    p.append(micro(24 + count_w + 14, 112, "alive", t))
+    p.append(f'  <rect x="24" y="122" width="28" height="3" rx="1.5" '
+             f'fill="url(#brand-{t})" opacity="{1.0 if hero else 0.35}"/>')
+    p.append("</svg>")
+    return "\n".join(p)
+
+
+def write_country_cards(entries: list[dict]) -> None:
+    """Write country-<CC>.svg for both themes; remove stale country cards
+    from countries that dropped out of the top 20."""
+    flags = {e["cc"]: fetch_flag(e["cc"]) for e in entries}
+    missing = [cc for cc, f in flags.items() if f is None]
+    if missing:
+        print(f"flagcdn fetch failed for {missing} — cards render without flag")
+    for theme in ("light", "dark"):
+        for i, e in enumerate(entries):
+            out = ASSETS / theme / f"country-{e['cc']}.svg"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            out.write_text(
+                card_country(theme, e["cc"], e["name"], e["count"],
+                             flags[e["cc"]], i),
+                encoding="utf-8")
+        keep = {f"country-{e['cc']}.svg" for e in entries}
+        for stale in ASSETS.glob(f"{theme}/country-*.svg"):
+            if stale.name not in keep:
+                stale.unlink()
+
+
+def build_grid_block(entries: list[dict]) -> str:
+    """HTML table (raw markup — no GitHub-interactive tricks): card image
+    links to the combined per-country .txt; a closed <details> holds three
+    per-type chips, zero-count types rendered as plain unlinked <code>."""
+    def cell(e: dict) -> str:
+        chips = []
+        for ptype in ("socks5", "socks4", "http"):
+            n = e["types"].get(ptype, 0)
+            if n:
+                chips.append(f'<a href="{RAW_BASE}/by-country/{e["cc"]}/'
+                             f'{ptype}.txt"><code>{ptype} · {n}</code></a>')
+            else:
+                chips.append(f'<code>{ptype} · 0</code>')
+        alt = f"{e['name']} — {e['count']} alive proxies, plain-text list"
+        return (
+            f'<a href="{RAW_BASE}/by-country/{e["cc"]}.txt">'
+            f'<picture><source media="(prefers-color-scheme: dark)" '
+            f'srcset="assets/dark/country-{e["cc"]}.svg">'
+            f'<img src="assets/light/country-{e["cc"]}.svg" alt="{alt}">'
+            f'</picture></a>'
+            f'<br><details><summary>socks5 · socks4 · http</summary>'
+            f'{" · ".join(chips)}</details>'
+        )
+
+    rows = [entries[i:i + 4] for i in range(0, len(entries), 4)]
+    body = "".join(
+        "<tr>" + "".join(f"<td>{cell(e)}</td>" for e in row) + "</tr>\n"
+        for row in rows)
+    return f'<table>\n{body}</table>'
+
+
+def update_readme_grid(entries: list[dict]) -> None:
+    readme = README_PATH.read_text(encoding="utf-8")
+    if GRID_START not in readme or GRID_END not in readme:
+        print("country-grid markers missing from README — grid not updated")
+        return
+    start = readme.index(GRID_START) + len(GRID_START)
+    end = readme.index(GRID_END)
+    updated = (readme[:start] + "\n\n" + build_grid_block(entries) + "\n\n"
+               + readme[end:])
+    README_PATH.write_text(updated, encoding="utf-8")
+    print(f"updated README country grid ({len(entries)} countries)")
+
+
+# ---------------------------------------------------------------------------
 # registry + main
 # ---------------------------------------------------------------------------
 
@@ -657,6 +870,12 @@ def main() -> int:
             out.parent.mkdir(parents=True, exist_ok=True)
             out.write_text(CARDS[name](theme, data), encoding="utf-8")
             print(f"wrote {out}")
+    # top-20 country fast-path cards + README grid (always derived from the
+    # just-published run output; skipped with --only unless "countries" ran)
+    if args.only is None or "countries" in names:
+        entries = load_country_entries()
+        write_country_cards(entries)
+        update_readme_grid(entries)
     return 0
 
 

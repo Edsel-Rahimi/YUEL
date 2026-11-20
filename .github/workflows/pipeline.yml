@@ -44,6 +44,9 @@ jobs:
         run: |
           test -s data/out/all.json
           test -s data/out/run-summary.json
+          # plain-text siblings are part of the contract — at least the
+          # combined country lists must exist
+          ls data/out/by-country/*.txt | head -1 | grep -q .
           python3 - <<'EOF'
           import json
           summary = json.load(open("data/out/run-summary.json"))
@@ -74,10 +77,10 @@ jobs:
         run: |
           git config user.name "yuel-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add assets/light assets/dark
+          git add assets/light assets/dark README.md
           if git diff --cached --quiet; then
             echo "rendered assets unchanged — nothing to commit"
           else
-            git commit -m "render: brand assets $(date -u +%FT%TZ) [skip ci]"
+            git commit -m "render: brand assets + country grid $(date -u +%FT%TZ) [skip ci]"
             git push
           fi

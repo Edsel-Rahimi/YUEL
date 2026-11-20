@@ -7,7 +7,22 @@ Output: ``data/out/`` — the ONLY directory downstream consumers should read:
     all.json                       every alive proxy, all tiers, all countries
     by-country/<ISO2>.json         one JSON array per country, tier != excluded
     by-country/unclassified.json   same shape; may be an empty array
+    by-country/<ISO2>.txt          plain-text sibling of every country file
+    by-country/<ISO2>/<type>.txt   per-country per-type split (only non-empty)
+    by-tier/<tier>.txt             plain-text sibling of every non-empty tier
     run-summary.json               counts for health-checking without parsing
+
+Plain-text siblings (``*.txt``): one proxy per line, ``type://ip:port`` or
+``type://user:pass@ip:port`` when credentials exist, **same entries in the
+same score-descending order as the JSON sibling**, prefixed by a single
+header comment line::
+
+    # YUEL · <label> · <N> proxies · generated <timestamp> UTC
+
+``<label>`` is the ISO2 code (combined country file), ``"<ISO2> · <type>"``
+(per-type split) or ``"<tier> tier"``. Files that would hold zero entries
+are **not** created — an empty list never gets a sibling. Like the JSON
+files they are written into the staging directory and swapped atomically.
 
 Record shape (plain proxies ONLY — never a vmess/vless/... tunnel feed):
 
@@ -120,6 +135,81 @@ def _record_sort_key(record: dict[str, Any]) -> tuple:
             record["ip"], record["port"])
 
 
+# ---------------------------------------------------------------------------
+# plain-text siblings (*.txt)
+# ---------------------------------------------------------------------------
+
+
+def txt_line(record: dict[str, Any]) -> str:
+    """One line of a .txt sibling: ``type://[user:pass@]ip:port``."""
+    creds = ""
+    if record.get("user") and record.get("pass"):
+        creds = f"{record['user']}:{record['pass']}@"
+    host = f"{record['ip']}:{record['port']}"
+    return f"{record.get('type') or 'unknown'}://{creds}{host}"
+
+
+def _txt_timestamp(now_utc: str) -> str:
+    """``2026-11-20T08:24:09+00:00`` → ``2026-11-20T08:24:09 UTC``."""
+    return now_utc.replace("+00:00", "") + " UTC"
+
+
+def txt_text(label: str, records: list[dict[str, Any]], now_utc: str) -> str:
+    """Full .txt sibling content: one header comment + one line per record.
+
+    ``records`` must already be in their published (score-descending) order;
+    the caller passes exactly the list that went into the JSON sibling."""
+    header = f"# YUEL · {label} · {len(records)} proxies · " \
+             f"generated {_txt_timestamp(now_utc)}"
+    return "\n".join([header] + [txt_line(r) for r in records]) + "\n"
+
+
+def write_txt_files(
+    target_dir: Path,
+    by_country: dict[str, list[dict[str, Any]]],
+    by_tier_records: dict[str, list[dict[str, Any]]],
+    now_utc: str,
+) -> int:
+    """Write every plain-text sibling under ``target_dir``.
+
+    - combined per-country: ``by-country/<ISO2>.txt`` (label = ISO2)
+    - per-country per-type: ``by-country/<ISO2>/<type>.txt``
+      (label = ``"<ISO2> · <type>"``) — only for types with ≥ 1 entry
+    - per-tier: ``by-tier/<tier>.txt`` (label = ``"<tier> tier"``)
+
+    Empty groups are skipped (never an empty file); per-type entries come
+    from exactly the records that went into the country's JSON file, so the
+    txt and JSON siblings always agree. Returns the number of files written.
+    """
+    written = 0
+    country_dir = target_dir / "by-country"
+    for country, records in sorted(by_country.items()):
+        if not records:
+            continue  # e.g. unclassified this run — no empty siblings
+        (country_dir / f"{country}.txt").write_text(
+            txt_text(country, records, now_utc), encoding="utf-8")
+        written += 1
+        by_type: dict[str, list[dict[str, Any]]] = {}
+        for record in records:
+            by_type.setdefault(record.get("type") or "unknown", []).append(record)
+        for ptype, typed in sorted(by_type.items()):
+            if not typed:
+                continue
+            type_dir = country_dir / country
+            type_dir.mkdir(parents=True, exist_ok=True)
+            (type_dir / f"{ptype}.txt").write_text(
+                txt_text(f"{country} · {ptype}", typed, now_utc),
+                encoding="utf-8")
+            written += 1
+    for tier, records in sorted(by_tier_records.items()):
+        if not records:
+            continue  # stable JSON contract keeps empty tiers; txt skips them
+        (target_dir / "by-tier" / f"{tier}.txt").write_text(
+            txt_text(f"{tier} tier", records, now_utc), encoding="utf-8")
+        written += 1
+    return written
+
+
 def _read_report_totals(data_dir: Path) -> dict[str, Any]:
     """Pull health-check counts from earlier stages' reports (None if absent —
     stages can be run individually without the whole chain)."""
@@ -188,6 +278,13 @@ def _validate_staging(staging_dir: Path, expected_records: int) -> int:
         json.loads((staging_dir / "run-summary.json").read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         raise PublishError(f"staged run-summary.json unusable: {exc}") from exc
+    # txt siblings: every file has its header comment and at least one entry
+    for txt_path in sorted(staging_dir.rglob("*.txt")):
+        lines = txt_path.read_text(encoding="utf-8").splitlines()
+        if len(lines) < 2 or not lines[0].startswith("# YUEL · "):
+            raise PublishError(
+                f"staged {txt_path.relative_to(staging_dir)} is not a valid "
+                f"YUEL txt sibling")
     return total_country_records
 
 
@@ -319,6 +416,9 @@ def stage_publish(
             json.dumps(summary, indent=2, ensure_ascii=False) + "\n",
             encoding="utf-8",
         )
+        # plain-text siblings — built from the SAME record lists as the JSON
+        # files above, so the two formats always agree exactly
+        write_txt_files(staging_dir, by_country, by_tier_records, now_utc)
         _validate_staging(staging_dir, expected_records=len(records))
         _swap_into_place(staging_dir, out_dir)
     except PublishError as exc:

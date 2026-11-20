@@ -268,5 +268,159 @@ class StagePublishTests(unittest.TestCase):
             self.assertIn("run geo first", result.detail)
 
 
+class TxtSiblingTests(unittest.TestCase):
+    """Plain-text siblings: same entries, same order as the JSON siblings."""
+
+    def _publish(self, data_dir: Path) -> None:
+        entries = [
+            make_geo_entry("9.9.9.9", 1080, country="CN", tier="gold",
+                           score=91.0, confirmed="socks5"),
+            make_geo_entry("1.2.3.4", 8080, country="CN", tier="gold",
+                           score=87.2, confirmed="http"),
+            make_geo_entry("5.6.7.8", 3128, country="IT", tier="silver",
+                           score=64.0, confirmed="socks5",
+                           username="alice", password="s3cret"),
+            make_geo_entry("7.7.7.7", 80, country="IT", tier="bronze",
+                           score=21.5, confirmed="socks4"),
+            make_geo_entry("8.8.8.8", 8000, country=None, tier="bronze",
+                           score=20.1, confirmed="http"),
+        ]
+        write_geo(data_dir, entries)
+        write_reports(data_dir)
+        result = stage_publish(Path("unused"), data_dir)
+        self.assertTrue(result.ok, result.detail)
+
+    @staticmethod
+    def _txt_entries(path: Path) -> list[str]:
+        lines = path.read_text(encoding="utf-8").splitlines()
+        # header: "# YUEL · <label> · <N> proxies · generated <ts> UTC"
+        # (the label itself may contain " · ", e.g. per-type files)
+        assert lines[0].startswith("# YUEL · "), lines[0]
+        assert " proxies · generated " in lines[0], lines[0]
+        assert lines[0].endswith(" UTC"), lines[0]
+        return lines[1:]
+
+    def test_txt_matches_json_exactly_same_order(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            data_dir = Path(tmp)
+            self._publish(data_dir)
+            out = data_dir / "out"
+            for rel in ("by-country/CN", "by-country/IT", "by-tier/gold"):
+                json_records = json.loads(
+                    (out / f"{rel}.json").read_text(encoding="utf-8"))
+                txt_lines = self._txt_entries(out / f"{rel}.txt")
+                self.assertEqual(len(txt_lines), len(json_records), rel)
+                for line, record in zip(txt_lines, json_records):
+                    creds = ""
+                    if record.get("user") and record.get("pass"):
+                        creds = f"{record['user']}:{record['pass']}@"
+                    self.assertEqual(
+                        line,
+                        f"{record['type']}://{creds}"
+                        f"{record['ip']}:{record['port']}",
+                        rel,
+                    )
+            # score-descending order survives into the txt
+            gold = self._txt_entries(out / "by-tier/gold.txt")
+            self.assertEqual(gold[0], "socks5://9.9.9.9:1080")
+            self.assertEqual(gold[1], "http://1.2.3.4:8080")
+
+    def test_header_comment_format(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            self._publish(Path(tmp))
+            header = (out / "by-country/CN.txt").read_text(
+                encoding="utf-8").splitlines()[0]
+            self.assertTrue(header.startswith("# YUEL · CN · 2 proxies · "
+                                             "generated "))
+            self.assertTrue(header.endswith(" UTC"))
+
+    def test_creds_line_format(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            self._publish(Path(tmp))
+            it = self._txt_entries(out / "by-country/IT.txt")
+            self.assertIn("socks5://alice:s3cret@5.6.7.8:3128", it)
+            self.assertIn("socks4://7.7.7.7:80", it)
+
+    def test_per_type_files_skip_zero_entry_types(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            self._publish(Path(tmp))
+            cn_dir = out / "by-country/CN"
+            self.assertTrue((cn_dir / "socks5.txt").exists())
+            self.assertTrue((cn_dir / "http.txt").exists())
+            self.assertFalse((cn_dir / "socks4.txt").exists())  # zero → skip
+            socks5 = self._txt_entries(cn_dir / "socks5.txt")
+            self.assertEqual(socks5, ["socks5://9.9.9.9:1080"])
+            header = (cn_dir / "socks5.txt").read_text(
+                encoding="utf-8").splitlines()[0]
+            self.assertTrue(header.startswith("# YUEL · CN · socks5 · "
+                                             "1 proxies · "))
+
+    def test_unclassified_txt_follows_json(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "out"
+            self._publish(Path(tmp))
+            # fixture has one unclassified record → txt exists and agrees
+            self.assertTrue((out / "by-country/unclassified.json").exists())
+            self.assertTrue((out / "by-country/unclassified.txt").exists())
+            self.assertEqual(
+                self._txt_entries(out / "by-country/unclassified.txt"),
+                ["http://8.8.8.8:8000"],
+            )
+
+    def test_empty_groups_never_get_txt(self):
+        """write_txt_files directly: an empty country/tier group produces no
+        file — never an empty sibling."""
+        from yuel.publish import write_txt_files
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp)
+            (base / "by-country").mkdir(parents=True)
+            (base / "by-tier").mkdir(parents=True)
+            record = {"ip": "1.2.3.4", "port": 80, "type": "http",
+                      "score": 50.0, "tier": "silver"}
+            write_txt_files(
+                base,
+                {"unclassified": [], "IT": [record]},
+                {"gold": [], "silver": [record]},
+                "2026-11-20T08:24:09+00:00",
+            )
+            self.assertFalse((base / "by-country/unclassified.txt").exists())
+            self.assertFalse((base / "by-tier/gold.txt").exists())
+            self.assertTrue((base / "by-country/IT.txt").exists())
+            self.assertTrue((base / "by-tier/silver.txt").exists())
+
+    def test_direct_writer_agrees_with_stage(self):
+        """write_txt_files() from loaded JSON = the staged files (the path
+        the README regenerator uses for backfilling old output)."""
+        from yuel.publish import write_txt_files
+        with tempfile.TemporaryDirectory() as tmp:
+            data_dir = Path(tmp)
+            self._publish(data_dir)
+            out = data_dir / "out"
+            regen = data_dir / "regen"
+            (regen / "by-country").mkdir(parents=True)
+            (regen / "by-tier").mkdir(parents=True)
+            by_country = {}
+            for path in sorted((out / "by-country").glob("*.json")):
+                by_country[path.stem] = json.loads(path.read_text())
+            by_tier = {}
+            for tier in ("gold", "silver", "bronze"):
+                by_tier[tier] = json.loads(
+                    (out / "by-tier" / f"{tier}.json").read_text())
+            write_txt_files(regen, by_country, by_tier,
+                            "2026-11-20T08:24:09+00:00")
+            # entries identical (the header timestamp differs by construction)
+            for rel in ("by-country/CN.txt", "by-country/CN/socks5.txt",
+                        "by-country/IT.txt", "by-tier/gold.txt",
+                        "by-tier/bronze.txt"):
+                self.assertEqual(
+                    self._txt_entries(out / rel),
+                    self._txt_entries(regen / rel),
+                    rel,
+                )
+
+
 if __name__ == "__main__":
     unittest.main()

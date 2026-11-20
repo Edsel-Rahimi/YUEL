@@ -47,6 +47,26 @@ code, config, or history with any other project.
   </picture>
 </p>
 
+## Top 20 countries — grab a list
+
+Live counts from the last published run. Click a card to grab that
+country's **combined** plain-text list (`type://ip:port`, one proxy per
+line, best score first) — no JSON parsing needed. Expand a card for the
+per-type files. Not on the list? Every country with alive proxies has the
+exact same files under `data/out/by-country/`.
+
+<!-- country-grid:start -->
+
+<table>
+<tr><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CN.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-CN.svg"><img src="assets/light/country-CN.svg" alt="China — 896 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CN/socks5.txt"><code>socks5 · 650</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CN/socks4.txt"><code>socks4 · 40</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CN/http.txt"><code>http · 206</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/US.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-US.svg"><img src="assets/light/country-US.svg" alt="United States — 287 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/US/socks5.txt"><code>socks5 · 181</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/US/socks4.txt"><code>socks4 · 1</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/US/http.txt"><code>http · 105</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/ID.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-ID.svg"><img src="assets/light/country-ID.svg" alt="Indonesia — 130 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/ID/socks5.txt"><code>socks5 · 4</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/ID/socks4.txt"><code>socks4 · 13</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/ID/http.txt"><code>http · 113</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/RU.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-RU.svg"><img src="assets/light/country-RU.svg" alt="Russia — 54 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/RU/socks5.txt"><code>socks5 · 22</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/RU/socks4.txt"><code>socks4 · 5</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/RU/http.txt"><code>http · 27</code></a></details></td></tr>
+<tr><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/DE.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-DE.svg"><img src="assets/light/country-DE.svg" alt="Germany — 52 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/DE/socks5.txt"><code>socks5 · 18</code></a> · <code>socks4 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/DE/http.txt"><code>http · 34</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CH.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-CH.svg"><img src="assets/light/country-CH.svg" alt="Switzerland — 34 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <code>socks4 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CH/http.txt"><code>http · 34</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/HK.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-HK.svg"><img src="assets/light/country-HK.svg" alt="Hong Kong — 27 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/HK/socks5.txt"><code>socks5 · 13</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/HK/socks4.txt"><code>socks4 · 2</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/HK/http.txt"><code>http · 12</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/ZW.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-ZW.svg"><img src="assets/light/country-ZW.svg" alt="Zimbabwe — 25 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <code>socks4 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/ZW/http.txt"><code>http · 25</code></a></details></td></tr>
+<tr><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CO.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-CO.svg"><img src="assets/light/country-CO.svg" alt="Colombia — 22 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CO/socks4.txt"><code>socks4 · 1</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/CO/http.txt"><code>http · 21</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/PH.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-PH.svg"><img src="assets/light/country-PH.svg" alt="Philippines — 20 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/PH/socks4.txt"><code>socks4 · 1</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/PH/http.txt"><code>http · 19</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/BR.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-BR.svg"><img src="assets/light/country-BR.svg" alt="Brazil — 19 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/BR/socks4.txt"><code>socks4 · 8</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/BR/http.txt"><code>http · 11</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/FR.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-FR.svg"><img src="assets/light/country-FR.svg" alt="France — 17 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <code>socks4 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/FR/http.txt"><code>http · 17</code></a></details></td></tr>
+<tr><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/BD.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-BD.svg"><img src="assets/light/country-BD.svg" alt="Bangladesh — 16 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/BD/socks5.txt"><code>socks5 · 1</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/BD/socks4.txt"><code>socks4 · 4</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/BD/http.txt"><code>http · 11</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/GB.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-GB.svg"><img src="assets/light/country-GB.svg" alt="United Kingdom — 16 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/GB/socks5.txt"><code>socks5 · 6</code></a> · <code>socks4 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/GB/http.txt"><code>http · 10</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/IN.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-IN.svg"><img src="assets/light/country-IN.svg" alt="India — 16 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/IN/socks5.txt"><code>socks5 · 4</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/IN/socks4.txt"><code>socks4 · 4</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/IN/http.txt"><code>http · 8</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/PA.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-PA.svg"><img src="assets/light/country-PA.svg" alt="Panama — 13 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/PA/socks4.txt"><code>socks4 · 1</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/PA/http.txt"><code>http · 12</code></a></details></td></tr>
+<tr><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/TH.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-TH.svg"><img src="assets/light/country-TH.svg" alt="Thailand — 13 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/TH/socks4.txt"><code>socks4 · 3</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/TH/http.txt"><code>http · 10</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/SG.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-SG.svg"><img src="assets/light/country-SG.svg" alt="Singapore — 12 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/SG/socks5.txt"><code>socks5 · 3</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/SG/socks4.txt"><code>socks4 · 2</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/SG/http.txt"><code>http · 7</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/TR.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-TR.svg"><img src="assets/light/country-TR.svg" alt="Turkey — 12 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/TR/socks5.txt"><code>socks5 · 2</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/TR/socks4.txt"><code>socks4 · 3</code></a> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/TR/http.txt"><code>http · 7</code></a></details></td><td><a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/EG.txt"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/dark/country-EG.svg"><img src="assets/light/country-EG.svg" alt="Egypt — 11 alive proxies, plain-text list"></picture></a><br><details><summary>socks5 · socks4 · http</summary><code>socks5 · 0</code> · <code>socks4 · 0</code> · <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/EG/http.txt"><code>http · 11</code></a></details></td></tr>
+</table>
+
+<!-- country-grid:end -->
+
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/divider.svg">
@@ -462,11 +482,35 @@ data/
 └── out/                       # stage 6 output (published, committed)
     ├── all.json               # every alive proxy, scored + tiered
     ├── by-tier/gold.json | silver.json | bronze.json
+    ├── by-tier/gold.txt | silver.txt | bronze.txt        # plain-text siblings
     ├── by-country/<ISO2>.json # alive, scored proxies per country
-    ├── unclassified.json      # proxies without a trustworthy country
-    ├── history/results.json   # per-proxy test history (auditable)
+    ├── by-country/<ISO2>.txt  # "type://ip:port" one per line, score-first
+    ├── by-country/<ISO2>/<type>.txt   # per-type split (socks5/socks4/http;
+    │                                  #   only created when non-empty)
+    ├── by-country/unclassified.json    # always exists, may be empty (no .txt
+    │                                   #   sibling when empty)
     └── run-summary.json       # counts, durations, stage statuses
 ```
+
+**Plain-text siblings (`.txt`).** Every per-country and per-tier JSON file
+has a plain-text twin with the same entries in the same score-descending
+order — one proxy per line as `type://ip:port` (or
+`type://user:pass@ip:port` with credentials), prefixed by a single header
+comment:
+
+```
+# YUEL · CN · 896 proxies · generated 2026-11-20T08:24:09 UTC
+http://47.85.161.37:3128
+socks5://47.251.166.203:1080
+...
+```
+
+Per-type split files (`by-country/<ISO2>/<type>.txt`) exist only for types
+that actually have alive proxies in that country — a type with zero entries
+gets no file, never an empty one. They are written by the publish stage
+into the same staging directory and swapped atomically with the JSON
+files, so a broken run can never leave the two formats disagreeing; the
+test suite asserts txt and JSON content match exactly.
 
 Field names, tiers, and the history schema are frozen as of v0.6.0 and are
 what the published files above actually contain; any change to the contract
@@ -480,6 +524,8 @@ commits the published contract to `main`, so consumers read stable URLs like:
 ```
 https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/all.json
 https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/IT.json
+https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/IT.txt
+https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/by-country/IT/socks5.txt
 https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/run-summary.json
 ```
 
@@ -552,9 +598,11 @@ volume and can tolerate churn. Files: `data/out/by-tier/{gold,silver,bronze}.jso
 if you think in tiers, `data/out/by-country/<ISO2>.json` if you need a
 country exit (e.g. `IT.json` for an Italian hop), and `data/out/all.json`
 when you want everything with its `score`/`tier`/`country` fields so your
-own consumer can filter. Pick the narrowest file your use case tolerates —
-narrower lists are fresher on average because every entry in them passed
-the same run.
+own consumer can filter. Every country and tier file also has a plain-text
+`.txt` sibling (`IT.txt`, or `IT/socks5.txt` per type) when you just want
+to grab a list without any JSON. Pick the narrowest file your use case
+tolerates — narrower lists are fresher on average because every entry in
+them passed the same run.
 </details>
 
 <details>

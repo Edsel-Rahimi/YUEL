@@ -8,6 +8,22 @@ All notable changes to YUEL are documented here. The format follows
 
 ### Added
 
+- **plain-text output format + top-20 country fast-path.** Every per-country
+  and per-tier JSON file now publishes a `.txt` sibling — one
+  `type://ip:port` line per proxy (or `type://user:pass@ip:port` with
+  credentials), score-descending, under a single
+  `# YUEL · <label> · N proxies · generated <ts> UTC` header — plus
+  per-country per-type splits (`by-country/<CC>/<type>.txt`, created only
+  for non-empty types). Written by the publish stage inside the same
+  atomic staging swap; the test suite asserts txt and JSON content match
+  exactly (same entries, same order). The README grows a "Top 20
+  countries — grab a list" grid right under the hero stats card: one card
+  per country (flagcdn.com flag embedded as a data URI, display name, live
+  count from `run-summary.json`), each card a clickable link to that
+  country's combined `.txt`, with a closed `<details>` block of per-type
+  chips — zero-count types render as disabled unlinked chips, never dead
+  links. Cards and grid regenerate from the real published output on every
+  pipeline run; `scripts/regen_txt_siblings.py` backfills older output.
 - **docs: README accuracy pass + CONTRIBUTING.md.** The stale "stages 1–3
   implemented" status line was replaced with the real state (all seven
   stages running automatically every 30 minutes, numbers pulled live from
