@@ -1,23 +1,12 @@
 [
   {
-    "ip": "149.210.44.175",
-    "port": 1080,
-    "type": "socks5",
+    "ip": "62.103.186.66",
+    "port": 4153,
+    "type": "socks4",
     "country": "GR",
-    "score": 87.0,
+    "score": 85.99,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "81.31.228.10",
-    "port": 1090,
-    "type": "http",
-    "country": "GR",
-    "score": 48.25,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

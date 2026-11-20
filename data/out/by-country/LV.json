@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "195.13.182.211",
+    "port": 443,
+    "type": "socks5",
+    "country": "LV",
+    "score": 88.81,
+    "tier": "gold",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "195.135.255.98",
+    "port": 1080,
+    "type": "socks5",
+    "country": "LV",
+    "score": 83.18,
+    "tier": "gold",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

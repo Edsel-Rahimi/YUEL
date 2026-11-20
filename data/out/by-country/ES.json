@@ -4,9 +4,20 @@
     "port": 80,
     "type": "http",
     "country": "ES",
-    "score": 93.71,
+    "score": 93.82,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "2.139.41.14",
+    "port": 3128,
+    "type": "http",
+    "country": "ES",
+    "score": 92.3,
+    "tier": "gold",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

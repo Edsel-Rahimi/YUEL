@@ -1,0 +1,24 @@
+[
+  {
+    "ip": "182.155.254.159",
+    "port": 80,
+    "type": "http",
+    "country": "TW",
+    "score": 95.86,
+    "tier": "gold",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "122.116.125.115",
+    "port": 8888,
+    "type": "http",
+    "country": "TW",
+    "score": 94.94,
+    "tier": "gold",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

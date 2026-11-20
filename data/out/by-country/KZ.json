@@ -4,20 +4,20 @@
     "port": 80,
     "type": "http",
     "country": "KZ",
-    "score": 95.92,
+    "score": 95.72,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "46.235.83.76",
-    "port": 1080,
+    "ip": "72.56.104.252",
+    "port": 9058,
     "type": "socks5",
     "country": "KZ",
-    "score": 84.51,
-    "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "score": 73.23,
+    "tier": "silver",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,12 +1,12 @@
 [
   {
-    "ip": "160.155.90.26",
+    "ip": "95.140.118.34",
     "port": 1080,
     "type": "socks4",
-    "country": "CI",
-    "score": 86.45,
+    "country": "RS",
+    "score": 82.14,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

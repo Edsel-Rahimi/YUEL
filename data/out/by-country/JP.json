@@ -4,9 +4,9 @@
     "port": 3128,
     "type": "http",
     "country": "JP",
-    "score": 44.46,
+    "score": 27.61,
     "tier": "bronze",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "CY",
-    "score": 97.84,
+    "score": 95.42,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +15,9 @@
     "port": 80,
     "type": "http",
     "country": "CY",
-    "score": 96.09,
+    "score": 95.35,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -4,9 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "AU",
-    "score": 42.85,
+    "score": 44.3,
     "tier": "bronze",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

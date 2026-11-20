@@ -1,23 +1,12 @@
 [
   {
-    "ip": "192.203.0.166",
+    "ip": "192.203.0.198",
     "port": 999,
     "type": "http",
     "country": "PR",
-    "score": 42.71,
+    "score": 32.8,
     "tier": "bronze",
-    "last_checked": "2026-11-20T03:48:31+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "154.64.211.145",
-    "port": 999,
-    "type": "http",
-    "country": "PR",
-    "score": 27.46,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

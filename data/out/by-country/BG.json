@@ -1,45 +1,23 @@
 [
   {
-    "ip": "31.211.142.115",
-    "port": 8192,
-    "type": "socks5",
-    "country": "BG",
-    "score": 94.3,
-    "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "213.169.33.7",
-    "port": 8001,
-    "type": "http",
-    "country": "BG",
-    "score": 93.09,
-    "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
     "ip": "213.149.156.87",
     "port": 5678,
     "type": "socks4",
     "country": "BG",
-    "score": 93.05,
+    "score": 90.19,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
   {
-    "ip": "93.123.16.23",
-    "port": 80,
-    "type": "http",
+    "ip": "212.5.132.74",
+    "port": 5678,
+    "type": "socks4",
     "country": "BG",
-    "score": 90.86,
+    "score": 89.45,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -48,9 +26,53 @@
     "port": 80,
     "type": "http",
     "country": "BG",
-    "score": 89.74,
+    "score": 84.94,
     "tier": "gold",
-    "last_checked": "2026-11-20T03:48:31+00:00",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "93.123.16.23",
+    "port": 80,
+    "type": "http",
+    "country": "BG",
+    "score": 84.59,
+    "tier": "gold",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "93.123.16.14",
+    "port": 80,
+    "type": "http",
+    "country": "BG",
+    "score": 83.85,
+    "tier": "gold",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "82.137.90.192",
+    "port": 80,
+    "type": "http",
+    "country": "BG",
+    "score": 32.26,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T04:55:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "82.137.90.220",
+    "port": 80,
+    "type": "http",
+    "country": "BG",
+    "score": 27.94,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T04:55:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
