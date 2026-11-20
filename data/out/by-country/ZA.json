@@ -4,9 +4,20 @@
     "port": 8080,
     "type": "http",
     "country": "ZA",
-    "score": 79.1,
-    "tier": "silver",
-    "last_checked": "2026-11-20T04:55:14+00:00",
+    "score": 84.21,
+    "tier": "gold",
+    "last_checked": "2026-11-20T05:58:33+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "160.226.165.228",
+    "port": 8080,
+    "type": "http",
+    "country": "ZA",
+    "score": 82.91,
+    "tier": "gold",
+    "last_checked": "2026-11-20T05:58:33+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -15,9 +26,9 @@
     "port": 80,
     "type": "http",
     "country": "ZA",
-    "score": 52.9,
-    "tier": "silver",
-    "last_checked": "2026-11-20T04:55:14+00:00",
+    "score": 42.89,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T05:58:33+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

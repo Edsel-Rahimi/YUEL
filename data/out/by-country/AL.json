@@ -1,23 +1,12 @@
 [
   {
     "ip": "37.26.86.206",
-    "port": 47464,
-    "type": "http",
+    "port": 4145,
+    "type": "socks4",
     "country": "AL",
-    "score": 33.3,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T04:55:14+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "79.106.33.26",
-    "port": 8079,
-    "type": "http",
-    "country": "AL",
-    "score": 30.29,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T04:55:14+00:00",
+    "score": 90.99,
+    "tier": "gold",
+    "last_checked": "2026-11-20T05:58:33+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

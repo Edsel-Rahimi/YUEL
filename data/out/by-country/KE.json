@@ -4,53 +4,9 @@
     "port": 80,
     "type": "http",
     "country": "KE",
-    "score": 79.47,
-    "tier": "silver",
-    "last_checked": "2026-11-20T04:55:14+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "102.68.76.247",
-    "port": 5566,
-    "type": "http",
-    "country": "KE",
-    "score": 74.83,
-    "tier": "silver",
-    "last_checked": "2026-11-20T04:55:14+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "102.209.18.248",
-    "port": 8080,
-    "type": "http",
-    "country": "KE",
-    "score": 71.54,
-    "tier": "silver",
-    "last_checked": "2026-11-20T04:55:14+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "102.210.40.125",
-    "port": 8080,
-    "type": "http",
-    "country": "KE",
-    "score": 44.67,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T04:55:14+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "197.248.75.221",
-    "port": 8102,
-    "type": "http",
-    "country": "KE",
-    "score": 40.91,
-    "tier": "bronze",
-    "last_checked": "2026-11-20T04:55:14+00:00",
+    "score": 83.54,
+    "tier": "gold",
+    "last_checked": "2026-11-20T05:58:33+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

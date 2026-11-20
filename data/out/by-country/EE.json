@@ -4,9 +4,9 @@
     "port": 9150,
     "type": "socks5",
     "country": "EE",
-    "score": 78.56,
-    "tier": "silver",
-    "last_checked": "2026-11-20T04:55:14+00:00",
+    "score": 42.59,
+    "tier": "bronze",
+    "last_checked": "2026-11-20T05:58:33+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

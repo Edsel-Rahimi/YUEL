@@ -4,9 +4,9 @@
     "port": 5678,
     "type": "socks4",
     "country": "EU",
-    "score": 91.35,
+    "score": 92.7,
     "tier": "gold",
-    "last_checked": "2026-11-20T04:55:14+00:00",
+    "last_checked": "2026-11-20T05:58:33+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

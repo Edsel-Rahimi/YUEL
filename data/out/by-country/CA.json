@@ -1,0 +1,13 @@
+[
+  {
+    "ip": "184.75.221.82",
+    "port": 3118,
+    "type": "http",
+    "country": "CA",
+    "score": 94.16,
+    "tier": "gold",
+    "last_checked": "2026-11-20T05:58:33+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
