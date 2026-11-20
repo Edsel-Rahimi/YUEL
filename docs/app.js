@@ -52,7 +52,19 @@ const $ = (id) => document.getElementById(id);
   const iconFor = (t) => t === "dark" ? sun : moon;
   const current = () => root.dataset.theme ||
     (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-  const paint = () => { btn.innerHTML = iconFor(current()); };
+  // <picture> follows the OS preference, but the manual toggle overrides it
+  // via data-theme — keep the brand mark in sync with the effective theme
+  const logoImg = document.querySelector(".brand-logo img");
+  const logoSource = document.querySelector(".brand-logo source");
+  const markFor = (t) => t === "dark"
+    ? "brand/yuel-mark-white.png"
+    : "brand/yuel-mark-color.png";
+  const paint = () => {
+    btn.innerHTML = iconFor(current());
+    const mark = markFor(current());
+    if (logoSource) logoSource.srcset = mark;
+    if (logoImg) logoImg.src = mark;
+  };
   paint();
   btn.addEventListener("click", () => {
     const next = current() === "dark" ? "light" : "dark";

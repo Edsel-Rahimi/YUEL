@@ -49,18 +49,15 @@ a { color: inherit; }
   text-decoration: none;
 }
 
-.brand-mark {
-  width: 30px;
-  height: 30px;
-  border-radius: var(--yuel-radius-sm);
-  background: var(--yuel-grad-brand);
-  color: #FFFFFF;
-  display: grid;
-  place-items: center;
-  font-family: var(--yuel-font-display);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: -0.03em;
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+}
+
+.brand-logo img {
+  height: 36px;
+  width: auto;
+  display: block;
 }
 
 .brand-name {
