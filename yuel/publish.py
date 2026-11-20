@@ -28,13 +28,16 @@ Record shape (plain proxies ONLY — never a vmess/vless/... tunnel feed):
 
     {"ip": "1.2.3.4", "port": 8080, "type": "socks5", "user": "...",
      "pass": "...", "country": "IT", "score": 87.2, "tier": "gold",
-     "last_checked": "2026-11-19T12:00:00+00:00",
+     "latency": 412, "last_checked": "2026-11-19T12:00:00+00:00",
      "consecutive_successes": 4, "consecutive_failures": 0}
 
-``user``/``pass`` are present only when the proxy has credentials. ``tier``
-keeps the stage-4 verdict; per-country files carry tier != ``excluded`` while
-``all.json`` deliberately includes everything (documented interpretation of
-"all tiers") so consumers can apply their own thresholds.
+``user``/``pass`` are present only when the proxy has credentials. ``latency``
+is the last successful handshake probe in whole milliseconds — ``null`` when
+the check did not measure one (the site displays it as plain text, no
+threshold colouring). ``tier`` keeps the stage-4 verdict; per-country files
+carry tier != ``excluded`` while ``all.json`` deliberately includes
+everything (documented interpretation of "all tiers") so consumers can apply
+their own thresholds.
 
 **Atomicity contract:** a failed or partial run never overwrites
 previously-good output. The stage builds everything in a staging directory
@@ -111,6 +114,7 @@ def build_record(entry: dict[str, Any]) -> dict[str, Any]:
     check = entry.get("check") or {}
     score = entry.get("score") or {}
     stats = entry.get("history") or {}
+    latency_ms = check.get("latency_ms")
     record: dict[str, Any] = {
         "ip": entry["host"],
         "port": entry["port"],
@@ -118,6 +122,7 @@ def build_record(entry: dict[str, Any]) -> dict[str, Any]:
         "country": entry.get("country") or "unclassified",
         "score": score.get("total"),
         "tier": score.get("tier") or "excluded",
+        "latency": round(latency_ms) if latency_ms is not None else None,
         "last_checked": check.get("checked_utc"),
         "consecutive_successes": int(stats.get("consecutive_successes") or 0),
         "consecutive_failures": int(stats.get("consecutive_failures") or 0),

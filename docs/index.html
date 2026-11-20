@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>YUEL — browse alive proxies</title>
   <meta name="description" content="Browse, filter and grab plain proxies from the latest YUEL run — socks5, socks4 and http, scored and tiered.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FC671F'/%3E%3Cstop offset='.38' stop-color='%23ED4A3B'/%3E%3Cstop offset='.66' stop-color='%23CC3C77'/%3E%3Cstop offset='1' stop-color='%236574C9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='17' font-weight='700' fill='%23fff' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="style.css">
@@ -33,8 +34,8 @@
     </a>
     <span class="header-spacer"></span>
     <div class="live-chips">
-      <span class="chip"><span class="dot pulse"></span><strong>1,875</strong>&nbsp;alive now</span>
-      <span class="chip updated">updated&nbsp;<strong>14m</strong>&nbsp;ago</span>
+      <span class="chip"><span class="dot pulse"></span><strong id="alive-count">…</strong>&nbsp;alive now</span>
+      <span class="chip updated">updated&nbsp;<strong id="updated-time">…</strong></span>
       <a class="icon-btn" href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener" aria-label="YUEL on GitHub" title="YUEL on GitHub">
         <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
       </a>
@@ -47,7 +48,7 @@
   <main class="wrap">
     <div class="page-head">
       <h1 class="page-title">Browse the latest run, <span class="grad">grab what you need</span></h1>
-      <p class="page-note">Static preview — sample rows, not wired to live data yet.</p>
+      <p class="page-note">plain <code>type://ip:port</code> · live from the latest run · refreshed every 30 min</p>
     </div>
 
     <!-- filter bar ------------------------------------------------- -->
@@ -98,12 +99,37 @@
 
     <!-- results ---------------------------------------------------- -->
     <section class="card" aria-label="Results">
-      <div class="results-head">
-        <span class="results-count">Showing <span id="shown-count">6</span> <span class="muted" id="of-total">of 1,875 proxies</span></span>
-        <span class="results-hint">static preview rows — latency values are illustrative</span>
+      <div class="results-head" id="results-head">
+        <span class="results-count">Showing <span id="shown-range">…</span> <span class="muted" id="of-total">of … proxies</span></span>
+        <span class="results-hint">latency = last successful check · plain text, no thresholds</span>
       </div>
+
+      <!-- loading skeleton -->
+      <div id="state-loading" class="state-block" hidden>
+        <div class="skeleton-row"></div><div class="skeleton-row"></div>
+        <div class="skeleton-row"></div><div class="skeleton-row"></div>
+        <div class="skeleton-row"></div><div class="skeleton-row"></div>
+        <p class="state-note">Fetching the latest published run…</p>
+      </div>
+
+      <!-- fetch failure -->
+      <div id="state-error" class="state-block" hidden>
+        <div class="state-ico">⚠️</div>
+        <h2 class="state-title">Couldn't load the data</h2>
+        <p class="state-note" id="error-detail"></p>
+        <button class="btn btn-primary" id="retry-load">Try again</button>
+      </div>
+
+      <!-- zero filter results -->
+      <div id="state-empty" class="state-block" hidden>
+        <div class="state-ico">🔍</div>
+        <h2 class="state-title">No proxies match your filters</h2>
+        <p class="state-note">Loosen a filter or two — or reset everything and browse the whole run.</p>
+        <button class="btn btn-outline" id="reset-filters">Reset all filters</button>
+      </div>
+
       <div class="table-scroll">
-        <table class="results">
+        <table class="results" id="results-table">
           <thead>
             <tr>
               <th class="col-check"><input type="checkbox" id="check-all" aria-label="Select all visible"></th>
@@ -117,13 +143,19 @@
               <th></th>
             </tr>
           </thead>
-          <tbody id="results-body"><!-- sample rows rendered by app.js --></tbody>
+          <tbody id="results-body"></tbody>
         </table>
+      </div>
+
+      <div class="table-foot" id="table-foot" hidden>
+        <button class="page-btn" id="page-prev" aria-label="Previous page">← Prev</button>
+        <span class="page-info" id="page-info"></span>
+        <button class="page-btn" id="page-next" aria-label="Next page">Next →</button>
       </div>
     </section>
   </main>
 
-  <!-- sticky selection bar (demo: shows when ≥1 row selected) ------- -->
+  <!-- sticky selection bar (appears once ≥1 row is selected) -------- -->
   <div class="selection-bar hidden" id="selection-bar" role="toolbar" aria-label="Selected proxies actions">
     <span class="selection-count"><span id="sel-count">0</span> <span class="muted">selected</span></span>
     <span class="sel-divider"></span>

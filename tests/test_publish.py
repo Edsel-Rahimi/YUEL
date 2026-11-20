@@ -89,6 +89,7 @@ class BuildRecordTests(unittest.TestCase):
                 "country": "IT",
                 "score": 87.2,
                 "tier": "gold",
+                "latency": 100,
                 "last_checked": "2026-11-19T12:00:00+00:00",
                 "consecutive_successes": 3,
                 "consecutive_failures": 0,
@@ -96,6 +97,16 @@ class BuildRecordTests(unittest.TestCase):
                 "pass": "s3cret",
             },
         )
+
+    def test_latency_rounded_to_whole_ms(self):
+        entry = make_geo_entry("9.9.9.9", 1080)
+        entry["check"]["latency_ms"] = 123.6
+        self.assertEqual(build_record(entry)["latency"], 124)
+
+    def test_latency_none_when_not_measured(self):
+        entry = make_geo_entry("9.9.9.9", 1080)
+        entry["check"]["latency_ms"] = None
+        self.assertIsNone(build_record(entry)["latency"])
 
     def test_creds_omitted_when_empty(self):
         record = build_record(make_geo_entry("5.6.7.8", 1080, country=None))
