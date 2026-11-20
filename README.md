@@ -25,6 +25,13 @@ code, config, or history with any other project.
 
 <p align="center">
   <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/yuel-logo-white.png">
+    <img src="assets/brand/yuel-logo-color.png" alt="YUEL — logo lockup" width="110">
+  </picture>
+</p>
+
+<p align="center">
+  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/header.svg">
     <img src="assets/light/header.svg" alt="YUEL — plain-proxy intelligence, refreshed hourly" width="100%">
   </picture>

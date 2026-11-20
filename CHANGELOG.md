@@ -8,6 +8,17 @@ All notable changes to YUEL are documented here. The format follows
 
 ### Added
 
+- **brand kit re-theme + logo.** All ten cards re-themed to
+  `assets/tokens.json` v1.0.0 — dark cards sit on aubergine `#1E0D2F` with
+  the logo gradient (ember → coral → magenta → violet), light cards on the
+  cream canvas with crimson links; hero text, tier colors and protocol
+  accents all come from the brand ramp. The logo lockup is embedded in the
+  header and footer cards (color variant on light, white on dark) and shown
+  at the top of the README via `<picture>` so the right variant renders per
+  theme.
+- **CI: README assets auto-regenerate.** The pipeline workflow runs
+  `scripts/render_assets.py` after every publish and commits refreshed
+  SVGs, so the visuals always describe the latest run.
 - **README: fully animated SVG card set.** Ten cards (header, stats strip,
   flow graph, quality tiers, collection funnel, top countries, protocol
   donut, pipeline architecture, divider, footer), each in a light and a

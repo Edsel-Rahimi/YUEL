@@ -9,9 +9,11 @@ rising particle fields, layered waves, one quiet highlight sweep per
 cycle, bars that draw in, heartbeat numbers. All CSS keyframes live in
 an embedded <style> block and are guarded by ``prefers-reduced-motion``.
 
-Palette: exactly the seven YUEL brand values —
-  cream #FAECC5 · ink #080806 · deep green #085834 · forest #08442C
-  crimson #BD2632 · maroon #7D2327 · vivid red #F32138
+Palette: the YUEL brand kit (``assets/tokens.json`` v1.0.0) — the logo
+gradient (ember #FC671F → coral #ED4A3B → magenta #CC3C77 → violet #6574C9)
+over aubergine #1E0D2F, with the semantic surfaces: dark = aubergine canvas
+/ plum surfaces / periwinkle links, light = cream #FCF7E8 canvas / ink
+#080806 text / crimson #BD2632 links.
 (the feTurbulence grain overlay is desaturated gray noise, i.e. texture).
 
 Data: every number comes from the last real pipeline run
@@ -32,6 +34,7 @@ show layout only — animations, grain and shadows live in the browser.
 from __future__ import annotations
 
 import argparse
+import base64
 import collections
 import json
 import math
@@ -42,90 +45,108 @@ REPO = Path(__file__).resolve().parent.parent
 ASSETS = REPO / "assets"
 
 # ---------------------------------------------------------------------------
-# YUEL palette — the exact seven brand values
+# YUEL brand kit — exact values from assets/tokens.json v1.0.0
 # ---------------------------------------------------------------------------
 
-CREAM = "#FAECC5"
-INK = "#080806"
-GREEN_DEEP = "#085834"
-GREEN_FOREST = "#08442C"
-CRIMSON = "#BD2632"
-MAROON = "#7D2327"
-RED_VIVID = "#F32138"
+AUBERGINE = "#1E0D2F"  # color.origin.aubergine — logo mark, dark bg-canvas
+EMBER = "#FC671F"      # color.origin.ember    — brand gradient start
+CORAL = "#ED4A3B"      # color.origin.coral    — brand gradient 38%
+MAGENTA = "#CC3C77"    # color.origin.magenta  — brand gradient 66%
+VIOLET = "#6574C9"     # color.origin.violet   — brand gradient end
+CREAM = "#FAECC5"      # color.origin.cream    — official palette
+INK = "#080806"        # color.origin.ink      — official palette
+CRIMSON = "#BD2632"    # color.origin.crimson  — semantic light link
+MAROON = "#7D2327"     # color.origin.maroon   — semantic light link-hover
+RED_VIVID = "#F32138"  # color.origin.red_vivid — primary.500
 
 DISPLAY_FONT = "Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif"
 MONO_FONT = "IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace"
 
 THEMES = {
-    "dark": {
-        "card_base": GREEN_FOREST, "card_base2": GREEN_DEEP,
-        "node_fill": GREEN_FOREST,
-        "text": CREAM,
-        "overline": (CREAM, 0.75),
-        "muted": (CREAM, 0.55),
-        "link": RED_VIVID,
-        "accent": RED_VIVID,
-        "accent2": CREAM,
-        "accent3": CRIMSON,
-        "hero_grad": (RED_VIVID, CRIMSON, CREAM),
-        "word_grad": (CREAM, RED_VIVID, CRIMSON),
-        "glow": RED_VIVID,
-        "border_muted": (CREAM, 0.20),
-        "divider": (CREAM, 0.16),
-        "bg_tint": (CREAM, 0.05),
+    "dark": {  # semantic dark: aubergine canvas, plum surfaces, brand gradient
+        "card_base": AUBERGINE, "card_base2": "#4F3F62",  # bg-canvas → bg-surface
+        "node_fill": "#4F3F62",
+        "text": "#F7F6F9",
+        "overline": ("#CCC5D5", 0.75),
+        "muted": ("#CCC5D5", 0.55),
+        "link": "#B0C3FF",
+        "accent": EMBER,
+        "accent2": VIOLET,
+        "accent3": MAGENTA,
+        "hero_grad": (EMBER, MAGENTA, VIOLET),   # the logo gradient
+        "word_grad": (EMBER, MAGENTA, VIOLET),
+        "glow": EMBER,
+        "border_muted": (VIOLET, 0.45),
+        "divider": ("#CCC5D5", 0.16),
+        "bg_tint": (VIOLET, 0.08),
         "sweep_band": (CREAM, 0.06),
-        "grid_dot": CREAM,
+        "grid_dot": "#CCC5D5",
         "grain_fill": CREAM,
-        "shadow_tint": RED_VIVID,
-        "wave_a": (RED_VIVID, 0.10),
-        "wave_b": (CREAM, 0.07),
-        "bar_track": (CREAM, 0.14),
-        "accent_line": (GREEN_DEEP, CRIMSON, RED_VIVID),
+        "shadow_tint": EMBER,
+        "wave_a": (EMBER, 0.10),
+        "wave_b": (VIOLET, 0.10),
+        "bar_track": ("#645676", 0.60),
+        "accent_line": (EMBER, MAGENTA, VIOLET),
     },
-    "light": {
-        "card_base": CREAM, "card_base2": CREAM,
-        "node_fill": CREAM,
+    "light": {  # semantic light: cream canvas, ink text, crimson links
+        "card_base": "#FCF7E8", "card_base2": "#FFFFFF",  # bg-canvas → bg-surface
+        "node_fill": "#FFFFFF",
         "text": INK,
-        "overline": (GREEN_DEEP, None),
-        "muted": (MAROON, 0.80),
+        "overline": (MAROON, None),
+        "muted": ("#545242", 0.85),
         "link": CRIMSON,
-        "accent": CRIMSON,
-        "accent2": GREEN_DEEP,
-        "accent3": MAROON,
-        "hero_grad": (CRIMSON, MAROON, RED_VIVID),
-        "word_grad": (MAROON, CRIMSON, RED_VIVID),
-        "glow": RED_VIVID,
-        "border_muted": (MAROON, 0.35),
-        "divider": (GREEN_DEEP, 0.25),
-        "bg_tint": (GREEN_FOREST, 0.05),
-        "sweep_band": (RED_VIVID, 0.05),
-        "grid_dot": GREEN_DEEP,
+        "accent": "#D03D00",       # accent.600 — ember kept readable on cream
+        "accent2": "#4854A6",      # secondary.700
+        "accent3": MAGENTA,
+        "hero_grad": ("#D03D00", CRIMSON, MAGENTA),
+        "word_grad": (MAROON, CRIMSON, "#D03D00"),
+        "glow": "#D03D00",
+        "border_muted": ("#D1C9AC", 0.90),
+        "divider": ("#B4AE95", 0.40),
+        "bg_tint": ("#E8E0C5", 0.60),
+        "sweep_band": (EMBER, 0.06),
+        "grid_dot": "#B4AE95",
         "grain_fill": INK,
         "shadow_tint": CRIMSON,
-        "wave_a": (CRIMSON, 0.09),
-        "wave_b": (GREEN_DEEP, 0.07),
-        "bar_track": (GREEN_DEEP, 0.13),
-        "accent_line": (GREEN_DEEP, CRIMSON, RED_VIVID),
+        "wave_a": (EMBER, 0.09),
+        "wave_b": ("#4854A6", 0.07),
+        "bar_track": ("#D1C9AC", 0.80),
+        "accent_line": ("#D03D00", CRIMSON, "#4854A6"),
     },
 }
 
-# alternating cell/node accents (reference-style multi-accent rhythm,
-# realized strictly inside the 7-color palette)
+# alternating cell/node accents — the logo-gradient family, theme-tuned
 ACCENTS = {
-    "dark": [RED_VIVID, CREAM, RED_VIVID, CREAM, RED_VIVID, CREAM],
-    "light": [CRIMSON, GREEN_DEEP, MAROON, GREEN_DEEP, CRIMSON, GREEN_DEEP],
+    "dark": [EMBER, VIOLET, CORAL, MAGENTA, EMBER, CORAL],
+    "light": ["#D03D00", "#4854A6", CRIMSON, MAGENTA, "#D03D00", "#4854A6"],
 }
 
-TIER_COLORS = {  # per tier, per theme
-    "gold": {"light": CRIMSON, "dark": RED_VIVID},
-    "silver": {"light": GREEN_DEEP, "dark": CREAM},
-    "bronze": {"light": MAROON, "dark": CRIMSON},
+TIER_COLORS = {  # per tier, per theme — ember / violet / coral = brand ramp
+    "gold": {"light": "#D03D00", "dark": EMBER},
+    "silver": {"light": "#4854A6", "dark": VIOLET},
+    "bronze": {"light": MAGENTA, "dark": CORAL},
 }
 
 
 def oc(th: dict, key: str) -> tuple[str, float | None]:
     hx, op = th[key]
     return hx, op
+
+
+LOGO_W, LOGO_H = 201, 298  # native px of assets/brand/yuel-logo-*.png
+
+
+def logo_image(t: str, x: float, y: float, w: float) -> str:
+    """Embed the brand logo lockup as a data URI.
+
+    Color variant on light surfaces, white variant on dark (the kit's
+    bg-inverse pairing) so the mark always reads clearly."""
+    variant = "color" if t == "light" else "white"
+    png = (ASSETS / "brand" / f"yuel-logo-{variant}.png").read_bytes()
+    b64 = base64.b64encode(png).decode("ascii")
+    h = w * LOGO_H / LOGO_W
+    return (f'  <image x="{x}" y="{y}" width="{w}" height="{h:.1f}" '
+            f'href="data:image/png;base64,{b64}"/>')
 
 
 # ---------------------------------------------------------------------------
@@ -597,8 +618,10 @@ def card_header(t: str, d: dict) -> str:
     parts.append(f'  <rect x="568" y="80" width="64" height="64" rx="17" '
                  f'fill="url(#hero-{t})"/>')
     parts.append(f'  <rect x="568.5" y="80.5" width="63" height="63" rx="17" '
-                 f'fill="none" stroke="{CREAM}" stroke-opacity="0.35" stroke-width="1"/>')
+                 f'fill="none" stroke="{th["text"]}" stroke-opacity="0.30" '
+                 f'stroke-width="1"/>')
     parts.append(icon("funnel", 588, 100, 24, CREAM, 0.95))
+    parts.append(logo_image(t, 1072, 34, 92))
 
     # badge pill
     label = "plain-proxy intelligence · refreshed hourly"
@@ -914,7 +937,7 @@ def card_protocols(t: str, d: dict) -> str:
                            "claimed type never trusted — first working protocol wins",
                            11.5, muted_c, anchor="end", opacity=muted_o))
 
-    colors = {"dark": [RED_VIVID, CREAM, CRIMSON], "light": [CRIMSON, GREEN_DEEP, MAROON]}[t]
+    colors = {"dark": [EMBER, VIOLET, CORAL], "light": ["#D03D00", "#4854A6", MAGENTA]}[t]
     protos = [("http", d["by_type"]["http"]), ("socks5", d["by_type"]["socks5"]),
               ("socks4", d["by_type"]["socks4"])]
     total = sum(v for _, v in protos)
@@ -1064,6 +1087,7 @@ def card_footer(t: str, d: dict) -> str:
     parts = [svg_open(t, th, W, H), card_frame(t, th, W, H, particles_n=6)]
     muted_c, muted_o = oc(th, "muted")
     stamp = d["generated_utc"][:16].replace("T", " · ") + " UTC"
+    parts.append(logo_image(t, 58, 17, 44))
     parts.append(live_dot(t, 320, 40, 4, th["accent"]))
     parts.append(mono_text(600, 44,
                            f"YUEL · last run {stamp} · regenerated by scripts/render_assets.py",

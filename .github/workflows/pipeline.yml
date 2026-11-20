@@ -64,3 +64,20 @@ jobs:
             git commit -m "publish: pipeline output $(date -u +%FT%TZ) [skip ci]"
             git push
           fi
+
+      - name: Render README brand assets
+        # regenerates assets/<light|dark>/*.svg from the just-published output
+        # (stdlib only — no extra dependencies needed)
+        run: python3 scripts/render_assets.py
+
+      - name: Commit rendered assets
+        run: |
+          git config user.name "yuel-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/light assets/dark
+          if git diff --cached --quiet; then
+            echo "rendered assets unchanged — nothing to commit"
+          else
+            git commit -m "render: brand assets $(date -u +%FT%TZ) [skip ci]"
+            git push
+          fi

@@ -1,61 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img">
   <defs>
     <linearGradient id="bg-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
-      <stop offset="0" stop-color="#FAECC5" stop-opacity="1"/>
-      <stop offset="1" stop-color="#FAECC5" stop-opacity="1"/>
+      <stop offset="0" stop-color="#FCF7E8" stop-opacity="1"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/>
     </linearGradient>
     <linearGradient id="tint-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#08442C" stop-opacity="0.05"/>
-      <stop offset="1" stop-color="#08442C" stop-opacity="0"/>
+      <stop offset="0" stop-color="#E8E0C5" stop-opacity="0.6"/>
+      <stop offset="1" stop-color="#E8E0C5" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="inner-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
       <stop offset="0" stop-color="#FAECC5" stop-opacity="0.55"/>
       <stop offset="0.28" stop-color="#FAECC5" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="topbar-light" gradientUnits="userSpaceOnUse" x1="0" y1="1.5" x2="1200" y2="1.5">
-      <stop offset="0" stop-color="#085834" stop-opacity="0.9"/>
+      <stop offset="0" stop-color="#D03D00" stop-opacity="0.9"/>
       <stop offset="0.55" stop-color="#BD2632" stop-opacity="0.9"/>
-      <stop offset="1" stop-color="#F32138" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#4854A6" stop-opacity="0.9"/>
     </linearGradient>
     <linearGradient id="hero-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#BD2632" stop-opacity="1"/>
-      <stop offset="0.55" stop-color="#7D2327" stop-opacity="1"/>
-      <stop offset="1" stop-color="#F32138" stop-opacity="1"/>
+      <stop offset="0" stop-color="#D03D00" stop-opacity="1"/>
+      <stop offset="0.55" stop-color="#BD2632" stop-opacity="1"/>
+      <stop offset="1" stop-color="#CC3C77" stop-opacity="1"/>
     </linearGradient>
     <linearGradient id="word-light" gradientUnits="objectBoundingBox" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#7D2327" stop-opacity="1"/>
       <stop offset="0.6" stop-color="#BD2632" stop-opacity="1"/>
-      <stop offset="1" stop-color="#F32138" stop-opacity="1"/>
+      <stop offset="1" stop-color="#D03D00" stop-opacity="1"/>
     </linearGradient>
     <linearGradient id="ib-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#BD2632" stop-opacity="0.5"/>
-      <stop offset="0.45" stop-color="#BD2632" stop-opacity="0.16"/>
-      <stop offset="1" stop-color="#BD2632" stop-opacity="0.05"/>
+      <stop offset="0" stop-color="#D03D00" stop-opacity="0.5"/>
+      <stop offset="0.45" stop-color="#D03D00" stop-opacity="0.16"/>
+      <stop offset="1" stop-color="#D03D00" stop-opacity="0.05"/>
     </linearGradient>
     <linearGradient id="border-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1.0" y2="1.0">
-      <stop offset="0" stop-color="#7D2327" stop-opacity="0.35"/>
-      <stop offset="1" stop-color="#7D2327" stop-opacity="0.1925"/>
+      <stop offset="0" stop-color="#D1C9AC" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#D1C9AC" stop-opacity="0.49500000000000005"/>
     </linearGradient>
     <linearGradient id="div-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
-      <stop offset="0" stop-color="#085834" stop-opacity="0.25"/>
-      <stop offset="1" stop-color="#085834" stop-opacity="0.0875"/>
+      <stop offset="0" stop-color="#B4AE95" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#B4AE95" stop-opacity="0.13999999999999999"/>
     </linearGradient>
-    <radialGradient id="glow-light" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#F32138" stop-opacity="0.55"/><stop offset="0.55" stop-color="#F32138" stop-opacity="0.18"/><stop offset="1" stop-color="#F32138" stop-opacity="0"/></radialGradient>
+    <radialGradient id="glow-light" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stop-color="#D03D00" stop-opacity="0.55"/><stop offset="0.55" stop-color="#D03D00" stop-opacity="0.18"/><stop offset="1" stop-color="#D03D00" stop-opacity="0"/></radialGradient>
     <linearGradient id="shine-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="1" y2="0">
-      <stop offset="0" stop-color="#F32138" stop-opacity="0"/>
-      <stop offset="0.5" stop-color="#F32138" stop-opacity="0.05"/>
-      <stop offset="1" stop-color="#F32138" stop-opacity="0"/>
+      <stop offset="0" stop-color="#FC671F" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#FC671F" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#FC671F" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="wavea-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#BD2632" stop-opacity="0.09"/>
-      <stop offset="1" stop-color="#BD2632" stop-opacity="0.018"/>
+      <stop offset="0" stop-color="#FC671F" stop-opacity="0.09"/>
+      <stop offset="1" stop-color="#FC671F" stop-opacity="0.018"/>
     </linearGradient>
     <linearGradient id="waveb-light" gradientUnits="objectBoundingBox" x1="0.0" y1="0.0" x2="0" y2="1">
-      <stop offset="0" stop-color="#085834" stop-opacity="0.07"/>
-      <stop offset="1" stop-color="#085834" stop-opacity="0.014000000000000002"/>
+      <stop offset="0" stop-color="#4854A6" stop-opacity="0.07"/>
+      <stop offset="1" stop-color="#4854A6" stop-opacity="0.014000000000000002"/>
     </linearGradient>
     <pattern id="grid-light" width="24" height="24" patternUnits="userSpaceOnUse">
-      <circle cx="1.6" cy="1.6" r="1.05" fill="#085834"/>
+      <circle cx="1.6" cy="1.6" r="1.05" fill="#B4AE95"/>
     </pattern>
     <filter id="grain-light" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch" result="n"/>
@@ -145,7 +145,7 @@
         .pt-light,.sweep-light,.wv-light,.spin-light,.rev-light,.beat-light,.glowG-light,.shn-light,.bgl-light,.dash-light,.pk-light,.pkv-light,.pls-light,.flt-light,.grow-light { animation: none; }
       }
     </style>
-  <g filter="url(#shadow-light)"><rect width="1200" height="300" rx="26" fill="#FAECC5"/></g>
+  <g filter="url(#shadow-light)"><rect width="1200" height="300" rx="26" fill="#FCF7E8"/></g>
   <g clip-path="url(#clip-light)">
     <rect width="1200" height="300" fill="url(#bg-light)"/>
     <rect width="1200" height="300" fill="url(#tint-light)"/>
@@ -158,69 +158,69 @@
     <path class="wv-light wv2-light" d="M -320 278 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0 q 85.0 9 170 0 q 85.0 -9 170 0" fill="url(#waveb-light)" opacity="0.9"/>
     <rect width="1200" height="3" fill="url(#topbar-light)"/>
     <g class="sweep-light"><rect x="-320" y="-60" width="230" height="420" fill="url(#shine-light)" opacity="0.75"/></g>
-  <circle class="pt-light" cx="40" cy="284" r="2.0" fill="#BD2632" opacity="0.55" style="animation-duration:8.0s;animation-delay:-0.0s"/>
-  <circle class="pt-light" cx="150" cy="284" r="2.7" fill="#085834" opacity="0.55" style="animation-duration:9.7s;animation-delay:-0.9s"/>
-  <circle class="pt-light" cx="260" cy="284" r="3.4" fill="#085834" opacity="0.55" style="animation-duration:11.4s;animation-delay:-1.8s"/>
-  <circle class="pt-light" cx="289" cy="284" r="2.0" fill="#BD2632" opacity="0.55" style="animation-duration:13.1s;animation-delay:-2.7s"/>
-  <circle class="pt-light" cx="399" cy="284" r="2.7" fill="#085834" opacity="0.55" style="animation-duration:8.0s;animation-delay:-3.6s"/>
-  <circle class="pt-light" cx="509" cy="284" r="3.4" fill="#085834" opacity="0.55" style="animation-duration:9.7s;animation-delay:-4.5s"/>
-  <circle class="pt-light" cx="538" cy="284" r="2.0" fill="#BD2632" opacity="0.55" style="animation-duration:11.4s;animation-delay:-5.4s"/>
-  <circle class="pt-light" cx="648" cy="284" r="2.7" fill="#085834" opacity="0.55" style="animation-duration:13.1s;animation-delay:-6.3s"/>
-  <circle class="pt-light" cx="758" cy="284" r="3.4" fill="#085834" opacity="0.55" style="animation-duration:8.0s;animation-delay:-7.2s"/>
-  <circle class="pt-light" cx="787" cy="284" r="2.0" fill="#BD2632" opacity="0.55" style="animation-duration:9.7s;animation-delay:-8.1s"/>
-  <circle class="pt-light" cx="897" cy="284" r="2.7" fill="#085834" opacity="0.55" style="animation-duration:11.4s;animation-delay:-9.0s"/>
-  <circle class="pt-light" cx="1007" cy="284" r="3.4" fill="#085834" opacity="0.55" style="animation-duration:13.1s;animation-delay:-9.9s"/>
-  <circle class="pt-light" cx="1036" cy="284" r="2.0" fill="#BD2632" opacity="0.55" style="animation-duration:8.0s;animation-delay:-2.8s"/>
-  <circle class="pt-light" cx="1146" cy="284" r="2.7" fill="#085834" opacity="0.55" style="animation-duration:9.7s;animation-delay:-2.0s"/>
-  <circle cx="46" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="89" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle class="bgl-light" cx="132" cy="293" r="1.8" fill="#085834" style="animation-delay:-0.46s"/>
-  <circle cx="176" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="219" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="262" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="305" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle class="bgl-light" cx="348" cy="293" r="1.8" fill="#085834" style="animation-delay:-1.61s"/>
-  <circle cx="392" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="435" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="478" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="521" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle class="bgl-light" cx="564" cy="293" r="1.8" fill="#085834" style="animation-delay:-2.76s"/>
-  <circle cx="608" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="651" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="694" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="737" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle class="bgl-light" cx="780" cy="293" r="1.8" fill="#085834" style="animation-delay:-3.91s"/>
-  <circle cx="824" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="867" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="910" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="953" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle class="bgl-light" cx="996" cy="293" r="1.8" fill="#085834" style="animation-delay:-5.06s"/>
-  <circle cx="1040" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="1083" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
-  <circle cx="1126" cy="293" r="1.8" fill="#085834" opacity="0.28"/>
+  <circle class="pt-light" cx="40" cy="284" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:8.0s;animation-delay:-0.0s"/>
+  <circle class="pt-light" cx="150" cy="284" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:9.7s;animation-delay:-0.9s"/>
+  <circle class="pt-light" cx="260" cy="284" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:11.4s;animation-delay:-1.8s"/>
+  <circle class="pt-light" cx="289" cy="284" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:13.1s;animation-delay:-2.7s"/>
+  <circle class="pt-light" cx="399" cy="284" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:8.0s;animation-delay:-3.6s"/>
+  <circle class="pt-light" cx="509" cy="284" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:9.7s;animation-delay:-4.5s"/>
+  <circle class="pt-light" cx="538" cy="284" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:11.4s;animation-delay:-5.4s"/>
+  <circle class="pt-light" cx="648" cy="284" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:13.1s;animation-delay:-6.3s"/>
+  <circle class="pt-light" cx="758" cy="284" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:8.0s;animation-delay:-7.2s"/>
+  <circle class="pt-light" cx="787" cy="284" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:9.7s;animation-delay:-8.1s"/>
+  <circle class="pt-light" cx="897" cy="284" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:11.4s;animation-delay:-9.0s"/>
+  <circle class="pt-light" cx="1007" cy="284" r="3.4" fill="#4854A6" opacity="0.55" style="animation-duration:13.1s;animation-delay:-9.9s"/>
+  <circle class="pt-light" cx="1036" cy="284" r="2.0" fill="#D03D00" opacity="0.55" style="animation-duration:8.0s;animation-delay:-2.8s"/>
+  <circle class="pt-light" cx="1146" cy="284" r="2.7" fill="#4854A6" opacity="0.55" style="animation-duration:9.7s;animation-delay:-2.0s"/>
+  <circle cx="46" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="89" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle class="bgl-light" cx="132" cy="293" r="1.8" fill="#4854A6" style="animation-delay:-0.46s"/>
+  <circle cx="176" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="219" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="262" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="305" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle class="bgl-light" cx="348" cy="293" r="1.8" fill="#4854A6" style="animation-delay:-1.61s"/>
+  <circle cx="392" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="435" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="478" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="521" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle class="bgl-light" cx="564" cy="293" r="1.8" fill="#4854A6" style="animation-delay:-2.76s"/>
+  <circle cx="608" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="651" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="694" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="737" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle class="bgl-light" cx="780" cy="293" r="1.8" fill="#4854A6" style="animation-delay:-3.91s"/>
+  <circle cx="824" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="867" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="910" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="953" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle class="bgl-light" cx="996" cy="293" r="1.8" fill="#4854A6" style="animation-delay:-5.06s"/>
+  <circle cx="1040" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="1083" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
+  <circle cx="1126" cy="293" r="1.8" fill="#4854A6" opacity="0.28"/>
   </g>
   <rect x="3.5" y="3.5" width="1193" height="293" rx="23" fill="none" stroke="url(#ib-light)" stroke-width="1.5"/>
   <rect x="0.5" y="0.5" width="1199" height="299" rx="26" fill="none" stroke="url(#border-light)" stroke-width="1"/>
-  <text x="40" y="52" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">PROTOCOL MIX — MEASURED BY REAL HANDSHAKE</text>
-  <text x="1160" y="52" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#7D2327" text-anchor="end" opacity="0.8">claimed type never trusted — first working protocol wins</text>
-  <circle cx="250" cy="168" r="76" fill="none" stroke="#BD2632" stroke-width="24" stroke-dasharray="174.5 308.0" stroke-dashoffset="2.5" transform="rotate(-90 250 168)"/>
-  <circle cx="250" cy="168" r="76" fill="none" stroke="#085834" stroke-width="24" stroke-dasharray="265.6 216.9" stroke-dashoffset="-177.0" transform="rotate(-90 250 168)"/>
-  <circle cx="250" cy="168" r="76" fill="none" stroke="#7D2327" stroke-width="24" stroke-dasharray="22.4 460.2" stroke-dashoffset="-447.7" transform="rotate(-90 250 168)"/>
-  <circle class="spin-light" cx="250" cy="168" r="108" fill="none" stroke="#085834" stroke-opacity="0.30" stroke-width="1.6" stroke-dasharray="3 10"/>
+  <text x="40" y="52" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">PROTOCOL MIX — MEASURED BY REAL HANDSHAKE</text>
+  <text x="1160" y="52" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="11.5" font-weight="500" fill="#545242" text-anchor="end" opacity="0.85">claimed type never trusted — first working protocol wins</text>
+  <circle cx="250" cy="168" r="76" fill="none" stroke="#D03D00" stroke-width="24" stroke-dasharray="174.5 308.0" stroke-dashoffset="2.5" transform="rotate(-90 250 168)"/>
+  <circle cx="250" cy="168" r="76" fill="none" stroke="#4854A6" stroke-width="24" stroke-dasharray="265.6 216.9" stroke-dashoffset="-177.0" transform="rotate(-90 250 168)"/>
+  <circle cx="250" cy="168" r="76" fill="none" stroke="#CC3C77" stroke-width="24" stroke-dasharray="22.4 460.2" stroke-dashoffset="-447.7" transform="rotate(-90 250 168)"/>
+  <circle class="spin-light" cx="250" cy="168" r="108" fill="none" stroke="#4854A6" stroke-opacity="0.30" stroke-width="1.6" stroke-dasharray="3 10"/>
   <g class="glowG-light"><ellipse cx="250" cy="168" rx="110" ry="48" fill="url(#glow-light)" opacity="0.28"/><ellipse cx="250" cy="168" rx="72" ry="32" fill="url(#glow-light)" opacity="0.5"/><ellipse cx="250" cy="168" rx="42" ry="19" fill="url(#glow-light)" opacity="0.85"/></g>
   <text class="beat-light" x="250" y="170" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="30" font-weight="800" fill="#080806" text-anchor="middle">1,745</text>
-  <text x="250" y="194" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" font-weight="700" fill="#085834" text-anchor="start" letter-spacing="2.4">ALIVE</text>
-  <rect x="440" y="84" width="20" height="20" rx="6" fill="#BD2632"/>
-<g transform="translate(472.0,84.0) scale(0.7500)" fill="none" stroke="#BD2632" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L20 7.5 L12 12 L4 7.5 Z"/><path d="M4 12.5 L12 17 L20 12.5"/><path d="M4 16.5 L12 21 L20 16.5"/></g>
+  <text x="250" y="194" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="9" font-weight="700" fill="#7D2327" text-anchor="start" letter-spacing="2.4">ALIVE</text>
+  <rect x="440" y="84" width="20" height="20" rx="6" fill="#D03D00"/>
+<g transform="translate(472.0,84.0) scale(0.7500)" fill="none" stroke="#D03D00" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L20 7.5 L12 12 L4 7.5 Z"/><path d="M4 12.5 L12 17 L20 12.5"/><path d="M4 16.5 L12 21 L20 16.5"/></g>
   <text x="500" y="100" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="800" fill="#080806" text-anchor="start" letter-spacing="0.8">HTTP</text>
-  <text x="500" y="122" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">656 · 37.6%</text>
-  <rect x="440" y="136" width="20" height="20" rx="6" fill="#085834"/>
-<g transform="translate(472.0,136.0) scale(0.7500)" fill="none" stroke="#085834" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L19 5.8 V11 C19 15.6 16.1 18.6 12 20.2 C7.9 18.6 5 15.6 5 11 V5.8 Z"/><path d="M9 11.6 L11.3 13.9 L15.3 9.7"/></g>
+  <text x="500" y="122" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#545242" text-anchor="start" opacity="0.85">656 · 37.6%</text>
+  <rect x="440" y="136" width="20" height="20" rx="6" fill="#4854A6"/>
+<g transform="translate(472.0,136.0) scale(0.7500)" fill="none" stroke="#4854A6" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><path d="M12 3 L19 5.8 V11 C19 15.6 16.1 18.6 12 20.2 C7.9 18.6 5 15.6 5 11 V5.8 Z"/><path d="M9 11.6 L11.3 13.9 L15.3 9.7"/></g>
   <text x="500" y="152" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="800" fill="#080806" text-anchor="start" letter-spacing="0.8">SOCKS5</text>
-  <text x="500" y="174" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">989 · 56.7%</text>
-  <rect x="440" y="188" width="20" height="20" rx="6" fill="#7D2327"/>
-<g transform="translate(472.0,188.0) scale(0.7500)" fill="none" stroke="#7D2327" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><circle cx="5.5" cy="6" r="2.4"/><circle cx="5.5" cy="18" r="2.4"/><circle cx="18.5" cy="12" r="2.4"/><path d="M7.7 7.1 L16.3 11 M7.7 16.9 L16.3 13"/></g>
+  <text x="500" y="174" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#545242" text-anchor="start" opacity="0.85">989 · 56.7%</text>
+  <rect x="440" y="188" width="20" height="20" rx="6" fill="#CC3C77"/>
+<g transform="translate(472.0,188.0) scale(0.7500)" fill="none" stroke="#CC3C77" stroke-width="2.67" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"><circle cx="5.5" cy="6" r="2.4"/><circle cx="5.5" cy="18" r="2.4"/><circle cx="18.5" cy="12" r="2.4"/><path d="M7.7 7.1 L16.3 11 M7.7 16.9 L16.3 13"/></g>
   <text x="500" y="204" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" font-size="17" font-weight="800" fill="#080806" text-anchor="start" letter-spacing="0.8">SOCKS4</text>
-  <text x="500" y="226" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="start" opacity="0.8">100 · 5.7%</text>
-  <text x="600" y="274" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#7D2327" text-anchor="middle" opacity="0.8">every protocol above was proven by a real handshake during this run</text>
+  <text x="500" y="226" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#545242" text-anchor="start" opacity="0.85">100 · 5.7%</text>
+  <text x="600" y="274" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" font-weight="500" fill="#545242" text-anchor="middle" opacity="0.85">every protocol above was proven by a real handshake during this run</text>
 </svg>
