@@ -139,6 +139,20 @@ exact same files under `data/out/by-country/`.
 
 ---
 
+## Website (GitHub Pages)
+
+**https://edsel-rahimi.github.io/YUEL/** — a zero-backend, build-step-free
+single page (plain HTML/CSS/vanilla JS in [`docs/`](docs/), served by
+Pages from `main /docs`) to browse and grab exactly the proxies you want:
+searchable country filter with live counts, type/tier toggle chips, IP
+text search, sort by score/latency/country, paginated results, per-row
+copy, multi-select with "copy N as list" and "download N as .txt" (same
+header convention as the published siblings), light/dark themes, and live
+header stats. Data is fetched client-side from the published
+`data/out/all.json` + `run-summary.json` raw URLs (CORS `*` verified);
+every pipeline run refreshes it automatically — no redeploy step exists.
+See [DEPLOY.md](DEPLOY.md) for the file map and local dev workflow.
+
 ## Architecture
 
 ```
@@ -462,9 +476,14 @@ with a vmess/vless/... tunnel-config feed:
   "country": "IT",
   "score": 87.2,
   "tier": "gold",
+  "latency": 412,
   "last_checked": "2026-11-19T10:00:00+00:00"
 }
 ```
+
+`latency` (added post-v0.6.0, consumed by the site) is the last successful
+handshake probe in whole milliseconds, or `null` when the check did not
+measure one; consumers that don't need it can ignore it safely.
 
 Layout as committed on `main` each run:
 

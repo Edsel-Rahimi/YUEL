@@ -8,6 +8,19 @@ All notable changes to YUEL are documented here. The format follows
 
 ### Added
 
+- **browser site (GitHub Pages, `docs/`).** A single-page proxy finder at
+  https://edsel-rahimi.github.io/YUEL/ — plain HTML/CSS/vanilla JS, no
+  build step. Fetches `all.json` + `run-summary.json` client-side
+  (raw.githubusercontent.com sends CORS `*`), with AND-combined filters
+  (searchable country combobox with live counts, type/tier chips, IP text
+  search), score/latency/country sort, 50-per-page pagination, per-row
+  copy, multi-select copy-as-list and download-as-txt using the published
+  header convention, light/dark theme (OS-aware + persisted override),
+  loading/error/empty states, and a live header (alive count, relative
+  last-run time). Published records gained a `latency` field (whole
+  milliseconds of the last successful handshake probe, `null` when
+  unmeasured) so the site can sort and display it; brand values come from
+  `assets/tokens.json` via the generated `docs/tokens.css`.
 - **plain-text output format + top-20 country fast-path.** Every per-country
   and per-tier JSON file now publishes a `.txt` sibling — one
   `type://ip:port` line per proxy (or `type://user:pass@ip:port` with
