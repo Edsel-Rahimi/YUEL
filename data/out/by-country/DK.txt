@@ -1,4 +1,4 @@
-# YUEL · DK · 3 proxies · generated 2026-11-20T20:51:20 UTC
+# YUEL · DK · 3 proxies · generated 2026-11-20T21:49:00 UTC
+http://194.150.110.134:80
 http://89.144.53.75:8080
 http://89.144.53.75:3128
-http://194.150.110.134:80

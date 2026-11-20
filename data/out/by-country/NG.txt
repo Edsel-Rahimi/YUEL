@@ -1,2 +1,2 @@
-# YUEL · NG · 1 proxies · generated 2026-11-20T20:51:20 UTC
-http://41.203.83.242:8080
+# YUEL · NG · 1 proxies · generated 2026-11-20T21:49:00 UTC
+http://155.93.96.210:8080
