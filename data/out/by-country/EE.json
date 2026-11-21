@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "88.218.206.170",
+    "port": 22,
+    "type": "socks5",
+    "country": "EE",
+    "score": 70.78,
+    "tier": "silver",
+    "latency": 385,
+    "last_checked": "2026-11-21T21:20:11+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "88.218.206.170",
+    "port": 5432,
+    "type": "socks5",
+    "country": "EE",
+    "score": 67.18,
+    "tier": "silver",
+    "latency": 677,
+    "last_checked": "2026-11-21T21:20:11+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

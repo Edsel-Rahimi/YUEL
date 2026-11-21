@@ -4,10 +4,22 @@
     "port": 1080,
     "type": "socks4",
     "country": "BI",
-    "score": 76.09,
+    "score": 72.0,
     "tier": "silver",
-    "latency": 303,
-    "last_checked": "2026-11-21T20:35:39+00:00",
+    "latency": 359,
+    "last_checked": "2026-11-21T21:20:11+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "197.157.195.154",
+    "port": 1080,
+    "type": "socks4",
+    "country": "BI",
+    "score": 70.54,
+    "tier": "silver",
+    "latency": 393,
+    "last_checked": "2026-11-21T21:20:11+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

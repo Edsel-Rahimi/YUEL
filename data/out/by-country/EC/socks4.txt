@@ -1,2 +1,0 @@
-# YUEL · EC · socks4 · 1 proxies · generated 2026-11-21T20:42:26 UTC
-socks4://45.163.207.18:1080
