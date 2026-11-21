@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "85.122.120.46",
+    "port": 20000,
+    "type": "http",
+    "country": "RO",
+    "score": 92.73,
+    "tier": "gold",
+    "latency": 160,
+    "last_checked": "2026-11-21T03:17:49+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

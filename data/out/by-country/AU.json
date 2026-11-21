@@ -1,13 +1,37 @@
 [
   {
+    "ip": "103.248.47.230",
+    "port": 1080,
+    "type": "socks5",
+    "country": "AU",
+    "score": 89.88,
+    "tier": "gold",
+    "latency": 203,
+    "last_checked": "2026-11-21T03:17:49+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "114.111.151.41",
+    "port": 80,
+    "type": "http",
+    "country": "AU",
+    "score": 88.6,
+    "tier": "gold",
+    "latency": 220,
+    "last_checked": "2026-11-21T03:17:49+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "159.196.163.64",
     "port": 80,
     "type": "socks5",
     "country": "AU",
-    "score": 88.0,
+    "score": 86.79,
     "tier": "gold",
-    "latency": 194,
-    "last_checked": "2026-11-21T02:05:33+00:00",
+    "latency": 207,
+    "last_checked": "2026-11-21T03:17:49+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

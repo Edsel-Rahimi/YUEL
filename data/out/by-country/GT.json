@@ -4,10 +4,10 @@
     "port": 999,
     "type": "http",
     "country": "GT",
-    "score": 30.4,
+    "score": 43.54,
     "tier": "bronze",
-    "latency": 3810,
-    "last_checked": "2026-11-21T02:05:33+00:00",
+    "latency": 1552,
+    "last_checked": "2026-11-21T03:17:49+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

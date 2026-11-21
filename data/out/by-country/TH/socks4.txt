@@ -1,3 +1,5 @@
-# YUEL · TH · socks4 · 2 proxies · generated 2026-11-21T02:11:46 UTC
-socks4://159.192.139.42:5678
+# YUEL · TH · socks4 · 4 proxies · generated 2026-11-21T03:23:51 UTC
+socks4://1.20.254.32:4153
+socks4://101.109.245.200:4153
+socks4://125.25.82.207:5678
 socks4://61.7.147.227:4145
