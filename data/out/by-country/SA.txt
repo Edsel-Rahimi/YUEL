@@ -1,3 +1,3 @@
-# YUEL · SA · 2 proxies · generated 2026-11-21T21:27:22 UTC
+# YUEL · SA · 2 proxies · generated 2026-11-21T22:20:23 UTC
 http://45.91.248.107:80
 http://143.246.138.227:80

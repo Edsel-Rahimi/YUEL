@@ -1,3 +1,0 @@
-# YUEL · PR · http · 2 proxies · generated 2026-11-21T21:27:22 UTC
-http://23.138.88.96:999
-http://154.64.211.145:999

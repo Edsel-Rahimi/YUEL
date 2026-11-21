@@ -1,25 +1,13 @@
 [
   {
-    "ip": "79.52.108.2",
-    "port": 8081,
+    "ip": "77.242.177.57",
+    "port": 3128,
     "type": "http",
     "country": "IT",
-    "score": 72.67,
-    "tier": "silver",
-    "latency": 347,
-    "last_checked": "2026-11-21T21:20:11+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "93.55.126.184",
-    "port": 8080,
-    "type": "http",
-    "country": "IT",
-    "score": 45.6,
+    "score": 28.42,
     "tier": "bronze",
-    "latency": 1496,
-    "last_checked": "2026-11-21T21:20:11+00:00",
+    "latency": 5855,
+    "last_checked": "2026-11-21T22:13:13+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

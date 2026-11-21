@@ -1,3 +1,4 @@
-# YUEL · UZ · http · 2 proxies · generated 2026-11-21T21:27:22 UTC
-http://87.192.243.177:8080
+# YUEL · UZ · http · 3 proxies · generated 2026-11-21T22:20:23 UTC
+http://90.156.160.234:3128
+http://87.192.231.122:3128
 http://195.158.8.123:3128

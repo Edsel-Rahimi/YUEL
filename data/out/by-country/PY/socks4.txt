@@ -1,2 +1,0 @@
-# YUEL · PY · socks4 · 1 proxies · generated 2026-11-21T21:27:22 UTC
-socks4://179.189.219.98:4145

@@ -4,22 +4,10 @@
     "port": 3128,
     "type": "http",
     "country": "SC",
-    "score": 95.46,
+    "score": 95.34,
     "tier": "gold",
-    "latency": 146,
-    "last_checked": "2026-11-21T21:20:11+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "31.207.4.14",
-    "port": 3128,
-    "type": "http",
-    "country": "SC",
-    "score": 37.72,
-    "tier": "bronze",
-    "latency": 2193,
-    "last_checked": "2026-11-21T21:20:11+00:00",
+    "latency": 148,
+    "last_checked": "2026-11-21T22:13:13+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

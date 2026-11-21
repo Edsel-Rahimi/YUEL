@@ -1,2 +1,2 @@
-# YUEL · NP · http · 1 proxies · generated 2026-11-21T21:27:22 UTC
-http://43.245.95.178:53805
+# YUEL · NP · http · 1 proxies · generated 2026-11-21T22:20:23 UTC
+http://36.253.25.11:8181
