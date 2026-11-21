@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "132.243.168.30",
+    "port": 9150,
+    "type": "socks5",
+    "country": "EE",
+    "score": 78.41,
+    "tier": "silver",
+    "latency": 524,
+    "last_checked": "2026-11-21T15:40:24+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

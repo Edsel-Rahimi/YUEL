@@ -1,13 +1,13 @@
 [
   {
-    "ip": "37.35.65.190",
+    "ip": "66.186.199.33",
     "port": 8080,
     "type": "http",
     "country": "AL",
-    "score": 93.25,
+    "score": 86.97,
     "tier": "gold",
-    "latency": 128,
-    "last_checked": "2026-11-21T14:45:59+00:00",
+    "latency": 205,
+    "last_checked": "2026-11-21T15:40:24+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +16,10 @@
     "port": 8080,
     "type": "http",
     "country": "AL",
-    "score": 28.68,
-    "tier": "bronze",
-    "latency": 5017,
-    "last_checked": "2026-11-21T14:45:59+00:00",
+    "score": 84.12,
+    "tier": "gold",
+    "latency": 222,
+    "last_checked": "2026-11-21T15:40:24+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
