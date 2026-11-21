@@ -4,10 +4,10 @@
     "port": 1080,
     "type": "socks5",
     "country": "EE",
-    "score": 93.13,
+    "score": 94.09,
     "tier": "gold",
-    "latency": 166,
-    "last_checked": "2026-11-21T05:28:18+00:00",
+    "latency": 127,
+    "last_checked": "2026-11-21T06:26:36+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +16,10 @@
     "port": 9150,
     "type": "socks5",
     "country": "EE",
-    "score": 81.68,
-    "tier": "gold",
-    "latency": 259,
-    "last_checked": "2026-11-21T05:28:18+00:00",
+    "score": 76.95,
+    "tier": "silver",
+    "latency": 303,
+    "last_checked": "2026-11-21T06:26:36+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
