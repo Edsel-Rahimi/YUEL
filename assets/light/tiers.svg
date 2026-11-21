@@ -10,25 +10,25 @@
   <rect x="48" y="76" width="344" height="188" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
   <circle cx="76" cy="110" r="5" fill="#D03D00"/>
   <text x="92" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#080806">GOLD</text>
-  <text x="76" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#D03D00">713</text>
-  <text x="76" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE ≥ 80 · 29.2% OF ALIVE</text>
+  <text x="76" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#D03D00">766</text>
+  <text x="76" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE ≥ 80 · 28.9% OF ALIVE</text>
   <rect x="76" y="228" width="288" height="6" rx="3" fill="#D1C9AC" fill-opacity="0.9"/>
-  <rect class="m-grow" style="animation-delay:0.30s" x="76" y="228" width="84.1" height="6" rx="3" fill="#D03D00"/>
+  <rect class="m-grow" style="animation-delay:0.30s" x="76" y="228" width="83.1" height="6" rx="3" fill="#D03D00"/>
   </g>
   <g class="m-fade" style="animation-delay:0.24s">
   <rect x="428" y="76" width="344" height="188" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
   <circle cx="456" cy="110" r="5" fill="#4854A6"/>
   <text x="472" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#080806">SILVER</text>
-  <text x="456" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#4854A6">1,001</text>
-  <text x="456" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE ≥ 50 · 41.0% OF ALIVE</text>
+  <text x="456" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#4854A6">1,097</text>
+  <text x="456" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE ≥ 50 · 41.3% OF ALIVE</text>
   <rect x="456" y="228" width="288" height="6" rx="3" fill="#D1C9AC" fill-opacity="0.9"/>
-  <rect class="m-grow" style="animation-delay:0.44s" x="456" y="228" width="118.1" height="6" rx="3" fill="#4854A6"/>
+  <rect class="m-grow" style="animation-delay:0.44s" x="456" y="228" width="119.0" height="6" rx="3" fill="#4854A6"/>
   </g>
   <g class="m-fade" style="animation-delay:0.38s">
   <rect x="808" y="76" width="344" height="188" rx="18" fill="#FFFFFF" fill-opacity="0.55" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1.2"/>
   <circle cx="836" cy="110" r="5" fill="#CC3C77"/>
   <text x="852" y="114" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#080806">BRONZE</text>
-  <text x="836" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#CC3C77">727</text>
+  <text x="836" y="178" font-size="56" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#CC3C77">791</text>
   <text x="836" y="210" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">SCORE ≥ 20 · 29.8% OF ALIVE</text>
   <rect x="836" y="228" width="288" height="6" rx="3" fill="#D1C9AC" fill-opacity="0.9"/>
   <rect class="m-grow" style="animation-delay:0.58s" x="836" y="228" width="85.8" height="6" rx="3" fill="#CC3C77"/>
