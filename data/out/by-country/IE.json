@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "185.138.114.111",
+    "port": 8080,
+    "type": "http",
+    "country": "IE",
+    "score": 67.01,
+    "tier": "silver",
+    "latency": 799,
+    "last_checked": "2026-11-21T23:12:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -1,13 +1,13 @@
 [
   {
-    "ip": "77.242.177.57",
-    "port": 3128,
+    "ip": "185.191.106.0",
+    "port": 8081,
     "type": "http",
     "country": "IT",
-    "score": 28.42,
-    "tier": "bronze",
-    "latency": 5855,
-    "last_checked": "2026-11-21T22:13:13+00:00",
+    "score": 93.81,
+    "tier": "gold",
+    "latency": 116,
+    "last_checked": "2026-11-21T23:12:10+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

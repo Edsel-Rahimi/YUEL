@@ -1,13 +1,13 @@
 [
   {
     "ip": "94.26.106.100",
-    "port": 3128,
+    "port": 8080,
     "type": "http",
     "country": "SC",
-    "score": 95.34,
+    "score": 95.57,
     "tier": "gold",
-    "latency": 148,
-    "last_checked": "2026-11-21T22:13:13+00:00",
+    "latency": 96,
+    "last_checked": "2026-11-21T23:12:10+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

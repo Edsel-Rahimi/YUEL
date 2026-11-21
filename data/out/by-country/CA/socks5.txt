@@ -1,3 +1,0 @@
-# YUEL · CA · socks5 · 2 proxies · generated 2026-11-21T22:20:23 UTC
-socks5://38.49.210.79:40000
-socks5://162.254.178.133:1080

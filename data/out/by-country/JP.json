@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "160.248.7.177",
+    "port": 80,
+    "type": "http",
+    "country": "JP",
+    "score": 92.37,
+    "tier": "gold",
+    "latency": 160,
+    "last_checked": "2026-11-21T23:12:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "133.232.93.66",
+    "port": 80,
+    "type": "http",
+    "country": "JP",
+    "score": 28.86,
+    "tier": "bronze",
+    "latency": 5329,
+    "last_checked": "2026-11-21T23:12:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

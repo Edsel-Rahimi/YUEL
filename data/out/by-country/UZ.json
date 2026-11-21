@@ -1,25 +1,13 @@
 [
   {
-    "ip": "90.156.160.234",
-    "port": 3128,
+    "ip": "31.135.214.17",
+    "port": 8026,
     "type": "http",
     "country": "UZ",
-    "score": 73.95,
-    "tier": "silver",
-    "latency": 924,
-    "last_checked": "2026-11-21T22:13:13+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "87.192.231.122",
-    "port": 3128,
-    "type": "http",
-    "country": "UZ",
-    "score": 54.41,
-    "tier": "silver",
-    "latency": 1881,
-    "last_checked": "2026-11-21T22:13:13+00:00",
+    "score": 80.87,
+    "tier": "gold",
+    "latency": 253,
+    "last_checked": "2026-11-21T23:12:10+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -28,10 +16,10 @@
     "port": 3128,
     "type": "http",
     "country": "UZ",
-    "score": 52.17,
-    "tier": "silver",
-    "latency": 2118,
-    "last_checked": "2026-11-21T22:13:13+00:00",
+    "score": 43.06,
+    "tier": "bronze",
+    "latency": 7206,
+    "last_checked": "2026-11-21T23:12:10+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

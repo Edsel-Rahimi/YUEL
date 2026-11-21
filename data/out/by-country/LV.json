@@ -1,0 +1,38 @@
+[
+  {
+    "ip": "195.13.182.211",
+    "port": 8080,
+    "type": "socks5",
+    "country": "LV",
+    "score": 92.85,
+    "tier": "gold",
+    "latency": 136,
+    "last_checked": "2026-11-21T23:12:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "195.13.182.210",
+    "port": 443,
+    "type": "socks5",
+    "country": "LV",
+    "score": 91.25,
+    "tier": "gold",
+    "latency": 146,
+    "last_checked": "2026-11-21T23:12:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "195.135.255.98",
+    "port": 1080,
+    "type": "socks5",
+    "country": "LV",
+    "score": 28.16,
+    "tier": "bronze",
+    "latency": 6168,
+    "last_checked": "2026-11-21T23:12:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
