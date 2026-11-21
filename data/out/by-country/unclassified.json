@@ -1,1 +1,86 @@
-[]
+[
+  {
+    "ip": "85.92.153.153",
+    "port": 1080,
+    "type": "socks5",
+    "country": "unclassified",
+    "score": 95.42,
+    "tier": "gold",
+    "latency": 124,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "78.142.217.197",
+    "port": 1080,
+    "type": "socks5",
+    "country": "unclassified",
+    "score": 95.32,
+    "tier": "gold",
+    "latency": 106,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "85.92.153.224",
+    "port": 1080,
+    "type": "socks5",
+    "country": "unclassified",
+    "score": 95.17,
+    "tier": "gold",
+    "latency": 128,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "85.92.153.46",
+    "port": 1080,
+    "type": "socks5",
+    "country": "unclassified",
+    "score": 82.93,
+    "tier": "gold",
+    "latency": 289,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "85.92.153.134",
+    "port": 1080,
+    "type": "socks5",
+    "country": "unclassified",
+    "score": 78.14,
+    "tier": "silver",
+    "latency": 289,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "85.92.153.14",
+    "port": 1080,
+    "type": "socks5",
+    "country": "unclassified",
+    "score": 77.72,
+    "tier": "silver",
+    "latency": 291,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "85.92.153.132",
+    "port": 1080,
+    "type": "socks5",
+    "country": "unclassified",
+    "score": 72.96,
+    "tier": "silver",
+    "latency": 341,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

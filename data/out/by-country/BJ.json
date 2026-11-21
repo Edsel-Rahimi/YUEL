@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "41.216.57.75",
+    "port": 8080,
+    "type": "http",
+    "country": "BJ",
+    "score": 47.02,
+    "tier": "bronze",
+    "latency": 1288,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

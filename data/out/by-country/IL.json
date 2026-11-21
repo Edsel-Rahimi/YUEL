@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "199.203.152.99",
+    "port": 8111,
+    "type": "http",
+    "country": "IL",
+    "score": 88.55,
+    "tier": "gold",
+    "latency": 204,
+    "last_checked": "2026-11-21T19:44:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
