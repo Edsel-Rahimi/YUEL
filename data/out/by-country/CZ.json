@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "176.62.229.17",
+    "port": 1080,
+    "type": "socks5",
+    "country": "CZ",
+    "score": 93.17,
+    "tier": "gold",
+    "latency": 109,
+    "last_checked": "2026-11-21T08:46:37+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.73.103.23",
+    "port": 3128,
+    "type": "http",
+    "country": "CZ",
+    "score": 29.15,
+    "tier": "bronze",
+    "latency": 4391,
+    "last_checked": "2026-11-21T08:46:37+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

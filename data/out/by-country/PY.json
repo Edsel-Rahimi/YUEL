@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "45.177.16.129",
+    "port": 999,
+    "type": "http",
+    "country": "PY",
+    "score": 90.36,
+    "tier": "gold",
+    "latency": 156,
+    "last_checked": "2026-11-21T08:46:37+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

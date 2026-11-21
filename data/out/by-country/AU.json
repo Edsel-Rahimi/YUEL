@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "159.196.163.64",
+    "port": 80,
+    "type": "socks5",
+    "country": "AU",
+    "score": 86.96,
+    "tier": "gold",
+    "latency": 201,
+    "last_checked": "2026-11-21T08:46:37+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
