@@ -1,2 +1,4 @@
-# YUEL · NP · 1 proxies · generated 2026-11-21T09:49:32 UTC
-http://43.245.93.193:53805
+# YUEL · NP · 3 proxies · generated 2026-11-21T10:48:34 UTC
+socks4://110.34.1.212:1080
+socks4://110.34.1.156:1080
+socks4://110.34.8.100:1080
