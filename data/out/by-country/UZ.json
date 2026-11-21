@@ -4,10 +4,22 @@
     "port": 3128,
     "type": "http",
     "country": "UZ",
-    "score": 76.22,
+    "score": 57.2,
     "tier": "silver",
-    "latency": 921,
-    "last_checked": "2026-11-21T08:46:37+00:00",
+    "latency": 1314,
+    "last_checked": "2026-11-21T09:44:05+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "90.156.160.234",
+    "port": 3128,
+    "type": "http",
+    "country": "UZ",
+    "score": 55.85,
+    "tier": "silver",
+    "latency": 1981,
+    "last_checked": "2026-11-21T09:44:05+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
