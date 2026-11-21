@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "92.86.207.198",
+    "port": 8080,
+    "type": "http",
+    "country": "RO",
+    "score": 49.99,
+    "tier": "bronze",
+    "latency": 1014,
+    "last_checked": "2026-11-21T16:40:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "45.80.151.33",
+    "port": 3128,
+    "type": "http",
+    "country": "RO",
+    "score": 45.21,
+    "tier": "bronze",
+    "latency": 4115,
+    "last_checked": "2026-11-21T16:40:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

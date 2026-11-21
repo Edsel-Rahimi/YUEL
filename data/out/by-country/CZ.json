@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "185.73.103.23",
+    "port": 3128,
+    "type": "http",
+    "country": "CZ",
+    "score": 33.95,
+    "tier": "bronze",
+    "latency": 2817,
+    "last_checked": "2026-11-21T16:40:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

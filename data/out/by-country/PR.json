@@ -1,13 +1,13 @@
 [
   {
-    "ip": "104.238.232.210",
+    "ip": "192.203.0.210",
     "port": 999,
     "type": "http",
     "country": "PR",
-    "score": 27.73,
-    "tier": "bronze",
-    "latency": 6582,
-    "last_checked": "2026-11-21T15:40:24+00:00",
+    "score": 93.84,
+    "tier": "gold",
+    "latency": 168,
+    "last_checked": "2026-11-21T16:40:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +16,10 @@
     "port": 999,
     "type": "http",
     "country": "PR",
-    "score": 27.43,
+    "score": 35.14,
     "tier": "bronze",
-    "latency": 7440,
-    "last_checked": "2026-11-21T15:40:24+00:00",
+    "latency": 2554,
+    "last_checked": "2026-11-21T16:40:56+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
