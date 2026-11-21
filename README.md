@@ -1,5 +1,11 @@
 # YUEL
 
+YUEL is a **free proxy list** — plain-text `socks5` / `socks4` / `http`
+entries with score tiers, per-proxy latency and country filters,
+refreshed every 30 minutes. Browse and filter everything in the
+[live dashboard](https://edsel-rahimi.github.io/YUEL/), or grab the raw
+files straight from [`data/out/`](data/out/).
+
 Automated pipeline that collects publicly published **plain SOCKS4/SOCKS5/HTTP
 proxy servers** — bare `ip:port` / `ip:port:user:pass` entries — really tests
 which ones are alive (and which protocol each one actually speaks), scores and
