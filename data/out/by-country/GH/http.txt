@@ -1,4 +1,3 @@
-# YUEL · GH · http · 3 proxies · generated 2026-11-21T12:51:19 UTC
+# YUEL · GH · http · 2 proxies · generated 2026-11-21T14:00:10 UTC
 http://41.204.63.118:80
 http://156.38.112.11:80
-http://197.255.125.12:80
