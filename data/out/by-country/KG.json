@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "80.72.180.122",
+    "port": 1080,
+    "type": "socks5",
+    "country": "KG",
+    "score": 76.17,
+    "tier": "silver",
+    "latency": 295,
+    "last_checked": "2026-11-21T02:05:33+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "77.235.31.24",
+    "port": 8080,
+    "type": "http",
+    "country": "KG",
+    "score": 75.8,
+    "tier": "silver",
+    "latency": 300,
+    "last_checked": "2026-11-21T02:05:33+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

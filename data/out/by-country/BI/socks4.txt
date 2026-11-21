@@ -1,0 +1,2 @@
+# YUEL · BI · socks4 · 1 proxies · generated 2026-11-21T02:11:46 UTC
+socks4://197.157.192.168:1080

@@ -1,13 +1,13 @@
 [
   {
-    "ip": "114.111.151.41",
+    "ip": "159.196.163.64",
     "port": 80,
-    "type": "http",
+    "type": "socks5",
     "country": "AU",
-    "score": 45.57,
-    "tier": "bronze",
-    "latency": 5559,
-    "last_checked": "2026-11-21T00:51:17+00:00",
+    "score": 88.0,
+    "tier": "gold",
+    "latency": 194,
+    "last_checked": "2026-11-21T02:05:33+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

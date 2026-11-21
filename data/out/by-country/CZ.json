@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "78.108.110.171",
+    "port": 8080,
+    "type": "http",
+    "country": "CZ",
+    "score": 44.0,
+    "tier": "bronze",
+    "latency": 1609,
+    "last_checked": "2026-11-21T02:05:33+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

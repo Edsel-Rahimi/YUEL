@@ -1,4 +1,4 @@
-# YUEL · PY · 3 proxies · generated 2026-11-21T00:57:59 UTC
+# YUEL · PY · 3 proxies · generated 2026-11-21T02:11:46 UTC
+socks4://179.189.219.98:4145
 http://190.110.226.122:80
-http://181.121.65.62:999
 http://201.222.50.218:80
