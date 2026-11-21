@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "213.173.75.222",
+    "port": 5678,
+    "type": "socks4",
+    "country": "AT",
+    "score": 89.1,
+    "tier": "gold",
+    "latency": 178,
+    "last_checked": "2026-11-21T12:45:29+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "70.38.101.182",
+    "port": 40000,
+    "type": "socks5",
+    "country": "CA",
+    "score": 85.32,
+    "tier": "gold",
+    "latency": 265,
+    "last_checked": "2026-11-21T12:45:29+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "173.181.142.228",
+    "port": 80,
+    "type": "http",
+    "country": "CA",
+    "score": 43.41,
+    "tier": "bronze",
+    "latency": 1410,
+    "last_checked": "2026-11-21T12:45:29+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

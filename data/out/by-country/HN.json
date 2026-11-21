@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "168.228.44.66",
+    "port": 999,
+    "type": "http",
+    "country": "HN",
+    "score": 96.19,
+    "tier": "gold",
+    "latency": 98,
+    "last_checked": "2026-11-21T12:45:29+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
