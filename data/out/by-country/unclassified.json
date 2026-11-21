@@ -1,14 +1,1 @@
-[
-  {
-    "ip": "195.5.168.34",
-    "port": 8080,
-    "type": "http",
-    "country": "unclassified",
-    "score": 28.98,
-    "tier": "bronze",
-    "latency": 4619,
-    "last_checked": "2026-11-21T10:43:24+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  }
-]
+[]

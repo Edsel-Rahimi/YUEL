@@ -1,13 +1,13 @@
 [
   {
-    "ip": "46.23.61.97",
+    "ip": "78.108.110.171",
     "port": 8080,
     "type": "http",
     "country": "CZ",
-    "score": 92.89,
-    "tier": "gold",
-    "latency": 138,
-    "last_checked": "2026-11-21T10:43:24+00:00",
+    "score": 32.41,
+    "tier": "bronze",
+    "latency": 2695,
+    "last_checked": "2026-11-21T11:41:36+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

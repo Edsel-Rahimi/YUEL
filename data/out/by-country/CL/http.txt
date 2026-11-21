@@ -1,6 +1,2 @@
-# YUEL · CL · http · 5 proxies · generated 2026-11-21T10:48:34 UTC
+# YUEL · CL · http · 1 proxies · generated 2026-11-21T11:47:27 UTC
 http://170.239.84.103:3128
-http://45.180.26.1:999
-http://45.160.14.33:999
-http://45.232.211.130:999
-http://204.199.139.76:999

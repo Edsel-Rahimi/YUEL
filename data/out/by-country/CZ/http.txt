@@ -1,2 +1,2 @@
-# YUEL · CZ · http · 1 proxies · generated 2026-11-21T10:48:34 UTC
-http://46.23.61.97:8080
+# YUEL · CZ · http · 1 proxies · generated 2026-11-21T11:47:27 UTC
+http://78.108.110.171:8080
