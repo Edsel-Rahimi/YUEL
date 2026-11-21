@@ -1,3 +1,2 @@
-# YUEL · MN · 2 proxies · generated 2026-11-21T19:50:52 UTC
-http://202.179.2.250:8080
-http://202.21.115.178:8080
+# YUEL · MN · 1 proxies · generated 2026-11-21T20:42:26 UTC
+socks4://202.131.246.250:5678

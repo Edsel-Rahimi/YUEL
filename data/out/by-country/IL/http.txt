@@ -1,2 +1,2 @@
-# YUEL · IL · http · 1 proxies · generated 2026-11-21T19:50:52 UTC
-http://199.203.152.99:8111
+# YUEL · IL · http · 1 proxies · generated 2026-11-21T20:42:26 UTC
+http://147.236.181.86:50009

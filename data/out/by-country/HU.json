@@ -4,22 +4,10 @@
     "port": 1080,
     "type": "socks4",
     "country": "HU",
-    "score": 92.12,
+    "score": 93.32,
     "tier": "gold",
-    "latency": 146,
-    "last_checked": "2026-11-21T19:44:04+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "95.214.123.144",
-    "port": 8080,
-    "type": "http",
-    "country": "HU",
-    "score": 27.97,
-    "tier": "bronze",
-    "latency": 6482,
-    "last_checked": "2026-11-21T19:44:04+00:00",
+    "latency": 148,
+    "last_checked": "2026-11-21T20:35:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

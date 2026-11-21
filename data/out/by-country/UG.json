@@ -1,13 +1,13 @@
 [
   {
-    "ip": "196.0.111.186",
-    "port": 46048,
+    "ip": "196.0.111.194",
+    "port": 48009,
     "type": "socks4",
     "country": "UG",
-    "score": 73.48,
-    "tier": "silver",
-    "latency": 333,
-    "last_checked": "2026-11-21T19:44:04+00:00",
+    "score": 82.27,
+    "tier": "gold",
+    "latency": 270,
+    "last_checked": "2026-11-21T20:35:39+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
