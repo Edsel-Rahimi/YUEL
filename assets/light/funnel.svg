@@ -11,31 +11,31 @@
   <text x="48" y="101" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">COLLECTED</text>
   <rect x="250" y="86" width="700" height="22" rx="11" fill="#D1C9AC" fill-opacity="0.405"/>
   <rect  x="250" y="86" width="700.0" height="22" rx="11" fill="#4854A6" fill-opacity="0.85"/>
-  <text x="978" y="103" font-size="20" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">78,575</text>
+  <text x="978" y="103" font-size="20" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">78,667</text>
   <text x="978" y="122" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">100.0% OF COLLECTED</text>
   </g>
   <g class="m-fade" style="animation-delay:0.22s">
   <text x="48" y="157" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">UNIQUE</text>
   <rect x="250" y="142" width="700" height="22" rx="11" fill="#D1C9AC" fill-opacity="0.405"/>
-  <rect  x="250" y="142" width="512.0" height="22" rx="11" fill="#4854A6" fill-opacity="0.77"/>
-  <text x="978" y="159" font-size="20" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">57,475</text>
+  <rect  x="250" y="142" width="511.8" height="22" rx="11" fill="#4854A6" fill-opacity="0.77"/>
+  <text x="978" y="159" font-size="20" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">57,512</text>
   <text x="978" y="178" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">73.1% OF COLLECTED</text>
   </g>
   <g class="m-fade" style="animation-delay:0.36s">
   <text x="48" y="213" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">HANDSHAKE-TESTED</text>
   <rect x="250" y="198" width="700" height="22" rx="11" fill="#D1C9AC" fill-opacity="0.405"/>
-  <rect  x="250" y="198" width="372.4" height="22" rx="11" fill="#4854A6" fill-opacity="0.69"/>
-  <text x="978" y="215" font-size="20" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">41,798</text>
+  <rect  x="250" y="198" width="372.6" height="22" rx="11" fill="#4854A6" fill-opacity="0.69"/>
+  <text x="978" y="215" font-size="20" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#080806">41,870</text>
   <text x="978" y="234" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">53.2% OF COLLECTED</text>
   </g>
   <g class="m-fade" style="animation-delay:0.50s">
   <text x="48" y="269" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">ALIVE</text>
   <rect x="250" y="254" width="700" height="22" rx="11" fill="#D1C9AC" fill-opacity="0.405"/>
-  <rect class="m-grow" style="animation-delay:0.72s" x="250" y="254" width="22.9" height="22" rx="11" fill="url(#brand-light)" fill-opacity="1.00"/>
-  <text class="m-beat" x="978" y="271" font-size="20" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="url(#brand-light)">2,570</text>
+  <rect class="m-grow" style="animation-delay:0.72s" x="250" y="254" width="23.3" height="22" rx="11" fill="url(#brand-light)" fill-opacity="1.00"/>
+  <text class="m-beat" x="978" y="271" font-size="20" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="url(#brand-light)">2,621</text>
   <text x="978" y="290" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#545242">3.3% OF COLLECTED</text>
   </g>
   <g class="m-fade" style="animation-delay:0.70s">
-  <text x="48" y="314" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#D03D00">2,570 OF 41,798 TESTED SURVIVE — 6.1% END-TO-END</text>
+  <text x="48" y="314" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#D03D00">2,621 OF 41,870 TESTED SURVIVE — 6.3% END-TO-END</text>
   </g>
 </svg>
