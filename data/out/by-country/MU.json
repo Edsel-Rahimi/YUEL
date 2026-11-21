@@ -1,13 +1,13 @@
 [
   {
-    "ip": "102.134.19.170",
+    "ip": "105.22.37.218",
     "port": 8080,
     "type": "http",
     "country": "MU",
-    "score": 87.24,
+    "score": 81.54,
     "tier": "gold",
-    "latency": 194,
-    "last_checked": "2026-11-21T04:26:12+00:00",
+    "latency": 261,
+    "last_checked": "2026-11-21T05:28:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

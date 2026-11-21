@@ -1,4 +1,4 @@
-# YUEL · HN · http · 3 proxies · generated 2026-11-21T04:32:39 UTC
-http://143.208.57.165:999
-http://45.190.13.12:999
+# YUEL · HN · http · 3 proxies · generated 2026-11-21T05:33:56 UTC
 http://131.108.232.201:8080
+http://45.190.13.12:999
+http://179.49.115.201:8080

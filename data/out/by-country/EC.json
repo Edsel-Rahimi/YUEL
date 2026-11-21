@@ -4,22 +4,10 @@
     "port": 999,
     "type": "http",
     "country": "EC",
-    "score": 93.51,
-    "tier": "gold",
-    "latency": 107,
-    "last_checked": "2026-11-21T04:26:12+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.4.202.146",
-    "port": 999,
-    "type": "http",
-    "country": "EC",
-    "score": 78.81,
+    "score": 69.88,
     "tier": "silver",
-    "latency": 123,
-    "last_checked": "2026-11-21T04:26:12+00:00",
+    "latency": 756,
+    "last_checked": "2026-11-21T05:28:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
