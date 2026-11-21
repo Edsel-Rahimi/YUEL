@@ -1,6 +1,6 @@
-# YUEL · SG · http · 5 proxies · generated 2026-11-20T23:48:54 UTC
+# YUEL · SG · http · 5 proxies · generated 2026-11-21T00:57:59 UTC
 http://139.162.78.109:3128
+http://172.232.155.226:8118
 http://211.188.60.84:80
 http://217.217.254.94:80
 http://172.235.157.127:3128
-http://172.235.116.78:8118
