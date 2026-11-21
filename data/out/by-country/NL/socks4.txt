@@ -1,2 +1,0 @@
-# YUEL · NL · socks4 · 1 proxies · generated 2026-11-21T14:00:10 UTC
-socks4://145.220.227.24:8080

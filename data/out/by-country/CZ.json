@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "109.123.219.11",
+    "port": 80,
+    "type": "http",
+    "country": "CZ",
+    "score": 96.73,
+    "tier": "gold",
+    "latency": 96,
+    "last_checked": "2026-11-21T14:45:59+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
