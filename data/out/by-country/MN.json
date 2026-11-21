@@ -4,22 +4,10 @@
     "port": 8080,
     "type": "http",
     "country": "MN",
-    "score": 72.46,
+    "score": 69.28,
     "tier": "silver",
-    "latency": 367,
-    "last_checked": "2026-11-21T03:17:49+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "202.179.2.250",
-    "port": 8080,
-    "type": "http",
-    "country": "MN",
-    "score": 31.05,
-    "tier": "bronze",
-    "latency": 3279,
-    "last_checked": "2026-11-21T03:17:49+00:00",
+    "latency": 732,
+    "last_checked": "2026-11-21T04:26:12+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

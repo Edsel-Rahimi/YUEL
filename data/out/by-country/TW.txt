@@ -1,3 +1,3 @@
-# YUEL · TW · 2 proxies · generated 2026-11-21T03:23:51 UTC
+# YUEL · TW · 2 proxies · generated 2026-11-21T04:32:39 UTC
 http://182.155.254.159:80
 http://122.116.125.115:8888
