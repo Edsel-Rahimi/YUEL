@@ -1,2 +1,2 @@
-# YUEL · MN · http · 1 proxies · generated 2026-11-21T17:43:37 UTC
-http://202.21.124.132:1011
+# YUEL · MN · http · 1 proxies · generated 2026-11-21T18:43:41 UTC
+http://103.11.193.67:8080

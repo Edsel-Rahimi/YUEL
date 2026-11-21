@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "179.189.219.98",
+    "port": 4145,
+    "type": "socks4",
+    "country": "PY",
+    "score": 92.55,
+    "tier": "gold",
+    "latency": 177,
+    "last_checked": "2026-11-21T18:37:08+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "181.121.65.62",
+    "port": 999,
+    "type": "http",
+    "country": "PY",
+    "score": 83.55,
+    "tier": "gold",
+    "latency": 241,
+    "last_checked": "2026-11-21T18:37:08+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -1,25 +1,13 @@
 [
   {
-    "ip": "154.0.157.196",
-    "port": 8080,
+    "ip": "41.78.170.178",
+    "port": 8040,
     "type": "http",
     "country": "TZ",
-    "score": 46.78,
+    "score": 31.47,
     "tier": "bronze",
-    "latency": 1245,
-    "last_checked": "2026-11-21T17:36:56+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "154.0.153.87",
-    "port": 8080,
-    "type": "http",
-    "country": "TZ",
-    "score": 44.18,
-    "tier": "bronze",
-    "latency": 1672,
-    "last_checked": "2026-11-21T17:36:56+00:00",
+    "latency": 3363,
+    "last_checked": "2026-11-21T18:37:08+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

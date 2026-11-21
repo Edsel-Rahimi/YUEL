@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "27.109.207.84",
+    "port": 80,
+    "type": "http",
+    "country": "MO",
+    "score": 90.49,
+    "tier": "gold",
+    "latency": 198,
+    "last_checked": "2026-11-21T18:37:08+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

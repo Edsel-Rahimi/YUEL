@@ -1,2 +1,2 @@
-# YUEL · MM · http · 1 proxies · generated 2026-11-21T17:43:37 UTC
-http://202.165.92.206:8080
+# YUEL · MM · http · 1 proxies · generated 2026-11-21T18:43:41 UTC
+http://185.133.213.86:8074

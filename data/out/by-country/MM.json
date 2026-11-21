@@ -1,13 +1,13 @@
 [
   {
-    "ip": "202.165.92.206",
-    "port": 8080,
+    "ip": "185.133.213.86",
+    "port": 8074,
     "type": "http",
     "country": "MM",
-    "score": 68.66,
+    "score": 69.06,
     "tier": "silver",
-    "latency": 554,
-    "last_checked": "2026-11-21T17:36:56+00:00",
+    "latency": 722,
+    "last_checked": "2026-11-21T18:37:08+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

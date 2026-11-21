@@ -4,10 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "AU",
-    "score": 43.6,
+    "score": 27.39,
     "tier": "bronze",
-    "latency": 5932,
-    "last_checked": "2026-11-21T17:36:56+00:00",
+    "latency": 7440,
+    "last_checked": "2026-11-21T18:37:08+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
