@@ -1,3 +1,0 @@
-# YUEL · CY · http · 2 proxies · generated 2026-11-21T16:47:43 UTC
-http://141.136.42.164:80
-http://93.127.163.52:80

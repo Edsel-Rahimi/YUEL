@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "45.190.13.12",
+    "port": 1080,
+    "type": "socks4",
+    "country": "HN",
+    "score": 97.84,
+    "tier": "gold",
+    "latency": 83,
+    "last_checked": "2026-11-21T17:36:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "190.83.3.35",
+    "port": 999,
+    "type": "http",
+    "country": "HN",
+    "score": 28.99,
+    "tier": "bronze",
+    "latency": 4890,
+    "last_checked": "2026-11-21T17:36:56+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

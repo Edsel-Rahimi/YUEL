@@ -1,2 +1,2 @@
-# YUEL · AZ · http · 1 proxies · generated 2026-11-21T16:47:43 UTC
-http://185.118.51.163:3128
+# YUEL · AZ · http · 1 proxies · generated 2026-11-21T17:43:37 UTC
+http://185.129.0.78:8080
