@@ -1,3 +1,0 @@
-# YUEL · RS · http · 2 proxies · generated 2026-11-22T20:23:28 UTC
-http://79.175.100.126:6666
-http://82.117.211.42:8085

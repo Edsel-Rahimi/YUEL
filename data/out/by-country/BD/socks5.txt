@@ -1,2 +1,5 @@
-# YUEL · BD · socks5 · 1 proxies · generated 2026-11-22T20:23:28 UTC
-socks5://103.151.74.5:2025
+# YUEL · BD · socks5 · 4 proxies · generated 2026-11-22T21:23:08 UTC
+socks5://115.127.53.114:1080
+socks5://203.76.123.6:1080
+socks5://103.151.74.29:2025
+socks5://103.81.70.71:1080
