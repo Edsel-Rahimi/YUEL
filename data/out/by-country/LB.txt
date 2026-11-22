@@ -1,3 +1,2 @@
-# YUEL · LB · 2 proxies · generated 2026-11-21T23:18:57 UTC
-http://85.112.65.130:8080
-http://185.82.99.101:92
+# YUEL · LB · 1 proxies · generated 2026-11-22T00:14:24 UTC
+http://185.82.99.204:92
