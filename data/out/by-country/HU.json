@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "95.214.123.144",
+    "port": 8080,
+    "type": "http",
+    "country": "HU",
+    "score": 88.71,
+    "tier": "gold",
+    "latency": 182,
+    "last_checked": "2026-11-22T04:54:35+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

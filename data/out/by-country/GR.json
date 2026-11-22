@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "81.31.228.10",
+    "port": 1090,
+    "type": "http",
+    "country": "GR",
+    "score": 46.04,
+    "tier": "bronze",
+    "latency": 3359,
+    "last_checked": "2026-11-22T04:54:35+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "149.210.4.75",
+    "port": 18080,
+    "type": "http",
+    "country": "GR",
+    "score": 44.04,
+    "tier": "bronze",
+    "latency": 1607,
+    "last_checked": "2026-11-22T04:54:35+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
