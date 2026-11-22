@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "178.217.168.164",
+    "port": 55443,
+    "type": "http",
+    "country": "KG",
+    "score": 71.0,
+    "tier": "silver",
+    "latency": 406,
+    "last_checked": "2026-11-22T16:15:59+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
