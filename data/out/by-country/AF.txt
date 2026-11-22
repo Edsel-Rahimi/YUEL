@@ -1,2 +1,2 @@
-# YUEL · AF · 1 proxies · generated 2026-11-22T12:17:37 UTC
-socks5://103.96.233.10:1080
+# YUEL · AF · 1 proxies · generated 2026-11-22T13:38:04 UTC
+http://203.171.115.116:8080
