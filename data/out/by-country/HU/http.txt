@@ -1,3 +1,0 @@
-# YUEL · HU · http · 2 proxies · generated 2026-11-22T07:03:05 UTC
-http://89.135.59.77:8090
-http://95.214.123.144:8080

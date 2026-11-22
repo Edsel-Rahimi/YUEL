@@ -4,22 +4,10 @@
     "port": 8888,
     "type": "http",
     "country": "TW",
-    "score": 93.92,
+    "score": 87.08,
     "tier": "gold",
-    "latency": 148,
-    "last_checked": "2026-11-22T06:57:05+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "59.124.62.9",
-    "port": 3128,
-    "type": "http",
-    "country": "TW",
-    "score": 27.8,
-    "tier": "bronze",
-    "latency": 6817,
-    "last_checked": "2026-11-22T06:57:05+00:00",
+    "latency": 212,
+    "last_checked": "2026-11-22T08:07:45+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
