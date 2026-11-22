@@ -1,13 +1,13 @@
 [
   {
-    "ip": "102.211.109.158",
+    "ip": "160.119.159.98",
     "port": 1080,
     "type": "socks4",
     "country": "MZ",
-    "score": 73.63,
+    "score": 79.65,
     "tier": "silver",
-    "latency": 319,
-    "last_checked": "2026-11-22T14:24:48+00:00",
+    "latency": 272,
+    "last_checked": "2026-11-22T15:17:36+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

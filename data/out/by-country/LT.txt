@@ -1,2 +1,2 @@
-# YUEL · LT · 1 proxies · generated 2026-11-22T14:30:18 UTC
+# YUEL · LT · 1 proxies · generated 2026-11-22T15:23:05 UTC
 http://84.55.46.85:8080
