@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "102.212.104.129",
+    "port": 8082,
+    "type": "http",
+    "country": "NG",
+    "score": 82.28,
+    "tier": "gold",
+    "latency": 242,
+    "last_checked": "2026-11-22T05:52:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -4,10 +4,10 @@
     "port": 8888,
     "type": "http",
     "country": "TW",
-    "score": 90.33,
+    "score": 88.92,
     "tier": "gold",
-    "latency": 174,
-    "last_checked": "2026-11-22T04:54:35+00:00",
+    "latency": 182,
+    "last_checked": "2026-11-22T05:52:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
