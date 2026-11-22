@@ -4,10 +4,34 @@
     "port": 8888,
     "type": "http",
     "country": "TW",
-    "score": 92.08,
+    "score": 91.88,
     "tier": "gold",
-    "latency": 161,
-    "last_checked": "2026-11-22T22:15:05+00:00",
+    "latency": 168,
+    "last_checked": "2026-11-22T23:15:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "220.128.223.136",
+    "port": 8084,
+    "type": "http",
+    "country": "TW",
+    "score": 91.81,
+    "tier": "gold",
+    "latency": 169,
+    "last_checked": "2026-11-22T23:15:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "61.216.156.222",
+    "port": 60808,
+    "type": "http",
+    "country": "TW",
+    "score": 44.06,
+    "tier": "bronze",
+    "latency": 1598,
+    "last_checked": "2026-11-22T23:15:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
