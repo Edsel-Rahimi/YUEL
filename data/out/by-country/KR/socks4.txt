@@ -1,0 +1,2 @@
+# YUEL · KR · socks4 · 1 proxies · generated 2026-11-22T02:56:12 UTC
+socks4://221.157.45.249:80

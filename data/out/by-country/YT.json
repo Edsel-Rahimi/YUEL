@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "41.242.117.3",
+    "port": 50002,
+    "type": "http",
+    "country": "YT",
+    "score": 73.11,
+    "tier": "silver",
+    "latency": 364,
+    "last_checked": "2026-11-22T02:49:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
