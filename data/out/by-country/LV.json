@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "38.180.137.149",
+    "port": 999,
+    "type": "http",
+    "country": "LV",
+    "score": 95.93,
+    "tier": "gold",
+    "latency": 112,
+    "last_checked": "2026-11-22T03:49:08+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "77.38.244.214",
+    "port": 80,
+    "type": "http",
+    "country": "LV",
+    "score": 90.53,
+    "tier": "gold",
+    "latency": 185,
+    "last_checked": "2026-11-22T03:49:08+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

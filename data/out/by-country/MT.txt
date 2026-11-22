@@ -1,2 +1,0 @@
-# YUEL · MT · 1 proxies · generated 2026-11-22T02:56:12 UTC
-socks4://213.165.185.211:4153

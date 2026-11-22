@@ -1,2 +1,3 @@
-# YUEL · HN · 1 proxies · generated 2026-11-22T02:56:12 UTC
+# YUEL · HN · 2 proxies · generated 2026-11-22T03:55:10 UTC
 http://131.108.232.201:8080
+http://190.122.185.170:999

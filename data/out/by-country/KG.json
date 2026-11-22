@@ -4,10 +4,10 @@
     "port": 3128,
     "type": "http",
     "country": "KG",
-    "score": 93.34,
+    "score": 92.12,
     "tier": "gold",
-    "latency": 155,
-    "last_checked": "2026-11-22T02:49:44+00:00",
+    "latency": 162,
+    "last_checked": "2026-11-22T03:49:08+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
