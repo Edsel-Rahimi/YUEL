@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "102.38.21.2",
+    "port": 19000,
+    "type": "http",
+    "country": "LY",
+    "score": 88.88,
+    "tier": "gold",
+    "latency": 159,
+    "last_checked": "2026-11-22T19:26:31+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.209.0.138",
+    "port": 8080,
+    "type": "http",
+    "country": "LY",
+    "score": 87.42,
+    "tier": "gold",
+    "latency": 182,
+    "last_checked": "2026-11-22T19:26:31+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
