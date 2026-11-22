@@ -4,22 +4,10 @@
     "port": 4145,
     "type": "socks4",
     "country": "RS",
-    "score": 91.0,
+    "score": 85.9,
     "tier": "gold",
-    "latency": 178,
-    "last_checked": "2026-11-22T21:17:15+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "217.16.130.83",
-    "port": 4145,
-    "type": "socks4",
-    "country": "RS",
-    "score": 89.13,
-    "tier": "gold",
-    "latency": 171,
-    "last_checked": "2026-11-22T21:17:15+00:00",
+    "latency": 218,
+    "last_checked": "2026-11-22T22:15:05+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
