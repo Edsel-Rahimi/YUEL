@@ -1,13 +1,13 @@
 [
   {
-    "ip": "140.227.61.201",
+    "ip": "85.131.243.125",
     "port": 3128,
     "type": "http",
     "country": "JP",
-    "score": 96.32,
-    "tier": "gold",
-    "latency": 112,
-    "last_checked": "2026-11-22T16:15:59+00:00",
+    "score": 28.42,
+    "tier": "bronze",
+    "latency": 4786,
+    "last_checked": "2026-11-22T17:16:19+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

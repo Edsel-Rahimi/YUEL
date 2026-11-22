@@ -1,13 +1,13 @@
 [
   {
-    "ip": "70.38.101.182",
-    "port": 40000,
-    "type": "socks5",
+    "ip": "173.181.142.228",
+    "port": 80,
+    "type": "http",
     "country": "CA",
-    "score": 97.6,
-    "tier": "gold",
-    "latency": 85,
-    "last_checked": "2026-11-22T16:15:59+00:00",
+    "score": 43.72,
+    "tier": "bronze",
+    "latency": 1560,
+    "last_checked": "2026-11-22T17:16:19+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

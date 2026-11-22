@@ -4,22 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "IQ",
-    "score": 81.74,
-    "tier": "gold",
-    "latency": 311,
-    "last_checked": "2026-11-22T16:15:59+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "95.170.205.202",
-    "port": 8080,
-    "type": "http",
-    "country": "IQ",
-    "score": 28.68,
-    "tier": "bronze",
-    "latency": 5004,
-    "last_checked": "2026-11-22T16:15:59+00:00",
+    "score": 74.67,
+    "tier": "silver",
+    "latency": 841,
+    "last_checked": "2026-11-22T17:16:19+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

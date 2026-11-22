@@ -1,0 +1,2 @@
+# YUEL · PA · socks4 · 1 proxies · generated 2026-11-22T17:21:47 UTC
+socks4://190.60.60.220:1080
