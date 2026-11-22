@@ -1,2 +1,4 @@
-# YUEL · KZ · http · 1 proxies · generated 2026-11-22T17:21:47 UTC
+# YUEL · KZ · http · 3 proxies · generated 2026-11-22T18:15:50 UTC
 http://72.56.73.23:80
+http://91.185.20.162:8080
+http://93.185.68.82:8080
