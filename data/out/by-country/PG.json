@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "202.165.201.74",
+    "port": 3128,
+    "type": "http",
+    "country": "PG",
+    "score": 74.5,
+    "tier": "silver",
+    "latency": 342,
+    "last_checked": "2026-11-22T11:14:53+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "103.99.175.54",
+    "port": 8080,
+    "type": "http",
+    "country": "PG",
+    "score": 72.01,
+    "tier": "silver",
+    "latency": 381,
+    "last_checked": "2026-11-22T11:14:53+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

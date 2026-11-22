@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "154.0.155.133",
+    "port": 8080,
+    "type": "http",
+    "country": "TZ",
+    "score": 67.25,
+    "tier": "silver",
+    "latency": 836,
+    "last_checked": "2026-11-22T11:14:53+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "41.220.131.48",
+    "port": 8040,
+    "type": "http",
+    "country": "TZ",
+    "score": 42.95,
+    "tier": "bronze",
+    "latency": 1884,
+    "last_checked": "2026-11-22T11:14:53+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

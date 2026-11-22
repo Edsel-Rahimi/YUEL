@@ -4,10 +4,22 @@
     "port": 1080,
     "type": "socks5",
     "country": "LV",
-    "score": 90.69,
-    "tier": "gold",
-    "latency": 168,
-    "last_checked": "2026-11-22T10:18:41+00:00",
+    "score": 47.16,
+    "tier": "bronze",
+    "latency": 1076,
+    "last_checked": "2026-11-22T11:14:53+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.242.107.224",
+    "port": 9999,
+    "type": "socks5",
+    "country": "LV",
+    "score": 28.03,
+    "tier": "bronze",
+    "latency": 5391,
+    "last_checked": "2026-11-22T11:14:53+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
