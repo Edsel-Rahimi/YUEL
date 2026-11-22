@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "178.134.100.66",
+    "port": 80,
+    "type": "http",
+    "country": "GE",
+    "score": 27.76,
+    "tier": "bronze",
+    "latency": 5726,
+    "last_checked": "2026-11-22T20:18:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "85.117.56.147",
+    "port": 8080,
+    "type": "http",
+    "country": "GE",
+    "score": 27.64,
+    "tier": "bronze",
+    "latency": 6265,
+    "last_checked": "2026-11-22T20:18:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

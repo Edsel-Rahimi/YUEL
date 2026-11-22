@@ -1,4 +1,4 @@
-# YUEL · BG · http · 3 proxies · generated 2026-11-22T19:31:51 UTC
-http://85.187.224.21:8080
+# YUEL · BG · http · 3 proxies · generated 2026-11-22T20:23:28 UTC
 http://93.123.16.66:80
-http://82.137.90.192:80
+http://93.123.16.38:80
+http://93.123.16.14:80
