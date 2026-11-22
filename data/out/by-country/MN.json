@@ -1,13 +1,13 @@
 [
   {
-    "ip": "202.179.2.250",
+    "ip": "103.11.193.67",
     "port": 8080,
     "type": "http",
     "country": "MN",
-    "score": 41.88,
+    "score": 28.98,
     "tier": "bronze",
-    "latency": 1687,
-    "last_checked": "2026-11-22T00:07:25+00:00",
+    "latency": 4721,
+    "last_checked": "2026-11-22T01:47:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

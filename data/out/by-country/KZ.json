@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "KZ",
-    "score": 97.78,
+    "score": 94.54,
     "tier": "gold",
-    "latency": 84,
-    "last_checked": "2026-11-22T00:07:25+00:00",
+    "latency": 122,
+    "last_checked": "2026-11-22T01:47:28+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "95.182.107.210",
+    "port": 1080,
+    "type": "socks4",
+    "country": "KZ",
+    "score": 69.27,
+    "tier": "silver",
+    "latency": 484,
+    "last_checked": "2026-11-22T01:47:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
