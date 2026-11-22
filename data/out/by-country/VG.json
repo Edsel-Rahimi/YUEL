@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "205.164.46.6",
+    "port": 3122,
+    "type": "http",
+    "country": "VG",
+    "score": 36.14,
+    "tier": "bronze",
+    "latency": 2259,
+    "last_checked": "2026-11-22T14:24:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

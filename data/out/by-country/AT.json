@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "83.215.25.66",
+    "port": 9050,
+    "type": "socks5",
+    "country": "AT",
+    "score": 69.42,
+    "tier": "silver",
+    "latency": 440,
+    "last_checked": "2026-11-22T14:24:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

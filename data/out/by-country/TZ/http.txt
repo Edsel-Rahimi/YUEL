@@ -1,2 +1,3 @@
-# YUEL · TZ · http · 1 proxies · generated 2026-11-22T13:38:04 UTC
+# YUEL · TZ · http · 2 proxies · generated 2026-11-22T14:30:18 UTC
 http://154.0.155.133:8080
+http://41.78.170.115:8080

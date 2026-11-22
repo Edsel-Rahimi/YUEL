@@ -1,5 +1,2 @@
-# YUEL · IQ · 4 proxies · generated 2026-11-22T13:38:04 UTC
+# YUEL · IQ · 1 proxies · generated 2026-11-22T14:30:18 UTC
 http://185.135.69.34:80
-socks5://130.255.94.32:5080
-http://65.20.230.118:9090
-http://185.95.186.140:80
