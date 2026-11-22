@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "94.26.106.100",
+    "port": 8080,
+    "type": "http",
+    "country": "SC",
+    "score": 96.69,
+    "tier": "gold",
+    "latency": 88,
+    "last_checked": "2026-11-22T12:12:11+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "31.56.19.26",
+    "port": 1080,
+    "type": "socks5",
+    "country": "SC",
+    "score": 91.3,
+    "tier": "gold",
+    "latency": 112,
+    "last_checked": "2026-11-22T12:12:11+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

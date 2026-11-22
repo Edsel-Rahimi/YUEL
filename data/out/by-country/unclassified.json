@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "ip": "85.92.153.224",
+    "port": 8888,
+    "type": "http",
+    "country": "unclassified",
+    "score": 28.85,
+    "tier": "bronze",
+    "latency": 4259,
+    "last_checked": "2026-11-22T12:12:11+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "195.5.168.195",
+    "port": 8080,
+    "type": "http",
+    "country": "unclassified",
+    "score": 27.43,
+    "tier": "bronze",
+    "latency": 6893,
+    "last_checked": "2026-11-22T12:12:11+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -1,2 +1,2 @@
-# YUEL · BO · 1 proxies · generated 2026-11-22T11:20:41 UTC
-http://190.181.28.186:999
+# YUEL · BO · 1 proxies · generated 2026-11-22T12:17:37 UTC
+http://158.172.153.36:999

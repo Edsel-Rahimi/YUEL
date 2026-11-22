@@ -1,2 +1,2 @@
-# YUEL · KG · 1 proxies · generated 2026-11-22T11:20:41 UTC
-http://178.217.168.164:55443
+# YUEL · KG · 1 proxies · generated 2026-11-22T12:17:37 UTC
+socks5://80.72.180.122:1080

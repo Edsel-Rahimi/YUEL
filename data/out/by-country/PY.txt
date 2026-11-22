@@ -1,4 +1,4 @@
-# YUEL · PY · 3 proxies · generated 2026-11-22T11:20:41 UTC
+# YUEL · PY · 3 proxies · generated 2026-11-22T12:17:37 UTC
 http://201.222.50.218:80
 http://190.110.226.122:80
-http://37.230.57.238:999
+http://181.94.197.37:8080

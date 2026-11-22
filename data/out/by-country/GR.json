@@ -1,13 +1,13 @@
 [
   {
-    "ip": "150.140.148.235",
-    "port": 80,
+    "ip": "81.31.228.10",
+    "port": 1090,
     "type": "http",
     "country": "GR",
-    "score": 45.99,
-    "tier": "bronze",
-    "latency": 1291,
-    "last_checked": "2026-11-22T11:14:53+00:00",
+    "score": 73.81,
+    "tier": "silver",
+    "latency": 846,
+    "last_checked": "2026-11-22T12:12:11+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
