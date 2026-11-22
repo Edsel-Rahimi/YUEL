@@ -4,10 +4,10 @@
 
   <g class="m-fade" style="animation-delay:0.10s">
   <circle cx="330" cy="188" r="95" fill="none" stroke="#645676" stroke-opacity="0.26" stroke-width="26"/>
-  <circle cx="330" cy="188" r="95" fill="none" stroke="#FC671F" stroke-width="26" stroke-dasharray="232.8 364.1" stroke-dashoffset="-0.0" transform="rotate(-90 330 188)"/>
-  <circle cx="330" cy="188" r="95" fill="none" stroke="#6574C9" stroke-width="26" stroke-dasharray="311.6 285.3" stroke-dashoffset="-236.8" transform="rotate(-90 330 188)"/>
-  <circle cx="330" cy="188" r="95" fill="none" stroke="#ED4A3B" stroke-width="26" stroke-dasharray="40.4 556.5" stroke-dashoffset="-552.5" transform="rotate(-90 330 188)"/>
-  <text x="330" y="186" font-size="44" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#F7F6F9">1,961</text>
+  <circle cx="330" cy="188" r="95" fill="none" stroke="#FC671F" stroke-width="26" stroke-dasharray="269.7 327.2" stroke-dashoffset="-0.0" transform="rotate(-90 330 188)"/>
+  <circle cx="330" cy="188" r="95" fill="none" stroke="#6574C9" stroke-width="26" stroke-dasharray="289.5 307.4" stroke-dashoffset="-273.7" transform="rotate(-90 330 188)"/>
+  <circle cx="330" cy="188" r="95" fill="none" stroke="#ED4A3B" stroke-width="26" stroke-dasharray="25.7 571.2" stroke-dashoffset="-567.2" transform="rotate(-90 330 188)"/>
+  <text x="330" y="186" font-size="44" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" text-anchor="middle" fill="#F7F6F9">2,288</text>
   <text x="330" y="214" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#CCC5D5">ALIVE</text>
   </g>
   <text x="560" y="96" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">PROTOCOL MIX — MEASURED BY REAL HANDSHAKE</text>
@@ -15,19 +15,19 @@
   <g class="m-fade" style="animation-delay:0.25s">
   <rect x="560" y="134" width="12" height="12" rx="4" fill="#FC671F"/>
   <text x="588" y="148" font-size="19" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" letter-spacing="1.2" fill="#F7F6F9">HTTP</text>
-  <text x="588" y="172" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#CCC5D5">778 · 39.7%</text>
+  <text x="588" y="172" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#CCC5D5">1,049 · 45.8%</text>
   <line x1="560" y1="188" x2="1152" y2="188" stroke="#645676" stroke-opacity="0.325" stroke-width="1.2" stroke-linecap="round"/>
   </g>
   <g class="m-fade" style="animation-delay:0.39s">
   <rect x="560" y="190" width="12" height="12" rx="4" fill="#6574C9"/>
   <text x="588" y="204" font-size="19" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" letter-spacing="1.2" fill="#F7F6F9">SOCKS5</text>
-  <text x="588" y="228" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#CCC5D5">1,037 · 52.9%</text>
+  <text x="588" y="228" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#CCC5D5">1,125 · 49.2%</text>
   <line x1="560" y1="244" x2="1152" y2="244" stroke="#645676" stroke-opacity="0.325" stroke-width="1.2" stroke-linecap="round"/>
   </g>
   <g class="m-fade" style="animation-delay:0.53s">
   <rect x="560" y="246" width="12" height="12" rx="4" fill="#ED4A3B"/>
   <text x="588" y="260" font-size="19" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" letter-spacing="1.2" fill="#F7F6F9">SOCKS4</text>
-  <text x="588" y="284" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#CCC5D5">146 · 7.4%</text>
+  <text x="588" y="284" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" fill="#CCC5D5">114 · 5.0%</text>
   <line x1="560" y1="300" x2="1152" y2="300" stroke="#645676" stroke-opacity="0.325" stroke-width="1.2" stroke-linecap="round"/>
   </g>
 </svg>
