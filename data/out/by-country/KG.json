@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "103.80.87.30",
+    "port": 3128,
+    "type": "http",
+    "country": "KG",
+    "score": 67.71,
+    "tier": "silver",
+    "latency": 904,
+    "last_checked": "2026-11-22T06:57:05+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

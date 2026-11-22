@@ -4,10 +4,10 @@
     "port": 1080,
     "type": "socks4",
     "country": "CI",
-    "score": 85.13,
-    "tier": "gold",
-    "latency": 222,
-    "last_checked": "2026-11-22T05:52:34+00:00",
+    "score": 74.07,
+    "tier": "silver",
+    "latency": 361,
+    "last_checked": "2026-11-22T06:57:05+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

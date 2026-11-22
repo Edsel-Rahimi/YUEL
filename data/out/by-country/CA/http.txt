@@ -1,2 +1,3 @@
-# YUEL · CA · http · 1 proxies · generated 2026-11-22T05:58:15 UTC
-http://96.1.101.113:80
+# YUEL · CA · http · 2 proxies · generated 2026-11-22T07:03:05 UTC
+http://70.38.101.182:40000
+http://173.181.142.228:80

@@ -4,22 +4,10 @@
     "port": 4145,
     "type": "socks4",
     "country": "RS",
-    "score": 82.05,
+    "score": 92.27,
     "tier": "gold",
-    "latency": 244,
-    "last_checked": "2026-11-22T05:52:34+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "79.175.100.126",
-    "port": 6666,
-    "type": "http",
-    "country": "RS",
-    "score": 73.9,
-    "tier": "silver",
-    "latency": 213,
-    "last_checked": "2026-11-22T05:52:34+00:00",
+    "latency": 185,
+    "last_checked": "2026-11-22T06:57:05+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

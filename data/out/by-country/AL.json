@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "79.106.229.208",
+    "port": 8989,
+    "type": "http",
+    "country": "AL",
+    "score": 31.8,
+    "tier": "bronze",
+    "latency": 3048,
+    "last_checked": "2026-11-22T06:57:05+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "66.186.199.33",
+    "port": 8080,
+    "type": "http",
+    "country": "AL",
+    "score": 29.45,
+    "tier": "bronze",
+    "latency": 4352,
+    "last_checked": "2026-11-22T06:57:05+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
