@@ -4,10 +4,22 @@
     "port": 1080,
     "type": "socks4",
     "country": "NG",
-    "score": 68.5,
+    "score": 67.45,
     "tier": "silver",
-    "latency": 331,
-    "last_checked": "2026-11-23T20:48:05+00:00",
+    "latency": 356,
+    "last_checked": "2026-11-23T21:47:28+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.212.104.129",
+    "port": 8082,
+    "type": "http",
+    "country": "NG",
+    "score": 64.97,
+    "tier": "silver",
+    "latency": 530,
+    "last_checked": "2026-11-23T21:47:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

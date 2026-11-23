@@ -1,2 +1,2 @@
-# YUEL · GE · 1 proxies · generated 2026-11-23T20:54:13 UTC
-http://85.117.56.104:8080
+# YUEL · GE · 1 proxies · generated 2026-11-23T21:53:16 UTC
+http://85.117.61.120:8080

@@ -1,3 +1,0 @@
-# YUEL · SI · http · 2 proxies · generated 2026-11-23T20:54:13 UTC
-http://109.127.199.81:9999
-http://109.127.199.106:9999

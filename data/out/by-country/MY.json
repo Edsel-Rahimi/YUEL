@@ -1,13 +1,13 @@
 [
   {
-    "ip": "58.84.16.214",
-    "port": 1231,
+    "ip": "113.23.200.86",
+    "port": 8081,
     "type": "http",
     "country": "MY",
-    "score": 82.14,
+    "score": 81.34,
     "tier": "gold",
     "latency": 210,
-    "last_checked": "2026-11-23T20:48:05+00:00",
+    "last_checked": "2026-11-23T21:47:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +16,10 @@
     "port": 80,
     "type": "http",
     "country": "MY",
-    "score": 81.32,
+    "score": 80.05,
     "tier": "gold",
-    "latency": 219,
-    "last_checked": "2026-11-23T20:48:05+00:00",
+    "latency": 216,
+    "last_checked": "2026-11-23T21:47:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -28,22 +28,10 @@
     "port": 80,
     "type": "http",
     "country": "MY",
-    "score": 74.29,
+    "score": 74.06,
     "tier": "silver",
-    "latency": 274,
-    "last_checked": "2026-11-23T20:48:05+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "219.94.75.2",
-    "port": 8080,
-    "type": "http",
-    "country": "MY",
-    "score": 31.51,
-    "tier": "bronze",
-    "latency": 2825,
-    "last_checked": "2026-11-23T20:48:05+00:00",
+    "latency": 257,
+    "last_checked": "2026-11-23T21:47:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

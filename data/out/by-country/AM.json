@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "81.16.9.222",
+    "port": 3629,
+    "type": "socks4",
+    "country": "AM",
+    "score": 76.54,
+    "tier": "silver",
+    "latency": 239,
+    "last_checked": "2026-11-23T21:47:28+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "103.75.198.134",
+    "port": 9051,
+    "type": "socks5",
+    "country": "AM",
+    "score": 66.19,
+    "tier": "silver",
+    "latency": 430,
+    "last_checked": "2026-11-23T21:47:28+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
