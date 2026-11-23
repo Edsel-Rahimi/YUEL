@@ -1,3 +1,2 @@
-# YUEL · unclassified · 2 proxies · generated 2026-11-23T09:59:37 UTC
-socks5://85.92.153.224:1080
-socks5://85.92.153.24:1080
+# YUEL · unclassified · 1 proxies · generated 2026-11-23T11:05:47 UTC
+socks5://85.92.153.14:1080
