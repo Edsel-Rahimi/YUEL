@@ -4,10 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "GR",
-    "score": 57.04,
+    "score": 55.76,
     "tier": "silver",
-    "latency": 1439,
-    "last_checked": "2026-11-23T11:50:34+00:00",
+    "latency": 1847,
+    "last_checked": "2026-11-23T13:02:09+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
