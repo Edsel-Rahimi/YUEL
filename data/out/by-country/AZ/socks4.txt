@@ -1,0 +1,2 @@
+# YUEL · AZ · socks4 · 1 proxies · generated 2026-11-23T00:19:41 UTC
+socks4://185.43.189.253:3629

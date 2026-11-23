@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "188.129.8.242",
+    "port": 81,
+    "type": "http",
+    "country": "HR",
+    "score": 44.63,
+    "tier": "bronze",
+    "latency": 4239,
+    "last_checked": "2026-11-23T00:13:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

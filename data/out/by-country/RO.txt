@@ -1,2 +1,2 @@
-# YUEL · RO · 1 proxies · generated 2026-11-22T23:20:22 UTC
-http://86.125.19.21:8080
+# YUEL · RO · 1 proxies · generated 2026-11-23T00:19:41 UTC
+http://185.128.240.2:3128
