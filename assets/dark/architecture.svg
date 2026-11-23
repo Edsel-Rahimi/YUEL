@@ -56,32 +56,32 @@
 <g class="r d3"><rect x="428" y="76" width="344" height="140" rx="16" fill="#4F3F62" fill-opacity="0.32" stroke="#645676" stroke-opacity="0.62" stroke-width="1.2"/>
 <rect x="454" y="100" width="10" height="10" rx="3" fill="#6574C9" class="gq" style="animation-delay:0.3s"/>
 <text x="476" y="110" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">NORMALIZE</text>
-<text x="454" y="162" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">56,317 unique</text>
+<text x="454" y="162" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">56,676 unique</text>
 <text x="454" y="192" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" fill="#CCC5D5">connection-identity dedupe</text>
 </g>
 <g class="r d4"><rect x="808" y="76" width="344" height="140" rx="16" fill="#4F3F62" fill-opacity="0.32" stroke="#645676" stroke-opacity="0.62" stroke-width="1.2"/>
 <rect x="834" y="100" width="10" height="10" rx="3" fill="#6574C9" class="gq" style="animation-delay:0.6s"/>
 <text x="856" y="110" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">VALIDATE</text>
-<text x="834" y="162" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">40,794 tested</text>
+<text x="834" y="162" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">41,146 tested</text>
 <text x="834" y="192" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" fill="#CCC5D5">real socks/http handshakes</text>
 </g>
 <g class="r d5"><rect x="48" y="236" width="344" height="140" rx="16" fill="#4F3F62" fill-opacity="0.32" stroke="#645676" stroke-opacity="0.62" stroke-width="1.2"/>
 <rect x="74" y="260" width="10" height="10" rx="3" fill="#6574C9" class="gq" style="animation-delay:0.9s"/>
 <text x="96" y="270" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">SCORE</text>
-<text x="74" y="322" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">p50 64.945</text>
+<text x="74" y="322" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">p50 64.1</text>
 <text x="74" y="352" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" fill="#CCC5D5">latency · success · freshness</text>
 </g>
 <g class="r d6"><rect x="428" y="236" width="344" height="140" rx="16" fill="#4F3F62" fill-opacity="0.32" stroke="#645676" stroke-opacity="0.62" stroke-width="1.2"/>
 <rect x="454" y="260" width="10" height="10" rx="3" fill="#6574C9" class="gq" style="animation-delay:1.2s"/>
 <text x="476" y="270" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">GEO</text>
-<text x="454" y="322" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">88 countries</text>
+<text x="454" y="322" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">98 countries</text>
 <text x="454" y="352" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" fill="#CCC5D5">ip2asn country lookup</text>
 </g>
 <g class="r d7"><rect x="808" y="236" width="344" height="140" rx="16" fill="#4F3F62" fill-opacity="0.32" stroke="#645676" stroke-opacity="0.62" stroke-width="1.2"/>
 <rect x="809.25" y="237.25" width="341.5" height="137.5" rx="15.5" fill="none" stroke="url(#bg-dark)" stroke-width="1.8"/>
 <rect x="834" y="260" width="10" height="10" rx="3" fill="url(#bg-dark)" class="gq" style="animation-delay:1.5s"/>
 <text x="856" y="270" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">PUBLISH</text>
-<text x="834" y="322" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="url(#bg-dark)">1,978 alive</text>
+<text x="834" y="322" font-size="24" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="url(#bg-dark)">2,313 alive</text>
 <text x="834" y="352" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" fill="#CCC5D5">data/out/ contract · atomic swap</text>
 </g>
 <line x1="398" y1="146" x2="422" y2="146" stroke="#645676" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 9" class="mh"/>
@@ -93,9 +93,9 @@
 <path d="M 417 301 L 422 306 L 417 311" fill="none" stroke="#645676" stroke-opacity=".7" stroke-width="1.5"/>
 <line x1="778" y1="306" x2="802" y2="306" stroke="#645676" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round" stroke-dasharray="3 9" class="mh"/>
 <path d="M 797 301 L 802 306 L 797 311" fill="none" stroke="#645676" stroke-opacity=".7" stroke-width="1.5"/>
-<defs><filter id="pg9203" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="4.5" fill="#FC671F" filter="url(#pg9203)"><animateMotion dur="7.5s" begin="0.0s" repeatCount="indefinite" path="M 220.0 146 H 980.0 V 246 H 220.0 V 306 H 980.0"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="7.5s" begin="0.0s" repeatCount="indefinite"/></circle>
-<defs><filter id="pg9203" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="3" fill="#6574C9" filter="url(#pg9203)"><animateMotion dur="7.5s" begin="1.2s" repeatCount="indefinite" path="M 220.0 146 H 980.0 V 246 H 220.0 V 306 H 980.0"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="7.5s" begin="1.2s" repeatCount="indefinite"/></circle>
-<defs><filter id="pg9203" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="3" fill="#6574C9" filter="url(#pg9203)"><animateMotion dur="7.5s" begin="2.4s" repeatCount="indefinite" path="M 220.0 146 H 980.0 V 246 H 220.0 V 306 H 980.0"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="7.5s" begin="2.4s" repeatCount="indefinite"/></circle>
-<defs><filter id="pg9203" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="3" fill="#6574C9" filter="url(#pg9203)"><animateMotion dur="7.5s" begin="3.6s" repeatCount="indefinite" path="M 220.0 146 H 980.0 V 246 H 220.0 V 306 H 980.0"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="7.5s" begin="3.6s" repeatCount="indefinite"/></circle>
+<defs><filter id="pg4663" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="4.5" fill="#FC671F" filter="url(#pg4663)"><animateMotion dur="7.5s" begin="0.0s" repeatCount="indefinite" path="M 220.0 146 H 980.0 V 246 H 220.0 V 306 H 980.0"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="7.5s" begin="0.0s" repeatCount="indefinite"/></circle>
+<defs><filter id="pg4663" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="3" fill="#6574C9" filter="url(#pg4663)"><animateMotion dur="7.5s" begin="1.2s" repeatCount="indefinite" path="M 220.0 146 H 980.0 V 246 H 220.0 V 306 H 980.0"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="7.5s" begin="1.2s" repeatCount="indefinite"/></circle>
+<defs><filter id="pg4663" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="3" fill="#6574C9" filter="url(#pg4663)"><animateMotion dur="7.5s" begin="2.4s" repeatCount="indefinite" path="M 220.0 146 H 980.0 V 246 H 220.0 V 306 H 980.0"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="7.5s" begin="2.4s" repeatCount="indefinite"/></circle>
+<defs><filter id="pg4663" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="3" fill="#6574C9" filter="url(#pg4663)"><animateMotion dur="7.5s" begin="3.6s" repeatCount="indefinite" path="M 220.0 146 H 980.0 V 246 H 220.0 V 306 H 980.0"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="7.5s" begin="3.6s" repeatCount="indefinite"/></circle>
 <g class="r d9"><text x="48" y="404" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">FAIL-LOUD · ATOMIC PUBLISH · RUNS EVERY 30 MINUTES ON GITHUB ACTIONS</text><text x="1152" y="404" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" text-anchor="end" fill="#6574C9">exit 0 = every stage green</text></g>
 </svg>
