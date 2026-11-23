@@ -1,13 +1,25 @@
 [
   {
-    "ip": "116.80.49.179",
-    "port": 6000,
+    "ip": "133.232.93.66",
+    "port": 80,
     "type": "http",
     "country": "JP",
-    "score": 94.29,
-    "tier": "gold",
-    "latency": 121,
-    "last_checked": "2026-11-23T18:53:30+00:00",
+    "score": 71.5,
+    "tier": "silver",
+    "latency": 320,
+    "last_checked": "2026-11-23T20:00:42+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "163.44.126.97",
+    "port": 3128,
+    "type": "http",
+    "country": "JP",
+    "score": 27.96,
+    "tier": "bronze",
+    "latency": 6065,
+    "last_checked": "2026-11-23T20:00:42+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

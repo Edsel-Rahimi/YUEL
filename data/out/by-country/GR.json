@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "150.140.148.235",
+    "port": 80,
+    "type": "http",
+    "country": "GR",
+    "score": 47.97,
+    "tier": "bronze",
+    "latency": 2208,
+    "last_checked": "2026-11-23T20:00:42+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
