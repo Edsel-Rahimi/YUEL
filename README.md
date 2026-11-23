@@ -24,20 +24,13 @@ confused with a tunnel-config feed downstream.
 **Status: all seven stages are implemented and running end-to-end — the
 full pipeline executes automatically on GitHub Actions every 30 minutes,
 and every number in this README comes from the latest published
-`data/out/run-summary.json` (last run 2026-11-20 08:24 UTC: 1,875 alive ·
-80 countries).**
+`data/out/run-summary.json` — the animated cards below are rendered
+from it on every run.**
 
 This repository is a fresh, independently written codebase. It shares no
 code, config, or history with any other project.
 
 ---
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/yuel-logo-white.png">
-    <img src="assets/brand/yuel-logo-color.png" alt="YUEL — logo lockup" width="110">
-  </picture>
-</p>
 
 <div align="center">
   <picture>
@@ -69,6 +62,13 @@ code, config, or history with any other project.
     <img src="assets/light/stats.svg" alt="Last run: 1,745 validated alive · 73,574 collected · 56,016 unique · 40,797 handshake-tested · 69 countries" width="100%">
   </picture>
 </div>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/dark/countries.svg">
+    <img src="assets/light/countries.svg" alt="Top countries by alive exits: CN 822, US 288, ID 105, GB 75, DE 58 — 73 countries total" width="100%">
+  </picture>
+</p>
 
 ## Top 20 countries — grab a list
 
@@ -127,13 +127,6 @@ exact same files under `data/out/by-country/`.
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/dark/countries.svg">
-    <img src="assets/light/countries.svg" alt="Top countries by alive exits: CN 897, US 267, GB 74, ID 74, DE 54 — 69 countries total" width="100%">
-  </picture>
-</p>
-
-<p align="center">
-  <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/divider.svg">
     <img src="assets/light/divider.svg" alt="" width="100%">
   </picture>
@@ -184,13 +177,6 @@ See [DEPLOY.md](DEPLOY.md) for the file map and local dev workflow.
 </div>
 
 ## ⚡ The pipeline — seven stages, one command
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/motion/dark/flow.svg">
-    <img src="assets/motion/light/flow.svg" alt="collect → normalize → validate → score → geo → publish → automate" width="100%">
-  </picture>
-</div>
 
 | Stage | What it does | Status |
 | --- | --- | --- |
@@ -717,3 +703,4 @@ people find a plain-proxy feed that doesn't pretend to be a tunnel config:
     <img src="assets/motion/light/footer.svg" alt="YUEL — free, open, plain-text proxies" width="100%">
   </picture>
 </div>
+

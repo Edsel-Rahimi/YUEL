@@ -1,12 +1,59 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="320" height="140" viewBox="0 0 320 140" role="img" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif">
-  <style>.m-fade{animation:vf .7s ease-out both}.m-grow{transform-box:fill-box;transform-origin:left center;animation:vg .9s cubic-bezier(.2,.7,.2,1) both}.m-dash{animation:vm 26s linear infinite}.m-beat{animation:vb 2.6s ease-in-out infinite;transform-box:fill-box;transform-origin:center}@keyframes vf{from{opacity:0}to{opacity:1}}@keyframes vg{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes vm{to{stroke-dashoffset:-320}}@keyframes vb{0%,86%,100%{transform:scale(1)}90%{transform:scale(1.05)}95%{transform:scale(1.01)}}@media (prefers-reduced-motion:reduce){.m-fade,.m-grow,.m-dash,.m-beat{animation:none}}</style>
-  <linearGradient id="brand-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FC671F"/><stop offset="0.38" stop-color="#ED4A3B"/><stop offset="0.66" stop-color="#CC3C77"/><stop offset="1" stop-color="#6574C9"/></linearGradient>
-  <rect x="0.75" y="0.75" width="318.5" height="138.5" rx="20" fill="#1E0D2F" stroke="#645676" stroke-width="1.5"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="150" viewBox="0 0 320 150" role="img" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif">
+<style>
+.r{animation:rise .8s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.16s}.d3{animation-delay:.24s}
+.d4{animation-delay:.32s}.d5{animation-delay:.4s}.d6{animation-delay:.48s}
+.d7{animation-delay:.56s}.d8{animation-delay:.64s}.d9{animation-delay:.74s}
+.d10{animation-delay:.9s}.d11{animation-delay:1.05s}.d12{animation-delay:1.2s}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.gw{transform-box:fill-box;transform-origin:left center;animation:grow 1s cubic-bezier(.2,.7,.2,1) both}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.mh{animation:march 20s linear infinite}
+@keyframes march{to{stroke-dashoffset:-400}}
+.bt{transform-box:fill-box;transform-origin:center;animation:beat 2.8s ease-in-out infinite}
+@keyframes beat{0%,84%,100%{transform:scale(1)}88%{transform:scale(1.05)}94%{transform:scale(1.01)}}
+.pz{transform-box:fill-box;transform-origin:center;animation:ping 2.6s cubic-bezier(0,0,.2,1) infinite}
+@keyframes ping{0%{transform:scale(.45);opacity:.85}75%,100%{transform:scale(2.5);opacity:0}}
+.sp{animation:spin 12s linear infinite}
+.sr{animation-duration:20s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sw{animation:sweep 7s cubic-bezier(.45,0,.25,1) infinite}
+@keyframes sweep{0%,58%{transform:translateX(-660px) skewX(-16deg)}100%{transform:translateX(1380px) skewX(-16deg)}}
+.dr{animation:drift 18s ease-in-out infinite alternate}
+.da{animation-duration:26s;animation-delay:-9s}
+.db{animation-duration:34s;animation-delay:-17s}
+@keyframes drift{to{transform:translate(44px,-28px) scale(1.09)}}
+.tk{animation:tw 3.4s ease-in-out infinite}
+.ta{animation-delay:-1.1s}.tb{animation-delay:-2.3s}
+@keyframes tw{0%,100%{opacity:.15}50%{opacity:1}}
+.eq{transform-box:fill-box;transform-origin:center bottom;animation:eq 1.5s ease-in-out infinite}
+.ea{animation-delay:-.38s}.eb{animation-delay:-.76s}.ec{animation-delay:-1.14s}
+@keyframes eq{0%,100%{transform:scaleY(.3)}50%{transform:scaleY(1)}}
+.cr{animation:caret 1.1s steps(2,jump-none) infinite}
+@keyframes caret{50%{opacity:0}}
+.dd{stroke-dasharray:100 100;animation:draw 1.15s cubic-bezier(.3,.6,.3,1) both}
+@keyframes draw{from{stroke-dashoffset:100}to{stroke-dashoffset:0}}
+.gq{animation:glowq 3.2s ease-in-out infinite}
+@keyframes glowq{0%,100%{opacity:.35}50%{opacity:1}}
+.wv{animation:wv 13s linear infinite}
+.wb{animation-duration:19s;animation-direction:reverse}
+.wc{animation-duration:27s}
+@keyframes wv{to{transform:translateX(-170px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs><linearGradient id="bg-dark" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#FC671F"/><stop offset="0.38" stop-color="#ED4A3B"/><stop offset="0.66" stop-color="#CC3C77"/><stop offset="1" stop-color="#6574C9"/></linearGradient>
+</defs>
+<rect x="0.75" y="0.75" width="318.5" height="148.5" rx="20" fill="#1E0D2F" stroke="#645676" stroke-width="1.5"/>
 
-  <image x="24" y="24" width="48" height="36" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAASCAMAAAB2Mu6sAAABHVBMVEVHcEzGMD3HNEHMzMy+vr7MN0a9vb3DKDbCJTLIyMjIyMjLNkS+vr7CwsK+vr7DMUHBJDHFKzm5LkbJMD/HMj7IMj/BwcHDw8O+vr6ioqLGxsbKNEPMOUntKD3////sJTXtKDjuLD3uKjvuLj/vMEHrIzL8+PjvM0PvNkfjIjC4GyfbKTjyV2XBwcHp6enxSlj19fXk5OTOOEfAICzT09P0c37wPEzoN0fQ0NDzeILmMD/2lJ3YMkHJMkH96uv4rbTNzc3pPU7Hx8e8vLz4r7X1j5fGKzn3nKPKLj3nJjX1hpD1fon39/f82t33q7HrUF7jPUrv7+/wRFTb29v6ztK8dXrMfoX24uP9/f3wP1DzaHT5usDdV2TomqLu7u49PspWAAAAHXRSTlMAaB3F1b6+ssey5tifaB0v5OgLVXude1UvC8rPoRy2E9gAAAD+SURBVBjTldFXc4JAFIbhValqei8jGMXdJGSRHoQAQuyxp7f//zMCGGIuMs7ku3yfc3cAyGZOyULhhNzb3dnYBotlMwwgFeX9YzwxHcfptttbDE3TzKaqqkBpiq5ojGYIIQgbjctkvV4Mb96r/iINIITVaqVSLp/xPH9+EYHbl2bIENMcdy6CG3PoIduwjainmVuAXtMlOP51znFCAkiypGVOegxdUxx0PK/T0kWUZkGYPIDHp9LP3Ptbu29ZrdGwfgW0u9IfWwXX/4RwFdSmWJZlPK0/L+EzBL7m53Msyx7ng8DX5jLGWJ4HIQVya+vf3zk6PNgvUgRBUMWofQGLuEFqveNkwQAAAABJRU5ErkJggg=="/>
-  <text x="86" y="46" font-size="17" font-weight="700" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#F7F6F9">Singapore</text>
-  <text x="86" y="66" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">SG</text>
-  <text x="24" y="112" font-size="40" font-weight="800" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif" fill="#F7F6F9">13</text>
-  <text x="87.6" y="112" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">ALIVE</text>
-  <rect x="24" y="122" width="28" height="3" rx="1.5" fill="url(#brand-dark)" opacity="0.35"/>
+<image x="22" y="22" width="44" height="33" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAbCAMAAAA5zj1cAAAAPFBMVEXtKTnvRFL5srj3oajvPEryW2fuM0L////2k5vtKjr1hY30doH+6On2lJzzbXjwTlv6wcb7ztL82Nv/9/iW1qa7AAAAe0lEQVQ4y+3RORIDIQxE0Q9IaATMfv+7OnDgyINyu+NXqmo1TijOG3pSicB9DAWZwn6fAi3XCazDNoStPdx0HNRu12OHevRH2OxCSgWaPsJuA/DPD77BZCakkmrRSetimXQKeZtAv6wHl9nXrDUCA1uvSygrFswf/g58AZjBEs/aTMUHAAAAAElFTkSuQmCC"/>
+<rect x="22" y="22" width="44" height="33" rx="4" fill="none" stroke="#645676" stroke-opacity="0.62" stroke-width="1"/>
+<text x="78" y="42" font-size="16" font-weight="700" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">Singapore</text>
+<text x="78" y="62" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">SG</text>
+<circle cx="294" cy="28" r="3.5" fill="none" stroke="#6BC490" stroke-width="1.6" class="pz"/><circle cx="294" cy="28" r="3.5" fill="#6BC490"/>
+<text x="22" y="112" font-size="34" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">13</text>
+<text x="74.8" y="112" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">ALIVE</text>
+<rect x="22" y="126" width="130" height="5" rx="2.5" fill="#645676" fill-opacity="0.496"/>
+<rect x="22" y="126" width="3.0" height="5" rx="2.5" fill="#6574C9" opacity="0.75" class="gw" style="animation-delay:1.10s"/>
+<clipPath id="cc-SG-dark"><rect x="1" y="1" width="318" height="148" rx="19"/></clipPath>
+<g clip-path="url(#cc-SG-dark)"><rect x="0" y="0" width="110" height="150" fill="#FFFFFF" opacity="0.09" class="sw" style="animation-delay:8.10s;animation-duration:9s"/></g>
 </svg>
