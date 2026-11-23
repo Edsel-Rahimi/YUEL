@@ -4,22 +4,10 @@
     "port": 32000,
     "type": "socks4",
     "country": "MN",
-    "score": 72.71,
+    "score": 69.56,
     "tier": "silver",
-    "latency": 275,
-    "last_checked": "2026-11-23T02:53:41+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "202.131.246.250",
-    "port": 5678,
-    "type": "socks4",
-    "country": "MN",
-    "score": 71.59,
-    "tier": "silver",
-    "latency": 286,
-    "last_checked": "2026-11-23T02:53:41+00:00",
+    "latency": 308,
+    "last_checked": "2026-11-23T03:56:40+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

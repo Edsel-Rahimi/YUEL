@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "213.6.249.37",
+    "port": 19000,
+    "type": "http",
+    "country": "PS",
+    "score": 91.44,
+    "tier": "gold",
+    "latency": 157,
+    "last_checked": "2026-11-23T03:56:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "213.6.68.210",
+    "port": 4145,
+    "type": "socks4",
+    "country": "PS",
+    "score": 91.37,
+    "tier": "gold",
+    "latency": 157,
+    "last_checked": "2026-11-23T03:56:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

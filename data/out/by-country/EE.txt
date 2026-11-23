@@ -1,5 +1,4 @@
-# YUEL · EE · 4 proxies · generated 2026-11-23T02:58:53 UTC
+# YUEL · EE · 3 proxies · generated 2026-11-23T04:02:27 UTC
 socks5://91.199.137.149:2005
-socks5://91.199.137.149:2001
-socks5://91.199.137.149:2015
 socks5://132.243.168.30:9150
+socks5://91.199.137.149:2015

@@ -4,10 +4,22 @@
     "port": 28000,
     "type": "socks4",
     "country": "SK",
-    "score": 87.85,
+    "score": 93.1,
     "tier": "gold",
-    "latency": 179,
-    "last_checked": "2026-11-23T02:53:41+00:00",
+    "latency": 142,
+    "last_checked": "2026-11-23T03:56:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "217.145.199.45",
+    "port": 56746,
+    "type": "socks4",
+    "country": "SK",
+    "score": 92.19,
+    "tier": "gold",
+    "latency": 148,
+    "last_checked": "2026-11-23T03:56:40+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
