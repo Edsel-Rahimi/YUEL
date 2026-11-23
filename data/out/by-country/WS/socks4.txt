@@ -1,2 +1,0 @@
-# YUEL · WS · socks4 · 1 proxies · generated 2026-11-23T00:19:41 UTC
-socks4://202.87.210.20:57833

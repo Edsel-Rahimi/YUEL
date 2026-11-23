@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "109.72.100.113",
+    "port": 48293,
+    "type": "socks4",
+    "country": "ME",
+    "score": 88.59,
+    "tier": "gold",
+    "latency": 175,
+    "last_checked": "2026-11-23T01:52:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "109.72.109.214",
+    "port": 48293,
+    "type": "socks4",
+    "country": "ME",
+    "score": 85.81,
+    "tier": "gold",
+    "latency": 195,
+    "last_checked": "2026-11-23T01:52:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

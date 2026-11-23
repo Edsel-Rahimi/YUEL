@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "103.215.216.13",
+    "port": 9050,
+    "type": "socks5",
+    "country": "LU",
+    "score": 43.11,
+    "tier": "bronze",
+    "latency": 1375,
+    "last_checked": "2026-11-23T01:52:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
