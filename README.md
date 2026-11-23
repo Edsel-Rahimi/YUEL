@@ -32,6 +32,13 @@ code, config, or history with any other project.
 
 ---
 
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/yuel-logo-white.png">
+    <img src="assets/brand/yuel-logo-color.png" alt="YUEL — logo lockup" width="110">
+  </picture>
+</p>
+
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/motion/dark/hero.svg">

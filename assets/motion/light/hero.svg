@@ -1,38 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="YUEL — live plain proxies">
 <style>
 .pt{animation:pt 8s linear infinite}
-@keyframes pt{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-260px);opacity:0}}
+@keyframes pt{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-300px);opacity:0}}
+.orb{transform-box:fill-box;transform-origin:center;animation:orb 9s linear infinite}
+.o2{animation-duration:14s;animation-direction:reverse}
+.o3{animation-duration:22s}
+@keyframes orb{to{transform:rotate(360deg)}}
+.breathe{transform-box:fill-box;transform-origin:center;animation:br 4.2s ease-in-out infinite}
+@keyframes br{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:.85}}
 .sweep{animation:sw 6.5s ease-in-out infinite}
-@keyframes sw{0%,55%{transform:translateX(-620px) skewX(-18deg)}100%{transform:translateX(1240px) skewX(-18deg)}}
+@keyframes sw{0%,58%{transform:translateX(-640px) skewX(-18deg)}100%{transform:translateX(1300px) skewX(-18deg)}}
+.scan{animation:sc 7s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes sc{0%{transform:translateY(-10px);opacity:0}12%{opacity:1}88%{opacity:1}100%{transform:translateY(300px);opacity:0}}
 .wv{animation:wv 11s ease-in-out infinite alternate}
-.w2{animation-duration:16s}
-@keyframes wv{to{transform:translateX(-120px)}}
+.w2{animation-duration:16s}.w3{animation-duration:23s}
+@keyframes wv{to{transform:translateX(-150px)}}
 .spin{transform-box:fill-box;transform-origin:center;animation:sp 7s linear infinite}
 .rev{animation-direction:reverse}
 @keyframes sp{to{transform:rotate(360deg)}}
 .beat{transform-box:fill-box;transform-origin:center;animation:bt 2.4s ease-in-out infinite}
-@keyframes bt{0%,100%{transform:scale(1)}12%{transform:scale(1.12)}24%{transform:scale(.98)}36%{transform:scale(1)}}
+@keyframes bt{0%,100%{transform:scale(1)}12%{transform:scale(1.16)}24%{transform:scale(.97)}36%{transform:scale(1)}}
 .glow{animation:gw 3.2s ease-in-out infinite}
-@keyframes gw{50%{opacity:.4}}
+@keyframes gw{50%{opacity:.35}}
 .dash{stroke-dasharray:7 9;animation:dsh 1.4s linear infinite}
 @keyframes dsh{to{stroke-dashoffset:-32}}
 .pk{animation:pk 3.2s linear infinite}
 .p2{animation-delay:1.1s}.p3{animation-delay:2.2s}
 @keyframes pk{0%{transform:translateX(0);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateX(var(--d,880px));opacity:0}}
 .pls{transform-box:fill-box;transform-origin:center;animation:pls 2.6s ease-out infinite}
-@keyframes pls{0%{transform:scale(.6);opacity:.85}100%{transform:scale(2.4);opacity:0}}
+@keyframes pls{0%{transform:scale(.6);opacity:.85}100%{transform:scale(2.6);opacity:0}}
 .flt{animation:flt 5.5s ease-in-out infinite}
-@keyframes flt{50%{transform:translateY(-6px)}}
+.f2{animation-delay:-2.7s}
+@keyframes flt{50%{transform:translateY(-9px)}}
 .rise{animation:rs .9s cubic-bezier(.2,.7,.2,1) both}
 .r2{animation-delay:.15s}.r3{animation-delay:.3s}.r4{animation-delay:.45s}.r5{animation-delay:.6s}.r6{animation-delay:.75s}.r7{animation-delay:.9s}.r8{animation-delay:1.05s}
-@keyframes rs{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rs{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .blink{animation:bl 1.1s steps(2) infinite}
 @keyframes bl{50%{opacity:0}}
+.grid{animation:gd 3.4s linear infinite}
+@keyframes gd{to{stroke-dashoffset:-44}}
+.hue{animation:hue 9s linear infinite}
+@keyframes hue{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(18deg)}}
+.skew{animation:skw 12s ease-in-out infinite alternate}
+@keyframes skw{from{transform:translateX(0)}to{transform:translateX(-360px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 <defs>
-<linearGradient id="gTitle" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#e35a17"/><stop offset=".55" stop-color="#d98a10"/><stop offset="1" stop-color="#7c3aed"/>
+<linearGradient id="gTitle" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#e35a17">
+    <animate attributeName="stop-color" values="#e35a17;#d98a10;#7c3aed;#e35a17" dur="9s" repeatCount="indefinite"/>
+  </stop>
+  <stop offset=".55" stop-color="#d98a10">
+    <animate attributeName="stop-color" values="#d98a10;#7c3aed;#e35a17;#d98a10" dur="9s" repeatCount="indefinite"/>
+  </stop>
+  <stop offset="1" stop-color="#7c3aed">
+    <animate attributeName="stop-color" values="#7c3aed;#e35a17;#d98a10;#7c3aed" dur="9s" repeatCount="indefinite"/>
+  </stop>
 </linearGradient>
 <linearGradient id="gLine" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="#e35a17" stop-opacity="0"/>
@@ -43,49 +66,59 @@
   <stop offset="0" stop-color="#f6f1e9"/><stop offset=".6" stop-color="#efe7da"/><stop offset="1" stop-color="#f6f1e9"/>
 </linearGradient>
 <linearGradient id="gShine" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
 </linearGradient>
-<radialGradient id="gOrL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 40) scale(560 320)">
-  <stop offset="0" stop-color="#e35a17" stop-opacity=".5"/><stop offset="1" stop-color="#e35a17" stop-opacity="0"/>
+<linearGradient id="gBeam" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#e35a17" stop-opacity="0"/>
+  <stop offset=".5" stop-color="#e35a17" stop-opacity=".55"/>
+  <stop offset="1" stop-color="#e35a17" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="gOrL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 40) scale(620 360)">
+  <stop offset="0" stop-color="#e35a17" stop-opacity=".5"><animate attributeName="stop-opacity" values=".5;.9;.5" dur="6s" repeatCount="indefinite"/></stop>
+  <stop offset="1" stop-color="#e35a17" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="gOrR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1140 40) scale(560 320)">
-  <stop offset="0" stop-color="#7c3aed" stop-opacity=".5"/><stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
+<radialGradient id="gOrR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1140 40) scale(620 360)">
+  <stop offset="0" stop-color="#7c3aed" stop-opacity=".5"><animate attributeName="stop-opacity" values=".5;.9;.5" dur="7.5s" repeatCount="indefinite"/></stop>
+  <stop offset="1" stop-color="#7c3aed" stop-opacity="0"/>
 </radialGradient>
-<filter id="fGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+<filter id="fGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="fSoft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="18"/></filter>
 </defs>
 <clipPath id="clip"><rect width="1200" height="440"/></clipPath>
 <rect width="1200" height="440" fill="url(#gBg)"/>
 <rect width="1200" height="440" fill="url(#gOrL)"/>
 <rect width="1200" height="440" fill="url(#gOrR)"/>
-<g clip-path="url(#clip)"><circle cx="60" cy="330" r="2" fill="#7c3aed" class="pt" style="animation-duration:6.0s;animation-delay:0.0s"/><circle cx="179" cy="383" r="3" fill="#e35a17" class="pt" style="animation-duration:7.3s;animation-delay:-0.9s"/><circle cx="258" cy="376" r="4" fill="#e35a17" class="pt" style="animation-duration:8.6s;animation-delay:-1.8s"/><circle cx="337" cy="369" r="2" fill="#7c3aed" class="pt" style="animation-duration:9.9s;animation-delay:-2.7s"/><circle cx="416" cy="362" r="3" fill="#e35a17" class="pt" style="animation-duration:11.2s;animation-delay:-3.6s"/><circle cx="495" cy="355" r="4" fill="#e35a17" class="pt" style="animation-duration:6.0s;animation-delay:-4.5s"/><circle cx="574" cy="348" r="2" fill="#7c3aed" class="pt" style="animation-duration:7.3s;animation-delay:-5.4s"/><circle cx="653" cy="341" r="3" fill="#e35a17" class="pt" style="animation-duration:8.6s;animation-delay:-6.3s"/><circle cx="732" cy="334" r="4" fill="#e35a17" class="pt" style="animation-duration:9.9s;animation-delay:-7.2s"/><circle cx="811" cy="387" r="2" fill="#7c3aed" class="pt" style="animation-duration:11.2s;animation-delay:-8.1s"/><circle cx="890" cy="380" r="3" fill="#e35a17" class="pt" style="animation-duration:6.0s;animation-delay:-9.0s"/><circle cx="969" cy="373" r="4" fill="#e35a17" class="pt" style="animation-duration:7.3s;animation-delay:-9.9s"/><circle cx="1048" cy="366" r="2" fill="#7c3aed" class="pt" style="animation-duration:8.6s;animation-delay:-10.8s"/><circle cx="1127" cy="359" r="3" fill="#e35a17" class="pt" style="animation-duration:9.9s;animation-delay:-11.7s"/><path d="M -140 392 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#e35a17" stroke-opacity="0.22" stroke-width="1.6" class="wv " style="animation-duration:11s"/><path d="M -140 404 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#7c3aed" stroke-opacity="0.16999999999999998" stroke-width="1.6" class="wv w2" style="animation-duration:15s"/><path d="M -140 416 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#e35a17" stroke-opacity="0.12" stroke-width="1.6" class="wv w2" style="animation-duration:19s"/></g>
-<g class="rise"><g transform="translate(134 118)">
-<rect x="-46" y="-46" width="92" height="92" rx="26" fill="#fffdf8" stroke="rgba(43,37,55,0.18)"/>
-<path d="M -17 -24 L 0 -2 L 17 -24 M 0 -2 L 0 24"
-  fill="none" stroke="url(#gTitle)" stroke-width="9.0" stroke-linecap="round" stroke-linejoin="round"/>
-</g></g>
-<g class="spin rev" opacity=".85"><circle cx="134" cy="118" r="72" fill="none" stroke="rgba(43,37,55,0.18)" stroke-width="1.4" stroke-dasharray="10 14"/></g>
-<g class="spin"><circle cx="134" cy="118" r="86" fill="none" stroke="rgba(43,37,55,0.18)" stroke-width="1" stroke-dasharray="3 9"/></g>
-<g class="rise r2" opacity=".9">
-  <circle cx="330" cy="86" r="4" fill="#e35a17"/><circle cx="330" cy="86" r="4" fill="#e35a17" class="pls"/>
+<circle cx="150" cy="140" r="110" fill="#e35a17" opacity=".16" filter="url(#fSoft)" class="flt"/>
+<circle cx="1050" cy="300" r="130" fill="#7c3aed" opacity=".16" filter="url(#fSoft)" class="flt f2"/>
+<g clip-path="url(#clip)"><circle cx="60" cy="350" r="2" fill="#7c3aed" class="pt" style="animation-duration:6.0s;animation-delay:0.0s"/><circle cx="169" cy="403" r="3" fill="#e35a17" class="pt" style="animation-duration:7.3s;animation-delay:-0.9s"/><circle cx="238" cy="396" r="4" fill="#e35a17" class="pt" style="animation-duration:8.6s;animation-delay:-1.8s"/><circle cx="307" cy="389" r="2" fill="#7c3aed" class="pt" style="animation-duration:9.9s;animation-delay:-2.7s"/><circle cx="376" cy="382" r="3" fill="#e35a17" class="pt" style="animation-duration:11.2s;animation-delay:-3.6s"/><circle cx="445" cy="375" r="4" fill="#e35a17" class="pt" style="animation-duration:6.0s;animation-delay:-4.5s"/><circle cx="514" cy="368" r="2" fill="#7c3aed" class="pt" style="animation-duration:7.3s;animation-delay:-5.4s"/><circle cx="583" cy="361" r="3" fill="#e35a17" class="pt" style="animation-duration:8.6s;animation-delay:-6.3s"/><circle cx="652" cy="354" r="4" fill="#e35a17" class="pt" style="animation-duration:9.9s;animation-delay:-7.2s"/><circle cx="721" cy="407" r="2" fill="#7c3aed" class="pt" style="animation-duration:11.2s;animation-delay:-8.1s"/><circle cx="790" cy="400" r="3" fill="#e35a17" class="pt" style="animation-duration:6.0s;animation-delay:-9.0s"/><circle cx="859" cy="393" r="4" fill="#e35a17" class="pt" style="animation-duration:7.3s;animation-delay:-9.9s"/><circle cx="928" cy="386" r="2" fill="#7c3aed" class="pt" style="animation-duration:8.6s;animation-delay:-10.8s"/><circle cx="997" cy="379" r="3" fill="#e35a17" class="pt" style="animation-duration:9.9s;animation-delay:-11.7s"/><circle cx="1106" cy="372" r="4" fill="#e35a17" class="pt" style="animation-duration:11.2s;animation-delay:-12.6s"/><circle cx="1175" cy="365" r="2" fill="#7c3aed" class="pt" style="animation-duration:6.0s;animation-delay:-13.5s"/><path d="M -160 396 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#e35a17" stroke-opacity="0.22" stroke-width="1.6" class="wv " style="animation-duration:11s"/><path d="M -160 408 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#7c3aed" stroke-opacity="0.16999999999999998" stroke-width="1.6" class="wv w2" style="animation-duration:15s"/><path d="M -160 420 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#e35a17" stroke-opacity="0.12" stroke-width="1.6" class="wv w3" style="animation-duration:19s"/></g>
+<g class="rise">
+  <circle cx="134" cy="118" r="120" fill="#fffdf8" opacity=".65"/>
+  <g class="orb" style="animation-duration:7s"><circle cx="208" cy="118" r="4" fill="#e35a17" filter="url(#fGlow)" opacity="0.9"/><circle cx="208" cy="118" r="4" fill="#d98a10" filter="url(#fGlow)" opacity="0.9"/><circle cx="208" cy="118" r="4" fill="#e35a17" filter="url(#fGlow)" opacity="0.9"/><circle cx="208" cy="118" r="4" fill="#d98a10" filter="url(#fGlow)" opacity="0.9"/><circle cx="208" cy="118" r="4" fill="#e35a17" filter="url(#fGlow)" opacity="0.9"/></g><circle cx="134" cy="118" r="74" fill="none" stroke="rgba(43,37,55,0.18)" stroke-width="1.2" stroke-dasharray="3 9"/><g class="orb o2" style="animation-duration:12s"><circle cx="226" cy="118" r="4" fill="#e35a17" filter="url(#fGlow)" opacity="0.7"/><circle cx="226" cy="118" r="4" fill="#d98a10" filter="url(#fGlow)" opacity="0.7"/><circle cx="226" cy="118" r="4" fill="#e35a17" filter="url(#fGlow)" opacity="0.7"/><circle cx="226" cy="118" r="4" fill="#d98a10" filter="url(#fGlow)" opacity="0.7"/><circle cx="226" cy="118" r="4" fill="#e35a17" filter="url(#fGlow)" opacity="0.7"/><circle cx="226" cy="118" r="4" fill="#d98a10" filter="url(#fGlow)" opacity="0.7"/><circle cx="226" cy="118" r="4" fill="#e35a17" filter="url(#fGlow)" opacity="0.7"/><circle cx="226" cy="118" r="4" fill="#d98a10" filter="url(#fGlow)" opacity="0.7"/><circle cx="226" cy="118" r="4" fill="#e35a17" filter="url(#fGlow)" opacity="0.7"/></g><circle cx="134" cy="118" r="92" fill="none" stroke="rgba(43,37,55,0.18)" stroke-width="1.2" stroke-dasharray="5 12"/><g class="orb o3" style="animation-duration:19s"><circle cx="246" cy="118" r="3" fill="#e35a17" filter="url(#fGlow)" opacity="0.5"/><circle cx="246" cy="118" r="3" fill="#d98a10" filter="url(#fGlow)" opacity="0.5"/><circle cx="246" cy="118" r="3" fill="#e35a17" filter="url(#fGlow)" opacity="0.5"/></g><circle cx="134" cy="118" r="112" fill="none" stroke="rgba(43,37,55,0.18)" stroke-width="1.2" stroke-dasharray="7 15"/>
+  <image x="88" y="72" width="92" height="92" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMkAAADcCAYAAADa3YUtAAAUlElEQVR4nO2df6xcx1XHv8dOCE3bqOmvFChtolJAgiAoQWqaCCgJoUrVVlFLWxUQFAHlh9R/MK4c1+CmqZFJgyyT4pqg1A1yQ4qTpimpU+S4qYJtMCFVSAxOSGU7jlzXTuQ4MS+xX95++WN2u/fdd++cuzN7596793yk1b63s2dn5u49e+bMnDkDGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGIZhGKmRSQVI7gfwVgDLptSGQcnrC5m/l+f+L/ucZbnnMg6KyE9WbqFRGZKbAJwF950tGz6eFZGPK3LrAbwR07uvynhBRH53EoEQJeGkMm1ERCbuu+GH5CEAbyooOigiF3nkbgfwwdoalmPS7z5Eaz8VINMqTEGmD8nbUKwg8CnIkGQKAuCOSQUmVhIRWQtg96RyLeLLTTdgRnlXyevf8gmR3FVDW8r4roh8YFKhoPGfiFwWItcCBiLyoaYbMWuQvB/AqwqK5kXklz1yKwC8o5ZGFfO5EKFgJ6mLQxYRWd50G2YNkqsAvL2k+EuK+J9MuTk+7hORz4QInhVZ8d8D+D3lPccB/BeA08r7srNXo5mpqkp8PoDLlfd8oeJnGZPxYQDnFLz+pIj8TpkQyZsAXBhR724A34F/FnPEcRH5s4i64iB5gB4StsPH86na0SdI3kRyoeSar1RkTyrfmY8HU/Vxamg9SlD/003W31dIHiq55F5nnOTdk+vFDHyfSr+eqLHezUrdG+qqu8+QvLPker9YQTaG21P0rxZI3qV0blNN9fo4XEedBkDyWMk136rIPTypVmR4OlX/aoPknK+HXa/PcJC8v+SSe3+USF4XpBpjrk/Vx1rRejnFem5Tqlo7rbqMMSTXkjwRcs1JHp1IJRbzSKIu1g/JdUpnp7LC2psL2jJYPlzaq8htnVQrsqTqXzJIPqT0+brIz+/XBW0JdJMkzxdc8rkKsmVTxVXYnqJ/yanrRia5s47PNXRIPl5y2bcpcg9MrhffR50t6zR1dF75zPun3AVjCN2Ub9FEiTqDGKQaYzam6F9jkNyiXIB7Jvw8L3X1o++QXEG3cHgmd8nPkLxBkT0QoBgjaltfaxUkDysXYlXFz9nr+5C6+9Fn6KZ857hUSR5S5LSFXi+p+tcKYi8GyVXKR8ymY9cCSK6nm7p9kYud75MVZL3rWAoPpOhfq1AuiPeCa1czVR/6CMkH6Wa0skqyQPJuRW57hIL08zutcNHuLJHbbxezGeh8ymN0FiGrJHU767em6F8roT5XviL3/vXK+7sb7NYBSO6jC2nPKskclRmnoVwox1L1r7VoV2iC955pqg99gC6c/dhQSUbDrRep7OUgeUOEgpDkmlR9bC0VLuKJ4ftsj0hDkFxNt3D4dE5J1Chc7XtT6N5mqrpgXLg0SW5uug+zDF1Uw7Gckpyk7qxvi/lSU/VvUhpL5hBxUY6LyOun2hjj+9AtDl4D4Dy4HANnD5+f1vJnRd7od4Sk+0lB3SklSwnNtmIKUjuXAzg399oLAO71CZHcE1HnqbYqCNCgkgzRUs7k+WwtrTAAACRvAfCG3MsDAE+JyB955FajPK1QFf42Qnb2YfWNOI833dZZh27h8DDJIxmf5Aj1zCdHIlyR1n+vrUgwV2Us28VkeF2CbjH3Z+ByaC2Hy8k2APCfIvJuj9wtAD4aWm8Xvtemh1sjmkscZoBu2+1b4JRjxADOVyhVkCEfiaj6vgjZZLRCSUTks1AuGG2vSJ1cCuDludfmAXzTJ0RyJ4qzN1ZhXkSuDJTtL9TDViqF1RvVIbmJ5CMkn6Db+zHySdSFvQg/hOzQWlcrLMmICgmt1yVpSL/4Wbi1kCynAXzVJxTpcH9PRD4WIZ+UVinJkL/2FXIWEpS1BLoA0dfkXh4AeFxEPu2R2wh3JGAoNpUfC5XwePY5lHpKkFyTGWbtzwy39lWQjUl2HbPo2AhttCSocOjnbyVpyGxzBVzoyYgBnLP+7z4huqni83zv8SEil4bKNkUrlQTQ58/J9gbEtZ2h0/zmgqJnK5xMe01E1Z08iq+1SjLEe1FJPpyqITPG27F06vY0gK/7hCKv93N2FF9NUN+f4E1pYyyGLn/WkeHj0NAX2UclvRPJ6yP8EDIya2eTtD4kANCHVl0IbWgDdIGIH4XzKV6C80Hm4YZZlyiyRwFcEFj1oyJycaBs47R9uDXiWl+h+SeVuRpLT8l9CcCjPiG62cRQBUGXFaRTkNylmPOJskH2DbrzDY/RHZtwLDPc8maDH8rmk9JNgnc3YxfoiiWpcnb81Uka0l2uBPCy3GvzAL7lE6KLmcuvyFdlXkTeGyjbGjqjJIBNC4cy/DX/kdzLC3DhIVoE9i9FVP35CNnW0CklGfI3vkLaOYmLoNswdQmK47O+osjGJKw+KCIfj5A3YqCbtvRxc9NtbAsk93CcM+v5oU9yVPPh6KKDg0nVP8ODfUk6HJ9MtZBTkgMVZE9E6MiOFP1LRReHWwDMP6nIVQBekXttHoA3YzudD/OqwDptM1WboFs99qFOb84qdGlKR4wsyUlWi/KNoTObqXoDiw+6zDIbZ39PAN3JVCcKlOQYyfWK7IMRCnIoVR+NCdG+uabblxouPf14lA1eO0Z6TYSC9O46d4oKX+5sn+CagW5lPZ8rYIHVkl0fiNCR/p1M1TWoh6304iwTulCTJT8SVI7MI3lrhIIspOqfEYn2TTbdvrrhYmc9y9EKsjFbcm07dZfos6Kw+CDPM3RZFn1yOyIURFVAo2WQ3Kh8qa3PPRsClzrrI6osHMawOkX/jClDPWzlpqbbOE1Y/sOwQGUKnHEHKvV2HWom0L7dpts3TViemd+7J53khggFsTMrZ4E+KArLnXV1xokupWkovZgtnHlI3qZ80fc33cZYPH3Tonxjzje0Y6RnCerRrN4DatoMy/2JuQqyMVO+lpN51tC+8abbFwLJGz1d8u6nIflAhII8lKqPRkJIrlS++BNNt3FS6IIViziiyK2lfsRFGeaszzLUfz23NN3GqpC8y9MP7XzDfYEKQro8wMYso90BTbevKp4ueIdCJG+OUJDeOuud3ZkYwizsZiT5SFmZiLxNEX9XRNX/ECFrdAn6HV76bsKmIbnO025vEjiWr6dUQd3NaMwY1A8JauUUJ8uTh1dZOAyd8u3NXhwjh3ZnNN2+PPQv/m1QZPcEKgip7EMxZpwuKYqnmV6Hmm54GZrL186nRM8c9wK+5Csk+Y1UDfFBT6CiiLxeEX83wnL5zgP4pwA5Y9ZgeQRtK6wJydWe5mmJHbYyfOFwf6o+Gh1Au1sabtuJ0HYxPMp3juSKFP0zOoRy03hDPWps01ZPm7yh6iS3M8yKnKFlPjGKIPkN5eZJnpnQ1xhFbg2r5/JdyDwv0PasGz60uylxW8r2rJP6lty9LLciC57HHC0jv6HRBkWhP2pZi/LdxHEm+SKlOFPwfIYuN5c56wX0fQq4iM/4Cpkm+UFpBhIR+WFF9p0Azh3+PYA70Sr7QO55MHycAvDFwPYafYN6BpG1Nda92VOvdmTC7XRDpryFyD9nH3PDhznrJdj55yVoQ6u6zo731VshivkwxkdJDzxvzZc9JyJvqNbC/mHDrRIq3JBTz39Lco+n+AuK7A4Ar8F4+DRShEHBAxgPuU4DuC+wyUbfob5JaappdXwVKXLr6LbzzhU8nvc8TnJGM1pOE7MkHkTk9wF81/OWD06rLvqDCbVjpK/C+Iz2vKOetSij5wGAlwC8AODLIe3tE+aTVKBu/4TkJgB/WFL8HRH5MY/sLQDeC+CczMtV/JEFAI+JyGWTtLWPmJJURFGUgyJyUR2fXcE32g/ghwqKBnAjhbzCLABYDuCUiPzohE3tJTbcqs7XPGUXktwY8qH0Z5H8F0X2LgCvRbGTPvq/aJ1kHsDukPb2EbMkEzCc0Sr9YQkZdoVaEZKrAPwBlh4lPbIUI4XIWpTR87Mi8uOTtrWvnNV0A7qEiCz33dQkOYmi0B9M+JeK+K8CeCXGypBlPvf/yLK8NCzzWUUjhw23JueTvkJl+JR933qMF/7ynBaRaz2yNwJ46/Bf31Ar//oAwFMi8qdV2mg4bLgVAMkHAfy85y2fEJG/Uj4jxlnfC+DCzEtlTnq2HHDKFzzB0FfMkgQgIpcob1nvK6R/7/y3FdktAN6IpZbjpeFzmWWZB+A91McoxixJBMq08PGyJA2RVuQRuPATH0V+ynMi8lOKnFGAWZI4Pucpe91wkXARwyDEMrTsLXdhPJtVFPa+gLHTnrUoFp8VgVmSSOg2QRUt5gFYbBnoTqot3VWoTPmuBfARjMNPsvh8kgGAoyJyadlnG37MkkSibYLKDa18227/XKnqcjgFKfM5ynySOVOQOGydZAqIiCjrJ3sA+JTpGRH5tEd+I9xsVlYhiixH1kkfcdBTr1EBG25NCZLbALw/RLbilO/rsFgxsivrZSvsp0Xk4pA2GWNsuDUlROQDAJ4LEP1XXyHJrRg76/Mo3qte5KwPYPFZU8EsyZTRwurzVLAiDwN4OYpjsLLky58xX2Q6mCWZMhMGOfqmkEdTvnlnHVjspOdDUZbBTfn+8wTtMDyYJakBkjvhUvt4UaZ81wF4D1xG+LwFKXpG5v+nRORXIrpgZDAlqYnY3YxDRcvOiOWtftko4LStrE8XG27VxzOesid9gnR5hy+Am6JfhvFU/bLhY3TeyPLM8+jxP4HtNUowS1ITU4jyfXXu5eVF78XiH7pTZkWmjy0m1gDJ5z3F3uwkwzRFr4ZTiqo+yOj53qiGG4WYkkyZYYzVK8rKReRDHtnrAPw0xgqCzPNZuf9HjIZex20zVT2Ykkyfv/CUeZNxA/hFOAXLW4z8yvpo6DV63zyUCGIjHPNJpghdqtErSooHIlLmV4yc9asw/uHKvzevOFkeFZErJ2yuURFTkikS6aw/DDejVeR7jCjySf5PRN4c2mZDx4ZbU0JJU6ptyd0GF8AILPVBkHl9kHt9AOCbEzTTCMAsyZSIyJ+1BsBvY+yLAOWWJO+TPGuJHerHLMkUUFbX/04RvwLAeSiftcozen0ewFa9dUYsZkkiIXkbgA+XlStWZDNcfNbLsNhCjPCti/yviLwtvOVGVUxJIol01vdhHJ+lOelZTovIaydppxGODbciGN7kZfhit0bO+gUYx2MVKcTZWLouMg/gP0Laa4RhliSCyGTXf4zFya6rxGYBLn9WYT4vox7MkgSiOOtaDNWvwTnr+ZVznw+C4d9fCWmvYSSF5IbCgw2HKLI3kXyaS4+KPlPyWMg8+xLbGUZ78CkIyQ2K7CMFirFQ8Lww/LzR84skVybqomGEQ/KBCCuyje5E3Kwi5B9l7E3VR8OIIkJBVpA8WmAhfIoxYupnxhvVse27E0DypKf4MUX8fRgnmEPBs4+vVniPYTQLyVURVmQjyZMVLEYRPsU0jPag3Mi3KrL7AxWEJG9I1UfDCIbO4S5Fkb09QkFsytfoBsqN7J2WJXksVENS9c8woiB5yHMfe/0FKtPFCrtS9dEwogj9pSe5nm49JIhU/TN0bArYg3Kzfk0Rfx/KN05pfDFQzjDSQRdjFWpFbgu1ICTnUvXRMKJQbuR1iuyJCCVZnaqPhhEMyT2+u1iRvT9CQQ6k6qNhRBGhINezWizWxJ9tNIc57jno9wm8+bMAXIPwa/r1QDnDSAfJ1RFW5NZQC2JWxOgMyn28RZENXlmnslHLMFoBye2hv/Qkd0YoiEX5Gt0gQkHWRCiIDbM6gDnuAEge8RR/TxH/jYiqtYkAw2gHEVbkZrMis0/vLYlys2rxWddEVO09O9EwWoFmCRTZGGfdrIjRDZT7+HqP3MoYBaE7fNQw2g3JfaG/9Jqsgu9ELMNoDxEKsilCQWyY1UF66biTPOMp1o41+PWIqu18Q6P90EXqhlqRe8yKGDOPch9vipDVuClVHw0jGJI7Qn/p6bLBB5Oqj4YRRYSCeM8jMQWZbXrjuJM86il+UhH/zYiq/ztC1jDSEWFF7jYr0m96YUmUm/UfFfH3RFR9R4SsYaSByrZaRfZhsyLGzKPcx2s8ctfFKAjJ61L206iPmT7HneR+AD9RUjwvIj/gkT0K4ILAql8QkXMDZY2WMes+SZmCQFGQbQhXEJiCzBYzqySKT6DFUL0/ourdEbKGkQaSN4Q61CT3xjgiqfpoGFEo93FpDBXdMdIxbE7ZT8MIgnHxWUdiNCRVHw0jiggF2WIKYsw89J8L8oQiG4MdmWC0HyrJGRTZXTEakqqPhhGFch9vjZDVuDtVHw0jGJJ3hv7SkzwcoyGp+mgYUSj3cekZhCQ3xygIyVUp+2k0Q+djt+gc8reUFJ8SkVd6ZBcQHnVwWkR+MFDW6BCzEJZSpiBQFGQHIvpvCtIfOq0kik+gnUF4RUTV/xYhaxhpILkx1KEmeSjGEUnVR8OIQrmPb/TIrYtREJK3pOyn0TyddNxJ7gXwC2XlIlLaL7oUp2eH1u37bGM26apPEqog98AUxJiQzikJ/afVPqaIXx1R9VMRsoaRBpKrQh1qWppSow8o93FpfJamXBXYnrKfhhEElUyKiuyLMRqSqo9GO+mST+LLpPiJsgK6zCfnRNT7qQhZYwboxGwNyUMA3lRS/KyInO+RjbEE3txcRj/oiiUpUxAoCvJQTKWmIAbQASVRLMG9ivjPRVT97QhZw0gDlZNuFdkT5qwbM49yH2/wyN0coyAkb07YTaPltNZxZ1x8VpQlsPATI0ubfZJQBdkVU6kpiJGnlUpCf3zWo4r4O6bZFsM4q+kG5CG5FsB5ZeUicrFH1nd4aNX6g4ZqZoGMZCgO9RaPXOxmqmASXh6jAVr160e336M0nL1OZz2C3SJyWUN1Gwlom0/i2+/xybICNhilawpiJIP+5AzHFNmmWJnq+hjN0ZrhFlk+XFKGWTsBvLOWRvk5KCIXNVCvkZg2Kck6AOfDDQEHw5eXicjHKsiuQVg4fNFwczB8LCspBwCIyLUB9RmGYRiGYRiGYRiGYRiGYRiGYRiGYRiGYRiGYRiGUYH/B/G6mXDDD5oEAAAAAElFTkSuQmCC" class="breathe"/>
 </g>
-<text x="356" y="92" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="19" letter-spacing="6" fill="#6f687f" class="rise r2">PLAIN-PROXY INTELLIGENCE</text>
+<g class="rise r2" opacity=".9">
+  <circle cx="300" cy="80" r="4" fill="#e35a17"/><circle cx="300" cy="80" r="4" fill="#e35a17" class="pls"/>
+</g>
+<text x="324" y="86" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="19" letter-spacing="6" fill="#6f687f" class="rise r2">PLAIN-PROXY INTELLIGENCE</text>
 <g class="rise r3">
-  <text x="60" y="240" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="128" letter-spacing="10" fill="url(#gTitle)">YUEL</text>
-  <g class="sweep" opacity=".9"><rect x="60" y="128" width="70" height="128" fill="url(#gShine)" transform="skewX(-18)"/></g>
+  <text x="60" y="252" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="124" letter-spacing="10" fill="url(#gTitle)" class="hue">YUEL</text>
+  <g class="sweep" opacity=".9"><rect x="60" y="140" width="70" height="124" fill="url(#gShine)" transform="skewX(-18)"/></g>
 </g>
 <g class="rise r4">
-  <text x="64" y="292" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="21" letter-spacing="3" fill="#2b2537">live proxies · scored · tiered · geo-tagged</text>
+  <text x="64" y="300" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="21" letter-spacing="3" fill="#2b2537">live proxies · scored · tiered · geo-tagged</text>
 </g>
 <g class="rise r5">
-  <text x="64" y="330" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="2" fill="#6f687f">socks5 / socks4 / http — refreshed every 30 minutes, straight from CI</text>
+  <text x="64" y="338" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="2" fill="#6f687f">socks5 / socks4 / http — refreshed every 30 minutes, straight from CI</text>
 </g>
 <g class="rise r6">
-  <circle cx="74" cy="374" r="6" fill="#6fdc8c"/><circle cx="74" cy="374" r="6" fill="#6fdc8c" class="pls"/>
-  <text x="92" y="380" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="2" fill="#6f687f">pipeline healthy — last run committed to <tspan fill="#e35a17">data/out/</tspan></text>
+  <circle cx="74" cy="378" r="6" fill="#6fdc8c"/><circle cx="74" cy="378" r="6" fill="#6fdc8c" class="pls"/>
+  <text x="92" y="384" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="2" fill="#6f687f">pipeline healthy — last run committed to <tspan fill="#e35a17">data/out/</tspan></text>
 </g>
 <g class="rise r7">
-  <rect x="880" y="330" width="260" height="58" rx="29" fill="none" stroke="#e35a17" stroke-width="1.6"/>
-  <circle cx="912" cy="359" r="7" fill="#e35a17" class="beat"/>
-  <text x="932" y="366" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" letter-spacing="3" fill="#e35a17">VIEW LIVE DASHBOARD</text>
+  <rect x="872" y="330" width="272" height="60" rx="30" fill="none" stroke="#e35a17" stroke-width="1.6"/>
+  <rect x="872" y="330" width="272" height="60" rx="30" fill="none" stroke="#e35a17" stroke-width="1.6" class="breathe" opacity=".5"/>
+  <circle cx="906" cy="360" r="7" fill="#e35a17" class="beat"/>
+  <text x="926" y="367" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" letter-spacing="3" fill="#e35a17">VIEW LIVE DASHBOARD</text>
 </g>
+<rect x="0" y="60" width="1200" height="3" fill="url(#gBeam)" class="scan" clip-path="url(#clip)"/>
 </svg>

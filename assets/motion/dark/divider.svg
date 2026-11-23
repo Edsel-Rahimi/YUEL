@@ -1,38 +1,61 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="30" viewBox="0 0 1200 30" role="img" aria-label="divider">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="34" viewBox="0 0 1200 34" role="img" aria-label="divider">
 <style>
 .pt{animation:pt 8s linear infinite}
-@keyframes pt{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-260px);opacity:0}}
+@keyframes pt{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-300px);opacity:0}}
+.orb{transform-box:fill-box;transform-origin:center;animation:orb 9s linear infinite}
+.o2{animation-duration:14s;animation-direction:reverse}
+.o3{animation-duration:22s}
+@keyframes orb{to{transform:rotate(360deg)}}
+.breathe{transform-box:fill-box;transform-origin:center;animation:br 4.2s ease-in-out infinite}
+@keyframes br{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.05);opacity:.85}}
 .sweep{animation:sw 6.5s ease-in-out infinite}
-@keyframes sw{0%,55%{transform:translateX(-620px) skewX(-18deg)}100%{transform:translateX(1240px) skewX(-18deg)}}
+@keyframes sw{0%,58%{transform:translateX(-640px) skewX(-18deg)}100%{transform:translateX(1300px) skewX(-18deg)}}
+.scan{animation:sc 7s cubic-bezier(.4,0,.6,1) infinite}
+@keyframes sc{0%{transform:translateY(-10px);opacity:0}12%{opacity:1}88%{opacity:1}100%{transform:translateY(300px);opacity:0}}
 .wv{animation:wv 11s ease-in-out infinite alternate}
-.w2{animation-duration:16s}
-@keyframes wv{to{transform:translateX(-120px)}}
+.w2{animation-duration:16s}.w3{animation-duration:23s}
+@keyframes wv{to{transform:translateX(-150px)}}
 .spin{transform-box:fill-box;transform-origin:center;animation:sp 7s linear infinite}
 .rev{animation-direction:reverse}
 @keyframes sp{to{transform:rotate(360deg)}}
 .beat{transform-box:fill-box;transform-origin:center;animation:bt 2.4s ease-in-out infinite}
-@keyframes bt{0%,100%{transform:scale(1)}12%{transform:scale(1.12)}24%{transform:scale(.98)}36%{transform:scale(1)}}
+@keyframes bt{0%,100%{transform:scale(1)}12%{transform:scale(1.16)}24%{transform:scale(.97)}36%{transform:scale(1)}}
 .glow{animation:gw 3.2s ease-in-out infinite}
-@keyframes gw{50%{opacity:.4}}
+@keyframes gw{50%{opacity:.35}}
 .dash{stroke-dasharray:7 9;animation:dsh 1.4s linear infinite}
 @keyframes dsh{to{stroke-dashoffset:-32}}
 .pk{animation:pk 3.2s linear infinite}
 .p2{animation-delay:1.1s}.p3{animation-delay:2.2s}
 @keyframes pk{0%{transform:translateX(0);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateX(var(--d,880px));opacity:0}}
 .pls{transform-box:fill-box;transform-origin:center;animation:pls 2.6s ease-out infinite}
-@keyframes pls{0%{transform:scale(.6);opacity:.85}100%{transform:scale(2.4);opacity:0}}
+@keyframes pls{0%{transform:scale(.6);opacity:.85}100%{transform:scale(2.6);opacity:0}}
 .flt{animation:flt 5.5s ease-in-out infinite}
-@keyframes flt{50%{transform:translateY(-6px)}}
+.f2{animation-delay:-2.7s}
+@keyframes flt{50%{transform:translateY(-9px)}}
 .rise{animation:rs .9s cubic-bezier(.2,.7,.2,1) both}
 .r2{animation-delay:.15s}.r3{animation-delay:.3s}.r4{animation-delay:.45s}.r5{animation-delay:.6s}.r6{animation-delay:.75s}.r7{animation-delay:.9s}.r8{animation-delay:1.05s}
-@keyframes rs{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes rs{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
 .blink{animation:bl 1.1s steps(2) infinite}
 @keyframes bl{50%{opacity:0}}
+.grid{animation:gd 3.4s linear infinite}
+@keyframes gd{to{stroke-dashoffset:-44}}
+.hue{animation:hue 9s linear infinite}
+@keyframes hue{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(18deg)}}
+.skew{animation:skw 12s ease-in-out infinite alternate}
+@keyframes skw{from{transform:translateX(0)}to{transform:translateX(-360px)}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important}}
 </style>
 <defs>
-<linearGradient id="gTitle" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#f4732c"/><stop offset=".55" stop-color="#f4a12c"/><stop offset="1" stop-color="#8b5cf6"/>
+<linearGradient id="gTitle" x1="0" y1="0" x2="1" y2="1">
+  <stop offset="0" stop-color="#f4732c">
+    <animate attributeName="stop-color" values="#f4732c;#f4a12c;#8b5cf6;#f4732c" dur="9s" repeatCount="indefinite"/>
+  </stop>
+  <stop offset=".55" stop-color="#f4a12c">
+    <animate attributeName="stop-color" values="#f4a12c;#8b5cf6;#f4732c;#f4a12c" dur="9s" repeatCount="indefinite"/>
+  </stop>
+  <stop offset="1" stop-color="#8b5cf6">
+    <animate attributeName="stop-color" values="#8b5cf6;#f4732c;#f4a12c;#8b5cf6" dur="9s" repeatCount="indefinite"/>
+  </stop>
 </linearGradient>
 <linearGradient id="gLine" x1="0" y1="0" x2="1" y2="0">
   <stop offset="0" stop-color="#f4732c" stop-opacity="0"/>
@@ -43,17 +66,26 @@
   <stop offset="0" stop-color="#1f1b2b"/><stop offset=".6" stop-color="#2e2a3b"/><stop offset="1" stop-color="#1f1b2b"/>
 </linearGradient>
 <linearGradient id="gShine" x1="0" y1="0" x2="1" y2="0">
-  <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+  <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".85"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
 </linearGradient>
-<radialGradient id="gOrL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 40) scale(560 320)">
-  <stop offset="0" stop-color="#f4732c" stop-opacity=".5"/><stop offset="1" stop-color="#f4732c" stop-opacity="0"/>
+<linearGradient id="gBeam" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#f4732c" stop-opacity="0"/>
+  <stop offset=".5" stop-color="#f4732c" stop-opacity=".55"/>
+  <stop offset="1" stop-color="#f4732c" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="gOrL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 40) scale(620 360)">
+  <stop offset="0" stop-color="#f4732c" stop-opacity=".5"><animate attributeName="stop-opacity" values=".5;.9;.5" dur="6s" repeatCount="indefinite"/></stop>
+  <stop offset="1" stop-color="#f4732c" stop-opacity="0"/>
 </radialGradient>
-<radialGradient id="gOrR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1140 40) scale(560 320)">
-  <stop offset="0" stop-color="#8b5cf6" stop-opacity=".5"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+<radialGradient id="gOrR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1140 40) scale(620 360)">
+  <stop offset="0" stop-color="#8b5cf6" stop-opacity=".5"><animate attributeName="stop-opacity" values=".5;.9;.5" dur="7.5s" repeatCount="indefinite"/></stop>
+  <stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
 </radialGradient>
-<filter id="fGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+<filter id="fGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
+<filter id="fSoft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="18"/></filter>
 </defs>
-<rect x="0" y="14" width="1200" height="2" rx="1" fill="url(#gLine)"/>
-<g class="pk"><g transform="translate(-10 3)"><path d="M11 0 5 11h5l-1 9 8-12h-5z" fill="#f4a12c"/></g></g>
-<g class="pk p2" style="--d:1000px"><circle cx="0" cy="15" r="4" fill="#8b5cf6"/></g>
+<rect x="0" y="16" width="1200" height="2" rx="1" fill="url(#gLine)"/>
+<g class="skew" opacity=".8"><rect x="0" y="14" width="340" height="6" rx="3" fill="url(#gShine)" opacity=".25"/></g>
+<g class="pk p1" style="--d:1180px"><g transform="translate(-20 3)"><path d="M11 0 5 11h5l-1 9 8-12h-5z" fill="#f4a12c" filter="url(#fGlow)"/></g></g><g class="pk p2" style="--d:1180px"><g transform="translate(-80 3)"><path d="M11 0 5 11h5l-1 9 8-12h-5z" fill="#f4a12c" filter="url(#fGlow)"/></g></g><g class="pk p3" style="--d:1180px"><g transform="translate(-140 3)"><path d="M11 0 5 11h5l-1 9 8-12h-5z" fill="#f4a12c" filter="url(#fGlow)"/></g></g>
+<circle cx="0" cy="17" r="4" fill="#8b5cf6" class="pk p2" style="--d:1200px"/>
 </svg>

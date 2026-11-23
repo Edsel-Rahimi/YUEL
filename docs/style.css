@@ -24,7 +24,7 @@
   --ink: #2b2537;
   --ink-dim: #6f687f;
   --hair: rgba(43, 37, 55, 0.16);
-  --accent: #e35a17;
+  --accent: #c2410c;
   --accent-ink: #fffdf8;
   --shadow: 0 20px 44px rgba(43, 37, 55, 0.12);
 }
@@ -81,9 +81,13 @@ body {
   border-bottom: 1px solid var(--hair);
 }
 
-.bar-mark { display: grid; gap: 4px; width: 30px; }
-.bar-mark i { height: 2px; background: var(--ink); border-radius: 2px; }
-.bar-mark i:nth-child(2) { width: 75%; }
+.bar-logo {
+  width: 34px;
+  height: 38px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(244, 115, 44, 0.35));
+}
+[data-theme="light"] .bar-logo { content: url("brand/yuel-mark-black.png"); filter: none; }
 
 .bar-link {
   color: var(--ink);
@@ -486,13 +490,13 @@ img.sel-flag { display: none; }
   .proxy .scorecell { display: none; }
   .proxy .when { display: none; }
   .views { margin-left: 0; }
+  .bar-logo { width: 30px; height: 33px; }
   .hero-meta .right { margin-left: 0; }
 }
 
 @media (max-width: 560px) {
   .bar { gap: 14px; height: 62px; }
   .bar-link { display: none; }
-  .bar-mark { display: grid; }
   .proxy { grid-template-columns: 36px 1fr 44px; gap: 10px; }
   .flag-wall { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
   .proxy .tags { display: none; }
