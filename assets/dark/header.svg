@@ -12,11 +12,11 @@
   <text x="600" y="264" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#FC671F">PLAIN-PROXY INTELLIGENCE · REFRESHED HOURLY</text>
   </g>
   <g class="m-fade" style="animation-delay:0.30s">
-  <text x="600" y="326" text-anchor="middle" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif"><tspan font-size="42" font-weight="800" fill="url(#brand-dark)">1,940</tspan><tspan dx="10" font-size="28" font-weight="700" fill="#F7F6F9">alive</tspan><tspan dx="18" font-size="19" font-weight="500" fill="#CCC5D5" opacity="0.62">· 86 countries · 24 sources</tspan></text>
+  <text x="600" y="326" text-anchor="middle" font-family="Space Grotesk, Inter, system-ui, -apple-system, Segoe UI, sans-serif"><tspan font-size="42" font-weight="800" fill="url(#brand-dark)">2,133</tspan><tspan dx="10" font-size="28" font-weight="700" fill="#F7F6F9">alive</tspan><tspan dx="18" font-size="19" font-weight="500" fill="#CCC5D5" opacity="0.62">· 90 countries · 24 sources</tspan></text>
   </g>
   <g class="m-fade" style="animation-delay:0.45s">
   <rect x="480" y="354" width="240" height="3" rx="1.5" fill="url(#brand-dark)"/>
   <text x="600" y="396" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="middle" fill="#CCC5D5">SOCKS4 · SOCKS5 · HTTP — ONE CLI · JSON OUTPUT · NO TUNNELS BY DESIGN</text>
-  <text x="600" y="446" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="middle" fill="#CCC5D5">score p50 63.975 — every hop handshake-verified each run</text>
+  <text x="600" y="446" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="middle" fill="#CCC5D5">score p50 64.79 — every hop handshake-verified each run</text>
   </g>
 </svg>
