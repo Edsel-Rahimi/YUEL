@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "JP",
-    "score": 27.39,
+    "score": 75.56,
+    "tier": "silver",
+    "latency": 350,
+    "last_checked": "2026-11-23T08:28:28+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "133.232.90.85",
+    "port": 80,
+    "type": "http",
+    "country": "JP",
+    "score": 28.11,
     "tier": "bronze",
-    "latency": 7397,
-    "last_checked": "2026-11-23T06:40:48+00:00",
+    "latency": 5494,
+    "last_checked": "2026-11-23T08:28:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

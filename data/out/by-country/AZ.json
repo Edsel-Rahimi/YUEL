@@ -1,13 +1,13 @@
 [
   {
-    "ip": "185.43.189.253",
-    "port": 3629,
-    "type": "socks4",
+    "ip": "185.129.0.78",
+    "port": 8080,
+    "type": "http",
     "country": "AZ",
-    "score": 78.98,
-    "tier": "silver",
-    "latency": 270,
-    "last_checked": "2026-11-23T06:40:48+00:00",
+    "score": 43.39,
+    "tier": "bronze",
+    "latency": 1881,
+    "last_checked": "2026-11-23T08:28:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

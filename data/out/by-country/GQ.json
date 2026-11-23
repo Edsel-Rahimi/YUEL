@@ -4,10 +4,10 @@
     "port": 8080,
     "type": "http",
     "country": "GQ",
-    "score": 65.09,
+    "score": 68.56,
     "tier": "silver",
-    "latency": 913,
-    "last_checked": "2026-11-23T06:40:48+00:00",
+    "latency": 356,
+    "last_checked": "2026-11-23T08:28:28+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
