@@ -1,0 +1,3 @@
+# YUEL · UZ · http · 2 proxies · generated 2026-11-23T18:01:51 UTC
+http://90.156.160.234:3128
+http://195.158.8.123:3128

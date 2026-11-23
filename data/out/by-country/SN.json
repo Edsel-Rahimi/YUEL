@@ -1,25 +1,25 @@
 [
   {
-    "ip": "196.1.95.124",
-    "port": 80,
-    "type": "http",
-    "country": "SN",
-    "score": 76.86,
-    "tier": "silver",
-    "latency": 276,
-    "last_checked": "2026-11-23T16:55:45+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
     "ip": "196.1.93.16",
     "port": 80,
     "type": "http",
     "country": "SN",
-    "score": 76.57,
+    "score": 70.14,
     "tier": "silver",
-    "latency": 279,
-    "last_checked": "2026-11-23T16:55:45+00:00",
+    "latency": 304,
+    "last_checked": "2026-11-23T17:56:36+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "196.1.95.124",
+    "port": 80,
+    "type": "http",
+    "country": "SN",
+    "score": 69.37,
+    "tier": "silver",
+    "latency": 314,
+    "last_checked": "2026-11-23T17:56:36+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -28,10 +28,22 @@
     "port": 80,
     "type": "http",
     "country": "SN",
-    "score": 28.91,
+    "score": 44.51,
     "tier": "bronze",
-    "latency": 4541,
-    "last_checked": "2026-11-23T16:55:45+00:00",
+    "latency": 1127,
+    "last_checked": "2026-11-23T17:56:36+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "154.65.39.8",
+    "port": 80,
+    "type": "http",
+    "country": "SN",
+    "score": 43.5,
+    "tier": "bronze",
+    "latency": 1347,
+    "last_checked": "2026-11-23T17:56:36+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

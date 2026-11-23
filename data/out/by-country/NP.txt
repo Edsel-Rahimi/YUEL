@@ -1,0 +1,2 @@
+# YUEL · NP · 1 proxies · generated 2026-11-23T18:01:51 UTC
+socks4://110.34.28.67:1080

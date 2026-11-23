@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "200.192.236.242",
+    "port": 1080,
+    "type": "socks4",
+    "country": "CR",
+    "score": 92.44,
+    "tier": "gold",
+    "latency": 123,
+    "last_checked": "2026-11-23T17:56:36+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
