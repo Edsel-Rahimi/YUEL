@@ -1,2 +1,2 @@
-# YUEL · MN · 1 proxies · generated 2026-11-23T04:02:27 UTC
-socks4://49.0.156.20:32000
+# YUEL · MN · 1 proxies · generated 2026-11-23T05:14:58 UTC
+http://202.179.2.250:8080

@@ -1,4 +1,2 @@
-# YUEL · IR · socks4 · 3 proxies · generated 2026-11-23T04:02:27 UTC
+# YUEL · IR · socks4 · 1 proxies · generated 2026-11-23T05:14:58 UTC
 socks4://80.191.46.62:1099
-socks4://151.232.18.66:5678
-socks4://5.160.103.246:8080

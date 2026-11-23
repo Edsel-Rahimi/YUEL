@@ -1,13 +1,13 @@
 [
   {
-    "ip": "38.199.88.1",
+    "ip": "138.117.231.133",
     "port": 999,
     "type": "http",
     "country": "GT",
-    "score": 96.37,
+    "score": 95.94,
     "tier": "gold",
-    "latency": 118,
-    "last_checked": "2026-11-23T03:56:40+00:00",
+    "latency": 86,
+    "last_checked": "2026-11-23T05:09:26+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
