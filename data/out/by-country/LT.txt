@@ -1,3 +1,4 @@
-# YUEL · LT · 2 proxies · generated 2026-11-23T08:34:39 UTC
-http://88.119.139.237:53281
+# YUEL · LT · 3 proxies · generated 2026-11-23T09:59:37 UTC
+socks5://78.63.115.20:8899
 http://84.55.46.85:8080
+socks5://185.193.26.120:9050
