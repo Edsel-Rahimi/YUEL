@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "114.111.151.41",
+    "port": 80,
+    "type": "http",
+    "country": "AU",
+    "score": 85.42,
+    "tier": "gold",
+    "latency": 216,
+    "last_checked": "2026-11-23T15:38:19+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "61.29.96.146",
+    "port": 80,
+    "type": "http",
+    "country": "AU",
+    "score": 27.72,
+    "tier": "bronze",
+    "latency": 6803,
+    "last_checked": "2026-11-23T15:38:19+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

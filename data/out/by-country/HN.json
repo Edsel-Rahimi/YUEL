@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "192.141.165.131",
+    "port": 999,
+    "type": "http",
+    "country": "HN",
+    "score": 92.76,
+    "tier": "gold",
+    "latency": 105,
+    "last_checked": "2026-11-23T15:38:19+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
