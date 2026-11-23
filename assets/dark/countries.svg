@@ -5,69 +5,69 @@
 
   <g class="m-fade" style="animation-delay:0.00s">
   <text x="48" y="50" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">WHERE THE ALIVE EXITS LIVE</text>
-  <text x="1152" y="50" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="end" fill="#CCC5D5">82 COUNTRIES · IP-GEOLOCATION VIA THE IPAPI TABLE</text>
+  <text x="1152" y="50" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" text-anchor="end" fill="#CCC5D5">72 COUNTRIES · IP-GEOLOCATION VIA THE IPAPI TABLE</text>
   </g>
   <g class="m-fade" style="animation-delay:0.05s">
   <text x="48" y="94" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">CN</text>
   <rect class="m-grow" style="animation-delay:0.15s" x="130" y="84" width="890.0" height="10" rx="5" fill="url(#brand-dark)" fill-opacity="1.00"/>
-  <text x="1152" y="94" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">756</text>
+  <text x="1152" y="94" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">739</text>
   </g>
   <g class="m-fade" style="animation-delay:0.10s">
   <text x="48" y="122" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">US</text>
-  <rect class="m-grow" style="animation-delay:0.20s" x="130" y="112" width="334.3" height="10" rx="5" fill="#6574C9" fill-opacity="0.79"/>
-  <text x="1152" y="122" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">284</text>
+  <rect class="m-grow" style="animation-delay:0.20s" x="130" y="112" width="390.2" height="10" rx="5" fill="#6574C9" fill-opacity="0.79"/>
+  <text x="1152" y="122" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">324</text>
   </g>
   <g class="m-fade" style="animation-delay:0.15s">
   <text x="48" y="150" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">ID</text>
-  <rect class="m-grow" style="animation-delay:0.25s" x="130" y="140" width="223.7" height="10" rx="5" fill="#6574C9" fill-opacity="0.74"/>
-  <text x="1152" y="150" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">190</text>
+  <rect class="m-grow" style="animation-delay:0.25s" x="130" y="140" width="190.3" height="10" rx="5" fill="#6574C9" fill-opacity="0.74"/>
+  <text x="1152" y="150" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">158</text>
   </g>
   <g class="m-fade" style="animation-delay:0.20s">
-  <text x="48" y="178" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">DE</text>
-  <rect class="m-grow" style="animation-delay:0.30s" x="130" y="168" width="71.8" height="10" rx="5" fill="#6574C9" fill-opacity="0.68"/>
-  <text x="1152" y="178" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">61</text>
+  <text x="48" y="178" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">GB</text>
+  <rect class="m-grow" style="animation-delay:0.30s" x="130" y="168" width="106.0" height="10" rx="5" fill="#6574C9" fill-opacity="0.68"/>
+  <text x="1152" y="178" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">88</text>
   </g>
   <g class="m-fade" style="animation-delay:0.25s">
-  <text x="48" y="206" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">GB</text>
-  <rect class="m-grow" style="animation-delay:0.35s" x="130" y="196" width="69.5" height="10" rx="5" fill="#6574C9" fill-opacity="0.63"/>
+  <text x="48" y="206" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">DE</text>
+  <rect class="m-grow" style="animation-delay:0.35s" x="130" y="196" width="71.1" height="10" rx="5" fill="#6574C9" fill-opacity="0.63"/>
   <text x="1152" y="206" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">59</text>
   </g>
   <g class="m-fade" style="animation-delay:0.30s">
   <text x="48" y="234" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">RU</text>
-  <rect class="m-grow" style="animation-delay:0.40s" x="130" y="224" width="55.3" height="10" rx="5" fill="#6574C9" fill-opacity="0.57"/>
-  <text x="1152" y="234" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">47</text>
+  <rect class="m-grow" style="animation-delay:0.40s" x="130" y="224" width="47.0" height="10" rx="5" fill="#6574C9" fill-opacity="0.57"/>
+  <text x="1152" y="234" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">39</text>
   </g>
   <g class="m-fade" style="animation-delay:0.35s">
-  <text x="48" y="262" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">HK</text>
-  <rect class="m-grow" style="animation-delay:0.45s" x="130" y="252" width="35.3" height="10" rx="5" fill="#6574C9" fill-opacity="0.52"/>
-  <text x="1152" y="262" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">30</text>
+  <text x="48" y="262" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">CH</text>
+  <rect class="m-grow" style="animation-delay:0.45s" x="130" y="252" width="45.8" height="10" rx="5" fill="#6574C9" fill-opacity="0.52"/>
+  <text x="1152" y="262" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">38</text>
   </g>
   <g class="m-fade" style="animation-delay:0.40s">
-  <text x="48" y="290" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">BR</text>
-  <rect class="m-grow" style="animation-delay:0.50s" x="130" y="280" width="34.1" height="10" rx="5" fill="#6574C9" fill-opacity="0.46"/>
+  <text x="48" y="290" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">IN</text>
+  <rect class="m-grow" style="animation-delay:0.50s" x="130" y="280" width="34.9" height="10" rx="5" fill="#6574C9" fill-opacity="0.46"/>
   <text x="1152" y="290" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">29</text>
   </g>
   <g class="m-fade" style="animation-delay:0.45s">
-  <text x="48" y="318" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">TR</text>
-  <rect class="m-grow" style="animation-delay:0.55s" x="130" y="308" width="34.1" height="10" rx="5" fill="#6574C9" fill-opacity="0.41"/>
-  <text x="1152" y="318" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">29</text>
+  <text x="48" y="318" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">PH</text>
+  <rect class="m-grow" style="animation-delay:0.55s" x="130" y="308" width="31.3" height="10" rx="5" fill="#6574C9" fill-opacity="0.41"/>
+  <text x="1152" y="318" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">26</text>
   </g>
   <g class="m-fade" style="animation-delay:0.50s">
-  <text x="48" y="346" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">CH</text>
-  <rect class="m-grow" style="animation-delay:0.60s" x="130" y="336" width="33.0" height="10" rx="5" fill="#6574C9" fill-opacity="0.35"/>
-  <text x="1152" y="346" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">28</text>
+  <text x="48" y="346" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">TH</text>
+  <rect class="m-grow" style="animation-delay:0.60s" x="130" y="336" width="30.1" height="10" rx="5" fill="#6574C9" fill-opacity="0.35"/>
+  <text x="1152" y="346" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">25</text>
   </g>
   <g class="m-fade" style="animation-delay:0.55s">
   <text x="48" y="374" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">ZW</text>
-  <rect class="m-grow" style="animation-delay:0.65s" x="130" y="364" width="29.4" height="10" rx="5" fill="#6574C9" fill-opacity="0.30"/>
+  <rect class="m-grow" style="animation-delay:0.65s" x="130" y="364" width="30.1" height="10" rx="5" fill="#6574C9" fill-opacity="0.30"/>
   <text x="1152" y="374" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">25</text>
   </g>
   <g class="m-fade" style="animation-delay:0.60s">
-  <text x="48" y="402" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">CO</text>
-  <rect class="m-grow" style="animation-delay:0.70s" x="130" y="392" width="28.3" height="10" rx="5" fill="#6574C9" fill-opacity="0.30"/>
-  <text x="1152" y="402" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">24</text>
+  <text x="48" y="402" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="1.5" fill="#F7F6F9">HK</text>
+  <rect class="m-grow" style="animation-delay:0.70s" x="130" y="392" width="26.5" height="10" rx="5" fill="#6574C9" fill-opacity="0.30"/>
+  <text x="1152" y="402" font-size="11.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" text-anchor="end" fill="#F7F6F9">22</text>
   </g>
   <g class="m-fade" style="animation-delay:0.75s">
-  <text x="48" y="444" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">+ 70 MORE COUNTRIES IN DATA/OUT/BY-COUNTRY/&lt;CC>.JSON</text>
+  <text x="48" y="444" font-size="10.5" font-weight="500" font-family="IBM Plex Mono, ui-monospace, SFMono-Regular, Menlo, monospace" letter-spacing="2.4" fill="#CCC5D5">+ 60 MORE COUNTRIES IN DATA/OUT/BY-COUNTRY/&lt;CC>.JSON</text>
   </g>
 </svg>
