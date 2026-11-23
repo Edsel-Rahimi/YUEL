@@ -1,13 +1,85 @@
 [
   {
+    "ip": "45.117.228.97",
+    "port": 4145,
+    "type": "socks4",
+    "country": "MY",
+    "score": 86.46,
+    "tier": "gold",
+    "latency": 216,
+    "last_checked": "2026-11-23T06:40:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "113.23.200.86",
+    "port": 8081,
+    "type": "http",
+    "country": "MY",
+    "score": 84.92,
+    "tier": "gold",
+    "latency": 226,
+    "last_checked": "2026-11-23T06:40:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "175.138.75.83",
+    "port": 8080,
+    "type": "http",
+    "country": "MY",
+    "score": 82.79,
+    "tier": "gold",
+    "latency": 241,
+    "last_checked": "2026-11-23T06:40:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "175.138.231.145",
     "port": 80,
     "type": "http",
     "country": "MY",
-    "score": 79.45,
+    "score": 74.54,
     "tier": "silver",
-    "latency": 235,
-    "last_checked": "2026-11-23T05:09:26+00:00",
+    "latency": 303,
+    "last_checked": "2026-11-23T06:40:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "219.93.101.62",
+    "port": 80,
+    "type": "http",
+    "country": "MY",
+    "score": 71.43,
+    "tier": "silver",
+    "latency": 360,
+    "last_checked": "2026-11-23T06:40:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "219.94.75.2",
+    "port": 8080,
+    "type": "http",
+    "country": "MY",
+    "score": 64.95,
+    "tier": "silver",
+    "latency": 941,
+    "last_checked": "2026-11-23T06:40:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "113.23.230.90",
+    "port": 8080,
+    "type": "http",
+    "country": "MY",
+    "score": 53.97,
+    "tier": "silver",
+    "latency": 1076,
+    "last_checked": "2026-11-23T06:40:48+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

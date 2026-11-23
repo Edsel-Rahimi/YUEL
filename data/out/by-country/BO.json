@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "200.58.180.75",
+    "port": 999,
+    "type": "http",
+    "country": "BO",
+    "score": 29.19,
+    "tier": "bronze",
+    "latency": 4938,
+    "last_checked": "2026-11-23T06:40:48+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

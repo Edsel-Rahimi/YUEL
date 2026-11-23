@@ -1,2 +1,2 @@
-# YUEL · MN · http · 1 proxies · generated 2026-11-23T05:14:58 UTC
-http://202.179.2.250:8080
+# YUEL · MN · http · 1 proxies · generated 2026-11-23T06:47:03 UTC
+http://202.21.101.37:8088
