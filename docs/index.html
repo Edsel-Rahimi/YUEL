@@ -3,59 +3,198 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YUEL — Live Proxies</title>
-  <meta name="description" content="Browse, filter and copy alive plain proxies — socks5, socks4, http — scored, tiered and mapped to countries with flags. Refreshed every 30 minutes.">
+  <title>YUEL — Live Free Proxies · socks5 / socks4 / http, scored & refreshed every 30 min</title>
+  <meta name="description" content="1,874 alive plain-text proxies from 24 sources — 7-stage validated, scored 0–100, tiered gold/silver/bronze, mapped to 73 countries with flags. Copy one or grab the whole list. No API key, no signup.">
+  <link rel="canonical" href="https://edsel-rahimi.github.io/YUEL/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="YUEL — Live Free Proxies">
+  <meta property="og:description" content="Alive socks5 / socks4 / http proxies, 7-stage validated, scored and refreshed every 30 minutes. Plain-text, copy-ready.">
+  <meta property="og:image" content="assets/social-card.png">
+  <meta property="og:url" content="https://edsel-rahimi.github.io/YUEL/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#1E0D2F">
   <link rel="icon" href="brand/yuel-mark-color.png">
   <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="style.css">
   <script>
     try {
-      var t = localStorage.getItem("yuel4-theme");
+      var t = localStorage.getItem("yuel-theme") || localStorage.getItem("yuel4-theme");
       if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
     } catch (e) {}
+    document.documentElement.classList.add("js");
   </script>
 </head>
 <body>
 
-  <div class="ghost-word" aria-hidden="true">YUEL</div>
+  <a class="skip" href="#list">Skip to the live list</a>
 
-  <nav class="bar">
-    <img class="bar-logo" src="brand/yuel-mark-color.png" alt="YUEL" width="34" height="38">
-    <a class="bar-link" href="#list">Proxies</a>
-    <a class="bar-link" href="#countries">Countries</a>
-    <a class="bar-link" href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener">GitHub</a>
-    <span class="bar-spacer"></span>
-    <span class="beacon"><i></i><b id="beacon-count">···</b> alive</span>
-    <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme"><span></span></button>
-    <a class="bar-cta" href="#list">View live list</a>
+  <!-- ambient background: aurora blobs + hairline grid (colors: tokens only) -->
+  <div class="aurora" aria-hidden="true">
+    <i class="blob blob-a"></i>
+    <i class="blob blob-b"></i>
+    <i class="blob blob-c"></i>
+  </div>
+
+  <nav class="nav" id="nav" aria-label="Main">
+    <a class="brand" href="#top">
+      <img src="brand/yuel-mark-color.png" alt="" width="32" height="36">
+      <span class="brand-name">YUEL</span>
+    </a>
+    <div class="nav-links">
+      <a href="#list">Proxies</a>
+      <a href="#countries">Countries</a>
+      <a href="#pipeline">Pipeline</a>
+    </div>
+    <span class="nav-spacer"></span>
+    <span class="beacon" title="Alive proxies in the latest run"><i></i><b id="beacon-count">1,874</b>&nbsp;alive</span>
+    <button class="theme-btn" id="theme-toggle" aria-label="Toggle light / dark theme"><span></span></button>
+    <a class="nav-cta" href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+      GitHub
+    </a>
   </nav>
 
-  <header class="hero">
-    <p class="hero-stamp" id="run-stamp">loading latest run…</p>
-    <h1 class="hero-title"><span class="line-1">Live</span> <span class="line-2">Proxies</span></h1>
-    <div class="hero-meta">
-      <span class="meta-item">Run <i class="dash"></i> <span id="meta-run">—</span></span>
-      <span class="meta-item mid"><b id="meta-total">—</b> unique items, checked &amp; scored for you</span>
-      <span class="meta-item right">UPT <i class="dash"></i> <span id="meta-up">—</span></span>
+  <header class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="overline" data-reveal><span class="live-dot"></span>Live · refreshed every 30 minutes</p>
+        <h1 class="hero-title" data-reveal style="--d:.06s">
+          Free proxies,<br><span class="grad-text">alive &amp; scored.</span>
+        </h1>
+        <p class="hero-sub" data-reveal style="--d:.12s">
+          YUEL pulls <b data-num="candidates">74,132</b> candidates from <b data-num="sources">24</b> public sources,
+          pushes them through a <b>7-stage</b> validation pipeline and serves the
+          <b data-num="alive">1,874</b> that answer right now — mapped to
+          <b data-num="countries">73</b> countries, scored 0–100, copy-ready.
+        </p>
+        <div class="hero-cta" data-reveal style="--d:.18s">
+          <a class="btn btn-primary" href="#list">
+            Browse live list
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+          </a>
+          <a class="btn btn-ghost" href="#pipeline">How it works</a>
+        </div>
+        <div class="hero-meta" data-reveal style="--d:.24s">
+          <span>run <i class="dash"></i> <span id="meta-run">2026-11-23 15:43 UTC</span></span>
+          <span>updated <i class="dash"></i> <span id="meta-ago">just now</span></span>
+          <span>pipeline <i class="dash"></i> GitHub Actions</span>
+        </div>
+      </div>
+
+      <div class="hero-panel" data-reveal style="--d:.2s">
+        <div class="term">
+          <div class="term-head"><i></i><i></i><i></i><span>yuel · live feed</span><b class="term-live" title="streaming" aria-hidden="true"></b></div>
+          <div class="term-body" id="feed-lines" aria-hidden="true"><span class="cursor" aria-hidden="true"></span></div>
+        </div>
+        <div class="float-chip chip-a"><b id="chip-gold">544</b> gold tier</div>
+        <div class="float-chip chip-b"><b id="chip-cc">73</b> countries</div>
+      </div>
     </div>
   </header>
 
-  <section class="figures">
-    <div class="figure"><b id="f-alive">—</b><span>alive now</span></div>
-    <div class="figure gold"><b id="f-gold">—</b><span>gold tier</span></div>
-    <div class="figure"><b id="f-countries">—</b><span>countries</span></div>
-    <div class="figure"><b id="f-tested">—</b><span>tested</span></div>
-    <div class="figure"><b id="f-sources">—</b><span>sources</span></div>
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track" id="ticker-track"></div>
+  </div>
+
+  <section class="stats" id="stats" aria-label="Latest run numbers">
+    <article class="stat" data-reveal>
+      <p class="stat-label">alive now</p>
+      <b class="stat-num" id="f-alive" data-count="1874">0</b>
+      <small>of <span id="f-tested-inline">40,963</span> tested this run</small>
+    </article>
+    <article class="stat" data-reveal style="--d:.06s">
+      <p class="stat-label">gold tier</p>
+      <b class="stat-num" id="f-gold" data-count="544">0</b>
+      <small><span id="f-goldpct">29</span>% of the alive list</small>
+    </article>
+    <article class="stat" data-reveal style="--d:.12s">
+      <p class="stat-label">countries</p>
+      <b class="stat-num" id="f-countries" data-count="73">0</b>
+      <small>flag-mapped coverage</small>
+    </article>
+    <article class="stat" data-reveal style="--d:.18s">
+      <p class="stat-label">tested</p>
+      <b class="stat-num" id="f-tested" data-count="40963">0</b>
+      <small>of <span id="f-candidates-inline">74,132</span> collected</small>
+    </article>
+    <article class="stat" data-reveal style="--d:.24s">
+      <p class="stat-label">sources</p>
+      <b class="stat-num" id="f-sources" data-count="24">0</b>
+      <small>public feeds scraped</small>
+    </article>
   </section>
 
-  <section class="countries" id="countries">
-    <h2 class="section-label">By country <i class="dash"></i> with flags</h2>
+  <section class="section" id="countries">
+    <div class="section-head" data-reveal>
+      <div>
+        <p class="overline">coverage</p>
+        <h2>By country</h2>
+      </div>
+      <p class="section-sub">Click a flag to filter the live list.</p>
+    </div>
     <div class="flag-wall" id="flag-wall"></div>
+    <div class="wall-more" data-reveal>
+      <button class="btn btn-ghost" id="show-all" hidden>Show all countries</button>
+    </div>
+  </section>
+
+  <section class="section" id="pipeline">
+    <div class="section-head" data-reveal>
+      <div>
+        <p class="overline">the pipeline</p>
+        <h2>How it stays alive</h2>
+      </div>
+      <p class="section-sub">End to end, every 30 minutes — no human in the loop.</p>
+    </div>
+    <ol class="steps">
+      <li class="step" data-reveal>
+        <span class="step-no">01</span>
+        <span class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.8 2.6 4.2 5.7 4.2 9S14.8 18.4 12 21c-2.8-2.6-4.2-5.7-4.2-9S9.2 5.6 12 3Z"/></svg>
+        </span>
+        <h3>Harvest</h3>
+        <p><b data-num="candidates">74,132</b> candidates pulled from <b data-num="sources">24</b> public feeds in the latest run.</p>
+      </li>
+      <li class="step" data-reveal style="--d:.08s">
+        <span class="step-no">02</span>
+        <span class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.1V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4 12 14.01l-3-3"/></svg>
+        </span>
+        <h3>Validate</h3>
+        <p><b data-num="tested">40,963</b> unique proxies through 7 connection stages — handshakes, timeouts, anonymity.</p>
+      </li>
+      <li class="step" data-reveal style="--d:.16s">
+        <span class="step-no">03</span>
+        <span class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.9 6.26L21.5 9.3l-4.75 4.57 1.15 6.63L12 17.27l-5.9 3.23 1.15-6.63L2.5 9.3l6.6-1.04L12 2Z"/></svg>
+        </span>
+        <h3>Score &amp; tier</h3>
+        <p>Survivors graded <b>0–100</b> into gold / silver / bronze by stability and speed.</p>
+      </li>
+      <li class="step" data-reveal style="--d:.24s">
+        <span class="step-no">04</span>
+        <span class="step-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        </span>
+        <h3>Publish</h3>
+        <p><b data-num="alive">1,874</b> alive proxies shipped as JSON + plain-text lists, every 30 minutes.</p>
+      </li>
+    </ol>
   </section>
 
   <main class="sheet" id="list">
-    <div class="controls">
+    <div class="sheet-head" data-reveal>
+      <div>
+        <p class="overline">dashboard</p>
+        <h2>The live list</h2>
+      </div>
+      <p class="count-line" id="count-line" aria-live="polite">connecting to the latest run…</p>
+    </div>
+
+    <div class="controls" data-reveal>
       <label class="field search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
         <input id="q" type="search" placeholder="Search IP…" autocomplete="off" spellcheck="false">
       </label>
       <label class="field">
@@ -79,24 +218,25 @@
         <button class="chip is-on" data-v="socks4">socks4</button>
         <button class="chip is-on" data-v="http">http</button>
       </div>
-      <div class="chips" data-kind="tier" role="group" aria-label="Tier">
-        <button class="chip is-on" data-v="gold">gold</button>
-        <button class="chip is-on" data-v="silver">silver</button>
-        <button class="chip is-on" data-v="bronze">bronze</button>
+      <div class="chips chips-tier" data-kind="tier" role="group" aria-label="Tier">
+        <button class="chip is-on t-gold" data-v="gold">gold</button>
+        <button class="chip is-on t-silver" data-v="silver">silver</button>
+        <button class="chip is-on t-bronze" data-v="bronze">bronze</button>
       </div>
       <button class="chip reset" id="reset">Reset</button>
-      <div class="views">
+      <div class="views" role="group" aria-label="View mode">
         <button id="mode-grid" aria-pressed="true">Rows</button>
         <button id="mode-text" aria-pressed="false">Text</button>
       </div>
     </div>
 
-    <p class="count-line" id="count-line">…</p>
-
-    <div id="flash-loading" class="flash">Loading the live list…</div>
+    <div id="flash-skeleton" class="skel-wrap" aria-hidden="true">
+      <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+      <div class="skel"></div><div class="skel"></div><div class="skel"></div>
+    </div>
     <div id="flash-error" class="flash is-error" hidden>
       <p id="flash-error-msg"></p>
-      <button id="retry" class="chip">Retry</button>
+      <button id="retry" class="btn btn-ghost">Retry</button>
     </div>
     <div id="flash-empty" class="flash" hidden>Nothing matches these filters — try widening them.</div>
 
@@ -104,16 +244,38 @@
     <pre id="rawlist" class="rawlist" hidden></pre>
 
     <div class="pager" id="pager" hidden>
-      <button id="prev">←</button>
+      <button id="prev" aria-label="Previous page">←</button>
       <span id="page-label">1 / 1</span>
-      <button id="next">→</button>
-      <button id="reset2" class="chip">Clear filters</button>
+      <button id="next" aria-label="Next page">→</button>
+      <button id="reset2" class="chip reset">Clear filters</button>
     </div>
   </main>
 
   <footer class="foot">
-    <span>YUEL — alive proxies on a platter, refreshed every 30 minutes.</span>
-    <a href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener">GitHub ↗</a>
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="brand/yuel-mark-color.png" alt="" width="30" height="34">
+        <b>YUEL</b>
+        <p>Alive proxies on a platter — harvested, validated, scored and published every 30 minutes by a 7-stage GitHub Actions pipeline.</p>
+      </div>
+      <nav aria-label="Live data files">
+        <h4>Live data</h4>
+        <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/all.json" target="_blank" rel="noopener">all.json</a>
+        <a href="https://raw.githubusercontent.com/Edsel-Rahimi/YUEL/main/data/out/run-summary.json" target="_blank" rel="noopener">run-summary.json</a>
+        <a href="https://github.com/Edsel-Rahimi/YUEL/tree/main/data/out/by-country" target="_blank" rel="noopener">by-country .txt lists</a>
+        <a href="https://github.com/Edsel-Rahimi/YUEL/tree/main/data/out/by-tier" target="_blank" rel="noopener">by-tier .txt lists</a>
+      </nav>
+      <nav aria-label="Project">
+        <h4>Project</h4>
+        <a href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener">GitHub repository</a>
+        <a href="https://github.com/Edsel-Rahimi/YUEL#readme" target="_blank" rel="noopener">README</a>
+        <a href="https://github.com/Edsel-Rahimi/YUEL/actions" target="_blank" rel="noopener">Pipeline runs</a>
+      </nav>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 YUEL</span>
+      <span>no API key · no signup · refreshed every 30 minutes</span>
+    </div>
   </footer>
 
   <div class="dock" id="dock" hidden>
@@ -123,7 +285,7 @@
     <button id="dock-clear" class="chip">Clear</button>
   </div>
 
-  <div id="snack" class="snack" hidden></div>
+  <div id="snack" class="snack" role="status" aria-live="polite" hidden></div>
 
   <script src="app.js"></script>
 </body>
