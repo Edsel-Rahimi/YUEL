@@ -32,26 +32,36 @@ code, config, or history with any other project.
 
 ---
 
-<p align="center">
+<div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/brand/yuel-logo-white.png">
-    <img src="assets/brand/yuel-logo-color.png" alt="YUEL — logo lockup" width="110">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/motion/dark/hero.svg">
+    <img src="assets/motion/light/hero.svg" alt="YUEL — plain-proxy intelligence, refreshed every 30 minutes" width="100%">
   </picture>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
+
+[![pipeline](https://github.com/Edsel-Rahimi/YUEL/actions/workflows/pipeline.yml/badge.svg)](https://github.com/Edsel-Rahimi/YUEL/actions/workflows/pipeline.yml)
+![python](https://img.shields.io/badge/python-3.10%2B-f4732c?logo=python&logoColor=white)
+![stdlib only](https://img.shields.io/badge/stdlib-only%20%7C%20zero%20deps-8b5cf6)
+![license](https://img.shields.io/badge/license-MIT-e8b23c)
+![data](https://img.shields.io/badge/alive%20proxies-%E2%89%A530min%20refresh-6fdc8c)
+
+</div>
+
+<div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/dark/header.svg">
-    <img src="assets/light/header.svg" alt="YUEL — plain-proxy intelligence, refreshed hourly" width="100%">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/motion/dark/divider.svg">
+    <img src="assets/motion/light/divider.svg" alt="" width="100%">
   </picture>
-</p>
+</div>
 
-<p align="center">
+<div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/dark/stats.svg">
     <img src="assets/light/stats.svg" alt="Last run: 1,745 validated alive · 73,574 collected · 56,016 unique · 40,797 handshake-tested · 69 countries" width="100%">
   </picture>
-</p>
+</div>
 
 ## Top 20 countries — grab a list
 
@@ -159,29 +169,21 @@ header stats. Data is fetched client-side from the published
 every pipeline run refreshes it automatically — no redeploy step exists.
 See [DEPLOY.md](DEPLOY.md) for the file map and local dev workflow.
 
-## Architecture
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/motion/dark/divider.svg">
+    <img src="assets/motion/light/divider.svg" alt="" width="100%">
+  </picture>
+</div>
 
-```
- config/sources.json
- (plain-proxy list sources)
-        │
-        ▼
- ┌─────────────┐    ┌─────────────┐    ┌──────────────┐    ┌─────────┐
- │ 1. collect  │───▶│ 2. normalize│───▶│ 3. validate  │───▶│ 4. score│
- │ fetch lists │    │ dedupe by   │    │ TCP prefilter│    │ latency,│
- │ parse ip:port│   │ connection  │    │ + real SOCKS5│    │ success,│
- │ (+creds)    │    │ identity    │    │ /SOCKS4/HTTP │    │ freshness│
- │             │    │             │    │ handshakes   │    │ anonymity│
- └─────────────┘    └─────────────┘    └──────────────┘    └─────────┘
-                                                                │
- ┌─────────────┐    ┌─────────────┐    ┌──────────────────────────▼──┐
- │ 7. automate │◀───│ 6. publish  │◀───│ 5. geo                        │
- │ scheduled   │    │ {ip,port,   │    │ IP→country via a free public  │
- │ CI runs     │    │ type,user?, │    │ IP-to-country table           │
- │             │    │ pass?,countr│    │                               │
- │             │    │ ,score,tier}│    │                               │
- └─────────────┘    └─────────────┘    └───────────────────────────────┘
-```
+## ⚡ The pipeline — seven stages, one command
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/motion/dark/flow.svg">
+    <img src="assets/motion/light/flow.svg" alt="collect → normalize → validate → score → geo → publish → automate" width="100%">
+  </picture>
+</div>
 
 | Stage | What it does | Status |
 | --- | --- | --- |
@@ -210,48 +212,50 @@ There are no invented future phases here; fixes and smaller improvements
 (new parsers, better scoring, more sources) ship as releases — see
 [CHANGELOG.md](CHANGELOG.md).
 
-## Repository layout
+<details open>
+<summary><h2>🗂 Repository layout</h2></summary>
 
-```
+```text
 YUEL/
-├── README.md                  ← you are here
-├── CHANGELOG.md               ← running changelog, updated every stage
-├── CONTRIBUTING.md            ← how to propose a new source
-├── LICENSE                    ← MIT
-├── .github/workflows/
-│   └── pipeline.yml           ← stage 7: scheduled runs, commits data/out/
-├── config/
-│   ├── sources.json           ← the plain-proxy source list (data, not code)
-│   ├── validate.json          ← validate stage: probe URL + timeouts + workers
-│   ├── score.json             ← score stage: weights + tier thresholds
-│   ├── geo.json               ← geo stage: ip2asn table URL + cache policy
-│   └── publish.json           ← publish stage: output layout + history depth
-├── yuel/
-│   ├── __init__.py
-│   ├── config.py              ← sources-file loading + strict schema validation
-│   ├── collect.py             ← stage 1: fetchers + plain-proxy line parsers
-│   ├── normalize.py           ← stage 2: identity dedupe + claim merge
-│   ├── proxy_client.py        ← stage 3: SOCKS5(+auth)/SOCKS4/HTTP proxy clients
-│   ├── validate.py            ← stage 3: TCP prefilter + handshake checks
-│   ├── score.py               ← stage 4: weighted quality score + tiers
-│   ├── history.py             ← stage 4: per-proxy test history (audit trail)
-│   ├── geo.py                 ← stage 5: IP→country via the ip2asn table
-│   ├── publish.py             ← stage 6: the data/out/ contract (atomic swap)
-│   ├── stage.py               ← shared StageResult dataclass
-│   └── pipeline.py            ← orchestrator + CLI entrypoint
-├── tests/                     ← 9 test modules, stdlib unittest, no network
-│   ├── test_collect.py        ← format parsers, identity, run error-handling
-│   ├── test_config.py         ← sources-file schema validation
-│   ├── test_normalize.py      ← dedupe, claim merging, determinism
-│   ├── test_proxy_client.py   ← handshakes against fake SOCKS5/SOCKS4/HTTP servers
-│   ├── test_validate.py       ← prefilter + checks + stage flows (fake proxies)
-│   ├── test_score.py          ← scoring, tiers, history (v0.4.0)
-│   ├── test_geo.py            ← ip2asn parsing, unclassified fallback (v0.5.0)
-│   ├── test_publish.py        ← output contract, atomic swap (v0.6.0)
-│   └── test_pipeline.py       ← stage chaining + graceful failure (file-based)
-└── data/                      ← stage output; data/out/ is committed to main
-                                  by the automation each run (see Automation)
+├── 📄 README.md                  ← you are here
+├── 📄 CHANGELOG.md               ← running changelog, updated every stage
+├── 📄 CONTRIBUTING.md            ← how to propose a new source
+├── 📄 LICENSE                    ← MIT
+├── 🤖 .github/workflows/
+│      └── pipeline.yml           ← stage 7: scheduled runs, commits data/out/
+├── ⚙️ config/
+│      ├── sources.json           ← the plain-proxy source list (data, not code)
+│      ├── validate.json          ← validate stage: probe URL + timeouts + workers
+│      ├── score.json             ← score stage: weights + tier thresholds
+│      ├── geo.json               ← geo stage: ip2asn table URL + cache policy
+│      └── publish.json           ← publish stage: output layout + history depth
+├── 🐍 yuel/
+│      ├── config.py              ← sources-file loading + strict schema validation
+│      ├── collect.py             ← stage 1: fetchers + plain-proxy line parsers
+│      ├── normalize.py           ← stage 2: identity dedupe + claim merge
+│      ├── proxy_client.py        ← stage 3: SOCKS5(+auth)/SOCKS4/HTTP proxy clients
+│      ├── validate.py            ← stage 3: TCP prefilter + handshake checks
+│      ├── score.py               ← stage 4: weighted quality score + tiers
+│      ├── history.py             ← stage 4: per-proxy test history (audit trail)
+│      ├── geo.py                 ← stage 5: IP→country via the ip2asn table
+│      ├── publish.py             ← stage 6: the data/out/ contract (atomic swap)
+│      ├── stage.py               ← shared StageResult dataclass
+│      └── pipeline.py            ← orchestrator + CLI entrypoint
+├── 🧪 tests/                     ← stdlib unittest, no network
+│      ├── test_collect.py        ← format parsers, identity, run error-handling
+│      ├── test_config.py         ← sources-file schema validation
+│      ├── test_normalize.py      ← dedupe, claim merging, determinism
+│      ├── test_proxy_client.py   ← handshakes vs fake SOCKS5/SOCKS4/HTTP servers
+│      ├── test_validate.py       ← prefilter + checks + stage flows (fake proxies)
+│      ├── test_score.py          ← scoring, tiers, history (v0.4.0)
+│      ├── test_geo.py            ← ip2asn parsing, unclassified fallback (v0.5.0)
+│      ├── test_publish.py        ← output contract, atomic swap (v0.6.0)
+│      └── test_pipeline.py       ← stage chaining + graceful failure (file-based)
+└── 📦 data/                      ← stage output; data/out/ is committed to main
+                                   by the automation each run (see Automation)
 ```
+
+</details>
 
 ## Quickstart
 
@@ -699,3 +703,10 @@ fixes for the six supported formats are equally welcome.
 If YUEL saves you time, consider giving the repo a ⭐ star — it helps other
 people find a plain-proxy feed that doesn't pretend to be a tunnel config:
 <https://github.com/Edsel-Rahimi/YUEL>
+
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/motion/dark/footer.svg">
+    <img src="assets/motion/light/footer.svg" alt="YUEL — free, open, plain-text proxies" width="100%">
+  </picture>
+</div>

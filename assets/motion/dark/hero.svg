@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="440" viewBox="0 0 1200 440" role="img" aria-label="YUEL — live plain proxies">
+<style>
+.pt{animation:pt 8s linear infinite}
+@keyframes pt{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-260px);opacity:0}}
+.sweep{animation:sw 6.5s ease-in-out infinite}
+@keyframes sw{0%,55%{transform:translateX(-620px) skewX(-18deg)}100%{transform:translateX(1240px) skewX(-18deg)}}
+.wv{animation:wv 11s ease-in-out infinite alternate}
+.w2{animation-duration:16s}
+@keyframes wv{to{transform:translateX(-120px)}}
+.spin{transform-box:fill-box;transform-origin:center;animation:sp 7s linear infinite}
+.rev{animation-direction:reverse}
+@keyframes sp{to{transform:rotate(360deg)}}
+.beat{transform-box:fill-box;transform-origin:center;animation:bt 2.4s ease-in-out infinite}
+@keyframes bt{0%,100%{transform:scale(1)}12%{transform:scale(1.12)}24%{transform:scale(.98)}36%{transform:scale(1)}}
+.glow{animation:gw 3.2s ease-in-out infinite}
+@keyframes gw{50%{opacity:.4}}
+.dash{stroke-dasharray:7 9;animation:dsh 1.4s linear infinite}
+@keyframes dsh{to{stroke-dashoffset:-32}}
+.pk{animation:pk 3.2s linear infinite}
+.p2{animation-delay:1.1s}.p3{animation-delay:2.2s}
+@keyframes pk{0%{transform:translateX(0);opacity:0}8%{opacity:1}92%{opacity:1}100%{transform:translateX(var(--d,880px));opacity:0}}
+.pls{transform-box:fill-box;transform-origin:center;animation:pls 2.6s ease-out infinite}
+@keyframes pls{0%{transform:scale(.6);opacity:.85}100%{transform:scale(2.4);opacity:0}}
+.flt{animation:flt 5.5s ease-in-out infinite}
+@keyframes flt{50%{transform:translateY(-6px)}}
+.rise{animation:rs .9s cubic-bezier(.2,.7,.2,1) both}
+.r2{animation-delay:.15s}.r3{animation-delay:.3s}.r4{animation-delay:.45s}.r5{animation-delay:.6s}.r6{animation-delay:.75s}.r7{animation-delay:.9s}.r8{animation-delay:1.05s}
+@keyframes rs{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.blink{animation:bl 1.1s steps(2) infinite}
+@keyframes bl{50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<defs>
+<linearGradient id="gTitle" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#f4732c"/><stop offset=".55" stop-color="#f4a12c"/><stop offset="1" stop-color="#8b5cf6"/>
+</linearGradient>
+<linearGradient id="gLine" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#f4732c" stop-opacity="0"/>
+  <stop offset=".3" stop-color="#f4732c"/><stop offset=".55" stop-color="#f4a12c"/>
+  <stop offset=".8" stop-color="#8b5cf6"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+</linearGradient>
+<linearGradient id="gBg" x1="0" y1="0" x2="0" y2="1">
+  <stop offset="0" stop-color="#1f1b2b"/><stop offset=".6" stop-color="#2e2a3b"/><stop offset="1" stop-color="#1f1b2b"/>
+</linearGradient>
+<linearGradient id="gShine" x1="0" y1="0" x2="1" y2="0">
+  <stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".8"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+</linearGradient>
+<radialGradient id="gOrL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(60 40) scale(560 320)">
+  <stop offset="0" stop-color="#f4732c" stop-opacity=".5"/><stop offset="1" stop-color="#f4732c" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="gOrR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1140 40) scale(560 320)">
+  <stop offset="0" stop-color="#8b5cf6" stop-opacity=".5"/><stop offset="1" stop-color="#8b5cf6" stop-opacity="0"/>
+</radialGradient>
+<filter id="fGlow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="7"/></filter>
+</defs>
+<clipPath id="clip"><rect width="1200" height="440"/></clipPath>
+<rect width="1200" height="440" fill="url(#gBg)"/>
+<rect width="1200" height="440" fill="url(#gOrL)"/>
+<rect width="1200" height="440" fill="url(#gOrR)"/>
+<g clip-path="url(#clip)"><circle cx="60" cy="330" r="2" fill="#8b5cf6" class="pt" style="animation-duration:6.0s;animation-delay:0.0s"/><circle cx="179" cy="383" r="3" fill="#f4732c" class="pt" style="animation-duration:7.3s;animation-delay:-0.9s"/><circle cx="258" cy="376" r="4" fill="#f4732c" class="pt" style="animation-duration:8.6s;animation-delay:-1.8s"/><circle cx="337" cy="369" r="2" fill="#8b5cf6" class="pt" style="animation-duration:9.9s;animation-delay:-2.7s"/><circle cx="416" cy="362" r="3" fill="#f4732c" class="pt" style="animation-duration:11.2s;animation-delay:-3.6s"/><circle cx="495" cy="355" r="4" fill="#f4732c" class="pt" style="animation-duration:6.0s;animation-delay:-4.5s"/><circle cx="574" cy="348" r="2" fill="#8b5cf6" class="pt" style="animation-duration:7.3s;animation-delay:-5.4s"/><circle cx="653" cy="341" r="3" fill="#f4732c" class="pt" style="animation-duration:8.6s;animation-delay:-6.3s"/><circle cx="732" cy="334" r="4" fill="#f4732c" class="pt" style="animation-duration:9.9s;animation-delay:-7.2s"/><circle cx="811" cy="387" r="2" fill="#8b5cf6" class="pt" style="animation-duration:11.2s;animation-delay:-8.1s"/><circle cx="890" cy="380" r="3" fill="#f4732c" class="pt" style="animation-duration:6.0s;animation-delay:-9.0s"/><circle cx="969" cy="373" r="4" fill="#f4732c" class="pt" style="animation-duration:7.3s;animation-delay:-9.9s"/><circle cx="1048" cy="366" r="2" fill="#8b5cf6" class="pt" style="animation-duration:8.6s;animation-delay:-10.8s"/><circle cx="1127" cy="359" r="3" fill="#f4732c" class="pt" style="animation-duration:9.9s;animation-delay:-11.7s"/><path d="M -140 392 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#f4732c" stroke-opacity="0.22" stroke-width="1.6" class="wv " style="animation-duration:11s"/><path d="M -140 404 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#8b5cf6" stroke-opacity="0.16999999999999998" stroke-width="1.6" class="wv w2" style="animation-duration:15s"/><path d="M -140 416 q 75 -26 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0 t 150 0" fill="none" stroke="#f4732c" stroke-opacity="0.12" stroke-width="1.6" class="wv w2" style="animation-duration:19s"/></g>
+<g class="rise"><g transform="translate(134 118)">
+<rect x="-46" y="-46" width="92" height="92" rx="26" fill="#262233" stroke="rgba(244,239,233,0.18)"/>
+<path d="M -17 -24 L 0 -2 L 17 -24 M 0 -2 L 0 24"
+  fill="none" stroke="url(#gTitle)" stroke-width="9.0" stroke-linecap="round" stroke-linejoin="round"/>
+</g></g>
+<g class="spin rev" opacity=".85"><circle cx="134" cy="118" r="72" fill="none" stroke="rgba(244,239,233,0.18)" stroke-width="1.4" stroke-dasharray="10 14"/></g>
+<g class="spin"><circle cx="134" cy="118" r="86" fill="none" stroke="rgba(244,239,233,0.18)" stroke-width="1" stroke-dasharray="3 9"/></g>
+<g class="rise r2" opacity=".9">
+  <circle cx="330" cy="86" r="4" fill="#f4732c"/><circle cx="330" cy="86" r="4" fill="#f4732c" class="pls"/>
+</g>
+<text x="356" y="92" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="19" letter-spacing="6" fill="#a49fb5" class="rise r2">PLAIN-PROXY INTELLIGENCE</text>
+<g class="rise r3">
+  <text x="60" y="240" font-family="Arial,Helvetica,sans-serif" font-weight="900" font-size="128" letter-spacing="10" fill="url(#gTitle)">YUEL</text>
+  <g class="sweep" opacity=".9"><rect x="60" y="128" width="70" height="128" fill="url(#gShine)" transform="skewX(-18)"/></g>
+</g>
+<g class="rise r4">
+  <text x="64" y="292" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="21" letter-spacing="3" fill="#f4efe9">live proxies · scored · tiered · geo-tagged</text>
+</g>
+<g class="rise r5">
+  <text x="64" y="330" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="2" fill="#a49fb5">socks5 / socks4 / http — refreshed every 30 minutes, straight from CI</text>
+</g>
+<g class="rise r6">
+  <circle cx="74" cy="374" r="6" fill="#6fdc8c"/><circle cx="74" cy="374" r="6" fill="#6fdc8c" class="pls"/>
+  <text x="92" y="380" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="16" letter-spacing="2" fill="#a49fb5">pipeline healthy — last run committed to <tspan fill="#f4732c">data/out/</tspan></text>
+</g>
+<g class="rise r7">
+  <rect x="880" y="330" width="260" height="58" rx="29" fill="none" stroke="#f4732c" stroke-width="1.6"/>
+  <circle cx="912" cy="359" r="7" fill="#f4732c" class="beat"/>
+  <text x="932" y="366" font-family="ui-monospace,Menlo,Consolas,monospace" font-size="17" letter-spacing="3" fill="#f4732c">VIEW LIVE DASHBOARD</text>
+</g>
+</svg>

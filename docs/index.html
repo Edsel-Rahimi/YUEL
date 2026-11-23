@@ -1,184 +1,129 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>YUEL — browse alive proxies</title>
-  <meta name="description" content="Browse, filter and grab plain proxies from the latest YUEL run — socks5, socks4 and http, scored and tiered.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FC671F'/%3E%3Cstop offset='.38' stop-color='%23ED4A3B'/%3E%3Cstop offset='.66' stop-color='%23CC3C77'/%3E%3Cstop offset='1' stop-color='%236574C9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='7' fill='url(%23g)'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='17' font-weight='700' fill='%23fff' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
+  <title>YUEL — Live Proxies</title>
+  <meta name="description" content="Browse, filter and copy alive plain proxies — socks5, socks4, http — scored, tiered and mapped to countries with flags. Refreshed every 30 minutes.">
+  <link rel="icon" href="brand/yuel-mark-color.png">
   <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="style.css">
   <script>
-    // apply a persisted manual theme before first paint (no flash);
-    // without it, docs/tokens.css follows the OS preference
-    (function () {
-      try {
-        var saved = localStorage.getItem("yuel-theme");
-        if (saved === "light" || saved === "dark") {
-          document.documentElement.dataset.theme = saved;
-        }
-      } catch (e) { /* private mode etc. — OS preference applies */ }
-    })();
+    try {
+      var t = localStorage.getItem("yuel4-theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch (e) {}
   </script>
 </head>
 <body>
 
-  <header class="site-header">
-    <a class="brand" href="./">
-      <picture class="brand-logo">
-        <source media="(prefers-color-scheme: dark)" srcset="brand/yuel-mark-white.png">
-        <img src="brand/yuel-mark-color.png" alt="YUEL logo" width="33" height="36">
-      </picture>
-      <span>
-        <span class="brand-name">YUEL</span>
-        <div class="brand-sub">plain-proxy intelligence</div>
-      </span>
-    </a>
-    <span class="header-spacer"></span>
-    <div class="live-chips">
-      <span class="chip"><span class="dot pulse"></span><strong id="alive-count">…</strong>&nbsp;alive now</span>
-      <span class="chip updated">updated&nbsp;<strong id="updated-time">…</strong></span>
-      <a class="icon-btn" href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener" aria-label="YUEL on GitHub" title="YUEL on GitHub">
-        <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
-      </a>
-      <button class="icon-btn" id="theme-toggle" aria-label="Toggle light/dark theme" title="Toggle theme">
-        <svg class="ico-moon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M6.06.94a.5.5 0 0 1 .5.5 5.06 5.06 0 0 0 5.06 5.06.5.5 0 0 1 .5.5 6.06 6.06 0 1 1-6.06-6.06Z" transform="translate(-1.06 1.06)"/></svg>
-      </button>
+  <div class="ghost-word" aria-hidden="true">YUEL</div>
+
+  <nav class="bar">
+    <span class="bar-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+    <a class="bar-link" href="#list">Proxies</a>
+    <a class="bar-link" href="#countries">Countries</a>
+    <a class="bar-link" href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener">GitHub</a>
+    <span class="bar-spacer"></span>
+    <span class="beacon"><i></i><b id="beacon-count">···</b> alive</span>
+    <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme"><span></span></button>
+    <a class="bar-cta" href="#list">View live list</a>
+  </nav>
+
+  <header class="hero">
+    <p class="hero-stamp" id="run-stamp">loading latest run…</p>
+    <h1 class="hero-title"><span class="line-1">Live</span> <span class="line-2">Proxies</span></h1>
+    <div class="hero-meta">
+      <span class="meta-item">Run <i class="dash"></i> <span id="meta-run">—</span></span>
+      <span class="meta-item mid"><b id="meta-total">—</b> unique items, checked &amp; scored for you</span>
+      <span class="meta-item right">UPT <i class="dash"></i> <span id="meta-up">—</span></span>
     </div>
   </header>
 
-  <main class="wrap">
-    <div class="page-head">
-      <h1 class="page-title">Browse the latest run, <span class="grad">grab what you need</span></h1>
-      <p class="page-note">plain <code>type://ip:port</code> · live from the latest run · refreshed every 30 min</p>
+  <section class="figures">
+    <div class="figure"><b id="f-alive">—</b><span>alive now</span></div>
+    <div class="figure gold"><b id="f-gold">—</b><span>gold tier</span></div>
+    <div class="figure"><b id="f-countries">—</b><span>countries</span></div>
+    <div class="figure"><b id="f-tested">—</b><span>tested</span></div>
+    <div class="figure"><b id="f-sources">—</b><span>sources</span></div>
+  </section>
+
+  <section class="countries" id="countries">
+    <h2 class="section-label">By country <i class="dash"></i> with flags</h2>
+    <div class="flag-wall" id="flag-wall"></div>
+  </section>
+
+  <main class="sheet" id="list">
+    <div class="controls">
+      <label class="field search">
+        <input id="q" type="search" placeholder="Search IP…" autocomplete="off" spellcheck="false">
+      </label>
+      <label class="field">
+        <span>Country</span>
+        <select id="country"><option value="">All</option></select>
+      </label>
+      <label class="field">
+        <span>Sort</span>
+        <select id="sort">
+          <option value="score">Score</option>
+          <option value="latency">Latency</option>
+          <option value="country">Country</option>
+        </select>
+      </label>
+      <label class="field lat">
+        <span>Max latency <output id="lat-out">any</output></span>
+        <input id="lat" type="range" min="0" max="3000" step="100" value="0">
+      </label>
+      <div class="chips" data-kind="type" role="group" aria-label="Protocol">
+        <button class="chip is-on" data-v="socks5">socks5</button>
+        <button class="chip is-on" data-v="socks4">socks4</button>
+        <button class="chip is-on" data-v="http">http</button>
+      </div>
+      <div class="chips" data-kind="tier" role="group" aria-label="Tier">
+        <button class="chip is-on" data-v="gold">gold</button>
+        <button class="chip is-on" data-v="silver">silver</button>
+        <button class="chip is-on" data-v="bronze">bronze</button>
+      </div>
+      <button class="chip reset" id="reset">Reset</button>
+      <div class="views">
+        <button id="mode-grid" aria-pressed="true">Rows</button>
+        <button id="mode-text" aria-pressed="false">Text</button>
+      </div>
     </div>
 
-    <!-- filter bar ------------------------------------------------- -->
-    <section class="card filters" aria-label="Filters">
-      <div class="field-combo">
-        <label class="field-label" for="country-input">Country</label>
-        <div class="combo" id="country-combo">
-          <input class="control" id="country-input" type="text" placeholder="All countries — type to narrow" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="country-list">
-          <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
-          <div class="combo-list" id="country-list" role="listbox"></div>
-        </div>
-      </div>
+    <p class="count-line" id="count-line">…</p>
 
-      <div class="search field-search">
-        <label class="field-label" for="ip-search">Search IP</label>
-        <input class="control" id="ip-search" type="text" placeholder="e.g. 47.251" autocomplete="off" spellcheck="false">
-        <svg class="search-ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="7" cy="7" r="4.4"/><path d="m10.4 10.4 3.2 3.2"/></svg>
-      </div>
+    <div id="flash-loading" class="flash">Loading the live list…</div>
+    <div id="flash-error" class="flash is-error" hidden>
+      <p id="flash-error-msg"></p>
+      <button id="retry" class="chip">Retry</button>
+    </div>
+    <div id="flash-empty" class="flash" hidden>Nothing matches these filters — try widening them.</div>
 
-      <div class="select field-sort">
-        <label class="field-label" for="sort-select">Sort by</label>
-        <select class="control" id="sort-select">
-          <option value="score" selected>Score — best first</option>
-          <option value="latency">Latency — fastest first</option>
-          <option value="country">Country — A to Z</option>
-        </select>
-        <svg class="chevron" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
-      </div>
+    <section class="rows" id="grid"></section>
+    <pre id="rawlist" class="rawlist" hidden></pre>
 
-      <div class="field-types">
-        <span class="field-label">Type</span>
-        <div class="toggle-group" id="type-toggles">
-          <button class="toggle" data-type="socks5" aria-pressed="true"><span class="tdot socks5"></span>socks5</button>
-          <button class="toggle" data-type="socks4" aria-pressed="true"><span class="tdot socks4"></span>socks4</button>
-          <button class="toggle" data-type="http" aria-pressed="true"><span class="tdot http"></span>http</button>
-        </div>
-      </div>
-
-      <div class="field-tiers">
-        <span class="field-label">Tier</span>
-        <div class="toggle-group" id="tier-toggles">
-          <button class="toggle" data-tier="gold" aria-pressed="true"><span class="tdot gold"></span>gold</button>
-          <button class="toggle" data-tier="silver" aria-pressed="true"><span class="tdot silver"></span>silver</button>
-          <button class="toggle" data-tier="bronze" aria-pressed="true"><span class="tdot bronze"></span>bronze</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- results ---------------------------------------------------- -->
-    <section class="card" aria-label="Results">
-      <div class="results-head" id="results-head">
-        <span class="results-count">Showing <span id="shown-range">…</span> <span class="muted" id="of-total">of … proxies</span></span>
-        <span class="results-hint">latency = last successful check · plain text, no thresholds</span>
-      </div>
-
-      <!-- loading skeleton -->
-      <div id="state-loading" class="state-block" hidden>
-        <div class="skeleton-row"></div><div class="skeleton-row"></div>
-        <div class="skeleton-row"></div><div class="skeleton-row"></div>
-        <div class="skeleton-row"></div><div class="skeleton-row"></div>
-        <p class="state-note">Fetching the latest published run…</p>
-      </div>
-
-      <!-- fetch failure -->
-      <div id="state-error" class="state-block" hidden>
-        <div class="state-ico">⚠️</div>
-        <h2 class="state-title">Couldn't load the data</h2>
-        <p class="state-note" id="error-detail"></p>
-        <button class="btn btn-primary" id="retry-load">Try again</button>
-      </div>
-
-      <!-- zero filter results -->
-      <div id="state-empty" class="state-block" hidden>
-        <div class="state-ico">🔍</div>
-        <h2 class="state-title">No proxies match your filters</h2>
-        <p class="state-note">Loosen a filter or two — or reset everything and browse the whole run.</p>
-        <button class="btn btn-outline" id="reset-filters">Reset all filters</button>
-      </div>
-
-      <div class="table-scroll">
-        <table class="results" id="results-table">
-          <thead>
-            <tr>
-              <th class="col-check"><input type="checkbox" id="check-all" aria-label="Select all visible"></th>
-              <th>IP : Port</th>
-              <th>Type</th>
-              <th>Country</th>
-              <th>Tier</th>
-              <th>Score</th>
-              <th>Latency</th>
-              <th>Checked</th>
-              <th></th>
-            </tr>
-          </thead>
-          <tbody id="results-body"></tbody>
-        </table>
-      </div>
-
-      <div class="table-foot" id="table-foot" hidden>
-        <button class="page-btn" id="page-prev" aria-label="Previous page">← Prev</button>
-        <span class="page-info" id="page-info"></span>
-        <button class="page-btn" id="page-next" aria-label="Next page">Next →</button>
-      </div>
-    </section>
+    <div class="pager" id="pager" hidden>
+      <button id="prev">←</button>
+      <span id="page-label">1 / 1</span>
+      <button id="next">→</button>
+      <button id="reset2" class="chip">Clear filters</button>
+    </div>
   </main>
 
-  <!-- sticky selection bar (appears once ≥1 row is selected) -------- -->
-  <div class="selection-bar hidden" id="selection-bar" role="toolbar" aria-label="Selected proxies actions">
-    <span class="selection-count"><span id="sel-count">0</span> <span class="muted">selected</span></span>
-    <span class="sel-divider"></span>
-    <button class="btn btn-primary" id="copy-list">
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="5.5" y="5.5" width="8" height="8" rx="1.5"/><path d="M10.5 5.5v-2A1.5 1.5 0 0 0 9 2H3.5A1.5 1.5 0 0 0 2 3.5V9a1.5 1.5 0 0 0 1.5 1.5h2"/></svg>
-      Copy <span id="copy-n">0</span> as list
-    </button>
-    <button class="btn btn-outline" id="download-txt">
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v8m0 0 3-3M8 10 5 7"/><path d="M2.5 12.5h11"/></svg>
-      Download <span id="dl-n">0</span> as <span class="btn-label-dl">.txt</span>
-    </button>
-    <button class="icon-btn" id="clear-sel" aria-label="Clear selection" title="Clear selection">
-      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8"/></svg>
-    </button>
+  <footer class="foot">
+    <span>YUEL — alive proxies on a platter, refreshed every 30 minutes.</span>
+    <a href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener">GitHub ↗</a>
+  </footer>
+
+  <div class="dock" id="dock" hidden>
+    <span><b id="dock-n">0</b> picked</span>
+    <button id="dock-copy" class="chip">Copy</button>
+    <button id="dock-dl" class="chip">Download .txt</button>
+    <button id="dock-clear" class="chip">Clear</button>
   </div>
 
-  <footer class="site-footer">
-    Data from <span class="mono">data/out</span> on <a href="https://github.com/Edsel-Rahimi/YUEL" target="_blank" rel="noopener">GitHub</a> · refreshed every 30 min by Actions ·
-    plain <code>type://ip:port</code> lists also available under <a href="https://github.com/Edsel-Rahimi/YUEL/tree/main/data/out/by-country" target="_blank" rel="noopener">by-country</a>
-  </footer>
+  <div id="snack" class="snack" hidden></div>
 
   <script src="app.js"></script>
 </body>
