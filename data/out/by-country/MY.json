@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "MY",
-    "score": 84.07,
+    "score": 86.76,
     "tier": "gold",
-    "latency": 232,
-    "last_checked": "2026-11-23T13:02:09+00:00",
+    "latency": 200,
+    "last_checked": "2026-11-23T14:25:31+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "219.94.75.2",
+    "port": 8080,
+    "type": "http",
+    "country": "MY",
+    "score": 42.87,
+    "tier": "bronze",
+    "latency": 1897,
+    "last_checked": "2026-11-23T14:25:31+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

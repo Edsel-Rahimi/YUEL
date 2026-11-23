@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "37.252.188.101",
+    "port": 3128,
+    "type": "http",
+    "country": "AT",
+    "score": 28.28,
+    "tier": "bronze",
+    "latency": 5514,
+    "last_checked": "2026-11-23T14:25:31+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
