@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "105.27.130.22",
+    "port": 9812,
+    "type": "http",
+    "country": "MU",
+    "score": 30.15,
+    "tier": "bronze",
+    "latency": 3372,
+    "last_checked": "2026-11-23T02:53:41+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "105.22.37.218",
+    "port": 8080,
+    "type": "http",
+    "country": "MU",
+    "score": 27.77,
+    "tier": "bronze",
+    "latency": 5975,
+    "last_checked": "2026-11-23T02:53:41+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
