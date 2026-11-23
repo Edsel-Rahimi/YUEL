@@ -1,2 +1,2 @@
-# YUEL · QA · 1 proxies · generated 2026-11-23T18:01:51 UTC
-http://176.202.184.21:8080
+# YUEL · QA · 1 proxies · generated 2026-11-23T18:59:27 UTC
+http://37.211.65.11:8080

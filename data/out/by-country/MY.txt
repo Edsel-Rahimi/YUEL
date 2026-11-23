@@ -1,4 +1,2 @@
-# YUEL · MY · 3 proxies · generated 2026-11-23T18:01:51 UTC
+# YUEL · MY · 1 proxies · generated 2026-11-23T18:59:27 UTC
 http://175.138.231.145:80
-socks4://45.117.228.97:4145
-http://219.93.101.60:80
