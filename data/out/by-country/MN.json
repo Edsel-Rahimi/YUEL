@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "49.0.156.20",
+    "port": 32000,
+    "type": "socks4",
+    "country": "MN",
+    "score": 69.14,
+    "tier": "silver",
+    "latency": 300,
+    "last_checked": "2026-11-23T22:47:13+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "202.21.101.37",
+    "port": 8088,
+    "type": "http",
+    "country": "MN",
+    "score": 34.31,
+    "tier": "bronze",
+    "latency": 2616,
+    "last_checked": "2026-11-23T22:47:13+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

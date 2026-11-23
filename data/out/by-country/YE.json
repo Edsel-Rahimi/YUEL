@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "82.114.181.147",
+    "port": 9050,
+    "type": "socks4",
+    "country": "YE",
+    "score": 33.91,
+    "tier": "bronze",
+    "latency": 2783,
+    "last_checked": "2026-11-23T22:47:13+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

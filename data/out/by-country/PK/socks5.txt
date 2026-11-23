@@ -1,2 +1,3 @@
-# YUEL · PK · socks5 · 1 proxies · generated 2026-11-23T21:53:16 UTC
+# YUEL · PK · socks5 · 2 proxies · generated 2026-11-23T22:52:42 UTC
+socks5://202.142.153.220:1080
 socks5://110.39.151.50:1080

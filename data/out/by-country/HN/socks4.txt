@@ -1,2 +1,0 @@
-# YUEL · HN · socks4 · 1 proxies · generated 2026-11-23T21:53:16 UTC
-socks4://45.190.13.12:1080

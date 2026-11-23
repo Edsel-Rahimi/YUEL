@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "185.43.189.253",
+    "port": 3629,
+    "type": "socks4",
+    "country": "AZ",
+    "score": 76.65,
+    "tier": "silver",
+    "latency": 246,
+    "last_checked": "2026-11-23T22:47:13+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
