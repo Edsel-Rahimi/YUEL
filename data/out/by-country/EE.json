@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "2.56.172.45",
+    "port": 3128,
+    "type": "http",
+    "country": "EE",
+    "score": 91.99,
+    "tier": "gold",
+    "latency": 108,
+    "last_checked": "2026-11-23T16:55:45+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.203.6.219",
+    "port": 3128,
+    "type": "http",
+    "country": "EE",
+    "score": 46.7,
+    "tier": "bronze",
+    "latency": 2800,
+    "last_checked": "2026-11-23T16:55:45+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

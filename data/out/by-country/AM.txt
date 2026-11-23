@@ -1,0 +1,2 @@
+# YUEL · AM · 1 proxies · generated 2026-11-23T17:01:24 UTC
+socks4://81.16.9.222:3629

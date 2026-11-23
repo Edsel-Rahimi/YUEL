@@ -4,10 +4,10 @@
     "port": 5678,
     "type": "socks4",
     "country": "MM",
-    "score": 72.68,
+    "score": 70.49,
     "tier": "silver",
-    "latency": 322,
-    "last_checked": "2026-11-23T15:38:19+00:00",
+    "latency": 334,
+    "last_checked": "2026-11-23T16:55:45+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +16,10 @@
     "port": 8074,
     "type": "http",
     "country": "MM",
-    "score": 47.59,
-    "tier": "bronze",
-    "latency": 1078,
-    "last_checked": "2026-11-23T15:38:19+00:00",
+    "score": 68.22,
+    "tier": "silver",
+    "latency": 484,
+    "last_checked": "2026-11-23T16:55:45+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
