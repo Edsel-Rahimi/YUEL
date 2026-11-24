@@ -1,3 +1,0 @@
-# YUEL · NP · http · 2 proxies · generated 2026-11-24T05:44:34 UTC
-http://103.114.25.25:8088
-http://103.124.97.12:8080

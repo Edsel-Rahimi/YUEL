@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "208.163.39.218",
+    "port": 53281,
+    "type": "http",
+    "country": "JM",
+    "score": 96.03,
+    "tier": "gold",
+    "latency": 98,
+    "last_checked": "2026-11-24T07:01:16+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
