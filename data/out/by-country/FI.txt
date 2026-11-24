@@ -1,3 +1,2 @@
-# YUEL · FI · 2 proxies · generated 2026-11-24T10:58:46 UTC
-socks5://77.90.187.123:1080
-socks5://77.90.187.132:1080
+# YUEL · FI · 1 proxies · generated 2026-11-24T11:59:09 UTC
+socks5://185.247.141.86:1080
