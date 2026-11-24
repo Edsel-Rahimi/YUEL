@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "41.79.233.182",
+    "port": 8080,
+    "type": "http",
+    "country": "CD",
+    "score": 41.39,
+    "tier": "bronze",
+    "latency": 1665,
+    "last_checked": "2026-11-24T00:50:09+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

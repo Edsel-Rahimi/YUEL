@@ -1,2 +1,4 @@
-# YUEL · unclassified · http · 1 proxies · generated 2026-11-23T23:51:37 UTC
+# YUEL · unclassified · http · 3 proxies · generated 2026-11-24T00:55:14 UTC
+http://195.5.168.34:8080
+http://195.5.168.195:8080
 http://85.92.153.224:8888

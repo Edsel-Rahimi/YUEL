@@ -1,2 +1,0 @@
-# YUEL · NZ · socks5 · 1 proxies · generated 2026-11-23T23:51:37 UTC
-socks5://202.74.203.17:1080
