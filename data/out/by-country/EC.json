@@ -1,13 +1,25 @@
 [
   {
-    "ip": "45.229.17.94",
+    "ip": "45.238.57.129",
+    "port": 1080,
+    "type": "socks4",
+    "country": "EC",
+    "score": 94.73,
+    "tier": "gold",
+    "latency": 132,
+    "last_checked": "2026-11-24T14:20:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "181.224.175.200",
     "port": 999,
     "type": "http",
     "country": "EC",
-    "score": 89.04,
+    "score": 92.56,
     "tier": "gold",
-    "latency": 152,
-    "last_checked": "2026-11-24T13:02:19+00:00",
+    "latency": 135,
+    "last_checked": "2026-11-24T14:20:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,34 +28,10 @@
     "port": 999,
     "type": "http",
     "country": "EC",
-    "score": 43.86,
+    "score": 46.79,
     "tier": "bronze",
-    "latency": 1419,
-    "last_checked": "2026-11-24T13:02:19+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "186.5.94.207",
-    "port": 999,
-    "type": "http",
-    "country": "EC",
-    "score": 33.04,
-    "tier": "bronze",
-    "latency": 2448,
-    "last_checked": "2026-11-24T13:02:19+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.190.87.44",
-    "port": 999,
-    "type": "http",
-    "country": "EC",
-    "score": 32.91,
-    "tier": "bronze",
-    "latency": 2486,
-    "last_checked": "2026-11-24T13:02:19+00:00",
+    "latency": 1019,
+    "last_checked": "2026-11-24T14:20:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

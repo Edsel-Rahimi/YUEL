@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "37.26.86.206",
+    "port": 4145,
+    "type": "socks4",
+    "country": "AL",
+    "score": 87.08,
+    "tier": "gold",
+    "latency": 184,
+    "last_checked": "2026-11-24T14:20:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
