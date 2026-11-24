@@ -4,10 +4,22 @@
     "port": 1080,
     "type": "socks5",
     "country": "FI",
-    "score": 89.69,
+    "score": 93.99,
     "tier": "gold",
-    "latency": 175,
-    "last_checked": "2026-11-24T08:28:07+00:00",
+    "latency": 141,
+    "last_checked": "2026-11-24T09:44:49+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "77.90.187.128",
+    "port": 1080,
+    "type": "socks5",
+    "country": "FI",
+    "score": 92.19,
+    "tier": "gold",
+    "latency": 179,
+    "last_checked": "2026-11-24T09:44:49+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
