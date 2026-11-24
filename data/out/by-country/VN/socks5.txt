@@ -1,2 +1,0 @@
-# YUEL · VN · socks5 · 1 proxies · generated 2026-11-24T15:40:08 UTC
-socks5://160.191.54.47:3128
