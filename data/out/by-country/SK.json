@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "217.145.199.45",
+    "port": 56746,
+    "type": "socks4",
+    "country": "SK",
+    "score": 88.76,
+    "tier": "gold",
+    "latency": 148,
+    "last_checked": "2026-11-24T10:53:36+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.98.208.98",
+    "port": 28000,
+    "type": "socks4",
+    "country": "SK",
+    "score": 84.12,
+    "tier": "gold",
+    "latency": 186,
+    "last_checked": "2026-11-24T10:53:36+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

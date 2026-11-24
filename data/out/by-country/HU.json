@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "109.61.117.11",
+    "port": 1080,
+    "type": "socks4",
+    "country": "HU",
+    "score": 87.8,
+    "tier": "gold",
+    "latency": 156,
+    "last_checked": "2026-11-24T10:53:36+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "91.147.235.162",
+    "port": 4153,
+    "type": "socks4",
+    "country": "HU",
+    "score": 76.17,
+    "tier": "silver",
+    "latency": 260,
+    "last_checked": "2026-11-24T10:53:36+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
