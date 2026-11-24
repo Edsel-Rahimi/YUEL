@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "AU",
-    "score": 55.67,
-    "tier": "silver",
-    "latency": 1820,
-    "last_checked": "2026-11-24T21:51:38+00:00",
+    "score": 87.64,
+    "tier": "gold",
+    "latency": 191,
+    "last_checked": "2026-11-24T22:52:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "202.174.103.98",
+    "port": 3128,
+    "type": "http",
+    "country": "AU",
+    "score": 43.8,
+    "tier": "bronze",
+    "latency": 1516,
+    "last_checked": "2026-11-24T22:52:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

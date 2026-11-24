@@ -1,2 +1,2 @@
-# YUEL · CZ · socks5 · 1 proxies · generated 2026-11-24T21:57:03 UTC
-socks5://37.221.248.119:10002
+# YUEL · CZ · socks5 · 1 proxies · generated 2026-11-24T22:57:25 UTC
+socks5://176.62.237.51:1080
