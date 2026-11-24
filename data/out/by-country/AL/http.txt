@@ -1,4 +1,4 @@
-# YUEL · AL · http · 3 proxies · generated 2026-11-24T04:42:11 UTC
+# YUEL · AL · http · 3 proxies · generated 2026-11-24T05:44:34 UTC
 http://84.22.48.28:8080
-http://79.106.108.156:8079
-http://84.22.48.150:8080
+http://185.196.182.22:8080
+http://188.164.218.209:8080
