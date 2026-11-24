@@ -1,4 +1,2 @@
-# YUEL · IT · 3 proxies · generated 2026-11-24T18:57:30 UTC
+# YUEL · IT · 1 proxies · generated 2026-11-24T20:04:48 UTC
 http://77.242.177.57:3128
-http://79.52.108.2:8081
-http://78.134.20.48:8080

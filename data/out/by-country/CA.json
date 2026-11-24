@@ -4,10 +4,22 @@
     "port": 40000,
     "type": "http",
     "country": "CA",
-    "score": 72.81,
+    "score": 86.77,
+    "tier": "gold",
+    "latency": 216,
+    "last_checked": "2026-11-24T19:59:20+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "23.132.28.60",
+    "port": 3129,
+    "type": "http",
+    "country": "CA",
+    "score": 67.66,
     "tier": "silver",
-    "latency": 877,
-    "last_checked": "2026-11-24T18:51:45+00:00",
+    "latency": 626,
+    "last_checked": "2026-11-24T19:59:20+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,2 +1,0 @@
-# YUEL · RO · socks4 · 1 proxies · generated 2026-11-24T18:57:30 UTC
-socks4://81.12.157.98:5678
