@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "83.143.29.225",
+    "port": 80,
+    "type": "http",
+    "country": "BW",
+    "score": 76.28,
+    "tier": "silver",
+    "latency": 281,
+    "last_checked": "2026-11-24T04:35:26+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

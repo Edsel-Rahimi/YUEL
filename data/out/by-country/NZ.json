@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "218.100.23.130",
+    "port": 8080,
+    "type": "http",
+    "country": "NZ",
+    "score": 45.43,
+    "tier": "bronze",
+    "latency": 1606,
+    "last_checked": "2026-11-24T04:35:26+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
