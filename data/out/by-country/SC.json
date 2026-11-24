@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "94.26.106.100",
+    "port": 8080,
+    "type": "http",
+    "country": "SC",
+    "score": 92.82,
+    "tier": "gold",
+    "latency": 120,
+    "last_checked": "2026-11-24T15:35:05+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

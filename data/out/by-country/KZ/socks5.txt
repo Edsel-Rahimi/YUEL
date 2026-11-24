@@ -1,2 +1,0 @@
-# YUEL · KZ · socks5 · 1 proxies · generated 2026-11-24T14:25:47 UTC
-socks5://147.45.226.230:1090
