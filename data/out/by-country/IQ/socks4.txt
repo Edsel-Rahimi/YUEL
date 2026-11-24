@@ -1,2 +1,0 @@
-# YUEL · IQ · socks4 · 1 proxies · generated 2026-11-24T11:59:09 UTC
-socks4://185.95.186.165:48293

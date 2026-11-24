@@ -1,73 +1,25 @@
 [
   {
+    "ip": "188.72.42.241",
+    "port": 47193,
+    "type": "http",
+    "country": "IQ",
+    "score": 77.6,
+    "tier": "silver",
+    "latency": 268,
+    "last_checked": "2026-11-24T13:02:19+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "185.135.69.34",
     "port": 80,
     "type": "http",
     "country": "IQ",
-    "score": 78.53,
+    "score": 76.62,
     "tier": "silver",
-    "latency": 313,
-    "last_checked": "2026-11-24T11:53:19+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "185.95.186.165",
-    "port": 48293,
-    "type": "socks4",
-    "country": "IQ",
-    "score": 74.24,
-    "tier": "silver",
-    "latency": 288,
-    "last_checked": "2026-11-24T11:53:19+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "130.255.94.32",
-    "port": 5080,
-    "type": "socks5",
-    "country": "IQ",
-    "score": 73.68,
-    "tier": "silver",
-    "latency": 294,
-    "last_checked": "2026-11-24T11:53:19+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "62.201.217.194",
-    "port": 8080,
-    "type": "http",
-    "country": "IQ",
-    "score": 67.3,
-    "tier": "silver",
-    "latency": 254,
-    "last_checked": "2026-11-24T11:53:19+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "185.166.27.208",
-    "port": 2020,
-    "type": "http",
-    "country": "IQ",
-    "score": 43.25,
-    "tier": "bronze",
-    "latency": 1740,
-    "last_checked": "2026-11-24T11:53:19+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "109.224.2.58",
-    "port": 8080,
-    "type": "http",
-    "country": "IQ",
-    "score": 32.04,
-    "tier": "bronze",
-    "latency": 3227,
-    "last_checked": "2026-11-24T11:53:19+00:00",
+    "latency": 412,
+    "last_checked": "2026-11-24T13:02:19+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
