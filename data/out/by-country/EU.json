@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "188.150.229.60",
+    "port": 5678,
+    "type": "socks4",
+    "country": "EU",
+    "score": 92.17,
+    "tier": "gold",
+    "latency": 122,
+    "last_checked": "2026-11-24T17:50:06+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -1,2 +1,2 @@
-# YUEL · GT · http · 1 proxies · generated 2026-11-24T16:48:23 UTC
-http://138.118.107.29:999
+# YUEL · GT · http · 1 proxies · generated 2026-11-24T17:55:08 UTC
+http://138.117.231.133:999

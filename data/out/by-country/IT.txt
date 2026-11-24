@@ -1,3 +1,2 @@
-# YUEL · IT · 2 proxies · generated 2026-11-24T16:48:23 UTC
-socks4://91.192.25.158:4145
+# YUEL · IT · 1 proxies · generated 2026-11-24T17:55:08 UTC
 http://77.242.177.57:3128

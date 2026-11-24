@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "80.78.74.66",
+    "port": 65530,
+    "type": "socks4",
+    "country": "AL",
+    "score": 89.53,
+    "tier": "gold",
+    "latency": 150,
+    "last_checked": "2026-11-24T17:50:06+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

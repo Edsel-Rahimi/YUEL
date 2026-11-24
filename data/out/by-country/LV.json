@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "LV",
-    "score": 90.49,
+    "score": 90.62,
     "tier": "gold",
-    "latency": 119,
-    "last_checked": "2026-11-24T16:43:16+00:00",
+    "latency": 136,
+    "last_checked": "2026-11-24T17:50:06+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "87.226.22.225",
+    "port": 80,
+    "type": "http",
+    "country": "LV",
+    "score": 86.59,
+    "tier": "gold",
+    "latency": 162,
+    "last_checked": "2026-11-24T17:50:06+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
