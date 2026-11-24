@@ -1,13 +1,13 @@
 [
   {
-    "ip": "133.232.90.85",
-    "port": 80,
+    "ip": "61.118.38.234",
+    "port": 60808,
     "type": "http",
     "country": "JP",
-    "score": 31.09,
+    "score": 27.6,
     "tier": "bronze",
-    "latency": 3451,
-    "last_checked": "2026-11-24T00:50:09+00:00",
+    "latency": 6767,
+    "last_checked": "2026-11-24T02:12:05+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
