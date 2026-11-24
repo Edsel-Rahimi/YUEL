@@ -50,10 +50,10 @@
 <text x="78" y="42" font-size="16" font-weight="700" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">Hong Kong</text>
 <text x="78" y="62" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">HK</text>
 <circle cx="294" cy="28" r="3.5" fill="none" stroke="#6BC490" stroke-width="1.6" class="pz"/><circle cx="294" cy="28" r="3.5" fill="#6BC490"/>
-<text x="22" y="112" font-size="34" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">25</text>
+<text x="22" y="112" font-size="34" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#F7F6F9">26</text>
 <text x="74.8" y="112" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">ALIVE</text>
 <rect x="22" y="126" width="130" height="5" rx="2.5" fill="#645676" fill-opacity="0.496"/>
-<rect x="22" y="126" width="4.3" height="5" rx="2.5" fill="#6574C9" opacity="0.75" class="gw" style="animation-delay:0.65s"/>
+<rect x="22" y="126" width="4.2" height="5" rx="2.5" fill="#6574C9" opacity="0.75" class="gw" style="animation-delay:0.60s"/>
 <clipPath id="cc-HK-dark"><rect x="1" y="1" width="318" height="148" rx="19"/></clipPath>
-<g clip-path="url(#cc-HK-dark)"><rect x="0" y="0" width="110" height="150" fill="#FFFFFF" opacity="0.09" class="sw" style="animation-delay:4.05s;animation-duration:9s"/></g>
+<g clip-path="url(#cc-HK-dark)"><rect x="0" y="0" width="110" height="150" fill="#FFFFFF" opacity="0.09" class="sw" style="animation-delay:3.60s;animation-duration:9s"/></g>
 </svg>
