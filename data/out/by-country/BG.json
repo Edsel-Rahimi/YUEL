@@ -1,49 +1,49 @@
 [
   {
+    "ip": "213.169.33.8",
+    "port": 8001,
+    "type": "http",
+    "country": "BG",
+    "score": 89.69,
+    "tier": "gold",
+    "latency": 162,
+    "last_checked": "2026-11-24T18:51:45+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "91.92.78.207",
+    "port": 4145,
+    "type": "socks4",
+    "country": "BG",
+    "score": 89.38,
+    "tier": "gold",
+    "latency": 165,
+    "last_checked": "2026-11-24T18:51:45+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "46.10.209.230",
+    "port": 8080,
+    "type": "http",
+    "country": "BG",
+    "score": 85.2,
+    "tier": "gold",
+    "latency": 189,
+    "last_checked": "2026-11-24T18:51:45+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "77.238.79.111",
     "port": 5678,
     "type": "socks4",
     "country": "BG",
-    "score": 89.44,
+    "score": 83.43,
     "tier": "gold",
-    "latency": 150,
-    "last_checked": "2026-11-24T17:50:06+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "79.110.118.15",
-    "port": 8085,
-    "type": "http",
-    "country": "BG",
-    "score": 68.52,
-    "tier": "silver",
-    "latency": 350,
-    "last_checked": "2026-11-24T17:50:06+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "85.187.5.66",
-    "port": 48293,
-    "type": "socks4",
-    "country": "BG",
-    "score": 66.61,
-    "tier": "silver",
-    "latency": 430,
-    "last_checked": "2026-11-24T17:50:06+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "78.142.61.74",
-    "port": 3128,
-    "type": "http",
-    "country": "BG",
-    "score": 33.49,
-    "tier": "bronze",
-    "latency": 2631,
-    "last_checked": "2026-11-24T17:50:06+00:00",
+    "latency": 204,
+    "last_checked": "2026-11-24T18:51:45+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
