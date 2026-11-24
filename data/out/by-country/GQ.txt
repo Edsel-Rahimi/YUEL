@@ -1,2 +1,0 @@
-# YUEL · GQ · 1 proxies · generated 2026-11-24T20:04:48 UTC
-socks4://102.164.251.242:4153

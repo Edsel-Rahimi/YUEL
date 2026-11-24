@@ -1,13 +1,13 @@
 [
   {
-    "ip": "102.38.7.110",
-    "port": 1972,
+    "ip": "165.16.27.42",
+    "port": 1981,
     "type": "http",
     "country": "LY",
-    "score": 41.81,
-    "tier": "bronze",
-    "latency": 1706,
-    "last_checked": "2026-11-24T19:59:20+00:00",
+    "score": 83.92,
+    "tier": "gold",
+    "latency": 195,
+    "last_checked": "2026-11-24T20:48:57+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,3 +1,0 @@
-# YUEL · GE · http · 2 proxies · generated 2026-11-24T20:04:48 UTC
-http://80.241.251.54:8080
-http://178.134.100.66:8080
