@@ -1,2 +1,2 @@
-# YUEL · JP · http · 1 proxies · generated 2026-11-24T02:17:53 UTC
-http://61.118.38.234:60808
+# YUEL · JP · http · 1 proxies · generated 2026-11-24T03:31:49 UTC
+http://85.131.243.125:3128

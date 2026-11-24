@@ -1,13 +1,25 @@
 [
   {
-    "ip": "151.253.146.146",
-    "port": 8080,
+    "ip": "104.252.175.210",
+    "port": 1080,
     "type": "http",
     "country": "AE",
-    "score": 28.71,
+    "score": 46.45,
     "tier": "bronze",
-    "latency": 5154,
-    "last_checked": "2026-11-24T02:12:05+00:00",
+    "latency": 2967,
+    "last_checked": "2026-11-24T03:25:34+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "104.253.134.37",
+    "port": 3128,
+    "type": "http",
+    "country": "AE",
+    "score": 27.63,
+    "tier": "bronze",
+    "latency": 6352,
+    "last_checked": "2026-11-24T03:25:34+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
