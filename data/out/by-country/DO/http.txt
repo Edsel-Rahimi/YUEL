@@ -1,3 +1,4 @@
-# YUEL · DO · http · 2 proxies · generated 2026-11-24T20:54:19 UTC
-http://179.49.202.42:999
-http://38.80.12.251:999
+# YUEL · DO · http · 3 proxies · generated 2026-11-24T21:57:03 UTC
+http://38.50.165.123:999
+http://38.44.17.142:999
+http://38.80.12.142:999
