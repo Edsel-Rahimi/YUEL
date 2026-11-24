@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "194.150.110.134",
+    "port": 80,
+    "type": "http",
+    "country": "DK",
+    "score": 90.21,
+    "tier": "gold",
+    "latency": 141,
+    "last_checked": "2026-11-24T23:46:17+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

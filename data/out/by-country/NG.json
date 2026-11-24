@@ -1,13 +1,13 @@
 [
   {
-    "ip": "102.212.104.129",
-    "port": 8082,
+    "ip": "102.90.0.149",
+    "port": 8080,
     "type": "http",
     "country": "NG",
-    "score": 44.75,
-    "tier": "bronze",
-    "latency": 1326,
-    "last_checked": "2026-11-24T22:52:14+00:00",
+    "score": 80.64,
+    "tier": "gold",
+    "latency": 226,
+    "last_checked": "2026-11-24T23:46:17+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
