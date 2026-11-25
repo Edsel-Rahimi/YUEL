@@ -1,6 +1,6 @@
-# YUEL · KH · http · 5 proxies · generated 2026-11-25T22:55:43 UTC
+# YUEL · KH · http · 5 proxies · generated 2026-11-25T23:51:22 UTC
 http://103.63.190.84:8080
-http://36.37.251.137:8080
 http://203.95.198.184:8080
 http://103.118.47.205:8080
 http://103.118.44.155:8080
+http://36.37.180.40:8080

@@ -1,13 +1,13 @@
 [
   {
-    "ip": "45.190.13.12",
-    "port": 999,
+    "ip": "131.108.232.201",
+    "port": 8080,
     "type": "http",
     "country": "HN",
-    "score": 44.33,
-    "tier": "bronze",
-    "latency": 1255,
-    "last_checked": "2026-11-25T22:50:14+00:00",
+    "score": 68.1,
+    "tier": "silver",
+    "latency": 428,
+    "last_checked": "2026-11-25T23:45:52+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

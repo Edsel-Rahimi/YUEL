@@ -1,3 +1,2 @@
-# YUEL · MM · 2 proxies · generated 2026-11-25T22:55:43 UTC
+# YUEL · MM · 1 proxies · generated 2026-11-25T23:51:22 UTC
 http://103.25.79.150:8054
-http://203.81.81.226:8055
