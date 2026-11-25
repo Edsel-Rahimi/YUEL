@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "105.27.130.22",
+    "port": 9812,
+    "type": "http",
+    "country": "MU",
+    "score": 73.55,
+    "tier": "silver",
+    "latency": 320,
+    "last_checked": "2026-11-25T19:51:57+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

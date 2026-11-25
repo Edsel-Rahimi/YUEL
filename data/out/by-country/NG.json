@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "196.1.182.130",
+    "port": 1080,
+    "type": "socks4",
+    "country": "NG",
+    "score": 67.92,
+    "tier": "silver",
+    "latency": 969,
+    "last_checked": "2026-11-25T19:51:57+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

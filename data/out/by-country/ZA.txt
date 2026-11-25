@@ -1,2 +1,4 @@
-# YUEL · ZA · 1 proxies · generated 2026-11-25T18:50:44 UTC
-socks4://160.226.220.30:1080
+# YUEL · ZA · 3 proxies · generated 2026-11-25T19:57:47 UTC
+http://102.222.240.10:9999
+http://154.66.159.34:800
+http://196.251.221.30:8080
