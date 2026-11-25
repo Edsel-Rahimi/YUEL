@@ -1,0 +1,2 @@
+# YUEL · MW · 1 proxies · generated 2026-11-25T17:53:25 UTC
+socks5://41.75.123.101:1080

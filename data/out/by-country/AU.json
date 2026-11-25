@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "159.196.182.72",
+    "port": 8080,
+    "type": "http",
+    "country": "AU",
+    "score": 31.29,
+    "tier": "bronze",
+    "latency": 3124,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

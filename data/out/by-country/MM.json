@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "103.25.79.150",
+    "port": 8054,
+    "type": "http",
+    "country": "MM",
+    "score": 70.84,
+    "tier": "silver",
+    "latency": 663,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

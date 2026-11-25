@@ -1,0 +1,110 @@
+[
+  {
+    "ip": "102.244.78.61",
+    "port": 8083,
+    "type": "http",
+    "country": "CM",
+    "score": 79.71,
+    "tier": "silver",
+    "latency": 341,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.244.78.61",
+    "port": 8089,
+    "type": "http",
+    "country": "CM",
+    "score": 78.55,
+    "tier": "silver",
+    "latency": 439,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.244.78.61",
+    "port": 8085,
+    "type": "http",
+    "country": "CM",
+    "score": 78.46,
+    "tier": "silver",
+    "latency": 449,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.244.78.61",
+    "port": 8084,
+    "type": "http",
+    "country": "CM",
+    "score": 78.32,
+    "tier": "silver",
+    "latency": 461,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.244.78.61",
+    "port": 8086,
+    "type": "http",
+    "country": "CM",
+    "score": 77.96,
+    "tier": "silver",
+    "latency": 519,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.244.78.61",
+    "port": 8081,
+    "type": "http",
+    "country": "CM",
+    "score": 77.5,
+    "tier": "silver",
+    "latency": 586,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.244.78.61",
+    "port": 8090,
+    "type": "http",
+    "country": "CM",
+    "score": 72.67,
+    "tier": "silver",
+    "latency": 442,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.244.78.61",
+    "port": 8087,
+    "type": "http",
+    "country": "CM",
+    "score": 71.99,
+    "tier": "silver",
+    "latency": 519,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.244.78.61",
+    "port": 8082,
+    "type": "http",
+    "country": "CM",
+    "score": 71.91,
+    "tier": "silver",
+    "latency": 526,
+    "last_checked": "2026-11-25T17:48:21+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
