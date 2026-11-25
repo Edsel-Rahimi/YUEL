@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "185.118.51.163",
+    "port": 3128,
+    "type": "http",
+    "country": "AZ",
+    "score": 83.34,
+    "tier": "gold",
+    "latency": 226,
+    "last_checked": "2026-11-25T08:36:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

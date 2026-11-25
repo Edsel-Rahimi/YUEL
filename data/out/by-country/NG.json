@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "102.69.146.59",
+    "port": 7080,
+    "type": "socks5",
+    "country": "NG",
+    "score": 76.46,
+    "tier": "silver",
+    "latency": 304,
+    "last_checked": "2026-11-25T08:36:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "41.216.169.82",
+    "port": 5678,
+    "type": "socks4",
+    "country": "NG",
+    "score": 72.52,
+    "tier": "silver",
+    "latency": 388,
+    "last_checked": "2026-11-25T08:36:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
