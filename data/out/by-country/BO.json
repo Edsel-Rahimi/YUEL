@@ -4,10 +4,22 @@
     "port": 33638,
     "type": "socks4",
     "country": "BO",
-    "score": 91.3,
+    "score": 86.52,
     "tier": "gold",
-    "latency": 168,
-    "last_checked": "2026-11-25T21:53:32+00:00",
+    "latency": 206,
+    "last_checked": "2026-11-25T22:50:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "190.181.28.186",
+    "port": 999,
+    "type": "http",
+    "country": "BO",
+    "score": 28.57,
+    "tier": "bronze",
+    "latency": 5581,
+    "last_checked": "2026-11-25T22:50:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

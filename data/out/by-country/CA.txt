@@ -1,3 +1,2 @@
-# YUEL · CA · 2 proxies · generated 2026-11-25T21:59:15 UTC
-socks4://50.67.100.178:8080
-http://23.132.28.60:3133
+# YUEL · CA · 1 proxies · generated 2026-11-25T22:55:43 UTC
+socks5://70.38.101.182:40000
