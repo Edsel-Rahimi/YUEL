@@ -1,2 +1,2 @@
-# YUEL · UA · http · 1 proxies · generated 2026-11-25T04:50:11 UTC
-http://194.44.255.112:8080
+# YUEL · UA · http · 1 proxies · generated 2026-11-25T06:02:57 UTC
+http://176.105.212.219:8080

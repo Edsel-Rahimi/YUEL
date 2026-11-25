@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "202.165.92.206",
+    "port": 8080,
+    "type": "http",
+    "country": "MM",
+    "score": 78.66,
+    "tier": "silver",
+    "latency": 256,
+    "last_checked": "2026-11-25T05:56:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "136.228.160.250",
+    "port": 5678,
+    "type": "socks4",
+    "country": "MM",
+    "score": 73.86,
+    "tier": "silver",
+    "latency": 311,
+    "last_checked": "2026-11-25T05:56:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

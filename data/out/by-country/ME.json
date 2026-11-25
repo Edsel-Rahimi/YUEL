@@ -4,22 +4,10 @@
     "port": 48293,
     "type": "socks4",
     "country": "ME",
-    "score": 90.72,
+    "score": 89.42,
     "tier": "gold",
-    "latency": 146,
-    "last_checked": "2026-11-25T04:44:36+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "109.72.109.214",
-    "port": 48293,
-    "type": "socks4",
-    "country": "ME",
-    "score": 89.49,
-    "tier": "gold",
-    "latency": 160,
-    "last_checked": "2026-11-25T04:44:36+00:00",
+    "latency": 175,
+    "last_checked": "2026-11-25T05:56:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

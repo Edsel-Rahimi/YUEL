@@ -1,2 +1,0 @@
-# YUEL · GE · socks5 · 1 proxies · generated 2026-11-25T04:50:11 UTC
-socks5://193.23.219.115:1080

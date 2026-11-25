@@ -1,3 +1,0 @@
-# YUEL · JP · 2 proxies · generated 2026-11-25T04:50:11 UTC
-http://160.248.7.177:80
-http://163.44.126.97:3128
