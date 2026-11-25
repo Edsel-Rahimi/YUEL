@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "77.242.177.57",
+    "port": 3128,
+    "type": "http",
+    "country": "IT",
+    "score": 90.3,
+    "tier": "gold",
+    "latency": 151,
+    "last_checked": "2026-11-25T00:55:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "91.192.25.158",
+    "port": 4145,
+    "type": "socks4",
+    "country": "IT",
+    "score": 79.86,
+    "tier": "silver",
+    "latency": 226,
+    "last_checked": "2026-11-25T00:55:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

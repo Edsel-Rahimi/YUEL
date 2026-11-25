@@ -1,2 +1,2 @@
-# YUEL · CZ · http · 1 proxies · generated 2026-11-24T23:51:26 UTC
-http://109.123.219.11:80
+# YUEL · CZ · http · 1 proxies · generated 2026-11-25T01:00:18 UTC
+http://217.75.208.181:8080
