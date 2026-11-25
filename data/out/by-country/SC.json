@@ -4,10 +4,22 @@
     "port": 1080,
     "type": "socks5",
     "country": "SC",
-    "score": 89.86,
+    "score": 91.27,
     "tier": "gold",
-    "latency": 153,
-    "last_checked": "2026-11-25T15:35:05+00:00",
+    "latency": 150,
+    "last_checked": "2026-11-25T16:44:02+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "31.207.4.14",
+    "port": 3128,
+    "type": "http",
+    "country": "SC",
+    "score": 27.17,
+    "tier": "bronze",
+    "latency": 7683,
+    "last_checked": "2026-11-25T16:44:02+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
