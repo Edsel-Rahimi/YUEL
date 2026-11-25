@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "81.7.112.174",
+    "port": 4145,
+    "type": "socks4",
+    "country": "LT",
+    "score": 92.9,
+    "tier": "gold",
+    "latency": 142,
+    "last_checked": "2026-11-25T14:27:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

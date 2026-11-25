@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "81.12.157.98",
+    "port": 5678,
+    "type": "socks4",
+    "country": "RO",
+    "score": 88.26,
+    "tier": "gold",
+    "latency": 197,
+    "last_checked": "2026-11-25T14:27:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
