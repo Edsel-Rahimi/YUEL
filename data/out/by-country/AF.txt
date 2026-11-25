@@ -1,2 +1,2 @@
-# YUEL · AF · 1 proxies · generated 2026-11-25T01:00:18 UTC
-http://149.54.16.170:8080
+# YUEL · AF · 1 proxies · generated 2026-11-25T02:24:47 UTC
+socks4://111.125.154.22:1080

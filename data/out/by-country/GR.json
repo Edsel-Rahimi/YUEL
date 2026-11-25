@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "62.103.186.66",
+    "port": 4153,
+    "type": "socks4",
+    "country": "GR",
+    "score": 86.22,
+    "tier": "gold",
+    "latency": 175,
+    "last_checked": "2026-11-25T02:19:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "94.68.245.147",
+    "port": 8080,
+    "type": "http",
+    "country": "GR",
+    "score": 28.29,
+    "tier": "bronze",
+    "latency": 5532,
+    "last_checked": "2026-11-25T02:19:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

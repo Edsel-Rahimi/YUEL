@@ -1,4 +1,4 @@
-# YUEL · MY · 3 proxies · generated 2026-11-25T01:00:18 UTC
+# YUEL · MY · 3 proxies · generated 2026-11-25T02:24:47 UTC
 http://175.138.231.145:80
-http://219.93.101.60:80
+http://219.93.101.62:80
 http://87.76.160.26:8880

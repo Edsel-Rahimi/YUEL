@@ -1,5 +1,4 @@
-# YUEL · ES · 4 proxies · generated 2026-11-25T01:00:18 UTC
-socks5://85.117.248.36:1080
+# YUEL · ES · 3 proxies · generated 2026-11-25T02:24:47 UTC
 socks4://83.56.15.57:5678
 http://195.114.209.50:80
-http://81.34.115.5:3128
+http://45.13.185.217:3128
