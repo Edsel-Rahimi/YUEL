@@ -1,2 +1,0 @@
-# YUEL · CM · socks4 · 1 proxies · generated 2026-11-25T20:55:20 UTC
-socks4://102.132.17.30:1080
