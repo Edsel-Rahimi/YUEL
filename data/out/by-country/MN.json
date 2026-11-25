@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "202.131.235.138",
+    "port": 4153,
+    "type": "socks4",
+    "country": "MN",
+    "score": 77.81,
+    "tier": "silver",
+    "latency": 283,
+    "last_checked": "2026-11-25T07:03:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "202.21.115.178",
+    "port": 8080,
+    "type": "http",
+    "country": "MN",
+    "score": 70.71,
+    "tier": "silver",
+    "latency": 392,
+    "last_checked": "2026-11-25T07:03:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
