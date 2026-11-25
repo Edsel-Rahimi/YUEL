@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "102.68.128.216",
+    "port": 8080,
+    "type": "http",
+    "country": "LY",
+    "score": 70.94,
+    "tier": "silver",
+    "latency": 272,
+    "last_checked": "2026-11-25T03:33:22+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.38.7.149",
+    "port": 19000,
+    "type": "http",
+    "country": "LY",
+    "score": 60.09,
+    "tier": "silver",
+    "latency": 967,
+    "last_checked": "2026-11-25T03:33:22+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

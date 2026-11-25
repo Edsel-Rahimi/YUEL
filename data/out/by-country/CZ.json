@@ -4,10 +4,22 @@
     "port": 4145,
     "type": "socks4",
     "country": "CZ",
-    "score": 89.95,
-    "tier": "gold",
-    "latency": 126,
-    "last_checked": "2026-11-25T02:19:44+00:00",
+    "score": 75.56,
+    "tier": "silver",
+    "latency": 248,
+    "last_checked": "2026-11-25T03:33:22+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "95.129.101.73",
+    "port": 80,
+    "type": "http",
+    "country": "CZ",
+    "score": 28.51,
+    "tier": "bronze",
+    "latency": 5088,
+    "last_checked": "2026-11-25T03:33:22+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

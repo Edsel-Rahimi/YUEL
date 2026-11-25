@@ -1,0 +1,2 @@
+# YUEL · CL · socks4 · 1 proxies · generated 2026-11-25T03:38:10 UTC
+socks4://190.54.100.74:5678

@@ -1,3 +1,0 @@
-# YUEL · MN · http · 2 proxies · generated 2026-11-25T02:24:47 UTC
-http://202.21.115.178:8080
-http://103.11.193.67:8080
