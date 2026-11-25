@@ -1,3 +1,7 @@
-# YUEL · BD · http · 2 proxies · generated 2026-11-25T10:08:32 UTC
+# YUEL · BD · http · 6 proxies · generated 2026-11-25T11:05:47 UTC
+http://103.101.98.117:8080
 http://113.212.111.4:8090
 http://103.124.227.36:8090
+http://114.130.175.18:8080
+http://103.89.27.32:8080
+http://118.179.84.131:81

@@ -1,3 +1,0 @@
-# YUEL · CL · http · 2 proxies · generated 2026-11-25T10:08:32 UTC
-http://181.74.82.91:999
-http://152.230.215.123:80

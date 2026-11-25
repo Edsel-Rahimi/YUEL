@@ -1,2 +1,0 @@
-# YUEL · MW · 1 proxies · generated 2026-11-25T10:08:32 UTC
-socks4://41.70.9.10:5678

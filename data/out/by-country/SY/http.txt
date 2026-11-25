@@ -1,5 +1,4 @@
-# YUEL · SY · http · 4 proxies · generated 2026-11-25T10:08:32 UTC
-http://185.225.42.81:8080
-http://191.44.91.56:8080
-http://89.43.133.116:8080
+# YUEL · SY · http · 3 proxies · generated 2026-11-25T11:05:47 UTC
+http://201.4.68.80:8080
 http://185.235.16.12:80
+http://128.0.7.188:8085

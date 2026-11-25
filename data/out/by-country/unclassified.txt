@@ -1,0 +1,2 @@
+# YUEL · unclassified · 1 proxies · generated 2026-11-25T11:05:47 UTC
+socks5://78.142.217.197:1080

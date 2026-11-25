@@ -1,3 +1,4 @@
-# YUEL · SC · 2 proxies · generated 2026-11-25T10:08:32 UTC
+# YUEL · SC · 3 proxies · generated 2026-11-25T11:05:47 UTC
 http://94.26.106.100:8080
 http://94.26.106.100:3128
+socks5://31.56.19.26:1080

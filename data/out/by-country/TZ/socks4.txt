@@ -1,2 +1,0 @@
-# YUEL · TZ · socks4 · 1 proxies · generated 2026-11-25T10:08:32 UTC
-socks4://169.255.48.50:1080
