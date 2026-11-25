@@ -1,4 +1,2 @@
-# YUEL · BR · socks4 · 3 proxies · generated 2026-11-25T17:53:25 UTC
-socks4://186.216.195.1:4153
-socks4://187.87.34.82:60606
-socks4://177.136.124.45:56113
+# YUEL · BR · socks4 · 1 proxies · generated 2026-11-25T18:50:44 UTC
+socks4://179.189.242.5:5432

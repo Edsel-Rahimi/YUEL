@@ -1,13 +1,13 @@
 [
   {
-    "ip": "159.196.182.72",
-    "port": 8080,
+    "ip": "114.111.151.41",
+    "port": 80,
     "type": "http",
     "country": "AU",
-    "score": 31.29,
+    "score": 45.71,
     "tier": "bronze",
-    "latency": 3124,
-    "last_checked": "2026-11-25T17:48:21+00:00",
+    "latency": 3416,
+    "last_checked": "2026-11-25T18:45:40+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

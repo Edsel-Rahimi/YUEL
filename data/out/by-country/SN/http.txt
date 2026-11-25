@@ -1,5 +1,2 @@
-# YUEL · SN · http · 4 proxies · generated 2026-11-25T17:53:25 UTC
-http://196.1.93.16:80
+# YUEL · SN · http · 1 proxies · generated 2026-11-25T18:50:44 UTC
 http://196.1.97.198:80
-http://196.1.93.10:80
-http://154.65.39.8:80

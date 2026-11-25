@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "147.236.181.86",
+    "port": 50009,
+    "type": "http",
+    "country": "IL",
+    "score": 91.43,
+    "tier": "gold",
+    "latency": 138,
+    "last_checked": "2026-11-25T18:45:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

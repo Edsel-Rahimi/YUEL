@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "45.133.107.192",
+    "port": 81,
+    "type": "http",
+    "country": "AM",
+    "score": 87.68,
+    "tier": "gold",
+    "latency": 193,
+    "last_checked": "2026-11-25T18:45:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

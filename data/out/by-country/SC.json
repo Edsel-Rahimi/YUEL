@@ -4,10 +4,22 @@
     "port": 3128,
     "type": "http",
     "country": "SC",
-    "score": 95.04,
+    "score": 96.08,
     "tier": "gold",
-    "latency": 98,
-    "last_checked": "2026-11-25T17:48:21+00:00",
+    "latency": 93,
+    "last_checked": "2026-11-25T18:45:40+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "94.26.106.100",
+    "port": 8080,
+    "type": "http",
+    "country": "SC",
+    "score": 95.81,
+    "tier": "gold",
+    "latency": 94,
+    "last_checked": "2026-11-25T18:45:40+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
