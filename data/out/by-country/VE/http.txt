@@ -1,5 +1,4 @@
-# YUEL · VE · http · 4 proxies · generated 2026-11-25T03:38:10 UTC
-http://181.225.32.10:999
-http://138.118.203.152:999
-http://154.59.56.76:999
+# YUEL · VE · http · 3 proxies · generated 2026-11-25T04:50:11 UTC
 http://154.59.56.74:999
+http://154.3.76.16:999
+http://154.59.56.76:999
