@@ -1,2 +1,0 @@
-# YUEL · MN · socks4 · 1 proxies · generated 2026-11-25T19:57:47 UTC
-socks4://49.0.156.20:32000

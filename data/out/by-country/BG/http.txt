@@ -1,2 +1,2 @@
-# YUEL · BG · http · 1 proxies · generated 2026-11-25T19:57:47 UTC
-http://93.123.16.38:80
+# YUEL · BG · http · 1 proxies · generated 2026-11-25T20:55:20 UTC
+http://88.87.6.135:3030

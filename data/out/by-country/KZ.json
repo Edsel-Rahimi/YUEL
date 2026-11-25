@@ -4,10 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "KZ",
-    "score": 93.17,
+    "score": 93.07,
     "tier": "gold",
-    "latency": 154,
-    "last_checked": "2026-11-25T19:51:57+00:00",
+    "latency": 149,
+    "last_checked": "2026-11-25T20:49:53+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
