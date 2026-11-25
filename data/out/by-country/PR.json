@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "67.206.213.202",
+    "port": 55555,
+    "type": "socks4",
+    "country": "PR",
+    "score": 90.77,
+    "tier": "gold",
+    "latency": 145,
+    "last_checked": "2026-11-25T11:57:00+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

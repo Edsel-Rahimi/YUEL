@@ -1,25 +1,13 @@
 [
   {
-    "ip": "83.56.15.57",
-    "port": 5678,
-    "type": "socks4",
-    "country": "ES",
-    "score": 92.62,
-    "tier": "gold",
-    "latency": 154,
-    "last_checked": "2026-11-25T11:00:58+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
     "ip": "195.114.209.50",
     "port": 80,
     "type": "http",
     "country": "ES",
-    "score": 92.16,
+    "score": 92.99,
     "tier": "gold",
-    "latency": 159,
-    "last_checked": "2026-11-25T11:00:58+00:00",
+    "latency": 140,
+    "last_checked": "2026-11-25T11:57:00+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

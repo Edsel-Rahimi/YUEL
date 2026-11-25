@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "41.220.131.48",
+    "port": 8040,
+    "type": "http",
+    "country": "TZ",
+    "score": 39.4,
+    "tier": "bronze",
+    "latency": 1552,
+    "last_checked": "2026-11-25T11:57:00+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

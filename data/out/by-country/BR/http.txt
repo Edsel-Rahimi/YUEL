@@ -1,5 +1,5 @@
-# YUEL · BR · http · 4 proxies · generated 2026-11-25T11:05:47 UTC
+# YUEL · BR · http · 4 proxies · generated 2026-11-25T12:01:41 UTC
 http://45.175.144.79:4080
 http://181.224.2.221:8080
+http://45.163.196.50:8083
 http://45.161.144.16:6666
-http://201.28.86.18:61804
