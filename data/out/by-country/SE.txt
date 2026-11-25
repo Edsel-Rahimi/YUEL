@@ -1,2 +1,2 @@
-# YUEL · SE · 1 proxies · generated 2026-11-25T08:41:37 UTC
-socks5://171.25.158.95:1080
+# YUEL · SE · 1 proxies · generated 2026-11-25T10:08:32 UTC
+http://194.14.207.87:8001

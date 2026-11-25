@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "85.66.19.69",
+    "port": 18080,
+    "type": "http",
+    "country": "HU",
+    "score": 78.29,
+    "tier": "silver",
+    "latency": 294,
+    "last_checked": "2026-11-25T10:04:01+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
