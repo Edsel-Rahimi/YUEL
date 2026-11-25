@@ -1,5 +1,2 @@
-# YUEL · AR · http · 4 proxies · generated 2026-11-25T12:01:41 UTC
+# YUEL · AR · http · 1 proxies · generated 2026-11-25T13:09:34 UTC
 http://190.123.83.137:999
-http://190.122.91.11:999
-http://45.65.227.161:999
-http://168.196.115.217:65000

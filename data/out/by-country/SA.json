@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "SA",
-    "score": 98.96,
+    "score": 97.17,
     "tier": "gold",
-    "latency": 46,
-    "last_checked": "2026-11-25T11:57:00+00:00",
+    "latency": 83,
+    "last_checked": "2026-11-25T13:04:51+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "45.91.248.107",
+    "port": 80,
+    "type": "http",
+    "country": "SA",
+    "score": 97.07,
+    "tier": "gold",
+    "latency": 86,
+    "last_checked": "2026-11-25T13:04:51+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

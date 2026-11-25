@@ -4,22 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "CL",
-    "score": 70.79,
-    "tier": "silver",
-    "latency": 851,
-    "last_checked": "2026-11-25T11:57:00+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "200.111.104.59",
-    "port": 3129,
-    "type": "http",
-    "country": "CL",
-    "score": 28.25,
+    "score": 29.08,
     "tier": "bronze",
-    "latency": 5002,
-    "last_checked": "2026-11-25T11:57:00+00:00",
+    "latency": 3910,
+    "last_checked": "2026-11-25T13:04:51+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

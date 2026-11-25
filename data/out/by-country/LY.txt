@@ -1,2 +1,0 @@
-# YUEL · LY · 1 proxies · generated 2026-11-25T12:01:41 UTC
-socks4://165.16.99.209:1080

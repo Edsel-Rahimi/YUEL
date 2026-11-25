@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "49.0.156.20",
+    "port": 32000,
+    "type": "socks4",
+    "country": "MN",
+    "score": 80.46,
+    "tier": "gold",
+    "latency": 252,
+    "last_checked": "2026-11-25T13:04:51+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

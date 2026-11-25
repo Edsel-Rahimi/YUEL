@@ -4,22 +4,10 @@
     "port": 443,
     "type": "http",
     "country": "FI",
-    "score": 89.17,
+    "score": 87.72,
     "tier": "gold",
-    "latency": 157,
-    "last_checked": "2026-11-25T11:57:00+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "81.27.101.176",
-    "port": 80,
-    "type": "http",
-    "country": "FI",
-    "score": 88.99,
-    "tier": "gold",
-    "latency": 160,
-    "last_checked": "2026-11-25T11:57:00+00:00",
+    "latency": 190,
+    "last_checked": "2026-11-25T13:04:51+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
