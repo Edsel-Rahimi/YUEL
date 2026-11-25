@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "78.40.211.252",
+    "port": 3128,
+    "type": "http",
+    "country": "GE",
+    "score": 90.95,
+    "tier": "gold",
+    "latency": 137,
+    "last_checked": "2026-11-25T15:35:05+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

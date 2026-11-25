@@ -1,3 +1,0 @@
-# YUEL · PE · 2 proxies · generated 2026-11-25T14:32:23 UTC
-http://45.236.44.94:8080
-http://190.119.81.43:999

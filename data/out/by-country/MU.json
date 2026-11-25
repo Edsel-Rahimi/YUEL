@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "105.22.37.218",
+    "port": 8080,
+    "type": "http",
+    "country": "MU",
+    "score": 78.54,
+    "tier": "silver",
+    "latency": 263,
+    "last_checked": "2026-11-25T15:35:05+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

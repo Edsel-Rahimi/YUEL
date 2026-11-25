@@ -1,13 +1,13 @@
 [
   {
-    "ip": "94.26.106.100",
-    "port": 3128,
-    "type": "http",
+    "ip": "31.56.19.26",
+    "port": 1080,
+    "type": "socks5",
     "country": "SC",
-    "score": 97.58,
+    "score": 89.86,
     "tier": "gold",
-    "latency": 91,
-    "last_checked": "2026-11-25T14:27:40+00:00",
+    "latency": 153,
+    "last_checked": "2026-11-25T15:35:05+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

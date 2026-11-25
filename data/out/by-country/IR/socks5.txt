@@ -1,2 +1,0 @@
-# YUEL · IR · socks5 · 1 proxies · generated 2026-11-25T14:32:23 UTC
-socks5://195.211.71.150:1081
