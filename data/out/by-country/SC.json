@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "176.65.132.138",
+    "port": 1080,
+    "type": "socks5",
+    "country": "SC",
+    "score": 93.42,
+    "tier": "gold",
+    "latency": 162,
+    "last_checked": "2026-11-26T02:18:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "31.56.19.26",
+    "port": 1080,
+    "type": "socks5",
+    "country": "SC",
+    "score": 88.38,
+    "tier": "gold",
+    "latency": 178,
+    "last_checked": "2026-11-26T02:18:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

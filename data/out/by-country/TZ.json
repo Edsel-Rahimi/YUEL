@@ -4,10 +4,10 @@
     "port": 8080,
     "type": "http",
     "country": "TZ",
-    "score": 37.18,
+    "score": 30.73,
     "tier": "bronze",
-    "latency": 2179,
-    "last_checked": "2026-11-26T00:54:47+00:00",
+    "latency": 3682,
+    "last_checked": "2026-11-26T02:18:10+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

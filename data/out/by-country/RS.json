@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "95.140.113.74",
+    "port": 6666,
+    "type": "http",
+    "country": "RS",
+    "score": 28.5,
+    "tier": "bronze",
+    "latency": 4808,
+    "last_checked": "2026-11-26T02:18:10+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

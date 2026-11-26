@@ -1,2 +1,0 @@
-# YUEL · MX · socks5 · 1 proxies · generated 2026-11-26T01:00:15 UTC
-socks5://206.135.52.21:1080
