@@ -1,2 +1,2 @@
-# YUEL · PK · http · 1 proxies · generated 2026-11-26T11:01:44 UTC
-http://202.166.172.138:8080
+# YUEL · PK · http · 1 proxies · generated 2026-11-26T12:00:50 UTC
+http://103.66.148.86:9999

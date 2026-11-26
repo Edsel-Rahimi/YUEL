@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "160.155.90.26",
+    "port": 1080,
+    "type": "socks4",
+    "country": "CI",
+    "score": 75.71,
+    "tier": "silver",
+    "latency": 316,
+    "last_checked": "2026-11-26T11:55:30+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

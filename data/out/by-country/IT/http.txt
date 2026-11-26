@@ -1,3 +1,2 @@
-# YUEL · IT · http · 2 proxies · generated 2026-11-26T11:01:44 UTC
+# YUEL · IT · http · 1 proxies · generated 2026-11-26T12:00:50 UTC
 http://2.237.63.228:80
-http://77.242.177.57:3128
