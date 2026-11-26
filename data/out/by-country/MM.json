@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "185.133.213.86",
+    "port": 8074,
+    "type": "http",
+    "country": "MM",
+    "score": 42.2,
+    "tier": "bronze",
+    "latency": 1860,
+    "last_checked": "2026-11-26T17:53:12+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

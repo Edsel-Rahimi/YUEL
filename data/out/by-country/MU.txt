@@ -1,2 +1,2 @@
-# YUEL · MU · 1 proxies · generated 2026-11-26T16:46:51 UTC
+# YUEL · MU · 1 proxies · generated 2026-11-26T17:58:52 UTC
 socks4://105.27.180.194:1080
