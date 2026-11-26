@@ -1,2 +1,2 @@
-# YUEL · CD · http · 1 proxies · generated 2026-11-26T07:07:49 UTC
-http://102.222.231.25:2333
+# YUEL · CD · http · 1 proxies · generated 2026-11-26T08:37:36 UTC
+http://41.79.233.182:8080

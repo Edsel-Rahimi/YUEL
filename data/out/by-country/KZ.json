@@ -4,34 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "KZ",
-    "score": 95.79,
+    "score": 97.51,
     "tier": "gold",
-    "latency": 104,
-    "last_checked": "2026-11-26T07:02:38+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "64.188.56.82",
-    "port": 8118,
-    "type": "http",
-    "country": "KZ",
-    "score": 33.49,
-    "tier": "bronze",
-    "latency": 2638,
-    "last_checked": "2026-11-26T07:02:38+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "147.45.152.242",
-    "port": 3128,
-    "type": "http",
-    "country": "KZ",
-    "score": 27.26,
-    "tier": "bronze",
-    "latency": 7937,
-    "last_checked": "2026-11-26T07:02:38+00:00",
+    "latency": 84,
+    "last_checked": "2026-11-26T08:32:35+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

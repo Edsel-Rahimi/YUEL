@@ -1,13 +1,37 @@
 [
   {
+    "ip": "185.247.141.86",
+    "port": 1080,
+    "type": "socks5",
+    "country": "FI",
+    "score": 92.74,
+    "tier": "gold",
+    "latency": 118,
+    "last_checked": "2026-11-26T08:32:35+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "77.90.187.127",
+    "port": 1080,
+    "type": "socks5",
+    "country": "FI",
+    "score": 90.73,
+    "tier": "gold",
+    "latency": 161,
+    "last_checked": "2026-11-26T08:32:35+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "81.27.101.176",
     "port": 80,
     "type": "http",
     "country": "FI",
-    "score": 90.29,
+    "score": 90.44,
     "tier": "gold",
-    "latency": 143,
-    "last_checked": "2026-11-26T07:02:38+00:00",
+    "latency": 125,
+    "last_checked": "2026-11-26T08:32:35+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +40,10 @@
     "port": 443,
     "type": "http",
     "country": "FI",
-    "score": 90.1,
+    "score": 90.35,
     "tier": "gold",
-    "latency": 147,
-    "last_checked": "2026-11-26T07:02:38+00:00",
+    "latency": 127,
+    "last_checked": "2026-11-26T08:32:35+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
