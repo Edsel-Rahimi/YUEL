@@ -1,1 +1,14 @@
-[]
+[
+  {
+    "ip": "185.222.30.155",
+    "port": 31623,
+    "type": "http",
+    "country": "unclassified",
+    "score": 93.98,
+    "tier": "gold",
+    "latency": 127,
+    "last_checked": "2026-11-26T00:54:47+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

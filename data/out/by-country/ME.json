@@ -4,10 +4,10 @@
     "port": 48293,
     "type": "socks4",
     "country": "ME",
-    "score": 87.1,
+    "score": 90.93,
     "tier": "gold",
-    "latency": 167,
-    "last_checked": "2026-11-25T23:45:52+00:00",
+    "latency": 156,
+    "last_checked": "2026-11-26T00:54:47+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
