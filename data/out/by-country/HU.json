@@ -4,10 +4,10 @@
     "port": 1080,
     "type": "socks4",
     "country": "HU",
-    "score": 89.31,
+    "score": 89.59,
     "tier": "gold",
-    "latency": 159,
-    "last_checked": "2026-11-26T20:49:00+00:00",
+    "latency": 196,
+    "last_checked": "2026-11-26T21:48:37+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,10 +16,10 @@
     "port": 80,
     "type": "socks4",
     "country": "HU",
-    "score": 87.91,
+    "score": 82.21,
     "tier": "gold",
-    "latency": 176,
-    "last_checked": "2026-11-26T20:49:00+00:00",
+    "latency": 218,
+    "last_checked": "2026-11-26T21:48:37+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,3 +1,2 @@
-# YUEL · GR · 2 proxies · generated 2026-11-26T20:54:40 UTC
-http://150.140.148.235:80
-http://194.177.207.44:3128
+# YUEL · GR · 1 proxies · generated 2026-11-26T21:54:27 UTC
+socks4://62.103.186.66:4153

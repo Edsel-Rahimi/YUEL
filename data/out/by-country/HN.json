@@ -4,22 +4,10 @@
     "port": 8080,
     "type": "http",
     "country": "HN",
-    "score": 91.25,
+    "score": 92.25,
     "tier": "gold",
-    "latency": 147,
-    "last_checked": "2026-11-26T20:49:00+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "200.107.239.218",
-    "port": 999,
-    "type": "http",
-    "country": "HN",
-    "score": 45.08,
-    "tier": "bronze",
-    "latency": 1401,
-    "last_checked": "2026-11-26T20:49:00+00:00",
+    "latency": 162,
+    "last_checked": "2026-11-26T21:48:37+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
