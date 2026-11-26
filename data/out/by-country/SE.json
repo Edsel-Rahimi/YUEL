@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "171.25.158.95",
+    "port": 1080,
+    "type": "socks5",
+    "country": "SE",
+    "score": 74.46,
+    "tier": "silver",
+    "latency": 714,
+    "last_checked": "2026-11-26T20:00:31+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "194.14.207.87",
+    "port": 8001,
+    "type": "http",
+    "country": "SE",
+    "score": 27.99,
+    "tier": "bronze",
+    "latency": 5938,
+    "last_checked": "2026-11-26T20:00:31+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

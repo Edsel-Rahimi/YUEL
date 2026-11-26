@@ -1,5 +1,4 @@
-# YUEL · CZ · 4 proxies · generated 2026-11-26T18:56:14 UTC
+# YUEL · CZ · 3 proxies · generated 2026-11-26T20:06:03 UTC
 http://109.123.219.11:80
 socks4://90.182.147.170:4145
-http://80.79.29.222:3128
 http://95.129.101.73:80
