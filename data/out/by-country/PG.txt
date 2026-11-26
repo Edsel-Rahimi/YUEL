@@ -1,2 +1,2 @@
-# YUEL · PG · 1 proxies · generated 2026-11-26T03:36:05 UTC
-http://103.99.175.54:8080
+# YUEL · PG · 1 proxies · generated 2026-11-26T04:46:19 UTC
+http://103.110.31.155:8080

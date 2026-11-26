@@ -1,4 +1,3 @@
-# YUEL · KR · http · 3 proxies · generated 2026-11-26T03:36:05 UTC
-http://220.81.123.23:48678
+# YUEL · KR · http · 2 proxies · generated 2026-11-26T04:46:19 UTC
+http://220.116.142.217:80
 http://61.111.251.68:80
-http://221.153.92.39:80

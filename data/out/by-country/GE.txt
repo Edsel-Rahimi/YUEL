@@ -1,4 +1,4 @@
-# YUEL · GE · 3 proxies · generated 2026-11-26T03:36:05 UTC
-http://78.40.211.121:3128
+# YUEL · GE · 3 proxies · generated 2026-11-26T04:46:19 UTC
 http://78.40.211.252:3128
-http://85.117.56.38:8080
+socks4://85.117.32.166:4153
+http://85.117.61.74:8080

@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "185.100.85.64",
+    "port": 1080,
+    "type": "socks5",
+    "country": "IS",
+    "score": 78.28,
+    "tier": "silver",
+    "latency": 301,
+    "last_checked": "2026-11-26T04:40:41+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
