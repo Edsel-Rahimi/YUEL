@@ -1,3 +1,2 @@
-# YUEL · BW · 2 proxies · generated 2026-11-26T15:39:17 UTC
-socks4://83.143.29.161:1080
-http://83.143.29.225:80
+# YUEL · BW · 1 proxies · generated 2026-11-26T16:46:51 UTC
+http://129.205.198.122:8080
