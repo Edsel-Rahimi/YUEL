@@ -1,3 +1,2 @@
-# YUEL · EC · http · 2 proxies · generated 2026-11-26T12:00:50 UTC
+# YUEL · EC · http · 1 proxies · generated 2026-11-26T13:09:33 UTC
 http://190.12.150.244:999
-http://45.229.17.17:999
