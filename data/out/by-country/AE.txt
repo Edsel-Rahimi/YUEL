@@ -1,4 +1,2 @@
-# YUEL · AE · 3 proxies · generated 2026-11-26T20:06:03 UTC
+# YUEL · AE · 1 proxies · generated 2026-11-26T20:54:40 UTC
 http://144.124.251.24:10807
-http://144.124.251.24:10576
-http://144.124.251.24:10088

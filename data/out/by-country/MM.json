@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "103.153.202.201",
+    "port": 8181,
+    "type": "http",
+    "country": "MM",
+    "score": 30.38,
+    "tier": "bronze",
+    "latency": 3826,
+    "last_checked": "2026-11-26T20:49:00+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

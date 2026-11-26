@@ -1,2 +1,0 @@
-# YUEL · KG · 1 proxies · generated 2026-11-26T20:06:03 UTC
-socks5://80.72.180.122:1080
