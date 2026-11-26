@@ -1,0 +1,2 @@
+# YUEL · TR · socks4 · 1 proxies · generated 2026-11-26T11:01:44 UTC
+socks4://176.236.37.132:1080

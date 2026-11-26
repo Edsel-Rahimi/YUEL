@@ -1,0 +1,2 @@
+# YUEL · CG · socks4 · 1 proxies · generated 2026-11-26T11:01:44 UTC
+socks4://102.64.116.254:4145

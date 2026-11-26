@@ -1,3 +1,2 @@
-# YUEL · AL · http · 2 proxies · generated 2026-11-26T09:52:56 UTC
-http://79.106.108.147:8079
-http://109.236.45.95:8989
+# YUEL · AL · http · 1 proxies · generated 2026-11-26T11:01:44 UTC
+http://66.186.199.33:8080

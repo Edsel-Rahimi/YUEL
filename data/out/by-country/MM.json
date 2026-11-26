@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "154.18.220.190",
+    "port": 5678,
+    "type": "socks4",
+    "country": "MM",
+    "score": 71.85,
+    "tier": "silver",
+    "latency": 323,
+    "last_checked": "2026-11-26T10:56:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "103.25.79.150",
+    "port": 8054,
+    "type": "http",
+    "country": "MM",
+    "score": 29.26,
+    "tier": "bronze",
+    "latency": 4256,
+    "last_checked": "2026-11-26T10:56:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
