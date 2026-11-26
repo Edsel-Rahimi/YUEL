@@ -1,5 +1,4 @@
-# YUEL · TW · http · 4 proxies · generated 2026-11-26T13:09:33 UTC
-http://182.155.254.159:80
+# YUEL · TW · http · 3 proxies · generated 2026-11-26T14:30:35 UTC
 http://122.116.125.115:8888
+http://182.155.254.159:80
 http://182.233.119.10:8880
-http://210.61.216.63:60808

@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "ES",
-    "score": 43.23,
-    "tier": "bronze",
-    "latency": 6088,
-    "last_checked": "2026-11-26T13:04:27+00:00",
+    "score": 92.29,
+    "tier": "gold",
+    "latency": 151,
+    "last_checked": "2026-11-26T14:24:26+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "31.24.44.115",
+    "port": 9050,
+    "type": "socks5",
+    "country": "ES",
+    "score": 69.37,
+    "tier": "silver",
+    "latency": 509,
+    "last_checked": "2026-11-26T14:24:26+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

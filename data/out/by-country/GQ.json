@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "102.164.252.150",
+    "port": 8080,
+    "type": "http",
+    "country": "GQ",
+    "score": 70.68,
+    "tier": "silver",
+    "latency": 386,
+    "last_checked": "2026-11-26T14:24:26+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
