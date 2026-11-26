@@ -1,2 +1,0 @@
-# YUEL · CZ · socks4 · 1 proxies · generated 2026-11-26T21:54:27 UTC
-socks4://90.182.147.170:4145

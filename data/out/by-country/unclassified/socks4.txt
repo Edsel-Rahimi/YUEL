@@ -1,2 +1,2 @@
-# YUEL · unclassified · socks4 · 1 proxies · generated 2026-11-26T21:54:27 UTC
+# YUEL · unclassified · socks4 · 1 proxies · generated 2026-11-26T22:56:16 UTC
 socks4://102.0.43.4:1080

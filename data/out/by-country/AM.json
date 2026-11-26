@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "81.16.9.222",
+    "port": 3629,
+    "type": "socks4",
+    "country": "AM",
+    "score": 76.71,
+    "tier": "silver",
+    "latency": 251,
+    "last_checked": "2026-11-26T22:50:51+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

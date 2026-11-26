@@ -4,10 +4,22 @@
     "port": 3128,
     "type": "http",
     "country": "IT",
-    "score": 90.5,
-    "tier": "gold",
-    "latency": 174,
-    "last_checked": "2026-11-26T21:48:37+00:00",
+    "score": 45.9,
+    "tier": "bronze",
+    "latency": 1594,
+    "last_checked": "2026-11-26T22:50:51+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "85.208.200.185",
+    "port": 8081,
+    "type": "http",
+    "country": "IT",
+    "score": 29.59,
+    "tier": "bronze",
+    "latency": 4466,
+    "last_checked": "2026-11-26T22:50:51+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
