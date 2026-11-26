@@ -1,5 +1,3 @@
-# YUEL · HK · socks4 · 4 proxies · generated 2026-11-26T02:24:07 UTC
-socks4://182.160.16.234:8020
+# YUEL · HK · socks4 · 2 proxies · generated 2026-11-26T03:36:05 UTC
 socks4://159.138.252.45:8888
-socks4://110.238.116.82:55443
-socks4://119.13.111.169:4006
+socks4://182.160.16.234:8020
