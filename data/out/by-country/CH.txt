@@ -1,3 +1,5 @@
-# YUEL · CH · 2 proxies · generated 2026-11-27T08:41:32 UTC
-http://217.162.8.134:80
+# YUEL · CH · 4 proxies · generated 2026-11-27T09:53:42 UTC
+http://194.182.178.90:3128
 http://185.85.111.18:80
+http://217.162.8.134:80
+socks5://194.182.163.117:1080

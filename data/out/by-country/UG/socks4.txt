@@ -1,2 +1,3 @@
-# YUEL · UG · socks4 · 1 proxies · generated 2026-11-27T08:41:32 UTC
+# YUEL · UG · socks4 · 2 proxies · generated 2026-11-27T09:53:42 UTC
 socks4://196.0.111.186:46048
+socks4://196.0.111.194:48009
