@@ -1,13 +1,13 @@
 [
   {
-    "ip": "190.110.226.122",
+    "ip": "201.222.50.218",
     "port": 80,
     "type": "http",
     "country": "PY",
-    "score": 28.96,
+    "score": 43.7,
     "tier": "bronze",
-    "latency": 5338,
-    "last_checked": "2026-11-27T07:05:24+00:00",
+    "latency": 5887,
+    "last_checked": "2026-11-27T08:35:15+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
