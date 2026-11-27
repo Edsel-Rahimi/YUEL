@@ -1,2 +1,2 @@
-# YUEL · ES · http · 1 proxies · generated 2026-11-27T10:57:58 UTC
-http://37.152.91.187:8080
+# YUEL · ES · http · 1 proxies · generated 2026-11-27T11:56:33 UTC
+http://195.114.209.50:80

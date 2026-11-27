@@ -4,10 +4,22 @@
     "port": 48009,
     "type": "socks4",
     "country": "UG",
-    "score": 67.08,
+    "score": 67.8,
     "tier": "silver",
-    "latency": 380,
-    "last_checked": "2026-11-27T10:52:01+00:00",
+    "latency": 389,
+    "last_checked": "2026-11-27T11:51:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "196.0.111.186",
+    "port": 46048,
+    "type": "socks4",
+    "country": "UG",
+    "score": 67.76,
+    "tier": "silver",
+    "latency": 391,
+    "last_checked": "2026-11-27T11:51:44+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

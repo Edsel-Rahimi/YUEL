@@ -4,10 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "BW",
-    "score": 37.41,
-    "tier": "bronze",
-    "latency": 2009,
-    "last_checked": "2026-11-27T10:52:01+00:00",
+    "score": 77.67,
+    "tier": "silver",
+    "latency": 264,
+    "last_checked": "2026-11-27T11:51:44+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

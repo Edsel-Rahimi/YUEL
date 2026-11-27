@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "170.239.84.103",
+    "port": 3128,
+    "type": "http",
+    "country": "CL",
+    "score": 89.53,
+    "tier": "gold",
+    "latency": 158,
+    "last_checked": "2026-11-27T11:51:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "160.19.203.241",
+    "port": 999,
+    "type": "http",
+    "country": "CL",
+    "score": 40.49,
+    "tier": "bronze",
+    "latency": 1114,
+    "last_checked": "2026-11-27T11:51:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
