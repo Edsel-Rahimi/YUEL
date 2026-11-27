@@ -4,10 +4,22 @@
     "port": 60606,
     "type": "socks4",
     "country": "AT",
-    "score": 91.6,
+    "score": 91.95,
     "tier": "gold",
-    "latency": 132,
-    "last_checked": "2026-11-27T11:51:44+00:00",
+    "latency": 112,
+    "last_checked": "2026-11-27T13:01:22+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "178.189.56.158",
+    "port": 4153,
+    "type": "socks4",
+    "country": "AT",
+    "score": 89.96,
+    "tier": "gold",
+    "latency": 141,
+    "last_checked": "2026-11-27T13:01:22+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

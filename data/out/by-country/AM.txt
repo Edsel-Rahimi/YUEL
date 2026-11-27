@@ -1,3 +1,3 @@
-# YUEL · AM · 2 proxies · generated 2026-11-27T11:56:33 UTC
+# YUEL · AM · 2 proxies · generated 2026-11-27T13:06:08 UTC
 socks4://130.193.123.34:5678
-http://91.204.190.140:81
+socks4://212.34.230.102:4153

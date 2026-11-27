@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "190.110.226.122",
+    "port": 80,
+    "type": "http",
+    "country": "PY",
+    "score": 66.93,
+    "tier": "silver",
+    "latency": 407,
+    "last_checked": "2026-11-27T13:01:22+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "45.177.16.136",
+    "port": 999,
+    "type": "http",
+    "country": "PY",
+    "score": 28.57,
+    "tier": "bronze",
+    "latency": 5053,
+    "last_checked": "2026-11-27T13:01:22+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
