@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "38.156.238.96",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 95.31,
+    "tier": "gold",
+    "latency": 126,
+    "last_checked": "2026-11-27T22:51:38+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "200.35.153.56",
+    "port": 999,
+    "type": "http",
+    "country": "DO",
+    "score": 95.23,
+    "tier": "gold",
+    "latency": 128,
+    "last_checked": "2026-11-27T22:51:38+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

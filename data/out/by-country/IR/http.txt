@@ -1,2 +1,4 @@
-# YUEL · IR · http · 1 proxies · generated 2026-11-27T21:55:13 UTC
+# YUEL · IR · http · 3 proxies · generated 2026-11-27T22:56:56 UTC
 http://5.198.179.172:10800
+http://46.209.30.11:8080
+http://85.133.162.37:8080

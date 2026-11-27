@@ -1,25 +1,13 @@
 [
   {
-    "ip": "197.157.195.154",
+    "ip": "197.157.194.10",
     "port": 1080,
     "type": "socks4",
     "country": "BI",
-    "score": 70.32,
+    "score": 65.46,
     "tier": "silver",
-    "latency": 303,
-    "last_checked": "2026-11-27T21:50:32+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "197.157.192.168",
-    "port": 1080,
-    "type": "socks4",
-    "country": "BI",
-    "score": 68.46,
-    "tier": "silver",
-    "latency": 321,
-    "last_checked": "2026-11-27T21:50:32+00:00",
+    "latency": 360,
+    "last_checked": "2026-11-27T22:51:38+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
