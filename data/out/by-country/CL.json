@@ -1,73 +1,25 @@
 [
   {
+    "ip": "170.239.84.103",
+    "port": 3128,
+    "type": "http",
+    "country": "CL",
+    "score": 90.34,
+    "tier": "gold",
+    "latency": 145,
+    "last_checked": "2026-11-27T16:36:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
     "ip": "152.230.215.123",
     "port": 80,
     "type": "http",
     "country": "CL",
-    "score": 91.1,
-    "tier": "gold",
-    "latency": 119,
-    "last_checked": "2026-11-27T15:30:42+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.161.191.17",
-    "port": 999,
-    "type": "http",
-    "country": "CL",
-    "score": 91.03,
-    "tier": "gold",
-    "latency": 119,
-    "last_checked": "2026-11-27T15:30:42+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.225.205.5",
-    "port": 999,
-    "type": "http",
-    "country": "CL",
-    "score": 90.72,
-    "tier": "gold",
-    "latency": 124,
-    "last_checked": "2026-11-27T15:30:42+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.181.122.193",
-    "port": 999,
-    "type": "http",
-    "country": "CL",
-    "score": 65.9,
-    "tier": "silver",
-    "latency": 927,
-    "last_checked": "2026-11-27T15:30:42+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.225.204.8",
-    "port": 999,
-    "type": "http",
-    "country": "CL",
-    "score": 37.74,
+    "score": 33.15,
     "tier": "bronze",
-    "latency": 2028,
-    "last_checked": "2026-11-27T15:30:42+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "45.175.137.250",
-    "port": 999,
-    "type": "http",
-    "country": "CL",
-    "score": 28.94,
-    "tier": "bronze",
-    "latency": 4649,
-    "last_checked": "2026-11-27T15:30:42+00:00",
+    "latency": 2776,
+    "last_checked": "2026-11-27T16:36:50+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
