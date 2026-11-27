@@ -1,3 +1,2 @@
-# YUEL · SE · http · 2 proxies · generated 2026-11-26T23:57:02 UTC
+# YUEL · SE · http · 1 proxies · generated 2026-11-27T01:05:42 UTC
 http://194.14.207.87:80
-http://193.181.35.173:8118

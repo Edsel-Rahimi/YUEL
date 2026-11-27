@@ -1,2 +1,2 @@
-# YUEL · SC · http · 1 proxies · generated 2026-11-26T23:57:02 UTC
-http://31.207.4.14:3128
+# YUEL · SC · http · 1 proxies · generated 2026-11-27T01:05:42 UTC
+http://94.26.106.100:8080
