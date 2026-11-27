@@ -1,1 +1,26 @@
-[]
+[
+  {
+    "ip": "170.81.131.70",
+    "port": 3128,
+    "type": "http",
+    "country": "unclassified",
+    "score": 90.42,
+    "tier": "gold",
+    "latency": 131,
+    "last_checked": "2026-11-27T10:52:01+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.222.30.155",
+    "port": 31623,
+    "type": "http",
+    "country": "unclassified",
+    "score": 32.76,
+    "tier": "bronze",
+    "latency": 2956,
+    "last_checked": "2026-11-27T10:52:01+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

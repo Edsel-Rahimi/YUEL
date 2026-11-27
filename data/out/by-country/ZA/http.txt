@@ -1,2 +1,2 @@
-# YUEL · ZA · http · 1 proxies · generated 2026-11-27T09:53:42 UTC
-http://196.251.221.30:8080
+# YUEL · ZA · http · 1 proxies · generated 2026-11-27T10:57:58 UTC
+http://41.57.136.174:8080
