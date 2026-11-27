@@ -1,2 +1,0 @@
-# YUEL · BR · socks5 · 1 proxies · generated 2026-11-27T16:41:51 UTC
-socks5://186.233.119.183:1080
