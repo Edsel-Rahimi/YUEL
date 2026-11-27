@@ -1,13 +1,13 @@
 [
   {
-    "ip": "102.0.43.4",
-    "port": 1080,
-    "type": "socks4",
+    "ip": "195.5.168.195",
+    "port": 8080,
+    "type": "http",
     "country": "unclassified",
-    "score": 78.52,
-    "tier": "silver",
-    "latency": 278,
-    "last_checked": "2026-11-27T00:59:41+00:00",
+    "score": 82.18,
+    "tier": "gold",
+    "latency": 223,
+    "last_checked": "2026-11-27T02:21:49+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
