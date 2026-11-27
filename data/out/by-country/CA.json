@@ -2,12 +2,12 @@
   {
     "ip": "144.168.59.44",
     "port": 1080,
-    "type": "http",
+    "type": "socks5",
     "country": "CA",
-    "score": 72.18,
+    "score": 74.21,
     "tier": "silver",
-    "latency": 446,
-    "last_checked": "2026-11-27T20:49:50+00:00",
+    "latency": 364,
+    "last_checked": "2026-11-27T21:50:32+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
