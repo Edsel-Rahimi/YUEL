@@ -47,6 +47,6 @@
 
 <line x1="300" y1="32" x2="900" y2="32" stroke="#645676" stroke-opacity="0.35" stroke-width="1.2" stroke-linecap="round"/>
 <rect x="440" y="29.5" width="320" height="5" rx="2.5" fill="url(#bg-dark)" opacity="1.0"/>
-<defs><filter id="pg8592" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="4" fill="#FC671F" filter="url(#pg8592)"><animateMotion dur="3.4s" begin="0.0s" repeatCount="indefinite" path="M 440 32 H 760"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="3.4s" begin="0.0s" repeatCount="indefinite"/></circle>
+<defs><filter id="pg4948" x="-150%" y="-150%" width="400%" height="400%"><feGaussianBlur stdDeviation="3.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs><circle r="4" fill="#FC671F" filter="url(#pg4948)"><animateMotion dur="3.4s" begin="0.0s" repeatCount="indefinite" path="M 440 32 H 760"/><animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.08;.92;1" dur="3.4s" begin="0.0s" repeatCount="indefinite"/></circle>
 <rect x="428" y="26" width="11" height="11" rx="2.5" fill="url(#bg-dark)" transform="rotate(45 433.5 31.5)" class="gq"/>
 </svg>
