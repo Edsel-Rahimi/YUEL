@@ -1,3 +1,2 @@
-# YUEL · CA · http · 2 proxies · generated 2026-11-27T02:28:17 UTC
-http://23.132.28.60:3133
-http://23.132.28.60:3129
+# YUEL · CA · http · 1 proxies · generated 2026-11-27T03:39:43 UTC
+http://23.132.28.60:3128

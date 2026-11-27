@@ -1,4 +1,2 @@
-# YUEL · AU · 3 proxies · generated 2026-11-27T02:28:17 UTC
-socks5://159.196.163.64:80
-http://210.8.69.103:808
+# YUEL · AU · 1 proxies · generated 2026-11-27T03:39:43 UTC
 http://114.111.151.41:80
