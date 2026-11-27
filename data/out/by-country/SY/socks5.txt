@@ -1,3 +1,2 @@
-# YUEL · SY · socks5 · 2 proxies · generated 2026-11-27T04:48:06 UTC
+# YUEL · SY · socks5 · 1 proxies · generated 2026-11-27T06:05:56 UTC
 socks5://188.132.249.166:1080
-socks5://201.4.65.79:46266
