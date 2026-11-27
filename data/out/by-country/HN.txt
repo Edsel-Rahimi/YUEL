@@ -1,3 +1,4 @@
-# YUEL · HN · 2 proxies · generated 2026-11-27T22:56:56 UTC
-socks4://45.190.13.12:1080
+# YUEL · HN · 3 proxies · generated 2026-11-27T23:52:13 UTC
+http://200.107.239.218:999
 http://131.108.232.201:8080
+http://45.170.34.154:999
