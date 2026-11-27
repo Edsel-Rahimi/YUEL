@@ -1,2 +1,2 @@
-# YUEL · LV · http · 1 proxies · generated 2026-11-27T03:39:43 UTC
-http://77.38.244.214:80
+# YUEL · LV · http · 1 proxies · generated 2026-11-27T04:48:06 UTC
+http://80.89.237.44:8080

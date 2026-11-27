@@ -1,3 +1,0 @@
-# YUEL · TR · socks5 · 2 proxies · generated 2026-11-27T03:39:43 UTC
-socks5://163.5.53.209:1080
-socks5://38.10.71.218:1080

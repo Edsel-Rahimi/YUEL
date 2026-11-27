@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "140.227.61.201",
+    "port": 3128,
+    "type": "http",
+    "country": "JP",
+    "score": 89.49,
+    "tier": "gold",
+    "latency": 155,
+    "last_checked": "2026-11-27T04:42:02+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
