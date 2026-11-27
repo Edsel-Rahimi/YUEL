@@ -1,3 +1,2 @@
-# YUEL · PE · 2 proxies · generated 2026-11-27T18:54:24 UTC
-http://38.43.158.7:8080
-http://190.119.81.43:999
+# YUEL · PE · 1 proxies · generated 2026-11-27T19:59:36 UTC
+http://190.235.208.51:8081
