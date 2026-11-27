@@ -1,0 +1,2 @@
+# YUEL · BT · 1 proxies · generated 2026-11-27T14:25:54 UTC
+socks4://202.144.134.150:5678
