@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "77.77.210.90",
+    "port": 21056,
+    "type": "http",
+    "country": "BA",
+    "score": 84.29,
+    "tier": "gold",
+    "latency": 188,
+    "last_checked": "2026-11-27T18:49:39+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
