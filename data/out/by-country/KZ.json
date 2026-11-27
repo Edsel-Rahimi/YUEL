@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "KZ",
-    "score": 93.49,
+    "score": 94.72,
     "tier": "gold",
-    "latency": 117,
-    "last_checked": "2026-11-27T14:20:20+00:00",
+    "latency": 96,
+    "last_checked": "2026-11-27T15:30:42+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "188.241.217.138",
+    "port": 3128,
+    "type": "http",
+    "country": "KZ",
+    "score": 78.85,
+    "tier": "silver",
+    "latency": 262,
+    "last_checked": "2026-11-27T15:30:42+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

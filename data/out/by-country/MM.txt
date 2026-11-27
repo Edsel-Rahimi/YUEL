@@ -1,2 +1,2 @@
-# YUEL · MM · 1 proxies · generated 2026-11-27T14:25:54 UTC
-http://202.165.92.206:8080
+# YUEL · MM · 1 proxies · generated 2026-11-27T15:36:02 UTC
+socks4://154.18.220.190:5678
