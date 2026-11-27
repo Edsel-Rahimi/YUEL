@@ -1,5 +1,6 @@
-# YUEL · NL · socks5 · 4 proxies · generated 2026-11-27T19:59:36 UTC
+# YUEL · NL · socks5 · 5 proxies · generated 2026-11-27T20:54:23 UTC
 socks5://145.220.227.67:8080
 socks5://145.220.227.24:8080
+socks5://5.255.113.177:1080
+socks5://5.255.123.162:1080
 socks5://5.255.103.55:1080
-socks5://5.255.117.127:1080

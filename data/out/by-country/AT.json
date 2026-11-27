@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "185.196.178.238",
+    "port": 60606,
+    "type": "socks4",
+    "country": "AT",
+    "score": 89.03,
+    "tier": "gold",
+    "latency": 118,
+    "last_checked": "2026-11-27T20:49:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

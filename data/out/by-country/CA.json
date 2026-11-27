@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "144.168.59.44",
+    "port": 1080,
+    "type": "http",
+    "country": "CA",
+    "score": 72.18,
+    "tier": "silver",
+    "latency": 446,
+    "last_checked": "2026-11-27T20:49:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

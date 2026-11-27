@@ -1,0 +1,74 @@
+[
+  {
+    "ip": "154.3.76.16",
+    "port": 999,
+    "type": "http",
+    "country": "VE",
+    "score": 88.89,
+    "tier": "gold",
+    "latency": 120,
+    "last_checked": "2026-11-27T20:49:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "200.59.191.146",
+    "port": 999,
+    "type": "http",
+    "country": "VE",
+    "score": 84.91,
+    "tier": "gold",
+    "latency": 166,
+    "last_checked": "2026-11-27T20:49:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "189.127.167.136",
+    "port": 8080,
+    "type": "http",
+    "country": "VE",
+    "score": 73.98,
+    "tier": "silver",
+    "latency": 261,
+    "last_checked": "2026-11-27T20:49:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "161.22.33.194",
+    "port": 999,
+    "type": "http",
+    "country": "VE",
+    "score": 62.07,
+    "tier": "silver",
+    "latency": 954,
+    "last_checked": "2026-11-27T20:49:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "191.97.19.82",
+    "port": 999,
+    "type": "http",
+    "country": "VE",
+    "score": 42.33,
+    "tier": "bronze",
+    "latency": 1310,
+    "last_checked": "2026-11-27T20:49:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "200.59.191.27",
+    "port": 999,
+    "type": "http",
+    "country": "VE",
+    "score": 42.11,
+    "tier": "bronze",
+    "latency": 1380,
+    "last_checked": "2026-11-27T20:49:50+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

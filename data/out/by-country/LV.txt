@@ -1,2 +1,2 @@
-# YUEL · LV · 1 proxies · generated 2026-11-27T19:59:36 UTC
-http://77.38.244.214:80
+# YUEL · LV · 1 proxies · generated 2026-11-27T20:54:23 UTC
+socks5://195.135.255.98:1080

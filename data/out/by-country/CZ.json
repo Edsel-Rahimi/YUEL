@@ -4,22 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "CZ",
-    "score": 90.62,
+    "score": 93.37,
     "tier": "gold",
-    "latency": 143,
-    "last_checked": "2026-11-27T19:54:54+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "95.129.101.73",
-    "port": 80,
-    "type": "http",
-    "country": "CZ",
-    "score": 44.96,
-    "tier": "bronze",
-    "latency": 3388,
-    "last_checked": "2026-11-27T19:54:54+00:00",
+    "latency": 95,
+    "last_checked": "2026-11-27T20:49:50+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
