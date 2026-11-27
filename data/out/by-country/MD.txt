@@ -1,2 +1,2 @@
-# YUEL · MD · 1 proxies · generated 2026-11-27T06:05:56 UTC
-http://85.121.4.77:8888
+# YUEL · MD · 1 proxies · generated 2026-11-27T07:11:30 UTC
+socks5://194.180.158.62:1080

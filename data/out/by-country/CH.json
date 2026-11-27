@@ -1,0 +1,38 @@
+[
+  {
+    "ip": "194.182.178.90",
+    "port": 3128,
+    "type": "http",
+    "country": "CH",
+    "score": 89.42,
+    "tier": "gold",
+    "latency": 179,
+    "last_checked": "2026-11-27T07:05:24+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "165.225.66.38",
+    "port": 11588,
+    "type": "http",
+    "country": "CH",
+    "score": 85.37,
+    "tier": "gold",
+    "latency": 210,
+    "last_checked": "2026-11-27T07:05:24+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "185.85.111.18",
+    "port": 80,
+    "type": "http",
+    "country": "CH",
+    "score": 84.44,
+    "tier": "gold",
+    "latency": 214,
+    "last_checked": "2026-11-27T07:05:24+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

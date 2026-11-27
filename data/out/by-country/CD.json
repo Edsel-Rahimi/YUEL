@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "102.222.231.1",
+    "port": 2333,
+    "type": "http",
+    "country": "CD",
+    "score": 33.61,
+    "tier": "bronze",
+    "latency": 2317,
+    "last_checked": "2026-11-27T07:05:24+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

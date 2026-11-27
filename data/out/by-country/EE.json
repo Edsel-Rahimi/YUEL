@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "37.49.224.167",
+    "port": 1080,
+    "type": "socks5",
+    "country": "EE",
+    "score": 93.64,
+    "tier": "gold",
+    "latency": 143,
+    "last_checked": "2026-11-27T07:05:24+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

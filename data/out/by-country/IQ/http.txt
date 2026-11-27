@@ -1,3 +1,2 @@
-# YUEL · IQ · http · 2 proxies · generated 2026-11-27T06:05:56 UTC
+# YUEL · IQ · http · 1 proxies · generated 2026-11-27T07:11:30 UTC
 http://185.135.69.34:80
-http://185.95.186.140:80

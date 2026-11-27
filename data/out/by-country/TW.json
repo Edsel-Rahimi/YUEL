@@ -4,10 +4,22 @@
     "port": 60909,
     "type": "socks4",
     "country": "TW",
-    "score": 91.86,
+    "score": 93.67,
     "tier": "gold",
-    "latency": 160,
-    "last_checked": "2026-11-27T05:59:31+00:00",
+    "latency": 143,
+    "last_checked": "2026-11-27T07:05:24+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "122.116.125.115",
+    "port": 8888,
+    "type": "http",
+    "country": "TW",
+    "score": 91.85,
+    "tier": "gold",
+    "latency": 156,
+    "last_checked": "2026-11-27T07:05:24+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
