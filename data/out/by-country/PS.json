@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "103.231.105.158",
+    "port": 4145,
+    "type": "socks4",
+    "country": "PS",
+    "score": 89.81,
+    "tier": "gold",
+    "latency": 160,
+    "last_checked": "2026-11-28T00:55:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

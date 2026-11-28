@@ -1,5 +1,4 @@
-# YUEL · CY · 4 proxies · generated 2026-11-27T23:52:13 UTC
-http://141.136.42.164:80
+# YUEL · CY · 3 proxies · generated 2026-11-28T01:00:01 UTC
 http://93.127.163.52:80
+http://141.136.42.164:80
 socks4://212.31.100.138:4153
-socks4://87.228.228.101:4145

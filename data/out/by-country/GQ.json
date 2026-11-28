@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "102.164.251.242",
+    "port": 4153,
+    "type": "socks4",
+    "country": "GQ",
+    "score": 65.33,
+    "tier": "silver",
+    "latency": 306,
+    "last_checked": "2026-11-28T00:55:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

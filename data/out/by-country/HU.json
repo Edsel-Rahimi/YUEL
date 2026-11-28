@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "84.2.239.42",
+    "port": 4153,
+    "type": "socks4",
+    "country": "HU",
+    "score": 84.51,
+    "tier": "gold",
+    "latency": 183,
+    "last_checked": "2026-11-28T00:55:23+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
