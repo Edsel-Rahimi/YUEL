@@ -1,2 +1,0 @@
-# YUEL · ZA · socks4 · 1 proxies · generated 2026-11-28T14:06:00 UTC
-socks4://102.215.245.6:4153

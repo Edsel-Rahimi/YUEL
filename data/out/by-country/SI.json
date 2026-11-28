@@ -4,10 +4,10 @@
     "port": 9999,
     "type": "http",
     "country": "SI",
-    "score": 29.95,
-    "tier": "bronze",
-    "latency": 4805,
-    "last_checked": "2026-11-28T14:00:32+00:00",
+    "score": 73.74,
+    "tier": "silver",
+    "latency": 323,
+    "last_checked": "2026-11-28T14:43:29+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
