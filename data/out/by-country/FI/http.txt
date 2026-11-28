@@ -1,5 +1,4 @@
-# YUEL · FI · http · 4 proxies · generated 2026-11-28T02:20:29 UTC
-http://81.27.101.176:443
+# YUEL · FI · http · 3 proxies · generated 2026-11-28T03:31:29 UTC
 http://81.27.101.176:80
+http://81.27.101.176:443
 http://185.247.141.86:3128
-http://5.22.217.168:8443
