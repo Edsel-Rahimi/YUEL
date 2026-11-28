@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "154.127.78.16",
+    "port": 44444,
+    "type": "http",
+    "country": "LY",
+    "score": 89.53,
+    "tier": "gold",
+    "latency": 141,
+    "last_checked": "2026-11-28T04:32:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.68.132.5",
+    "port": 18000,
+    "type": "http",
+    "country": "LY",
+    "score": 28.6,
+    "tier": "bronze",
+    "latency": 4488,
+    "last_checked": "2026-11-28T04:32:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

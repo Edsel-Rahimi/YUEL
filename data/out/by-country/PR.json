@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "192.203.0.118",
+    "port": 999,
+    "type": "http",
+    "country": "PR",
+    "score": 35.15,
+    "tier": "bronze",
+    "latency": 2176,
+    "last_checked": "2026-11-28T04:32:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -4,10 +4,10 @@
     "port": 80,
     "type": "http",
     "country": "CY",
-    "score": 96.86,
+    "score": 97.0,
     "tier": "gold",
     "latency": 85,
-    "last_checked": "2026-11-28T03:26:05+00:00",
+    "last_checked": "2026-11-28T04:32:44+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   },
@@ -16,22 +16,10 @@
     "port": 80,
     "type": "http",
     "country": "CY",
-    "score": 96.16,
+    "score": 95.59,
     "tier": "gold",
-    "latency": 89,
-    "last_checked": "2026-11-28T03:26:05+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "212.31.100.138",
-    "port": 4153,
-    "type": "socks4",
-    "country": "CY",
-    "score": 90.33,
-    "tier": "gold",
-    "latency": 136,
-    "last_checked": "2026-11-28T03:26:05+00:00",
+    "latency": 91,
+    "last_checked": "2026-11-28T04:32:44+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "196.0.111.194",
+    "port": 48009,
+    "type": "socks4",
+    "country": "UG",
+    "score": 67.03,
+    "tier": "silver",
+    "latency": 322,
+    "last_checked": "2026-11-28T04:32:44+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
