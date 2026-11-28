@@ -4,10 +4,10 @@
     "port": 3128,
     "type": "http",
     "country": "SC",
-    "score": 95.71,
+    "score": 94.67,
     "tier": "gold",
-    "latency": 89,
-    "last_checked": "2026-11-28T10:47:33+00:00",
+    "latency": 109,
+    "last_checked": "2026-11-28T11:44:59+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

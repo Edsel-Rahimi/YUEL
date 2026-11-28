@@ -4,10 +4,10 @@
     "port": 6789,
     "type": "http",
     "country": "AE",
-    "score": 93.42,
-    "tier": "gold",
-    "latency": 100,
-    "last_checked": "2026-11-28T10:47:33+00:00",
+    "score": 46.54,
+    "tier": "bronze",
+    "latency": 2830,
+    "last_checked": "2026-11-28T11:44:59+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
