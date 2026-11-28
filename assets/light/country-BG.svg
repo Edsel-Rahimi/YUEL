@@ -45,15 +45,15 @@
 </defs>
 <rect x="0.75" y="0.75" width="318.5" height="148.5" rx="20" fill="#FCF7E8" stroke="#E8E0C5" stroke-width="1.5"/>
 
-<image x="22" y="22" width="44" height="33" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAXCAMAAABODP0nAAAAh1BMVEUAaEfOESb///+qzMHvrrXR0rWKYUHe4dHy7+fW069pPyP8/PnBxKJwra/ur7a2upL19ezm28vRtKOng3HIrHHnzserlmmSblSgelzQ6OJRkpB4VDxkRjXDs4r889m4296Bp6mfZj9/Tie5r6i7083Dtq7b2MLcwpGUlI+Ogmu5iVulyszYwIRdbSBmAAAAfElEQVQoz+XTtxbCMAxAUUMid+P0XihpkPz/92U1A0dkzpvvIh2JEDfv6nS7uJHf0D8TVGH0oOkfUCQfKiVHYTe1RSOfMQYD1c60LmiuEKhTveVNPb4sAsVgljV7xyEgkENpqsrcgWHDMCiTrBeAr4drFtngbNdzHH5/4Q77sAk1toKo3AAAAABJRU5ErkJggg=="/>
+<image x="22" y="22" width="44" height="33" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAYAgMAAAD16ldTAAAACVBMVEXWJhIAlm7///+uJ0PXAAAAFUlEQVQY02NYBQcMVGWGwgF1mTQCAF49T7GuEQs4AAAAAElFTkSuQmCC"/>
 <rect x="22" y="22" width="44" height="33" rx="4" fill="none" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1"/>
-<text x="78" y="42" font-size="16" font-weight="700" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#080806">Mexico</text>
-<text x="78" y="62" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#545242">MX</text>
+<text x="78" y="42" font-size="16" font-weight="700" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#080806">Bulgaria</text>
+<text x="78" y="62" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#545242">BG</text>
 <circle cx="294" cy="28" r="3.5" fill="none" stroke="#20754A" stroke-width="1.6" class="pz"/><circle cx="294" cy="28" r="3.5" fill="#20754A"/>
-<text x="22" y="112" font-size="34" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#080806">26</text>
+<text x="22" y="112" font-size="34" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#080806">13</text>
 <text x="74.8" y="112" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#545242">ALIVE</text>
 <rect x="22" y="126" width="130" height="5" rx="2.5" fill="#D1C9AC" fill-opacity="0.7200000000000001"/>
-<rect x="22" y="126" width="3.9" height="5" rx="2.5" fill="#4854A6" opacity="0.75" class="gw" style="animation-delay:0.70s"/>
-<clipPath id="cc-MX-light"><rect x="1" y="1" width="318" height="148" rx="19"/></clipPath>
-<g clip-path="url(#cc-MX-light)"><rect x="0" y="0" width="110" height="150" fill="#FFFFFF" opacity="0.45" class="sw" style="animation-delay:4.50s;animation-duration:9s"/></g>
+<rect x="22" y="126" width="3.0" height="5" rx="2.5" fill="#4854A6" opacity="0.75" class="gw" style="animation-delay:1.15s"/>
+<clipPath id="cc-BG-light"><rect x="1" y="1" width="318" height="148" rx="19"/></clipPath>
+<g clip-path="url(#cc-BG-light)"><rect x="0" y="0" width="110" height="150" fill="#FFFFFF" opacity="0.45" class="sw" style="animation-delay:8.55s;animation-duration:9s"/></g>
 </svg>
