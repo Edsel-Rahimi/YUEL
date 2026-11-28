@@ -1,2 +1,4 @@
-# YUEL · CH · http · 1 proxies · generated 2026-11-28T01:00:01 UTC
+# YUEL · CH · http · 3 proxies · generated 2026-11-28T02:20:29 UTC
+http://165.225.66.38:11588
+http://217.162.8.134:80
 http://185.85.111.18:80

@@ -1,2 +1,0 @@
-# YUEL · LT · socks5 · 1 proxies · generated 2026-11-28T01:00:01 UTC
-socks5://78.63.115.20:8899

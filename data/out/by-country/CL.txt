@@ -1,2 +1,4 @@
-# YUEL · CL · 1 proxies · generated 2026-11-28T01:00:01 UTC
+# YUEL · CL · 3 proxies · generated 2026-11-28T02:20:29 UTC
 http://152.230.215.123:80
+http://45.160.14.33:999
+http://200.39.139.65:999

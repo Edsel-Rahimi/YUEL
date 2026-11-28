@@ -4,10 +4,22 @@
     "port": 4153,
     "type": "socks4",
     "country": "GQ",
-    "score": 65.33,
+    "score": 73.25,
     "tier": "silver",
-    "latency": 306,
-    "last_checked": "2026-11-28T00:55:23+00:00",
+    "latency": 282,
+    "last_checked": "2026-11-28T02:15:14+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "102.164.252.150",
+    "port": 8080,
+    "type": "http",
+    "country": "GQ",
+    "score": 63.19,
+    "tier": "silver",
+    "latency": 724,
+    "last_checked": "2026-11-28T02:15:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

@@ -4,22 +4,10 @@
     "port": 5678,
     "type": "socks4",
     "country": "EE",
-    "score": 89.11,
+    "score": 90.85,
     "tier": "gold",
-    "latency": 146,
-    "last_checked": "2026-11-28T00:55:23+00:00",
-    "consecutive_successes": 1,
-    "consecutive_failures": 0
-  },
-  {
-    "ip": "178.18.147.109",
-    "port": 9050,
-    "type": "socks5",
-    "country": "EE",
-    "score": 69.01,
-    "tier": "silver",
-    "latency": 794,
-    "last_checked": "2026-11-28T00:55:23+00:00",
+    "latency": 142,
+    "last_checked": "2026-11-28T02:15:14+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }
