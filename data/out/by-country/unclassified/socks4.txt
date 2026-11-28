@@ -1,2 +1,0 @@
-# YUEL · unclassified · socks4 · 1 proxies · generated 2026-11-28T07:56:12 UTC
-socks4://102.0.43.20:1080

@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "94.60.14.97",
+    "port": 3128,
+    "type": "http",
+    "country": "PT",
+    "score": 88.23,
+    "tier": "gold",
+    "latency": 183,
+    "last_checked": "2026-11-28T08:48:00+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

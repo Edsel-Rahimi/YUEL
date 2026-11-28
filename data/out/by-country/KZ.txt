@@ -1,4 +1,4 @@
-# YUEL · KZ · 3 proxies · generated 2026-11-28T07:56:12 UTC
-socks5://82.97.246.229:1080
+# YUEL · KZ · 3 proxies · generated 2026-11-28T08:53:36 UTC
 http://109.71.240.57:3128
 http://72.56.73.23:80
+socks4://95.182.107.210:1080
