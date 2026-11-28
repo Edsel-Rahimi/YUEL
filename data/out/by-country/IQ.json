@@ -4,10 +4,22 @@
     "port": 80,
     "type": "http",
     "country": "IQ",
-    "score": 82.91,
+    "score": 81.82,
     "tier": "gold",
-    "latency": 267,
-    "last_checked": "2026-11-28T11:44:59+00:00",
+    "latency": 271,
+    "last_checked": "2026-11-28T12:50:42+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "212.237.125.216",
+    "port": 6969,
+    "type": "socks5",
+    "country": "IQ",
+    "score": 67.11,
+    "tier": "silver",
+    "latency": 534,
+    "last_checked": "2026-11-28T12:50:42+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

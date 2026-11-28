@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "190.104.26.227",
+    "port": 33638,
+    "type": "socks4",
+    "country": "BO",
+    "score": 88.57,
+    "tier": "gold",
+    "latency": 175,
+    "last_checked": "2026-11-28T12:50:42+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "200.105.192.6",
+    "port": 5678,
+    "type": "socks4",
+    "country": "BO",
+    "score": 87.98,
+    "tier": "gold",
+    "latency": 182,
+    "last_checked": "2026-11-28T12:50:42+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

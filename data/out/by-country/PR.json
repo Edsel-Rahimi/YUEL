@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "23.138.88.96",
+    "port": 999,
+    "type": "http",
+    "country": "PR",
+    "score": 96.6,
+    "tier": "gold",
+    "latency": 90,
+    "last_checked": "2026-11-28T12:50:42+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "172.99.187.33",
+    "port": 4145,
+    "type": "socks4",
+    "country": "PR",
+    "score": 95.62,
+    "tier": "gold",
+    "latency": 112,
+    "last_checked": "2026-11-28T12:50:42+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
