@@ -1,13 +1,13 @@
 [
   {
-    "ip": "41.242.119.123",
+    "ip": "41.242.117.3",
     "port": 50003,
     "type": "http",
     "country": "YT",
-    "score": 68.09,
+    "score": 68.26,
     "tier": "silver",
-    "latency": 371,
-    "last_checked": "2026-11-28T05:32:51+00:00",
+    "latency": 344,
+    "last_checked": "2026-11-28T06:31:18+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

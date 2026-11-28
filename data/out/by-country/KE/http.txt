@@ -1,4 +1,3 @@
-# YUEL · KE · http · 3 proxies · generated 2026-11-28T05:37:31 UTC
+# YUEL · KE · http · 2 proxies · generated 2026-11-28T06:35:38 UTC
 http://41.139.151.147:80
-http://102.0.42.136:8080
-http://102.0.13.38:8080
+http://41.139.160.219:8104

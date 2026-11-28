@@ -1,2 +1,2 @@
-# YUEL · YT · http · 1 proxies · generated 2026-11-28T05:37:31 UTC
-http://41.242.119.123:50003
+# YUEL · YT · http · 1 proxies · generated 2026-11-28T06:35:38 UTC
+http://41.242.117.3:50003

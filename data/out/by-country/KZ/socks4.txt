@@ -1,0 +1,2 @@
+# YUEL · KZ · socks4 · 1 proxies · generated 2026-11-28T06:35:38 UTC
+socks4://194.39.65.230:1080
