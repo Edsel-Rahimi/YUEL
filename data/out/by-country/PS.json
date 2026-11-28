@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "93.184.7.73",
+    "port": 1080,
+    "type": "socks4",
+    "country": "PS",
+    "score": 85.12,
+    "tier": "gold",
+    "latency": 199,
+    "last_checked": "2026-11-28T09:48:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

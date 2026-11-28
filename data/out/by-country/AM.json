@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "37.186.66.36",
+    "port": 3629,
+    "type": "socks4",
+    "country": "AM",
+    "score": 80.35,
+    "tier": "gold",
+    "latency": 228,
+    "last_checked": "2026-11-28T09:48:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "81.16.9.222",
+    "port": 3629,
+    "type": "socks4",
+    "country": "AM",
+    "score": 73.68,
+    "tier": "silver",
+    "latency": 261,
+    "last_checked": "2026-11-28T09:48:04+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

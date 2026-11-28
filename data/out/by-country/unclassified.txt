@@ -1,2 +1,4 @@
-# YUEL · unclassified · 1 proxies · generated 2026-11-28T08:53:36 UTC
-http://195.5.168.195:8080
+# YUEL · unclassified · 3 proxies · generated 2026-11-28T09:53:11 UTC
+socks5://78.142.217.197:1080
+socks5://85.92.153.153:1080
+http://95.81.92.173:3128

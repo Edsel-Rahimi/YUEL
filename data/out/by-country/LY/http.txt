@@ -1,3 +1,4 @@
-# YUEL · LY · http · 2 proxies · generated 2026-11-28T08:53:36 UTC
-http://154.73.28.49:8080
-http://165.16.30.101:9999
+# YUEL · LY · http · 3 proxies · generated 2026-11-28T09:53:11 UTC
+http://102.214.104.58:8080
+http://102.209.0.138:8080
+http://102.23.220.66:8520
