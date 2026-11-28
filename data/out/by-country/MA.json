@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "105.154.183.78",
+    "port": 8446,
+    "type": "http",
+    "country": "MA",
+    "score": 31.41,
+    "tier": "bronze",
+    "latency": 3511,
+    "last_checked": "2026-11-28T14:00:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

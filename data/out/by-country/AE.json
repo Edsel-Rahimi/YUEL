@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "104.253.134.37",
+    "port": 3128,
+    "type": "http",
+    "country": "AE",
+    "score": 27.86,
+    "tier": "bronze",
+    "latency": 6599,
+    "last_checked": "2026-11-28T14:00:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

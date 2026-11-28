@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "91.189.80.13",
+    "port": 8090,
+    "type": "http",
+    "country": "SK",
+    "score": 83.64,
+    "tier": "gold",
+    "latency": 225,
+    "last_checked": "2026-11-28T14:00:32+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
