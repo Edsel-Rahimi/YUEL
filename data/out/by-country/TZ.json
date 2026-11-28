@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "169.255.48.50",
+    "port": 1080,
+    "type": "socks4",
+    "country": "TZ",
+    "score": 71.04,
+    "tier": "silver",
+    "latency": 339,
+    "last_checked": "2026-11-28T10:47:33+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

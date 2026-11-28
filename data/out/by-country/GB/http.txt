@@ -1,5 +1,4 @@
-# YUEL · GB · http · 4 proxies · generated 2026-11-28T09:53:11 UTC
+# YUEL · GB · http · 3 proxies · generated 2026-11-28T10:52:40 UTC
 http://45.8.211.76:80
-http://45.8.211.110:80
 http://194.53.53.231:80
-http://81.168.119.85:5443
+http://5.11.93.98:8080
