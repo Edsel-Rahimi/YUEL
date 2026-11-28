@@ -4,10 +4,22 @@
     "port": 3128,
     "type": "http",
     "country": "UZ",
-    "score": 49.4,
+    "score": 46.35,
     "tier": "bronze",
-    "latency": 2160,
-    "last_checked": "2026-11-28T06:31:18+00:00",
+    "latency": 2420,
+    "last_checked": "2026-11-28T07:51:09+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "195.158.8.123",
+    "port": 3128,
+    "type": "http",
+    "country": "UZ",
+    "score": 36.02,
+    "tier": "bronze",
+    "latency": 2111,
+    "last_checked": "2026-11-28T07:51:09+00:00",
     "consecutive_successes": 1,
     "consecutive_failures": 0
   }

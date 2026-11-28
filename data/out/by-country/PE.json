@@ -1,0 +1,26 @@
+[
+  {
+    "ip": "190.235.208.51",
+    "port": 8080,
+    "type": "http",
+    "country": "PE",
+    "score": 87.38,
+    "tier": "gold",
+    "latency": 177,
+    "last_checked": "2026-11-28T07:51:09+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  },
+  {
+    "ip": "38.225.36.92",
+    "port": 999,
+    "type": "http",
+    "country": "PE",
+    "score": 39.98,
+    "tier": "bronze",
+    "latency": 1494,
+    "last_checked": "2026-11-28T07:51:09+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

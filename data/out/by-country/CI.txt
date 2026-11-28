@@ -1,0 +1,2 @@
+# YUEL · CI · 1 proxies · generated 2026-11-28T07:56:12 UTC
+socks4://160.155.90.26:1080

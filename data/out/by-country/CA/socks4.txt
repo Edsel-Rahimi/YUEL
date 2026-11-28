@@ -1,2 +1,0 @@
-# YUEL · CA · socks4 · 1 proxies · generated 2026-11-28T06:35:38 UTC
-socks4://24.37.245.42:51056
