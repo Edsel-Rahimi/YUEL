@@ -45,15 +45,15 @@
 </defs>
 <rect x="0.75" y="0.75" width="318.5" height="148.5" rx="20" fill="#FCF7E8" stroke="#E8E0C5" stroke-width="1.5"/>
 
-<image x="22" y="22" width="44" height="33" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAbAgMAAABzfiX9AAAADFBMVEUtKkqlGTHMh5T09fiioZ6bAAAAIElEQVQY02MIhQMGgsxVcMDwHw4IM+kASHEOki9I8DwAW5h3iXM3AMAAAAAASUVORK5CYII="/>
+<image x="22" y="22" width="44" height="33" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAbBAMAAAD8PtBdAAAAKlBMVEX///8AAAAAej3OESb76+3zw8jniZTeW2raSVnRIzf0x8zrnqfidIHsoKljD70uAAAAQElEQVQoz2NQwgIYhoogTsDigEJAAPcFFAIMXCNaQ5AICGAzNk5AIqBg5SwUAgKKzVEICEjgQSFwAEEsYKgIAgCaTzULiSFuhgAAAABJRU5ErkJggg=="/>
 <rect x="22" y="22" width="44" height="33" rx="4" fill="none" stroke="#D1C9AC" stroke-opacity="0.9" stroke-width="1"/>
-<text x="78" y="42" font-size="16" font-weight="700" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#080806">Thailand</text>
-<text x="78" y="62" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#545242">TH</text>
+<text x="78" y="42" font-size="16" font-weight="700" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#080806">Syria</text>
+<text x="78" y="62" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#545242">SY</text>
 <circle cx="294" cy="28" r="3.5" fill="none" stroke="#20754A" stroke-width="1.6" class="pz"/><circle cx="294" cy="28" r="3.5" fill="#20754A"/>
-<text x="22" y="112" font-size="34" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#080806">16</text>
+<text x="22" y="112" font-size="34" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#080806">18</text>
 <text x="74.8" y="112" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#545242">ALIVE</text>
 <rect x="22" y="126" width="130" height="5" rx="2.5" fill="#D1C9AC" fill-opacity="0.7200000000000001"/>
-<rect x="22" y="126" width="3.0" height="5" rx="2.5" fill="#4854A6" opacity="0.75" class="gw" style="animation-delay:0.90s"/>
-<clipPath id="cc-TH-light"><rect x="1" y="1" width="318" height="148" rx="19"/></clipPath>
-<g clip-path="url(#cc-TH-light)"><rect x="0" y="0" width="110" height="150" fill="#FFFFFF" opacity="0.45" class="sw" style="animation-delay:6.30s;animation-duration:9s"/></g>
+<rect x="22" y="126" width="3.0" height="5" rx="2.5" fill="#4854A6" opacity="0.75" class="gw" style="animation-delay:0.85s"/>
+<clipPath id="cc-SY-light"><rect x="1" y="1" width="318" height="148" rx="19"/></clipPath>
+<g clip-path="url(#cc-SY-light)"><rect x="0" y="0" width="110" height="150" fill="#FFFFFF" opacity="0.45" class="sw" style="animation-delay:5.85s;animation-duration:9s"/></g>
 </svg>
