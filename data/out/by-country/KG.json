@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "195.96.156.46",
+    "port": 20000,
+    "type": "http",
+    "country": "KG",
+    "score": 27.64,
+    "tier": "bronze",
+    "latency": 5542,
+    "last_checked": "2026-11-28T05:32:51+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]

@@ -1,0 +1,14 @@
+[
+  {
+    "ip": "90.156.160.234",
+    "port": 3128,
+    "type": "http",
+    "country": "UZ",
+    "score": 29.36,
+    "tier": "bronze",
+    "latency": 3941,
+    "last_checked": "2026-11-28T05:32:51+00:00",
+    "consecutive_successes": 1,
+    "consecutive_failures": 0
+  }
+]
