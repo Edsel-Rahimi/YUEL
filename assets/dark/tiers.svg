@@ -53,30 +53,30 @@
 <circle cx="106" cy="142" r="23" fill="#FC671F" fill-opacity=".14" stroke="#FC671F" stroke-width="1.5"/>
 <rect x="101" y="137" width="10" height="10" rx="2" fill="#FC671F" transform="rotate(45 106 142)"/>
 <path d="M 148 96 C 148.768 100.08 149.92 101.232 154 102 C 149.92 102.768 148.768 103.92 148 108 C 147.232 103.92 146.08 102.768 142 102 C 146.08 101.232 147.232 100.08 148 96 Z" fill="#FC671F" class="tk"/><path d="M 68 175 C 68.64 178.4 69.6 179.36 73 180 C 69.6 180.64 68.64 181.6 68 185 C 67.36 181.6 66.4 180.64 63 180 C 66.4 179.36 67.36 178.4 68 175 Z" fill="#FC671F" class="tk ta"/><path d="M 144 184 C 144.512 186.72 145.28 187.488 148 188 C 145.28 188.512 144.512 189.28 144 192 C 143.488 189.28 142.72 188.512 140 188 C 142.72 187.488 143.488 186.72 144 184 Z" fill="#FC671F" class="tk tb"/>
-<text x="152" y="154" font-size="44" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#FC671F">499</text>
+<text x="152" y="154" font-size="44" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#FC671F">478</text>
 <text x="152" y="180" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#F7F6F9">SCORE ≥ 80</text>
 <rect x="76" y="204" width="288" height="6" rx="3" fill="#645676" fill-opacity="0.496"/>
-<rect x="76" y="204" width="81.1" height="6" rx="3" fill="#FC671F" class="gw d5"/>
-<text x="76" y="238" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">28.2% OF ALIVE PROXIES</text>
+<rect x="76" y="204" width="83.2" height="6" rx="3" fill="#FC671F" class="gw d5"/>
+<text x="76" y="238" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">28.9% OF ALIVE PROXIES</text>
 </g>
 <g class="r d4"><rect x="428" y="76" width="344" height="188" rx="16" fill="#4F3F62" fill-opacity="0.32" stroke="#645676" stroke-opacity="0.62" stroke-width="1.2"/>
 <circle cx="486" cy="142" r="32" fill="none" stroke="#6574C9" stroke-opacity=".5" stroke-width="1.3" stroke-dasharray="5 9" class="sp" style="transform-origin:486px 142px"/>
 <circle cx="486" cy="142" r="23" fill="#6574C9" fill-opacity=".14" stroke="#6574C9" stroke-width="1.5"/>
 <rect x="481" y="137" width="10" height="10" rx="2" fill="#6574C9" transform="rotate(45 486 142)"/>
-<text x="532" y="154" font-size="44" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#6574C9">755</text>
+<text x="532" y="154" font-size="44" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#6574C9">682</text>
 <text x="532" y="180" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#F7F6F9">SCORE ≥ 50</text>
 <rect x="456" y="204" width="288" height="6" rx="3" fill="#645676" fill-opacity="0.496"/>
-<rect x="456" y="204" width="122.7" height="6" rx="3" fill="#6574C9" class="gw d6"/>
-<text x="456" y="238" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">42.6% OF ALIVE PROXIES</text>
+<rect x="456" y="204" width="118.7" height="6" rx="3" fill="#6574C9" class="gw d6"/>
+<text x="456" y="238" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">41.2% OF ALIVE PROXIES</text>
 </g>
 <g class="r d5"><rect x="808" y="76" width="344" height="188" rx="16" fill="#4F3F62" fill-opacity="0.32" stroke="#645676" stroke-opacity="0.62" stroke-width="1.2"/>
 <circle cx="866" cy="142" r="32" fill="none" stroke="#ED4A3B" stroke-opacity=".5" stroke-width="1.3" stroke-dasharray="5 9" class="sp" style="transform-origin:866px 142px"/>
 <circle cx="866" cy="142" r="23" fill="#ED4A3B" fill-opacity=".14" stroke="#ED4A3B" stroke-width="1.5"/>
 <rect x="861" y="137" width="10" height="10" rx="2" fill="#ED4A3B" transform="rotate(45 866 142)"/>
-<text x="912" y="154" font-size="44" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#ED4A3B">518</text>
+<text x="912" y="154" font-size="44" font-weight="800" font-family="'Space Grotesk','Segoe UI',system-ui,-apple-system,sans-serif" fill="#ED4A3B">495</text>
 <text x="912" y="180" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#F7F6F9">SCORE ≥ 20</text>
 <rect x="836" y="204" width="288" height="6" rx="3" fill="#645676" fill-opacity="0.496"/>
-<rect x="836" y="204" width="84.2" height="6" rx="3" fill="#ED4A3B" class="gw d7"/>
-<text x="836" y="238" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">29.2% OF ALIVE PROXIES</text>
+<rect x="836" y="204" width="86.1" height="6" rx="3" fill="#ED4A3B" class="gw d7"/>
+<text x="836" y="238" font-size="10.5" font-weight="500" font-family="'IBM Plex Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace" letter-spacing="2.4" fill="#CCC5D5">29.9% OF ALIVE PROXIES</text>
 </g>
 </svg>
